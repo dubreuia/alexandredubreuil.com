@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Continuous delivery chez LesFurets.com</title>
+  <meta name="description" content="Continuous delivery chez LesFurets.com">
+  <meta name="author" content="Alexandre Dubreuil">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../common/bower_components/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../common/bower_components/reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="../common/css/lesfurets-theme.css" id="theme">
+  <link rel="stylesheet" href="../common/css/git-octopus-theme.css" id="octopus-theme">
+  <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = '../common/css/print/pdf.css';
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+  </script>
+  <style>
+.footer.hide {
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  padding: 5px;
+  z-index: 2;
+  opacity: 0.75;
+}
+.footer.hide img {
+  transform: scale(0.75, 0.75);
+}
+.reveal .controls {
+  top: 10px;
+  right: 30px;
+}
+  </style>
+  <!--[if lt IE 9]>
+  <script src="../common/bower_components/reveal.js/lib/js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div id="footer" class="footer show">
+  <a href="https://www.lesfurets.com" target="_blank">
+    <img class="logo" src="../common/img/logo-open-r-and-d-day.png">
+  </a>
+  <a class="github" href="https://github.com/lesfurets" target="_blank">https://github.com/lesfurets</a>
+  <a class="twitter" href="https://twitter.com/BeastieFurets" target="_blank">@BeastieFurets</a>
+  <a class="github" href="https://github.com/dubreuia" target="_blank">https://github.com/dubreuia</a>
+  <a style="margin-right: 10px;" class="twitter" href="https://twitter.com/dubreuia" target="_blank">@dubreuia</a>
+</div>
+<div class="reveal">
+  <div class="slides">
+    <!-- SECTION - INTRO -->
+
+    <section class="flushright" data-state="background-furets">
+      <h1>Continuous merge<br>avec git-octopus</h1>
+      <h2>Alexandre Dubreuil</h2>
+      <ul class="flushright nodisc">
+        <li>
+          <a style="color:white" href="https://twitter.com/dubreuia">https://twitter.com/dubreuia</a>
+        </li>
+        <li>
+          <a style="color:white" href="https://github.com/dubreuia">https://github.com/dubreuia</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <p>Une histoire de transformation vers le <strong class="color-deeporange300">continuous delivery</strong></p>
+      <ul class="color-gray400">
+        <li class="fragment"><strong>2012</strong> : <span class="color-indigo300">12 releases</span> en sprint scrum mensuel</li>
+        <li class="fragment"><strong>2013</strong> : <span class="color-indigo300">45 releases</span> en sprint scrum hebdo</li>
+        <li class="fragment"><strong>2014</strong> : <span class="color-indigo300">208 releases</span></li>
+        <li class="fragment"><strong>2015</strong> : <span class="color-indigo300">225 releases</span> en kanban daily delivery </li>
+        <li class="fragment"><strong>2016</strong> : <span class="color-indigo300">260 releases</span> avec release 2 heures</li>
+      </ul>
+    </section>
+
+    <section class="center" data-background="#222">
+      <p>Chez LesFurets.com, le <strong class="color-deeporange300">continuous delivery</strong> est un process</p>
+      <p class="fragment">Une partie importante de ce process est le <strong class="color-indigo300">continuous merge</strong> : il nous permet de travailler en <strong class="color-indigo300">feature branching</strong></p>
+    </section>
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/feature_branch_1.svg"/>
+      <p class="flushleft svg-header small"><strong>feature branching</strong> : on part d'un master</p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/feature_branch_2.svg"/>
+      <p class="flushleft svg-header small"><strong>feature branching</strong> : création d'une branche de développement <code>features/f1</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/feature_branch_3.svg"/>
+      <p class="flushleft svg-header small"><strong>feature branching</strong> : création d'une branche de développement <code>features/f2</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/simple_merge_1.svg"/>
+      <p class="flushleft svg-header small"><strong>Merge pre-build</strong> : merge de master sur la branche avant le build. Les outils IC permettent de faire le merge simple automatique.</p>
+      <aside class="notes">
+        <p>Simple merge pre-build</p>
+        <ul class="color-gray50 nodisc">
+          <li>Jenkins: merge before build, post build push</li>
+          <li>Bamboo: Branch updater, Gatekeeper</li>
+          <li>TeamCity: Automatic Merge</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="center" data-background="#222">
+      <p class="color-gray400">Avec une code base en <strong class="color-indigo300">feature branching</strong>, chaque feature est <strong class="color-gray50">sur une branche dédiée</strong>, <span class="fragment">la prochaine release est la <strong class="color-gray50">fusion du master et des features</strong>, </span><span class="fragment">les développements avancent en <strong class="color-gray50">isolation</strong>, </span><span class="fragment">et on livre une branche <strong class="color-gray50">lorsqu'elle est prête</strong>.</span></p>
+      <p class="fragment large color-deeporange300"><strong>On perd l'intégration continue et la gestion des conflits</strong></p>
+    </section>
+
+    <section class="center" data-background="#222">
+      <img style="width: 75%;" src="../common/img/feature-branching.png">
+    </section>
+
+    <section class="center" data-background="#222">
+      <p>On veut une code base en <strong class="color-indigo300">feature branching</strong> (pour sa flexibilité) et on veut faire du <strong class="color-indigo300">continuous delivery</strong> (pour sa valeur ajoutée), sans perdre l'<strong class="color-indigo300">intégration continue</strong>.</p>
+      <p class="fragment">Autrement dit, comment réconcilier feature branching et intégration continue ?</p>
+      <p class="fragment large color-deeporange300"><strong>On fait du continuous merge !</strong></p>
+    </section>
+
+    <!-- SECTION - CONTINUOUS MERGE -->
+    <section class="flushleft" data-state="background-merge">
+      <h2 class="color-indigo300">Continuous merge</h2>
+      <h4 class="flushright section-subheader">Réconcilier feature branching et intégration continue, <br>et détecter les conflits rapidement.</h4>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <!--<p>Continuous merge <br><span>on sait fusioner ponctuellement 2 historiques</span></p>-->
+      <img class="nostyle" src="../common/img/octopus-diagrams/feature_branch_3.svg"/>
+      <p class="flushleft svg-header small"><strong>Feature branching</strong> : historiques indépendants de <code>features/f1</code> et <code>features/f2</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <!--<p>Continuous merge <br><span>on sait fusioner ponctuellement 2 historiques</span></p>-->
+      <img class="nostyle" src="../common/img/octopus-diagrams/continuous_merge_1.svg"/>
+      <p class="flushleft svg-header small"><strong>Continuous merge</strong> : merge de <code>features/f1</code> et <code>features/f2</code> avec master</p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/continuous_merge_2.svg"/>
+      <p class="flushleft svg-header small"><strong>continuous merge</strong> : nouveau commit sur <code>features/f1</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/continuous_merge_3.svg"/>
+      <p class="flushleft svg-header small"><strong>continuous merge</strong> : fusion automatique</p>
+    </section>
+
+    <section class="center" data-background="#222">
+        <pre class=""><code class="code bash" data-trim data-noescape>
+# Fusion plusieurs branches avec pattern
+git merge features/*
+        </code></pre>
+      <p class="">Mais le merge de plusieurs branches à partir d'un pattern n'existe pas dans git...</p>
+      <p class="fragment large color-deeporange300"><strong>LesFurets git-octopus</strong> : <br/>
+      <a style="color:white;font-weight:bold" href="https://github.com/lesfurets/git-octopus">https://github.com/lesfurets/git-octopus</a></p>
+    </section>
+
+    <section class="center" data-background="#222">
+      <img style="position:absolute;left:0;top:0;width:100%;" class="nostyle" src="../common/img/octopus-05.gif"/>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <p class="color-"><span style="color:green">&#10003; </span>On garde l'intégration continue</p>
+      <p class="color-"><span style="color:green">&#10003; </span>On livre ce qui est prêt grâce au <strong class="color-indigo300">feature branching</strong></p>
+      <p class="color-"><span style="color:green">&#10003; </span>Peu d'investissements pour mettre en place <strong class="color-indigo300">(git, jenkins, git-octopus)</strong></p>
+      <p class="color-"><span style="color:green">&#10003; </span>Facile de passer à l'echelle</p>
+      <p class="color-"><span style="color:green">&#10003; </span>On constitue facilement les environnements <strong class="color-indigo300">dev</strong> avec toutes les features, <strong class="color-indigo300">stage</strong> pour la validation, <strong class="color-indigo300">preprod</strong> pour les tickets validés<p>
+    </section>
+
+    <section class="center" data-background="#222">
+      <p class="large"><strong class="color-deeporange300">Et comment gérer les conflits ?</strong></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_1.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_2.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong> : une nouvelle branche sauvage
+        <code>features/new</code>
+        apparaît</p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_3.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong> : git-octopus merge <span
+          class="ko">KO</span>
+      </p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_4.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong> : git merge simple
+        <code>master</code>
+        et <code>features/new</code> <span class="ok">OK</span></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_5.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong> : git merge simple
+        <code>features/f1</code> et <code>features/new</code> <span class="ok">OK</span></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/octopus_6.svg"/>
+      <p class="flushleft svg-header small"><strong>gestion des conflits</strong> : git merge simple
+        <code>features/f2</code> et <code>features/new</code> <span class="ko">KO</span></p>
+    </section>
+
+    <!-- SECTION - CONFLICTS -->
+    <section class="flushleft" data-state="background-conflict">
+      <h2 class="color-indigo300">Gestion de conflits</h2>
+      <h4 class="flushright section-subheader">L'utilisation de git-octopus dans l'intégration continue permet de détecter tôt les conflits</h4>
+    </section>
+
+    <section class="flushright" data-background="#222">
+      <p>On défini le <strong class="color-deeporange300">risque d'une résolution de conflit</strong> lorsqu'on ajoute une dépendance entre deux branches</p>
+      <p>Une dépendance entre deux branches nous enlève la possibilité de livrer une branche <strong class="color-indigo300">dès qu'elle est prête</strong></p>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <h3><span class="color-indigo300">Éviter le conflit</span> au niveau du code</h3>
+      <p>Avoir des conventions de code communes, éviter les binaires, avoir un code modulaire, évoluer par abstraction</p>
+      <p class="flushright" style="font-weight: bold;">RISQUE : <span class="dangerzone safe">faible</span></p>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <h3><span class="color-indigo300">Enlever la branche</span> de l'octopus</h3>
+      <p>Si deux branches sont en conflits, on peut souvent en enlever une en attendant que l'autre soit dans le master</p>
+      <p>Règle générale, éviter les branches de longue durée</p>
+      <p class="flushright" style="font-weight: bold;">RISQUE : <span class="dangerzone safe">faible</span></p>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <h3><span class="color-deeporange300">Fusionner</span> la branche</h3>
+      <p>On peut merger l'historique des deux branches pour résoudre le conflit : <strong>on perd alors la possibilité de livrer séparément</strong></p>
+      <p>On peut aussi utiliser une branche partagée pour du code commun</p>
+      <p class="flushright" style="font-weight: bold;">RISQUE : <span class="dangerzone danger">danger</span></p>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <h3><span class="color-deeporange300">Rebaser</span> la branche</h3>
+      <p>On garde alors une certaine flexibilité dans la livraison</p>
+      <p>Utile pour livrer des branches <strong>par étape</strong>, ou lorsqu'on sait qu'une branche partira avant une autre</p>
+      <p class="flushright" style="font-weight: bold;">RISQUE : <span class="dangerzone danger">danger</span></p>
+    </section>
+
+    <section class="flushleft" data-background="#222">
+      <h3 style="font-weight: bold;"><span class="color-orange300">git-conflict : </span>résolution de conflit partagé</h3>
+      <p><code>git-conflict</code> est livré avec <code>git-octopus</code> et permet de persister la résolution de conflit à l'extérieur d'une branche</p>
+      <p>Permet l'évolution indépendantes des branches</p> 
+      <p>Nécessite de valider le contenu des résolutions de conflit</p>
+      <p class="flushright" style="font-weight: bold;">RISQUE : <span class="dangerzone warning">attention</span></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/conflict_1.svg"/>
+      <p class="flushleft svg-header small"><strong>git-conflict</strong> : git-octopus features/* <span class="ko">KO</span> à cause de <code>features/new</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/conflict_2.svg"/>
+      <p class="flushleft svg-header small"><strong>git-conflict</strong> : dépôt résolution de conflit situé sous <code>conflict/resolutions</code></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/conflict_3.svg"/>
+      <p class="flushleft svg-header small"><strong>git-conflict</strong> : git merge simple <code>features/f2</code> et <code>features/new</code> <span class="ko">KO</span></p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/conflict_4.svg"/>
+      <p class="flushleft svg-header small"><strong>git-conflict</strong> : git-octopus regarde s'il y a une résolution de conflit disponible </p>
+    </section>
+
+    <section class="center" data-background="#222" data-transition="fade-in" data-transition-speed="slow">
+      <img class="nostyle" src="../common/img/octopus-diagrams/conflict_9.svg"/>
+      <p class="flushleft svg-header small"><strong>git-conflict</strong> : git-octopus features/* <span class="ok">OK</span>
+      </p>
+    </section>
+
+    <!-- SECTION - WORFLOW LF -->
+
+    <section class="flushleft" data-state="background-furets">
+      <h2 class="color-deeporange300">Continuous delivery chez LesFurets.com</h2>
+      <h4 class="flushright">L'objectif est de trouver les <strong class="color-indigo300">conflits le plus rapidement possible</strong>, de pouvoir <strong class="color-indigo300">les corriger le plus tôt possible</strong>, et de pouvoir livrer une feature <strong class="color-indigo300">dès qu'elle est prête</strong></h4>
+    </section>
+
+    <section class="center" data-background="#222">
+      <img class="nostyle" style="width:125%;margin-left:-7vw" src="../common/img/octopus-diagrams/git_repo_setup_1.png">
+    </section>
+
+    <!-- SECTION - END -->
+
+    <section class="flushright" data-background="#222">
+      <h2>La <strong class="color-indigo300">détection des conflits</strong> pour tous</h2>
+      <p><code>git octopus</code> peut être utilisé par n'importe quelle équipe pour <strong class="color-deeporange300">valider le conflit entre les branches</strong></p>
+      <p><code>git octopus</code> pour valider les conflits entre vos <br><strong class="color-deeporange300">pull requests</strong></p>
+    </section>
+
+    <section class="flushright" data-background="../common/img/live-code-review/blindard-01.jpeg">
+      <h2>Ajoutez git-octopus à votre CI dès maintenant !</h2>
+      <pre class="">
+        <code class="bash code small" data-trim data-noescape>
+# Linux & Cygwin
+git clone git@github.com:lesfurets/git-octopus.git
+cd git-octopus && make install
+# Mac
+brew update
+brew install git-octopus
+        </code>
+      </pre>
+    </section>
+
+    <!-- SECTION - CONTRIBUTION -->
+
+    <section class="flushleft" data-background="#eee">
+      <h2 style="color:#1a237e">Références</h2>
+      <p class="flushright" style="color:black">Code source <strong>git octopus</strong> sur github<br/><a
+          href="http://github.com/lesfurets/lesfurets-conferences">https://github.com/lesfurets/git-octopus</a></p>
+      <p class="flushright" style="color:black">Forum <strong>git octopus</strong> sur Google Groups<br/><a
+          href="https://groups.google.com/forum/#!forum/git-octopus">https://groups.google.com/forum/#!forum/git-octopus</a>
+      </p>
+      <p class="flushright" style="color:black">Blog technique sur <strong>git octopus</strong><br/><a
+          href="http://github.com/lesfurets/lesfurets-conferences">https://beastie.lesfurets.com/projets/</a>
+      </p>
+      <p class="flushright" style="color:black">Ces slides<br/><a
+          href="http://github.com/lesfurets/lesfurets-conferences">https://github.com/lesfurets/lesfurets-conferences</a>
+      </p>
+    </section>
+
+    <section class="flushright" data-background="#eee">
+      <h2 style="color:#1a237e">FIN</h2>
+    </section>
+
+  </div>
+</div>
+<script src="../common/bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../common/bower_components/reveal.js/js/reveal.js"></script>
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        embedded: true,
+
+        // Hack my remote because it send 5 events
+        keyboard: {
+            // Tab : nop
+            9: null,
+            // Page down : previous slide
+            33: function () {
+                if (!window.animate) {
+                    window.animate = true;
+                    Reveal.left();
+                    setTimeout(function () {
+                        window.animate = false;
+                    }, 1000);
+                }
+            },
+            // Page up : next slide
+            34: function () {
+                if (!window.animate) {
+                    window.animate = true;
+                    Reveal.right();
+                    setTimeout(function () {
+                        window.animate = false;
+                    }, 1000);
+                }
+            }
+        },
+
+
+        //theme: 'lesfurets', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: '../common/bower_components/reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: '../common/bower_components/reveal.js/plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: '../common/bower_components/reveal.js/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: '../common/bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: '../common/bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: '../common/bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+        ]
+    });
+</script>
+<script src="../common/js/lesfurets-theme.js" async></script>
+</body>
+</html>

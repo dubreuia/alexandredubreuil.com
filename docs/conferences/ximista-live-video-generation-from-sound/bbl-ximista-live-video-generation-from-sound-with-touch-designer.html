@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BBL XIMISTA - Live Video Generation From Sound with Touch Designer</title>
+    <meta name="description" content="BBL XIMISTA - Live Video Generation From Sound with Touch Designer">
+    <meta name="author" content="Alexandre DuBreuil">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../common/bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../common/bower_components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../common/css/dubreuia-theme.css" id="theme">
+    <link rel="stylesheet" href="../common/css/ximista-theme.css" id="theme">
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../common/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]><script src="../common/lib/js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="footer">
+      <a href="http://www.odeimusic.com/" target="_blank"><img class="logo" src="../common/img/odei-logo-01.png"></a><a href="https://github.com/dubreuia" target="_blank">Alexandre DuBreuil</a><a href="https://www.behance.net/nicolasweyrich" target="_blank">Nicolas Weyrich</a>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+      <!-- START -->
+      <section class="flushright" data-background="#111111">
+        <h1>BBL Ximista - Live Video Generation From Sound</h1>
+        <h2>Alexandre DuBreuil</h2>
+        <h2>Nicolas Weyrich</h2>
+      </section>
+      <section data-background="../common/img/odei-01.jpg">
+        <img class="fragment" style="background-color:transparent;box-shadow:none;border:none;width:50%;" src="../common/img/odei-logo-02.png">
+      </section>
+      <section data-background="../common/img/antescofo-01.jpg">
+        <h2 style="font-weight:bold;">Antescofo</h2>
+        <img src="../common/img/antescofo-02.jpg">
+      </section>
+      <section class="flushleft" data-background="../common/img/unity-01.jpg">
+        <img src="../common/img/unity-02.jpg">
+      </section>
+      <section class="flushright" data-background="../common/img/touch_designer-01.jpg">
+        <p><img src="../common/img/touch_designer-02.jpg"></p>
+        <p><img class="fragment" src="../common/img/touch_designer-03.jpg"></p>
+      </section>
+      <section data-background="#222222">
+        <p><img style="width:100%" src="../common/img/architecture-02.jpg"></p>
+      </section>
+      <section class="flushleft" data-background="../common/img/concerts-01.jpg">
+        <h3><strong>6 août 2015 / Baleapop 6</strong> / Saint-Jean-de-Luz</h3>
+        <h3><strong>5 septembre 2015 / Le 6b</strong> / Saint-Denis</h3>
+        <h3><strong>1 octobre 2015 / Toulouse</strong></h3>
+      </section>
+      <!-- END -->
+      </div>
+    </div>
+    <script src="../common/bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="../common/bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        embedded: true,
+
+        //theme: 'dubreuia', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../common/bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../common/bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../common/bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../common/bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../common/bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../common/bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>

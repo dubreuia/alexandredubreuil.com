@@ -1,0 +1,4 @@
+*.swp
+models
+output
+checkpoints
