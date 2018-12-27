@@ -1,0 +1,123 @@
+-- Single sample --
+
+d1 $ sound "bd"
+
+d1 $ sound "bd:3"
+
+d1 $ sound "bd" # n "1"
+
+-- Multiple samples --
+
+d1 $ sound "bd sd:3"
+
+-- More than one sequence --
+
+d1 $ sound "bd sd:1"
+
+d2 $ sound "hh hc hh hc"
+
+d3 $ sound "arpy"
+
+-- Cycle --
+
+d1 $ sound "bd sd"
+
+d1 $ sound "bd sd hh cp mt arpy drum"
+
+d1 $ sound "bd sd hh cp mt arpy drum odx bd arpy bass2 feel future"
+
+-- Silence --
+
+d1 silence
+
+hush
+
+solo $ d1 $ sound "bd sn"
+
+-- Pattern groups --
+
+d1 $ sound "[bd sd sd] cp"
+
+d1 $ sound "bd [sd sd]"
+
+d1 $ sound "bd [sd sd sd]"
+
+d1 $ sound "[bd bd bd bd] [sd sd]"
+
+d1 $ sound "[bd bd] [bd [sd [sd sd] sd] sd]"
+
+d1 $ sound "[bd bd] [bd [sd [sd [sd sd] sd] sd] sd]"
+
+d1 $ sound "bd bd . sd sd sd . bd sd"
+
+d1 $ sound "[bd bd] [sd sd sd] [bd sd]"
+
+-- Polyrhythms --
+
+d1 $ sound "[bd bd bd, sd cp sd cp]"
+
+d1 $ sound "[bd bd bd, sd cp sd cp, arpy arpy, odx]"
+
+d1 $ sound "[bd bd bd, [sd, sd] cp, arpy [arpy [arpy arpy] arpy arpy], odx]"
+
+-- One step per cycle --
+
+d1 $ sound "bd <arpy:1 arpy:2 arpy:3>"
+
+-- Pattern repetition and speed --
+
+d1 $ sound "bd*2"
+
+d1 $ sound "bd/2"
+
+d1 $ sound "[bd sn]*2 cp"
+
+d1 $ sound "[bd sn] cp/2"
+
+d1 $ sound "[[bd sn] cp]*2"
+
+d1 $ sound "[[bd sn] cp]/2"
+
+d1 $ sound "[bd sn sn*3]/2 [bd sn*3 bd*4]/3"
+
+-- Transformations --
+
+d1 $ rev (sound "bd*2 [bd [sn sn*2 sn] sn]")
+
+d1 $ every 4 (rev) (sound "bd*2 [bd [sn sn*2 sn] sn]")
+
+d1 $ slow 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
+
+d1 $ fast 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
+
+d1 $ every 4 (fast 4) $ sound "bd*2 [bd [sn sn*2 sn] sn]"
+
+-- Effects --
+
+d1 $ sound "bd*4" # crush "5"
+
+d1 $ sound "bd*4" # crush "5" # speed "2"
+
+d1 $ sound "bd*4" # gain "1 0.8 0.5 0.7"
+
+d1 $ sound "bd*4 sn*4" # gain "[[1 0.8]*2 [0.5 0.7]]/2"
+
+d1 $ sound "bd*4" # gain (every 3 (rev) $ "1 0.8 0.5 0.7")
+
+d1 $ gain "1 0.8 0.5 0.7" # sound "bd"
+
+-- Effects values --
+
+d1 $ (|=| speed "4") $ sound "arpy*4" |=| speed "1"
+
+d1 $ every 2 (|*| speed "4") $ sound "arpy*4" |=| speed "1"
+
+d1 $ every 2 (|*| crush "4") $ sound "arpy*4" |=| speed "2"
+
+d1 $ every 2 (|*| vowel "e") $ sound "arpy*4" |=| speed "1"
+
+d1 $ every 2 (|*| pan "0.9") $ sound "arpy*4" |=| speed "1"
+
+-- Shorthand ---
+
+-- TODO

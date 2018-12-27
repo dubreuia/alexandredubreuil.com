@@ -1,0 +1,177 @@
+import Sound.Tidal.MIDI.Context
+
+import Sound.Tidal.Scales
+
+displayOutputDevices >>= putStrLn
+
+devices <- midiDevices
+
+m1 <- midiStream devices "Arturia BeatStep Pro MIDI 1" 1 synthController
+
+m2 <- midiStream devices "Arturia BeatStep Pro MIDI 1" 2 synthController
+
+m3 <- midiStream devices "Arturia BeatStep Pro MIDI 1" 3 synthController
+
+
+m1 $ midinote ""
+
+m1 $ midinote "0"
+
+m1 $ midinote "0*64" # pan sine
+
+m1 $ midinote "0*8" # speed (density 2 $ tri)
+
+m1 $ midinote "0 0 ~ 1"
+
+m1 $ midinote "{0 2 4 8 2}"
+
+m1 $ midinote "{0 1 3 4, 0 2 4 8 2}"
+
+m1 $ midinote "0*2 2*2 3? 5?"
+
+m1 $ (0.25 <~) $ midinote "0*2 2*2 3 5"
+
+m1 $ every 5 (|+| speed "0.5") $ every 4 (0.25 <~) $ every 3 (rev) $ 
+   midinote "0 1 2*2 4"
+
+m1 $ whenmod 8 6 (rev) $ midinote "0*2 2*2 4 8*4"
+
+m1 $ every 8 (rev) $ every 4 (density 2) $ midinote "0 1 4 8"
+
+--m1 $ whenmod 8 6 (const $ midinote "0(3,8) 1*4") $ sound "4 8 10 3"
+
+--m1 $ every 12 (const $ midinote "0*4 2*2") $ sound "0 2 4 8"
+
+-- m1 $ fastcat [sound "0 2:2" # vowel "[a o]/2",
+--               sound "4 8 10*2"
+--              ]
+
+m1 $ midinote "0"
+
+m1 $ midinote "[36*2, 38*1]"
+
+m1 $ midinote "36"
+
+m1 $ midinote "37"
+
+m1 $ midinote "38"
+
+m1 $ midinote "39"
+
+m2 $ midinote "0"
+
+m2 $ midinote "can(2,5)"
+
+m2 $ midinote "0"
+
+m2 $ midinote "0 2*4 4*2 2"
+
+m3 $ midinote "[1 2 1] [2 3] 1 1"
+
+--m3 $ midinote major 1
+
+m3 $ every 4 (rev) $ midinote "<[g5 df5 e5 a5] [gf5 d5 c5 g5]*3>" # s "supersaw"
+
+m1 $ midinote "36*2 [36 [37 37*2 37] 37]" # speed ((*2) <$> sine)
+
+-- PALINDROME
+
+m1 $ palindrome $ midinote "36 37 38 39"
+
+-- BRAK
+
+m1 $ brak $ midinote "[36 36, 39 39 39 38]"
+
+m1 $ midinote "[36 36, 39 39 39 38]"
+
+-- DEGRADE
+
+m1 $ slow 2 $ degrade $ midinote "[[[36*8,37*3] 39*8], 38*4]" # accelerate "-6" # speed "2"
+
+m1 $ slow 2 $ midinote "[36 ~ 37 36 ~ 36 [37 36] ~, [39*8]?]"
+
+m1 $ slow 2 $ midinote "36 ~ 37 36 ~ 36? [37 36?] ~"
+
+m1 $ slow 2 $ midinote "36 ~ 37 36 ~ 36 [37 36]? ~"
+
+m1 $ slow 2 $ degradeBy 0.25 $ midinote "[[[36*8, 37*3] 39*8], 38*4]" # accelerate "-6" # speed "2"
+
+-- FAST --
+
+m1 $ midinote (fast 1 "36 37 39")
+
+-- FIT --
+-- ??? --
+
+m1 $ midinote (fit' 1 2 "0 1" "1 0" "36 37")
+
+m1 $ fit' 1 4 (run 4) "[0 3*2 2 1 0 3*2 2 [1*8 ~]]/2" $ chop 4 $ (midinote "39" # unit "c")
+
+-- ITER --
+-- Generates 4 cycles from the pattern by shifting by one each element each
+-- cycle. Will generate 4 different cycles for a cycle of 4 elements (because
+-- it shifts by 1 each time)
+
+m1 $ midinote "36 37 38 39"
+
+m1 $ iter 4 $ midinote "36 37 38 39"
+
+-- JUX(audio) --
+
+d1 $ slow 32 $ jux (rev) $ striate' 32 (1/16) $ sound "bev"
+
+-- LINGER (see TRUNC) --
+-- Plays only the first fraction of the pattern, but fills the remainder with
+-- it
+
+m1 $ linger 0.25 $ midinote "36 37 [38 39] 37"
+
+m1 $ every 4 (linger 0.25) $ midinote "36 37 [38 39] 37"
+
+m1 $ linger "<0.75 0.25 1>" $ midinote "36 37 [38 39] 40"
+
+-- BEAT ROTATION --
+
+m1 $ every 4 (0.25 <~) $ midinote ("36 37 38 39")
+
+m1 $ every 4 (0.25 ~>) $ midinote ("36 ~ 37 [38 39]")
+
+m1 $ "<0 0.5 0.125>" <~ midinote ("36 37 38 39")
+
+m1 $ midinote "0"
+
+-- REVERSE --
+
+m1 $ slow 2 $ rev $ midinote "36 37 38 39"
+
+m1 $ every 4 (slow 2) $ every 2 (rev) $ midinote "36 37 38 39"
+
+-- SCRAMBLE --
+-- Separates second arg by first arg parts, then rearrange them randomly
+
+m1 $ midinote $ scramble 3 "36 37 38"
+
+m1 $ midinote $ scramble 2 "36 37 40 39"
+
+-- SHUFFLE (see SCRAMBLE) --
+-- Separates second arg by first arg parts, then permutes
+
+m1 $ midinote $ shuffle 3 "36 37 38"
+
+m1 $ midinote $ shuffle 2 "36 37 40 39"
+
+-- SLOW --
+
+m1 $ midinote (slow 2 "36 37 38")
+
+-- SMASH --
+-- ???
+
+m1 $ smash 3 [2,3,4] $ midinote "36 37 38 39"
+
+-- SCALES --
+
+m2 $ midinote "0" # n (toScale Scales.aeolian "<0 1 2 3 4 5 6 7>")
+
+m2 $ midinote "0"
+

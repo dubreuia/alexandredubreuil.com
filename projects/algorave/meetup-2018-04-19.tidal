@@ -1,0 +1,68 @@
+import Sound.Tidal.MIDI.Context
+
+import Sound.Tidal.MIDI.VolcaBeats
+
+import Sound.Tidal.Scales
+
+displayOutputDevices >>= putStrLn
+
+devices <- midiDevices
+
+m1 <- midiStream devices "Komplete Audio 6 MIDI 1" 1 volcabeatsController
+
+-- kick : "36"
+-- snare : "38"
+-- clap : "39"
+-- closed hat : "42"
+-- open hat : "46"
+-- lo tom : "43"
+-- high tom : "50"
+-- crash : "49"
+
+-- kick --
+m1 $ midinote "36"
+
+-- snare --
+m1 $ midinote "38"
+
+-- clap --
+m1 $ midinote "39"
+
+-- closed hat --
+m1 $ midinote "42"
+
+-- open hat --
+m1 $ midinote "46"
+
+-- lo tom --
+m1 $ midinote "43"
+
+-- high tom --
+m1 $ midinote "50"
+
+-- crash --
+m1 $ midinote "49"
+
+-- JAM 1 --
+m1 $ stack [ 
+  midinote "36*2",
+  degrade $ midinote "42*8",
+  brak $ midinote "39*2",
+  every 4 (0.25 <~) $ midinote "43*4 50*4"
+]
+
+-- JAM 2 --
+m1 $ stack [ 
+  midinote "36*2",
+  midinote $ fast 2 $ shuffle 2 "42 43",
+  spread fast [2, 4] $ midinote "43*1",
+  spread fast [2, 4] $ midinote "39"
+]
+
+-- JAM 3 --
+m1 $ stack [ 
+  midinote "36 <36 36 36*2>",
+  brak $ midinote "42*2",
+  every 2 (slow 4) $ midinote "[46*8]",
+  every 2 (slow 2) $ midinote "39*1"
+]

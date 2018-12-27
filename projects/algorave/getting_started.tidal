@@ -1,0 +1,15 @@
+d1 $ sound "bd"
+
+d1 $ sound "bd:3"
+
+d1 $ sound "bd" # n "1"
+
+d1 $ sound "bd sd:3"
+
+d1 $ sound "bd sd:1"
+
+d2 $ sound "hh hc hh hc"
+
+d3 $ sound "arpy"
+
+hush
