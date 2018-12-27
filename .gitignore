@@ -1,8 +1,5 @@
-# Ruby
-Gemfile.lock
-
-# Jekyll
-_site
-
 # Vim
 *.swp
+
+# Build
+build
