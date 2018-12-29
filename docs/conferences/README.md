@@ -20,6 +20,10 @@ Overview of our code review process based on a `git flow` branching strategy tha
 
 Overview of some AI music generation tools. We'll talk about music generation in general, real world examples, wavenet for voice, magenta for music, AI theory and state of the art.
 
+## [Software factory](software-factory)
+
+TODO
+
 ## [Git Version Control](git-gestion-version)
 
 Master class about git and version control systems.

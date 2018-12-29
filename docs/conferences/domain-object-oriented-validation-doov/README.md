@@ -6,13 +6,18 @@ Main project at [doov.io](https://doov.io/).
 
 ## Conferences
 
-- 2018/06/20 - Open R&Day @ Paris, France - [DSL.toGoBeyond(BeanValidation).at(OpenRDay)](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html) (french)
-    - [Video recording](https://www.youtube.com/watch?v=a0PJ3NuSA_c) 
-- 2018/06/10 - JDK.IO @ Copenhagen, Danmark - [DSL.toGoBeyond(BeanValidation).at(JDK.io)](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_jdk_io.html) (english)
-    - [Video recording](https://www.youtube.com/watch?v=2R1ByMSVHa8) 
-- 2018/05/09 - BGL META @ London, UK - [DSL.toGoBeyond(BeanValidation).at(BGL.meta)](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_meta.html) (english)
-- 2018/01/24 - Snowcamp @ Grenobles, France - [DSL.toGoBeyond(BeanValidation).at(Snowcamp.io)](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_snowcamp.html) (french)
-- 2018/10/26 - Softshake @ Geneva, Switzerland - [DSL.toGoBeyond(BeanValidation).at(Softshake.ch)](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_softshake.html) (french)
+- 2018/06/20 - Open R&Day @ Paris, France
+    - [Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html)
+    - [Video](https://www.youtube.com/watch?v=a0PJ3NuSA_c) 
+- 2018/06/10 - JDK.IO @ Copenhagen, Danmark
+    - [Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_jdk_io.html)
+    - [Video](https://www.youtube.com/watch?v=2R1ByMSVHa8) 
+- 2018/05/09 - BGL META @ London, UK
+    - [Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_meta.html)
+- 2018/01/24 - Snowcamp @ Grenobles, France
+    - [Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_snowcamp.html)
+- 2018/10/26 - Softshake @ Geneva, Switzerland
+    - [Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_softshake.html)
 
 ## DSL.using(java).toGoBeyond(BeanValidation); (english)
 
