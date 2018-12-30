@@ -1,386 +1,280 @@
 ---
 ---
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
-body {
-  margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-  display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type="button"],[type="reset"],[type="submit"],button{-webkit-appearance:button}[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
 /*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
+gray-50  #FAFAFA
+gray-100 #F5F5F5
+gray-200 #EEEEEE
+gray-300 #E0E0E0
+gray-400 #BDBDBD
+gray-500 #9E9E9E
+gray-600 #757575
+gray-700 #616161
+gray-800 #424242
+gray-900 #212121
 
-details {
-  display: block;
-}
+brown-50  #EFEBE9
+brown-100 #D7CCC8
+brown-200 #BCAAA4
+brown-300 #A1887F
+brown-400 #8D6E63
+brown-500 #795548
+brown-600 #6D4C41
+brown-700 #5D4037
+brown-800 #4E342E
+brown-900 #3E2723
 
-/*
- * Add the correct display in all browsers.
- */
+red-50   #FFEBEE
+red-100  #FFCDD2
+red-200  #EF9A9A
+red-300  #E57373
+red-400  #EF5350
+red-500  #F44336
+red-600  #E53935
+red-700  #D32F2F
+red-800  #C62828
+red-900  #B71C1C
+red-A100 #FF8A80
+red-A200 #FF5252
+red-A400 #FF1744
+red-A700 #D50000
 
-summary {
-  display: list-item;
-}
+pink-50   #FCE4EC
+pink-100  #F8BBD0
+pink-200  #F48FB1
+pink-300  #F06292
+pink-400  #EC407A
+pink-500  #E91E63
+pink-600  #D81B60
+pink-700  #C2185B
+pink-800  #AD1457
+pink-900  #880E4F
+pink-A100 #FF80AB
+pink-A200 #FF4081
+pink-A400 #F50057
+pink-A700 #C51162
 
-/* Misc
-   ========================================================================== */
+purple-50   #F3E5F5
+purple-100  #E1BEE7
+purple-200  #CE93D8
+purple-300  #BA68C8
+purple-400  #AB47BC
+purple-500  #9C27B0
+purple-600  #8E24AA
+purple-700  #7B1FA2
+purple-800  #6A1B9A
+purple-900  #4A148C
+purple-A100 #EA80FC
+purple-A200 #E040FB
+purple-A400 #D500F9
+purple-A700 #AA00FF
 
-/**
- * Add the correct display in IE 10+.
- */
+deep-purple-50   #EDE7F6
+deep-purple-100  #D1C4E9
+deep-purple-200  #B39DDB
+deep-purple-300  #9575CD
+deep-purple-400  #7E57C2
+deep-purple-500  #673AB7
+deep-purple-600  #5E35B1
+deep-purple-700  #512DA8
+deep-purple-800  #4527A0
+deep-purple-900  #311B92
+deep-purple-A100 #B388FF
+deep-purple-A200 #7C4DFF
+deep-purple-A400 #651FFF
+deep-purple-A700 #6200EA
 
-template {
-  display: none;
-}
+indigo-50   #E8EAF6
+indigo-100  #C5CAE9
+indigo-200  #9FA8DA
+indigo-300  #7986CB
+indigo-400  #5C6BC0
+indigo-500  #3F51B5
+indigo-600  #3949AB
+indigo-700  #303F9F
+indigo-800  #283593
+indigo-900  #1A237E
+indigo-A100 #8C9EFF
+indigo-A200 #536DFE
+indigo-A400 #3D5AFE
+indigo-A700 #304FFE
 
-/**
- * Add the correct display in IE 10.
- */
+blue-50   #E3F2FD
+blue-100  #BBDEFB
+blue-200  #90CAF9
+blue-300  #64B5F6
+blue-400  #42A5F5
+blue-500  #2196F3
+blue-600  #1E88E5
+blue-700  #1976D2
+blue-800  #1565C0
+blue-900  #0D47A1
+blue-A100 #82B1FF
+blue-A200 #448AFF
+blue-A400 #2979FF
+blue-A700 #2962FF
 
-[hidden] {
-  display: none;
-}
+light-blue-50   #E1F5FE
+light-blue-100  #B3E5FC
+light-blue-200  #81D4FA
+light-blue-300  #4FC3F7
+light-blue-400  #29B6F6
+light-blue-500  #03A9F4
+light-blue-600  #039BE5
+light-blue-700  #0288D1
+light-blue-800  #0277BD
+light-blue-900  #01579B
+light-blue-A100 #80D8FF
+light-blue-A200 #40C4FF
+light-blue-A400 #00B0FF
+light-blue-A700 #0091EA
 
-/* MY STUFF
-   ========================================================================== */
+cyan-50   #E0F7FA
+cyan-100  #B2EBF2
+cyan-200  #80DEEA
+cyan-300  #4DD0E1
+cyan-400  #26C6DA
+cyan-500  #00BCD4
+cyan-600  #00ACC1
+cyan-700  #0097A7
+cyan-800  #00838F
+cyan-900  #006064
+cyan-A100 #84FFFF
+cyan-A200 #18FFFF
+cyan-A400 #00E5FF
+cyan-A700 #00B8D4
 
-/* 
-https://nabauer.com/monument-valley-design-analysis/
-#57694e
-#b7b26f
-#f5e6a2
-#eca330
-#1dbeab
+teal-50   #E0F2F1
+teal-100  #B2DFDB
+teal-200  #80CBC4
+teal-300  #4DB6AC
+teal-400  #26A69A
+teal-500  #009688
+teal-600  #00897B
+teal-700  #00796B
+teal-800  #00695C
+teal-900  #004D40
+teal-A100 #A7FFEB
+teal-A200 #64FFDA
+teal-A400 #1DE9B6
+teal-A700 #00BFA5
 
-test1
-#c7e9f0
+green-50   #E8F5E9
+green-100  #C8E6C9
+green-200  #A5D6A7
+green-300  #81C784
+green-400  #66BB6A
+green-500  #4CAF50
+green-600  #43A047
+green-700  #388E3C
+green-800  #2E7D32
+green-900  #1B5E20
+green-A100 #B9F6CA
+green-A200 #69F0AE
+green-A400 #00E676
+green-A700 #00C853
+
+light-green-50   #F1F8E9
+light-green-100  #DCEDC8
+light-green-200  #C5E1A5
+light-green-300  #AED581
+light-green-400  #9CCC65
+light-green-500  #8BC34A
+light-green-600  #7CB342
+light-green-700  #689F38
+light-green-800  #558B2F
+light-green-900  #33691E
+light-green-A100 #CCFF90
+light-green-A200 #B2FF59
+light-green-A400 #76FF03
+light-green-A700 #64DD17
+
+lime-50   #F9FBE7
+lime-100  #F0F4C3
+lime-200  #E6EE9C
+lime-300  #DCE775
+lime-400  #D4E157
+lime-500  #CDDC39
+lime-600  #C0CA33
+lime-700  #AFB42B
+lime-800  #9E9D24
+lime-900  #827717
+lime-A100 #F4FF81
+lime-A200 #EEFF41
+lime-A400 #C6FF00
+lime-A700 #AEEA00
+
+yellow-50   #FFFDE7
+yellow-100  #FFF9C4
+yellow-200  #FFF59D
+yellow-300  #FFF176
+yellow-400  #FFEE58
+yellow-500  #FFEB3B
+yellow-600  #FDD835
+yellow-700  #FBC02D
+yellow-800  #F9A825
+yellow-900  #F57F17
+yellow-A100 #FFFF8D
+yellow-A200 #FFFF00
+yellow-A400 #FFEA00
+yellow-A700 #FFD600
+
+amber-50   #FFF8E1
+amber-100  #FFECB3
+amber-200  #FFE082
+amber-300  #FFD54F
+amber-400  #FFCA28
+amber-500  #FFC107
+amber-600  #FFB300
+amber-700  #FFA000
+amber-800  #FF8F00
+amber-900  #FF6F00
+amber-A100 #FFE57F
+amber-A200 #FFD740
+amber-A400 #FFC400
+amber-A700 #FFAB00
+
+orange-50   #FFF3E0
+orange-100  #FFE0B2
+orange-200  #FFCC80
+orange-300  #FFB74D
+orange-400  #FFA726
+orange-500  #FF9800
+orange-600  #FB8C00
+orange-700  #F57C00
+orange-800  #EF6C00
+orange-900  #E65100
+orange-A100 #FFD180
+orange-A200 #FFAB40
+orange-A400 #FF9100
+orange-A700 #FF6D00
+
+deep-orange-50   #FBE9E7
+deep-orange-100  #FFCCBC
+deep-orange-200  #FFAB91
+deep-orange-300  #FF8A65
+deep-orange-400  #FF7043
+deep-orange-500  #FF5722
+deep-orange-600  #F4511E
+deep-orange-700  #E64A19
+deep-orange-800  #D84315
+deep-orange-900  #BF360C
+deep-orange-A100 #FF9E80
+deep-orange-A200 #FF6E40
+deep-orange-A400 #FF3D00
+deep-orange-A700 #DD2C00
 */
 
-.dark-primary-color    { background: #303F9F; }
-.default-primary-color { background: #3F51B5; }
-.light-primary-color   { background: #C5CAE9; }
-.text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #FF4081; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #BDBDBD; }
-
-
 html {
+	animation: background 100000s infinite;
+	background-color: #FAFAFA;
+	color: #212121;
 	font-family: monospace;
 	font-size: 15px;
-	color: #212121;
 	line-height: 25px;
+	overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -391,62 +285,84 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 24px;
 }
 
-h1 {
-	position: relative;
+.container-lg h1:first-child {
+	background-color: #212121;
+	text-align: right;
+	transition: background 2000ms;
+}
+
+.container-lg h1:first-child:hover {
+	background-color: #B71C1C;
+}
+
+.container-lg h1:first-child a {
 	color: #FFFFFF;
-	/* background-image: radial-gradient(#1A237E, #303F9F); */
-	background-image: radial-gradient(#333, #333);
 }
 
-/*
-h1::before,
-h1::after {
-	content: "";
-	height: 37px;
-	position: absolute;
-	top: 0px;
-	width: 1000px;
-	z-index: -1;
-	transition: opacity 1000ms;
-	opacity: 0;
+h1 {
+	background-color: #424242;
+	color: #FFFFFF;
+	transition: background 2000ms;
 }
 
-h1:hover::before {
-	background-image: linear-gradient(to left, #303F9F, #FFFFFF);
-	left: -1000px;
-	opacity: 1;
+h1 a {
+	color: #FFFFFF;
 }
 
-h1:hover::after {
-	background-image: linear-gradient(to right, #303F9F, #FFFFFF);
-	opacity: 1;
+h1:hover {
+	background-color: #C62828;
 }
-*/
 
 h2 {
-	/* background-image: linear-gradient(to bottom right, #C5CAE9, #C5CAE9); */
-	background-image: linear-gradient(to bottom right, #aaa, #aaa);
+	background-color: #616161;
+	color: #FFFFFF;
+	transition: background 2000ms;
+}
+
+h2 a {
+	color: #FFFFFF;
+}
+
+h2:hover {
+	background-color: #D32F2F;
 }
 
 h3 {
-	/* background-image: linear-gradient(to bottom right, #C5CAE9, #C5CAE9); */
-	background-image: linear-gradient(to bottom right, #aaa, #aaa);
+	background-color: #757575;
+	transition: background 2000ms;
+}
+
+h3:hover {
+	background-color: #E53935;
 }
 
 h4 {
-	/* background-image: linear-gradient(to bottom right, #C5CAE9, #C5CAE9); */
-	background-image: linear-gradient(to bottom right, #aaa, #aaa);
+	background-color: #9E9E9E;
+	transition: background 2000ms;
+}
+
+h4:hover {
+	background-color: #E53935;
 }
 
 h5 {
-	/* background-image: linear-gradient(to bottom right, #C5CAE9, #C5CAE9); */
-	background-image: linear-gradient(to bottom right, #aaa, #aaa);
+	background-color: #BDBDBD;
+	transition: background 2000ms;
+}
+
+h5:hover {
+	background-color: #E53935;
 }
 
 h6 {
-	/* background-image: linear-gradient(to bottom right, #C5CAE9, #C5CAE9); */
-	background-image: linear-gradient(to bottom right, #aaa, #aaa);
+	background-color: #E0E0E0;
+	transition: background 2000ms;
 }
+
+h6:hover {
+	background-color: #E53935;
+}
+
 
 a {
 	color: #222222;
@@ -482,48 +398,74 @@ img {
 	padding: 0 20px;
 }
 
-.container-lg h1 {
-	position: relative;
-}
-
-.container-lg h1:first-child {
-	text-align: right;
-	/* background-image: radial-gradient(#FF4081, #F50057); */
-	background-image: radial-gradient(#111, #222);
-}
-
-/*
-.container-lg h1:first-child::before,
-.container-lg h1:first-child::after {
-	content: "";
-	height: 37px;
-	opacity: 1;
-	position: absolute;
-	top: 0px;
-	width: 1000px;
-	z-index: -1;
-}
-
-.container-lg h1:first-child::before {
-	background-image: linear-gradient(to left, #222, #FFFFFF);
-	left: -1000px;
-}
-
-.container-lg h1:first-child::after {
-	background-image: linear-gradient(to right, #222, #FFFFFF);
-}
-*/
-
-.container-lg h1:first-child a {
-	color: #FFFFFF;
-}
-
 .footer {
 	visibility: hidden;
 	color: #FFFFFF;
 	background-color: #00796B;
 	padding-top: 1ex;
 	padding-bottom: 1ex;
+}
+
+/* BACKGROUND COLOR */
+
+@keyframes background {
+	0% {
+		background-color: #FAFAFA;
+	}
+	15% {
+		background-color: #FBE9E7;
+	}
+	20% {
+		background-color: #FFF3E0;
+	}
+	25% {
+		background-color: #FFF8E1;
+	}
+	30% {
+		background-color: #FFFDE7;
+	}
+	35% {
+		background-color: #F9FBE7;
+	}
+	40% {
+		background-color: #F1F8E9;
+	}
+	45% {
+		background-color: #E8F5E9;
+	}
+	50% {
+		background-color: #E0F2F1;
+	}
+	55% {
+		background-color: #E0F7FA;
+	}
+	60% {
+		background-color: #E1F5FE;
+	}
+	65% {
+		background-color: #E3F2FD;
+	}
+	70% {
+		background-color: #E8EAF6;
+	}
+	75% {
+		background-color: #EDE7F6;
+	}
+	80% {
+		background-color: #F3E5F5;
+	}
+	85% {
+		background-color: #FCE4EC;
+	}
+	90% {
+		background-color: #FFEBEE;
+	}
+	95% {
+		background-color: #EFEBE9;
+	}
+	100% {
+		background-color: #FAFAFA;
+	}
 }
 
 /* HIGHTLIGHT */
@@ -745,4 +687,3 @@ img {
 	border: 1px dashed #ccc;
 	overflow: auto;
 }
-
