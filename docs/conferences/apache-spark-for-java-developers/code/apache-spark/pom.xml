@@ -5,8 +5,7 @@
     <artifactId>apache-spark</artifactId>
     <version>0.0.1</version>
     <properties>
-        <sparkVersion>2.2.0</sparkVersion>
-        <sparkCassandraVersion>2.0.5</sparkCassandraVersion>
+        <sparkVersion>2.4.0</sparkVersion>
     </properties>
     <build>
         <plugins>
@@ -36,7 +35,7 @@
         <dependency>
             <groupId>com.datastax.spark</groupId>
             <artifactId>spark-cassandra-connector_2.11</artifactId>
-            <version>${sparkCassandraVersion}</version>
+            <version>${sparkVersion}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
