@@ -2,7 +2,7 @@
 
 <iframe src="https://ghbtns.com/github-btn.html?user=dubreuia&repo=intellij-plugin-save-actions&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-## Documentation
+## Resources
 
 - [Source code](https://github.com/dubreuia/intellij-plugin-save-actions)
 

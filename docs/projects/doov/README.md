@@ -1,18 +1,28 @@
 # Domain Object Oriented Validation (dOOv)
 
-<iframe src="https://ghbtns.com/github-btn.html?user=doov-io&repo=doov&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe class="star" src="https://ghbtns.com/github-btn.html?user=doov-io&repo=doov&type=star&count=true" frameborder="0" scrolling="0"></iframe>
 
-## Documentation
+## Resources
 
 - [Website](https://doov.io)
 - [Source code](https://github.com/doov-io/doov)
 - [Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov)
 
+## [Conference slides](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html)
+
+<iframe class="slides" src="https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html" frameborder="0"></iframe>
+
+## [Conference video](https://www.youtube-nocookie.com/embed/a0PJ3NuSA_c)
+
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/a0PJ3NuSA_c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Abstract
+
+![dOOv logo](doov-logo.png)
 
 dOOv is a fluent API for typesafe domain model validation. It uses annotations, code generation and a type safe DSL to make domain model validation fast and easy.
 
-Annotate your model with @Path annotations on field, qualifying them with field ids (see wiki section [Domain Model Annotation](https://github.com/doov-io/doov/wiki/Domain-Model-Annotation))
+Annotate your model with @Path annotations on field, qualifying them with field ids.
 
 ```java
 public class User {
@@ -29,7 +39,7 @@ public class User {
 }
 ```
 
-Use the dOOv code genrator to generate a DSL with elements `userFirstName`, `userLastName` and `userBirthDate` (see wiki section [DSL Code Generation](https://github.com/doov-io/doov/wiki/DSL-Code-Generation)). Then write your rules with entry point `DOOV#when` and terminal operation `ValidationRule#validate` (see wiki section [Validation Rules](https://github.com/doov-io/doov/wiki/Validation-Rules)).
+Use the dOOv code generator to generate a DSL with elements `userFirstName`, `userLastName` and `userBirthDate`. Then write your rules with entry point `DOOV#when` and terminal operation `ValidationRule#validate`.
 
 ```java
 DOOV.when(userBirthdate().ageAt(today()).greaterOrEquals(18))
@@ -44,7 +54,7 @@ DOOV.when(userBirthdate().ageAt(today()).greaterOrEquals(18)
     .validate()
 ```
 
-You can then execute the rule on an instantiated model (see wiki section [Validation Engine](https://github.com/doov-io/doov/wiki/Validation-Engine)).
+You can then execute the rule on an instantiated model.
 
 ```java
 // Execute the DSL on the model

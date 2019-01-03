@@ -1,6 +1,6 @@
 # Climat general at Venice Art Bienale 2017
 
-## Documentation
+## Resources
 
 - [Soundcloud](https://soundcloud.com/dubreuia/sets/climat-general).
 
