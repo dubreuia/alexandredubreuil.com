@@ -139,3 +139,9 @@ html.background-conflict .reveal:not(.overview) .backgrounds {
 h3.section-subheader {
     text-shadow: 1px 2px 15px #222;
 }
+
+@media only screen and (max-width: 800px) {
+	.footer {
+		display: none;
+	}
+}

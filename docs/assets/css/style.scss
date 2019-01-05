@@ -407,6 +407,25 @@ code.highlighter-rouge {
 	border-radius: 3px
 }
 
+iframe.star {
+	height: 20px;
+	width: 100px;
+}
+
+iframe.slides {
+	height: 50vw;
+	max-height: 430px;
+	width: 100%;
+}
+
+iframe.video {
+	height: 50vw;
+	max-height: 430px;
+	width: 100%;
+}
+
+/* width="560" height="315" */
+
 footer {
 	background-color: white;
 	border: 1px dashed #9E9E9E;

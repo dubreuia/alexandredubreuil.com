@@ -376,6 +376,12 @@ body {
   transform: translateY(100px);
 }
 
+@media only screen and (max-width: 800px) {
+	.footer {
+		display: none;
+	}
+}
+
 /*********************************************
  * CUSTOM STYLES
  *********************************************/

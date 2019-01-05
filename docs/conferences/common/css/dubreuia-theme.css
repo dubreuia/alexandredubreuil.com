@@ -361,3 +361,9 @@ body {
 .reveal .small {
   font-size: 0.75em;
 }
+
+@media only screen and (max-width: 800px) {
+	.footer {
+		display: none;
+	}
+}

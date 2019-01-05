@@ -396,3 +396,9 @@
 .reveal mark .hljs-title {
     color: #000;
 }
+
+@media only screen and (max-width: 800px) {
+	.footer {
+		display: none;
+	}
+}

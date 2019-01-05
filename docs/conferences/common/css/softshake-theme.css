@@ -447,3 +447,9 @@ pre .pln.operator {
   font-weight: bold;
   color: #fffcad;
 }
+
+@media only screen and (max-width: 800px) {
+	.footer {
+		display: none;
+	}
+}
