@@ -1,6 +1,15 @@
 # Alexandre DuBreuil
 
-Hello, I'm a software engineer, conference speaker, open source maintainer and sound designer. Follow me on [twitter](https://twitter.com/dubreuia) and [github](https://github.com/dubreuia) and [soundcloud](https://soundcloud.com/dubreuia) and [linkedin](https://www.linkedin.com/in/alexandredubreuil) or not.
+Hello, I'm a software engineer, conference speaker, open source maintainer and sound designer.
+
+## [Contact](contact)
+
+- email: contact @ thisdomain
+- github: [@dubreuia](https://github.com/dubreuia)
+- twitter: [@dubreuia](https://twitter.com/dubreuia)
+- soundcloud: [@dubreuia](https://soundcloud.com/dubreuia)
+- instagram: [@dubreuia0](https://www.instagram.com/dubreuia0/)
+- linkedin: [@alexandredubreuil](https://www.linkedin.com/in/alexandredubreuil)
 
 ## [Articles](articles)
 
@@ -13,4 +22,8 @@ Conferences on software development and software craftsmanship, with slides and 
 ## [Projects](projects)
 
 Open-source or closed-source projects I've worked on.
+
+## Resume
+
+Coming soon
 
