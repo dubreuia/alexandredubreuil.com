@@ -276,9 +276,12 @@ deep-orange-A700 #DD2C00
 html {
 	animation: background 10000s infinite;
 	background-color: #FAFAFA;
+	/* background-image: linear-gradient(to bottom right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
+	/* background-image: radial-gradient(ellipse at top right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
 	color: #212121;
 	font-family: monospace;
 	font-size: 15px;
+	height: 100%;
 	line-height: 24px;
 	overflow-y: scroll;
 }
