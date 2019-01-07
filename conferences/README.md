@@ -1,5 +1,14 @@
 # Conferences
 
+Conference speaker since 2014, I've talked about subjects like [continuous delivery](#continuous-merge-with-git-octopus), [apache spark](#apache-spark-for-java-developers), [doov (domain object oriented validation)](#domain-object-oriented-validation-doov), AI music generation, software craftsmanship, and other subjects, in many conferences, universities (Telecom Paris Tech, Rouen University, INSTA Paris), JUG (Java User Groups), BBL (Brown Bag Lunch), and meetups, in France and internationally.
+
+![Conference picture 01](conferences-cover-01.jpg)
+![Conference picture 02](conferences-cover-02.jpg)
+
+## [Deploying your application secrets with Hashicorp Vault](secrets-with-hashicorp-vault)
+
+Managing application secrets, like database credentials, passphrases, salts and private keys, is hard. The availability of those elements are critical to the application, yet they need to be properly secured to reduce the attack surface on your system. Most secret management systems, like Hashicorp Vault, are used as a centralized database, but it creates a single point of failure and it requires extra care in hardening the security of that system. How about deploying your secrets, in Hashicorp Vault, alongside your application? By leveraging your build infrastructure, you can deploy a copy of your secrets, in a Vault that is secured using a one-time token, accessible only by your application. In this presentation, we'll show a continuous delivery pipeline that enables that approach, talk about the implications of handling secrets in your build infrastructure, and use threat modeling to verify the security of the deployed Vault.
+
 ## [Domain Object Oriented Validation (dOOv)](domain-object-oriented-validation-doov)
 
 Fluent, stream-like API are great for writing type checked code, taking advantage of Java 8 functions and lambdas. What about creating your own fluent API to manipulate and validate your model? We created an framework called dOOv, for "Domain Object Oriented Validation", that generates a validation DSL from a domain model. This presentation will demonstrate the efficiency and expressiveness of dOOv to define validation constraints. The validation rules are represented as an abstract syntax tree, which makes it possible to visit the tree and show the rule in text format, markdown, or HTML. We will compare our solution to industry standards like Bean Validation. During the session, we will live code legacy business rule migration to dOOv.
