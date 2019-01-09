@@ -317,8 +317,8 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
 	padding-bottom: 6px;
 }
 
-.page-header h2, .page-header a {
-	display: none;
+.page-header h1 a {
+	color: white;
 }
 
 h1 {
@@ -370,9 +370,10 @@ p {
 }
 
 img {
+	box-shadow: 0 0 15px black;
 	float: left;
+	margin: 0 20px 20px 0;
 	max-width: 100%;
-	padding: 0 5px 5px 0;
 }
 
 code.highlighter-rouge {
