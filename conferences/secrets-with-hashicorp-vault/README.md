@@ -2,7 +2,9 @@
 
 ## Conferences
 
-Upcoming
+- 2019/04/17 - Devoxx @ Paris, France
+    - Slides: upcoming
+    - Video: upcoming
 
 ## Deploying your application secrets: Hashicorp Vault and continuous delivery Abstract (en)
 

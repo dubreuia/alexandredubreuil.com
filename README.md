@@ -19,6 +19,10 @@ Articles on music and technology.
 
 Conferences on software development and software craftsmanship, with slides and video recordings when available. Also some classes I give at Universities (software factory and version control).
 
+## [Music](music)
+
+Electronic music composition, djing and generative music.
+
 ## [Projects](projects)
 
 Open-source or closed-source projects I've worked on.
