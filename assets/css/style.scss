@@ -1,11 +1,15 @@
 ---
 ---
 
-/* SECTION - NORMALIZE CSS */
+/*******************************************************/
+/* NORMALIZE
+/*******************************************************/
 
 html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type="button"],[type="reset"],[type="submit"],button{-webkit-appearance:button}[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
-/* SECTION - MATERIAL DESIGN COLORS */
+/*******************************************************/
+/* MATERIAL DESIGN COLORS
+/*******************************************************/
 
 /*
 gray-50  #FAFAFA
@@ -271,7 +275,9 @@ deep-orange-A400 #FF3D00
 deep-orange-A700 #DD2C00
 */
 
-/* SECTION - MAIN SITE */
+/*******************************************************/
+/* MAIN
+/*******************************************************/
 
 html {
 	animation: background 10000s infinite;
@@ -370,7 +376,7 @@ p {
 }
 
 img {
-	box-shadow: 0 0 15px black;
+	box-shadow: 0 0 5px gray;
 	float: left;
 	margin: 0 20px 20px 0;
 	max-width: 100%;
@@ -403,10 +409,10 @@ iframe.video {
 
 footer {
 	background-color: white;
-	border: 1px dashed #9E9E9E;
-	color: #9E9E9E;
+	border: 3px dashed #9E9E9E;
+	color: #333;
 	font-size: 12px;
-	margin: 5px 0 20px 0;
+	margin: 50px 0 20px 0;
 	padding: 0 5px;
 	text-align: center;
 }
@@ -427,10 +433,27 @@ footer a {
 }
 
 .main-content > ul {
-	padding: 0 20px;
+	padding: 0 0 0 20px;
 }
 
-/* SECTION - BACKGROUND COLOR */
+p.columns-two ~ div.highlighter-rouge,
+span.columns-two img {
+	/* Value 5px is half the margin value between the cols */
+	display: inline-block;
+	margin-right: 0;
+	vertical-align: top;
+	width: calc(50% - 5px)
+}
+
+span.columns-two img:first-child {
+	/* Value 10px is the margin value between the cols */
+	/* code blocks have space between they don't need margin */
+	margin-right: 10px;
+}
+
+/*******************************************************/
+/* BACKGROUND COLOR
+/*******************************************************/
 
 @keyframes background {
 	0% {
@@ -492,7 +515,9 @@ footer a {
 	}
 }
 
-/* SECTION - HIGHTLIGHT CODE */
+/*******************************************************/
+/* HIGHLIGHT CODE
+/*******************************************************/
 
 
 .highlight table td {
@@ -777,12 +802,44 @@ footer a {
 	padding: 5px;
 }
 
-/* SECTION - MEDIA SMALL SCREEN */
+/*******************************************************/
+/* MEDIA QUERY
+/*******************************************************/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 	html {
 		font-size: 14px;
 		line-height: 22px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.fullscreen:before {
+		color: #333;
+		content: '(hover image for fullscreen)';
+		display: block;
+		font-size: small;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.fullscreen:hover {
+		background-color: #333;
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.fullscreen:hover:before {
+		color: #ccc;
+		content: '(mouse pointer outside of window to exit fullscreen)';
+	}
+
+	.fullscreen:hover img {
+		height: 100%;
+		width: 100%;
 	}
 }
 
