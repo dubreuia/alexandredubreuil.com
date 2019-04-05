@@ -1,5 +1,3 @@
-<!-- vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab: -->
-
 # Deploying your application secrets: Hashicorp Vault and continuous delivery
 
 **2019/03/01**
@@ -602,7 +600,6 @@ Access to the secrets is different now, the most important part is being able to
 
 - **Automate everything:** even certificate renewal, self signed certificates are easy to produce at each deploy for each Tomcat and Vault pair
 - **Small jobs:** to redeploy small parts for emergencies
-
 
 ### Human challenge
 
