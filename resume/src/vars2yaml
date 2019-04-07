@@ -1,0 +1,73 @@
+#!/bin/bash
+
+LANGUAGE=${1?"Missing argument 'language': one of [tex,md]"}
+INPUT=${2?"Missing argument 'input' file"}
+OUTPUT=${3?"Missing argument 'output' file"}
+
+SED="\([ a-zA-Z0-9-]*\)"
+SED_ALL="\(.*\)"
+SED_LANG="\$lang{${SED}}"
+SED_STRONG="\$strong{${SED}}"
+SED_EMPH="\$emph{${SED}}"
+SED_LINK="\$link{${SED_ALL}}{${SED_ALL}}"
+SED_STAR="\$star{${SED}}"
+
+#
+# Replaces the variables for tex yaml
+# (like "$strong{toto} -> "\textbf{toto}")
+#
+# Params:
+#   - 1: the input file
+#   - 2: the output file
+function replace_variable_for_tex {
+    local lang="\\\\cvlang{\1}"
+    local strong="\\\\textbf{\1}"
+    local emph="\\\\emph{\1}"
+    local link="\\\\cvlink{\1}{\2}"
+    local star="\\\\cvstar{\1}"
+
+    sed -e "s/${SED_LANG}/${lang}/g" \
+        -e "s/${SED_STRONG}/${strong}/g" \
+        -e "s/${SED_EMPH}/${emph}/g" \
+        -e "s/${SED_LINK}/${link}/g" \
+        -e "s/${SED_STAR}/${star}/g" \
+        $1 > $2
+}
+
+#
+# Replaces the variables for md yaml
+# (like "$strong{toto} -> "**toto**")
+#
+# Params:
+#   - 1: the input file
+#   - 2: the output file
+function replace_variable_for_md {
+    local lang="\1"
+    local strong="**\1**"
+    local emph="*\1*"
+    local link="'[\1](\2)'"
+    local star=""
+
+    sed -e "s/${SED_LANG}/${lang}/g" \
+        -e "s/${SED_STRONG}/${strong}/g" \
+        -e "s/${SED_EMPH}/${emph}/g" \
+        -e "s/${SED_LINK}/${link}/g" \
+        -e "s/${SED_STAR}/${star}/g" \
+        $1 > $2
+}
+
+if [[ "${LANGUAGE}" == "tex" ]]
+then
+    replace_variable_for_tex "${INPUT}" "${OUTPUT}"
+    exit 0
+fi
+
+if [[ "${LANGUAGE}" == "md" ]]
+then
+    replace_variable_for_md "${INPUT}" "${OUTPUT}"
+    exit 0
+fi
+
+echo "Unrecognized language argument '${LANGUAGE}'"
+exit 1
+

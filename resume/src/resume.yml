@@ -1,0 +1,523 @@
+---
+title: "Resume"
+person:
+  name: "Alexandre DuBreuil"
+  title: "Java Developer"
+  location: "Paris, France + Montreal, Canada"
+  telephone: "+33 (0)6 27 71 46 75"
+  mail: "contact@alexandredubreuil.com"
+  website: "alexandredubreuil.com"
+  github: "github.com/dubreuia"
+  twitter: "twitter.com/dubreuia"
+  linkedin: "linkedin.com/in/alexandredubreuil"
+
+summary:
+  show: True
+  title: "Summary"
+  content: |-
+    Java developer with 10 years of experience, as
+    a freelancer, technical lead and architect. Full
+    stack web developer, strong background on software
+    craftsmanship, devops and agile culture,
+    infrastructure automation, and security.
+    Open source maintainer, speaker in conferences,
+    trainer and teacher on $lang{git} and software
+    factory.
+  category:
+    - title: Language
+      content: |-
+        $lang{Java},
+        $lang{Python}, 
+        $lang{Javascript},
+        $lang{SQL}
+    - title: DevOps
+      content: |-
+        $lang{git}, 
+        $lang{Maven}, 
+        $lang{Ansible}, 
+        $lang{Jenkins Pipeline}, 
+        $lang{Docker}
+    - title: Culture
+      content: >-
+        $lang{Linux},
+        $lang{DevOps},
+        $lang{Continuous delivery}
+    - title: Security
+      content: |-
+        $lang{Threat modeling}, 
+        $lang{Hashicorp Vault}
+    - title: Methodology
+      content: |-
+        $lang{Kanban}, 
+        $lang{Agile}
+    
+experience:
+  # DuBreuil Consulting
+  - show: True
+    single: True
+    title: Freelance Software Developer
+    date: December 2018 - today
+    duration: 6 months
+    company: DuBreuil Consulting (self-employed)
+    location: Paris, France
+    content: |-
+      Freelance developer on full stack web
+      development, software architecture, infrastructure
+      automation, devops tooling, security solutions
+      and artificial intelligence.
+
+  # LesFurets
+  - show: True
+    title: Software Architect
+    date: June 2016 - October 2018
+    duration: 2.5 years
+    company: LesFurets.com
+    location: Paris, France
+    content: |-
+      Software Architect on a 500,000 lines 
+      web application, working on full stack
+      refactoring, domain driven design,
+      infrastructure automation, software factory,
+      continuous delivery and devops tooling.
+    description:
+      - |-
+        Refactoring of the legacy insurance
+        product domain model code and the insurance
+        validation rules in $lang{Java}.
+      - |-
+        Modernizing of the infrastructure
+        automation with $lang{Ansible} and
+        $lang{Docker}.
+      - |-
+        Security architecture on secrets
+        management with $lang{Hashicorp Vault}.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java},
+          $lang{Docker},
+          $lang{Ansible},
+          $lang{Hashicorp Vault}
+      - title: Culture
+        content: >-
+          $lang{Domain Driven Design},
+          $lang{DevOps}
+
+  # LesFurets
+  - show: True
+    title: Technical Lead
+    date: January 2014 - June 2016
+    duration: 2.5 years
+    company: LesFurets.com
+    location: Paris, France
+    content: |-
+      Technical leader of an Agile team of 5
+      developers responsible for the 60 web services
+      communicating with the insurers, providing
+      agile management, mentoring, architecture
+      design, software development and software
+      craftsmanship.
+    description:
+      - |-
+        Team management on the Kanban methodology,
+        with visual management, daily stand ups, weekly
+        One-on-One with team members.
+      - |-
+        Team mentoring on code review and code
+        quality, as well as pair programming.
+      - >-
+        Development and architecture of frontend
+        and backend services in $lang{Java}.
+      - >-
+        Development of $lang{REST} and $lang{WSDL}
+        web services.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java},
+          $lang{Maven},
+          $lang{REST},
+          $lang{WSDL}
+      - title: Culture
+        content: >-
+          $lang{Kanban},
+          $lang{Visual management},
+          $lang{Daily stand-ups},
+          $lang{One-on-One}
+
+  # Telecom
+  - show: False
+    title: Research Engineer
+    date: September 2013 - Decembre 2013
+    duration: 4 months
+    company: University Telecom ParisTech
+    location: Paris, France
+    content: >-
+      Research engineer on the subject of type safety in
+      web service orchestration with the $lang{Orc}
+      orchestration language.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Orc},
+          $lang{Scala},
+          $lang{WSDL}
+
+  # CGI
+  - show: True
+    title: Java EE Consultant
+    date: January 2010 - August 2013
+    duration: 3.5 years
+    company: CGI France
+    location: Paris, France
+    content: >-
+      Java EE consultant on a large scale
+      front office and back office Java
+      application in the energy business (20,000
+      classes, 3,000,000 lines of code). Development,
+      testing, delivery, training and documentation.
+    description:
+      - >-
+        Development of front-end in $lang{JSP},
+        backend in $lang{Java} and data layer in
+        $lang{SQL}.
+      - >-
+        Development of multi-threaded algorithms,
+        handling large datasets (1,000+ curves, millions
+        of points) efficiently, for the energy market on
+        price optimisation and energy curve manipulation.
+      - >-
+        Development of a $lang{Javascript} curve
+        visualisation component used to visualise energy
+        curves and apply operations on them.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java EE},
+          $lang{JSP},
+          $lang{Maven},
+          $lang{SQL},
+          $lang{Javascript},
+          $lang{jQuery},
+          $lang{jQPlot}
+
+  # CHUM (intern)
+  - show: False
+    title: Java Developer (intern)
+    date: May 2009 - August 2009
+    duration: 4 months
+    company: University of Montreal Hospital (CHUM)
+    location: Montreal, Quebec
+    content: >-
+      Java developer for a client server patient
+      diagnosis application, $strong{SPR}. Database
+      design, REST API design, development and server
+      deployment.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java},
+          $lang{GWT},
+          $lang{REST},
+          $lang{Perl},
+          $lang{Catalyst},
+          $lang{Eclipse},
+          $lang{Bash},
+          $lang{Vim},
+          $lang{UNIX}
+
+  # CGI (intern)
+  - show: False
+    title: Java Consultant (intern)
+    date: September 2008 - December 2008
+    duration: 4 months
+    company: CGI Montreal
+    location: Montreal, Quebec
+    content: >-
+      Java developer for an internal project tracking
+      application, $strong{Radar}, on Hibernate and
+      JBoss Seam.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java EE},
+          $lang{Hibernate},
+          $lang{JBoss Seam},
+          $lang{Eclipse},
+          $lang{Bash},
+          $lang{Vim},
+          $lang{Windows}
+
+conference:
+  # vault
+  - show: True
+    title: $link{Hashicorp Vault and Continuous Delivery}{alexandredubreuil.com/conferences/secrets-with-hashicorp-vault}
+    date: April 2019 - June 2019
+    duration: 3 conferences
+    content: |-
+      Conference on securing your
+      application secrets with infrastructure
+      automation, continuous delivery and
+      $lang{Hashicorp Vault}.
+    description:
+      - 2019/06/12 -- Open R&Day @ Paris, France
+      - 2019/04/25 -- JUG @ Nantes, France
+      - 2019/04/17 -- Devoxx @ Paris, France
+    category:
+      - title: Tags
+        content: >-
+          $lang{Hashicorp Vault},
+          $lang{Continuous Delivery},
+          $lang{DevOps},
+          $lang{Security}
+
+  # doov
+  - show: True
+    title: $link{Domain Object Oriented Validation (dOOv)}{alexandredubreuil.com/conferences/domain-object-oriented-validation-doov}
+    date: October 2017 - June 2018
+    duration: 5 conferences
+    content: |-
+      Conference our library,
+      $lang{dOOv}, a fluent API for type-safe domain
+      model validation and mapping (see
+      \cvlink{doov.io}{https://doov.io})
+    description:
+      - 2018/06/20 -- Open R&Day @ Paris, France
+      - 2018/06/10 -- JDK.IO @ Copenhagen, Danmark
+      - 2018/05/09 -- BGL META @ London, UK
+      - 2018/01/24 -- Snowcamp @ Grenobles, France
+      - 2017/10/26 -- Softshake @ Geneva, Switzerland
+    category:
+      - title: Tags
+        content: >-
+          $lang{dOOv},
+          $lang{Java},
+          $lang{Domain Driven Design}
+
+  # spark
+  - show: True
+    title: $link{Apache Spark for Java Developers}{https://alexandredubreuil.com/conferences/apache-spark-for-java-developers}
+    date: January 2017 - October 2017
+    duration: 6 conferences
+    content: |-
+      Conference on using $lang{Apache Spark}
+      with $lang{Java}.
+    description:
+      - 2017/10/27 -- Softshake @ Geneva, Switzerland
+      - 2017/06/22 -- Devoxx @ Krakow, Poland
+      - 2017/04/19 -- Breizhcamp @ Rennes, France
+      - 2017/02/09 -- Snowcamp @ Grenoble, France
+      - 2017/01/31 -- BBL Whoz @ Paris, France
+      - 2017/01/24 -- BBL Murex @ Paris, France
+    category:
+      - title: Tags
+        content: >-
+          $lang{Java},
+          $lang{Apache Spark},
+          $lang{Big Data}
+
+  # continuous delivery
+  - show: True
+    title: $link{Continuous Merge with git-octopus}{alexandredubreuil.com/conferences/git-octopus}
+    date: September 2014 - June 2017
+    duration: 7 conferences
+    link: 
+    content: |-
+      Conference on shipping code to production
+      everyday in a feature branching environment with
+      $lang{git-octopus}.
+    description:
+      - 2017/06/14 -- Open R&Day @ Paris, France
+      - 2016/11/07 -- BBL WorkIT @ Paris, France
+      - 2016/11/13 -- JUG @ Marseille, France
+      - 2016/06/29 -- BBL SG @ Paris, France
+      - 2016/01/31 -- JUG @ Tours, France
+      - 2015/12/10 -- BBL Octo @ Paris, France
+      - 2014/11/01 -- AgileTour @ Rennes, France
+    category:
+      - title: Tags
+        content: >-
+          $lang{git},
+          $lang{DevOps},
+          $lang{Continuous delivery}
+
+project:
+  # doov
+  - show: True
+    title: $link{Domain Object Oriented Validation (dOOv)}{https://doov.io/}$star{25}
+    date: September 2017 - today
+    duration: 2.5 years
+    content: |-
+      Maintainer of $lang{dOOv}, a fluent API
+      for type-safe bean validation and mapping.
+    category:
+      - title: Tags
+        content: >-
+          $lang{Java},
+          $lang{Domain Driven Design}
+
+  # intellij save action plugin
+  - show: True
+    title: $link{Intellij Save Action Plugin}{https://github.com/dubreuia/intellij-plugin-save-actions}$star{289}
+    date: January 2015 - today
+    duration: 4 years
+    content: |-
+      Creator and maintainer of an $lang{Intellij}
+      plugin that adds save actions to the IDE.
+    category:
+      - title: Tags
+        content: >-
+          $lang{Java},
+          $lang{Intellij}
+
+  # git octopus
+  - show: True
+    title: $link{Project git-octopus}{https://github.com/lesfurets/git-octopus}$star{171}
+    date: November 2014 - June 2017
+    duration: 3.5 years
+    content: |-
+      Evangelist and committer on $lang{git-octopus},
+      a tool enabling the continuous merge
+      workflow.
+    category:
+      - title: Tags
+        content: >-
+          $lang{git}
+
+  # climat
+  - show: True
+    title: $link{Climat General at Venice Art Bienale}{https://alexandredubreuil.com/projects/climat-general}
+    date: January 2017 - November 2017
+    duration: 1 year
+    content: |-
+      Generative music algorithms and sound design
+      for the Climat General exhibit of the artist
+      Claire Malrieux.
+    category:
+      - title: Tags
+        content: >-
+          $lang{NodeJS},
+          $lang{Ableton Live}
+
+  # ximista
+  - show: False
+    title: $link{Odei / Ximista - Live video generation}{vimeo.com/130523273}
+    date: February 2015 - August 2015
+    duration: 6 months
+    content: |-
+      Development of a video generation software
+      for live musical perfomance, Ximista, which
+      generate images based on structured and
+      unstructured sound data, for the Baleapop
+      festival, Saint-Jean de Luz, France. The project
+      is developped with and for Odei, an electro-jazz
+      improvisation band. The product works in
+      $lang{Touch Designer} and is written in
+      $lang{Python}.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Touch Designer},
+          $lang{Python}
+
+  # atlas du temps present
+  - show: False
+    title: $link{Atlas du temps present}{atlas-du-temps-présent.fr}
+    date: September 2013 - January 2014
+    duration: 3 months
+    content: |-
+      Exhibit at the Exhibit at the Arts
+      Decoratifs Museum in Paris, on the composition of
+      generative random drawings with Photoshop and
+      Javascript. The project was done in collaboration
+      with the artist Claire Malrieux. A website of
+      daily automatically generated drawing is
+      available.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Javascript},
+          $lang{Photoshop}
+
+  # paesine
+  - show: False
+    title: $link{Interactive 3D exhibit}{http://www.behance.net/gallery/PAESINE-TRIPPER/12053619}
+    date: January 2013 - May 2013
+    duration: 4 months
+    content: |-
+      Interactive exhibit at Exposition at the
+      Arts Forains Museum, Enghien-les-Bains, France for
+      the account of the Museum of Arts Forains of
+      Paris, which consists of the exploration of the 3D
+      model of a landscape with an iPad as a controller.
+      The development was done in $lang{Unity} in
+      $lang{CSharp}.
+    category:
+      - title: Technologies
+        content: >-
+          $lang{CSharp},
+          $lang{OSC},
+          $lang{Unity}
+
+education:
+  # upmc
+  - show: True
+    single: True
+    title: Pierre and Marie Curie University (Paris VI)
+    date: September 2009 - January 2010
+    duration: 4 months
+    school: Computer Science Master - International exchange - CREPUQ
+    location: Paris, France
+    content: |-
+      International exchange student from
+      University of Montreal.
+
+  # udm
+  - show: True
+    title: University of Montreal
+    date: September 2007 - January 2011
+    duration: 4 years
+    school: Computer Science Baccalaureate
+    location: Montreal, Quebec
+    content: |-
+      Program with 1 semester of international
+      exchange and 3 internships of 4 months
+    description:
+      - |-
+        CGI Paris internship --
+        $lang{Java} backend development (see
+        experience).
+      - |-
+        CGI Montreal internship --
+        $lang{Java} full stack web development
+        with $lang{Hibernate} for an internal application.
+      - |-
+        CHUM Montreal internship --
+        $lang{Java} full stack web development for an
+        internal application.
+
+  # brebeuf
+  - show: True
+    title: Jean-de-Brebeuf College
+    date: September 2005 - June 2007
+    duration: 2 years
+    school: DEC in science, letters and arts
+    location: Montreal, Quebec
+
+interest:
+  content: Big music geek, listen at $link{alexandredubreuil.com/music}{https://alexandredubreuil.com/music}, also
+  category:
+    - title: Sports
+      content: |-
+        cycling, squash, climbing
+    - title: Geek
+      content: |-
+        mechanical keyboards, gaming
+    - title: Music
+      content: |-
+        modular synthesizer, music production, DJ
+
+---
+
+# vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:
+

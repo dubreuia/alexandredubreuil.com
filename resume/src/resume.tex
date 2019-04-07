@@ -1,0 +1,232 @@
+\documentclass[a4paper]{article}
+
+\usepackage{resume}
+
+\newcommand{\cvname}{$person.name$}
+\newcommand{\cvtitle}{$person.title$}
+\newcommand{\cvlocation}{$person.location$}
+\newcommand{\cvtelephone}{$person.telephone$}
+\newcommand{\cvmail}{$person.mail$}
+\newcommand{\cvwebsite}{$person.website$}
+\newcommand{\cvgithub}{$person.github$}
+\newcommand{\cvtwitter}{$person.twitter$}
+
+\hypersetup{
+  pdftitle={$title$ - \cvname},
+  pdfsubject={$title$ - \cvname},
+  pdfauthor={\cvname},
+  pdfcreator={\cvname},
+  pdfproducer={\cvname},
+}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                  Document                                %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\begin{document}%
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %               Summary                 %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+$if(summary)$
+$if(summary.show)$
+\cvsection{$summary.title$}%
+\begin{cvexperience}%
+  $summary.content$%
+$for(summary.category)$
+
+  \begin{cvexperiencetech}%
+    \cvexperiencetechitem{$summary.category.title$}{$summary.category.content$}%
+  \end{cvexperiencetech}%
+$endfor$
+\end{cvexperience}%
+$endif$
+$endif$
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %              Experience               %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\cvsection{Experience}
+
+$for(experience)$
+$if(experience.show)$
+%%%%%%%%%%%%%%%%%%%%%%%%
+% $experience.title$
+%%%%%%%%%%%%%%%%%%%%%%%%
+\cvexperiencetitle%
+  {$experience.title$}%
+  {$experience.date$}%
+  {$experience.duration$}%
+  {$experience.company$}%
+  {$experience.location$}%
+
+$if(experience.single)$
+\begin{cvexperiencesingle}%
+$else$
+\begin{cvexperience}%
+$endif$
+  $experience.content$%
+$if(experience.description)$
+
+  \begin{cvexperiencedescription}%
+$for(experience.description)$
+    \cvexperiencedescriptionitem{$experience.description$}
+$endfor$
+  \end{cvexperiencedescription}%
+$endif$
+$for(experience.category)$
+
+  \begin{cvexperiencetech}%
+    \cvexperiencetechitem{$experience.category.title$}{$experience.category.content$}%
+  \end{cvexperiencetech}%
+$endfor$
+$if(experience.single)$
+\end{cvexperiencesingle}%
+$else$
+\end{cvexperience}%
+$endif$
+
+$endif$
+$endfor$
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %               Conferences             %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\cvsection{Conferences}
+
+$for(conference)$
+$if(conference.show)$
+%%%%%%%%%%%%%%%%%%%%%%%%
+% $conference.title$
+%%%%%%%%%%%%%%%%%%%%%%%%
+\cvexperiencetitlesmall%
+  {$conference.title$}%
+  {$conference.date$}%
+  {$conference.duration$}%
+
+\begin{cvexperience}%
+  $conference.content$%
+$if(conference.description)$
+
+  \begin{cvexperiencedescription}%
+$for(conference.description)$
+    \cvexperiencedescriptionitem{$conference.description$}
+$endfor$
+  \end{cvexperiencedescription}%
+$endif$
+$for(conference.category)$
+
+  \begin{cvexperiencetech}%
+    \cvexperiencetechitem{$conference.category.title$}{$conference.category.content$}%
+  \end{cvexperiencetech}%
+$endfor$
+\end{cvexperience}%
+
+$endif$
+$endfor$
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %                Projects               %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\cvsection{Projects}
+
+$for(project)$
+$if(project.show)$
+%%%%%%%%%%%%%%%%%%%%%%%%
+% $project.title$
+%%%%%%%%%%%%%%%%%%%%%%%%
+\cvexperiencetitlesmall%
+  {$project.title$}%
+  {$project.date$}%
+  {$project.duration$}%
+
+\begin{cvexperiencesingle}%
+  $project.content$%
+$if(project.description)$
+
+  \begin{cvexperiencedescription}%
+$for(project.description)$
+    \cvexperiencedescriptionitem{$project.description$}
+$endfor$
+  \end{cvexperiencedescription}%
+$endif$
+$for(project.category)$
+  \ %
+  \cvexperiencetechitem{$project.category.title$}{$project.category.content$}%
+$endfor$
+\end{cvexperiencesingle}%
+
+$endif$
+$endfor$
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %               Education               %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\cvsection{Education}
+
+$for(education)$
+$if(education.show)$
+%%%%%%%%%%%%%%%%%%%%%%%%
+% $education.title$
+%%%%%%%%%%%%%%%%%%%%%%%%
+\cvexperiencetitle%
+  {$education.title$}%
+  {$education.date$}%
+  {$education.duration$}%
+  {$education.school$}%
+  {$education.location$}%
+
+$if(education.single)$
+\begin{cvexperiencesingle}%
+$else$
+\begin{cvexperience}%
+$endif$
+  $education.content$%
+$if(education.description)$
+
+  \begin{cvexperiencedescription}%
+$for(education.description)$
+    \cvexperiencedescriptionitem{$education.description$}
+$endfor$
+  \end{cvexperiencedescription}%
+$endif$
+$for(education.category)$
+
+  \begin{cvexperiencetech}%
+    \cvexperiencetechitem{$education.category.title$}{$education.category.content$}%
+  \end{cvexperiencetech}%
+$endfor$
+$if(education.single)$
+\end{cvexperiencesingle}%
+$else$
+\end{cvexperience}%
+$endif$
+
+$endif$
+$endfor$
+
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+                   %                Interests              %
+                   % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+
+\cvsection{Interests}
+
+$interest.content$
+
+\vspace{1ex}
+
+\begin{description}%
+$for(interest.category)$
+  \item[$interest.category.title$] $interest.category.content$
+$endfor$
+\end{description}
+
+\end{document}
+
+% vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:

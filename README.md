@@ -29,5 +29,5 @@ Open-source or closed-source projects I've worked on.
 
 ## Resume
 
-Coming soon
+Web and portable format resume.
 

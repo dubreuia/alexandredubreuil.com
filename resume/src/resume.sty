@@ -1,0 +1,237 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                  Packages                                %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\usepackage[a4paper]{geometry}
+\usepackage[cm]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{keystroke}
+\usepackage[normalem]{ulem}
+\usepackage{ifthen}
+\usepackage{lastpage}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                Configuration                             %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\ttdefault}
+
+% package hyperref configuration (link style)
+\hypersetup{
+    bookmarks=false,
+    pdftoolbar=false,
+    pdfmenubar=false,
+    pdffitwindow=false,
+    pdfstartview={FitH},
+    pdfnewwindow=true,
+    colorlinks=false,
+    allbordercolors={0 0 0},
+    % underline links instead of boxes
+    pdfborderstyle={/S/U/W 1},
+    % color of internal links
+    %linkbordercolor=red,
+    % color of links to bibliography
+    %citebordercolor=green,
+    % color of file links
+    %filebordercolor=magenta,
+    % color of external links
+    urlbordercolor=gray
+}
+
+% package tcolorbox configuration (section backgrounds)
+\tcbset{
+  frame code={}
+  top=3pt,
+  bottom=3pt,
+  arc=0pt,
+  outer arc=0pt,
+}
+
+% package soul configuration (hightlight colors)
+\definecolor{verylightgray}{gray}{0.95}
+\sethlcolor{verylightgray}
+
+% package fancyhdt configuration (headers and footers size)
+\setlength{\headheight}{45pt}
+\renewcommand{\headrulewidth}{5pt}
+\setlength{\headsep}{20pt}
+\setlength{\multicolsep}{0pt}
+\setlength{\columnsep}{0.6cm}
+\setlength{\textheight}{0.92\textheight}
+
+% package enumitem (remove space before and after lists)
+\setlist{nolistsep}
+
+% package fancyhdt configuration (headers and footers content)
+\pagestyle{fancy}
+\lhead{%
+  {\Large%
+  \ifx\cvname\undefined\else{\Huge{\textbf{\cvname}}}\fi%
+  \ifx\cvtitle\undefined\else{\\\Large{\textbf{\cvtitle}}}\fi%
+  \ifx\cvlocation\undefined\else{\\\small\textbf{\textcolor{darkgray}{\cvlocation}}}\fi}%
+}
+\rhead{%
+  \ifx\cvtelephone\undefined\else{\Telefon}\ \ \cvtelephone\fi%
+  \ifx\cvwebsite\undefined\else{\\\faKeyboardO}\ \ \cvlink{\cvwebsite}{\cvwebsite}\fi%
+  \ifx\cvgithub\undefined\else{\\\faGithub}\ \ \cvlink{\cvgithub}{\cvgithub}\fi%
+  \ifx\cvtwitter\undefined\else{\\\faTwitter}\ \ \cvlink{\cvtwitter}{\cvtwitter}\fi%
+  \ifx\cvmail\undefined\else\\{\Letter}\ \ \href{mailto:\cvmail}{\cvmail}\fi%
+  \ifx\cvlinkedin\undefined\else{\\\Printer}\ \ \cvlink{\cvlinkedin}{\cvlinkedin}\fi%
+}
+\lfoot{\texttt{\thepage\ / \pageref*{LastPage}}}
+\cfoot{}
+\rfoot{\ifthenelse{\value{page}=3}{\Esc}{\PgDown}}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                Environment                               %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+%%
+% The experience environment.
+%
+\newenvironment{cvexperience}%
+{%
+    \begin{multicols}{2}%
+    \noindent%
+}%
+{%
+    \end{multicols}%
+}%
+
+%%
+% The experience environment single column.
+%
+\newenvironment{cvexperiencesingle}%
+{%
+    \noindent%
+}%
+{%
+}%
+
+%%
+% Inside the cvexperience, the environment
+% starts a new list of items.
+%
+\newenvironment{cvexperiencedescription}%
+{%
+    \begin{itemize}[leftmargin=1em]%
+}%
+{%
+    \end{itemize}%
+}%
+
+%%
+% Inside the cvexperience, the environment
+% starts a new list of elements with a header.
+%
+\newenvironment{cvexperiencetech}%
+{%
+    \par%
+    \noindent%
+}%
+{%
+    \par%
+}%
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                  Commands                                %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+%%
+% Formats cv section (main section)
+% params:
+%   - 1: the cv section
+%
+\newcommand{\cvsection}[1]{%
+  \vspace{-2em}%
+  \section*{%
+    \begin{tcolorbox}[colback=gray!30, colframe=gray!30, width=\dimexpr1.20\textwidth\relax, boxsep=2pt, left=45pt, right=5pt, enlarge left by=-50pt]%
+      #1%
+    \end{tcolorbox}%
+  }%
+  \vspace{-1em}%
+}%
+
+%%
+% Formats an experience title (secondary section)
+% params:
+%   - 1: the experience title
+%   - 2: the start date and end date
+%   - 3: the length (in years or months)
+%   - 4: the company
+%   - 5: the location
+%
+\newcommand{\cvexperiencetitle}[5]{%
+  \vspace{1ex}%
+  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+    \subsection*{#1\hfill{\small(#2)}\ #3}%
+    \tcblower%
+    \vspace{-1ex}%
+    \subsubsection*{#4 \hfill #5}%
+  \end{tcolorbox}%
+}
+
+%%
+% Formats an experience title (small secondary section)
+% params:
+%   - 1: the experience title
+%   - 2: the start date and end date
+%   - 3: the length (in years or months)
+%
+\newcommand{\cvexperiencetitlesmall}[3]{%
+  \vspace{1ex}%
+  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+    \subsection*{#1\hfill{\small(#2)}\ #3}%
+  \end{tcolorbox}%
+}
+
+%%
+% Inside the cvexperiencedescription environment,
+% adds a new item.
+% params:
+%   - 1: the content of the item
+%
+\newcommand{\cvexperiencedescriptionitem}[1]{\item #1}
+
+%%
+% Inside the cvexperiencetech environment,
+% adds a new item with the subjects highlighted.
+% params:
+%   - 1: the subject of the item
+%   - 2: the content of the item
+%
+\newcommand{\cvexperiencetechitem}[2]{\hl{\emph{#1:}} #2}
+
+%%
+% Formats a link
+% params:
+%   - 1: the text
+%   - 2: the link
+%
+\newcommand{\cvlink}[2]{\href{#2}{#1}}
+
+%%
+% Formats language or technology.
+% params:
+%   - 1: the thing to format
+%
+\newcommand{\cvlang}[1]{\mbox{\textsf{#1}}}
+
+%%
+% Formats a github style star
+% params:
+%   - 1: the thing to format
+%
+\newcommand{\cvstar}[1]{ \faStar #1}
+
