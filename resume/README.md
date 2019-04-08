@@ -1,5 +1,5 @@
 # Resume
 
-- [Web version](resume.md)
-- [PDF version](resume.pdf)
+- [Web version](web)
+- [PDF version](pdf)
 

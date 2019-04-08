@@ -10,7 +10,6 @@ SED_LANG="\$lang{${SED}}"
 SED_STRONG="\$strong{${SED}}"
 SED_EMPH="\$emph{${SED}}"
 SED_LINK="\$link{${SED_ALL}}{${SED_ALL}}"
-SED_STAR="\$star{${SED}}"
 
 #
 # Replaces the variables for tex yaml
@@ -24,13 +23,11 @@ function replace_variable_for_tex {
     local strong="\\\\textbf{\1}"
     local emph="\\\\emph{\1}"
     local link="\\\\cvlink{\1}{\2}"
-    local star="\\\\cvstar{\1}"
 
     sed -e "s/${SED_LANG}/${lang}/g" \
         -e "s/${SED_STRONG}/${strong}/g" \
         -e "s/${SED_EMPH}/${emph}/g" \
         -e "s/${SED_LINK}/${link}/g" \
-        -e "s/${SED_STAR}/${star}/g" \
         $1 > $2
 }
 
@@ -45,14 +42,12 @@ function replace_variable_for_md {
     local lang="\1"
     local strong="**\1**"
     local emph="*\1*"
-    local link="'[\1](\2)'"
-    local star=""
+    local link="[\1](\2)"
 
     sed -e "s/${SED_LANG}/${lang}/g" \
         -e "s/${SED_STRONG}/${strong}/g" \
         -e "s/${SED_EMPH}/${emph}/g" \
         -e "s/${SED_LINK}/${link}/g" \
-        -e "s/${SED_STAR}/${star}/g" \
         $1 > $2
 }
 

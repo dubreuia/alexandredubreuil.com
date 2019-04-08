@@ -73,6 +73,7 @@ experience:
     duration: 2.5 years
     company: LesFurets.com
     location: Paris, France
+    logo: logo-lesfurets.jpg
     content: |-
       Software Architect on a 500,000 lines 
       web application, working on full stack
@@ -110,6 +111,7 @@ experience:
     duration: 2.5 years
     company: LesFurets.com
     location: Paris, France
+    logo: logo-lesfurets.jpg
     content: |-
       Technical leader of an Agile team of 5
       developers responsible for the 60 web services
@@ -170,6 +172,7 @@ experience:
     duration: 3.5 years
     company: CGI France
     location: Paris, France
+    logo: logo-cgi.jpg
     content: >-
       Java EE consultant on a large scale
       front office and back office Java
@@ -255,6 +258,7 @@ conference:
     link: https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault
     date: April 2019 - June 2019
     duration: 3 conferences
+    #logo: logo-vault.jpg
     content: |-
       Conference on securing your
       application secrets with infrastructure
@@ -278,11 +282,12 @@ conference:
     link: https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov
     date: October 2017 - June 2018
     duration: 5 conferences
+    #logo: logo-doov.jpg
     content: |-
       Conference our library,
       $lang{dOOv}, a fluent API for type-safe domain
       model validation and mapping (see
-      \cvlink{doov.io}{https://doov.io})
+      $link{doov.io}{https://doov.io})
     description:
       - 2018/06/20 -- Open R&Day @ Paris, France
       - 2018/06/10 -- JDK.IO @ Copenhagen, Danmark
@@ -302,6 +307,7 @@ conference:
     link: https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers
     date: January 2017 - October 2017
     duration: 6 conferences
+    #logo: logo-spark.jpg
     content: |-
       Conference on using $lang{Apache Spark}
       with $lang{Java}.
@@ -325,6 +331,7 @@ conference:
     link: https://alexandredubreuil.com/conferences/continuous-merge-git-octopus
     date: September 2014 - June 2017
     duration: 7 conferences
+    #logo: logo-git.jpg
     content: |-
       Conference on shipping code to production
       everyday in a feature branching environment with
@@ -347,9 +354,12 @@ conference:
 project:
   # doov
   - show: True
-    title: $link{Domain Object Oriented Validation (dOOv)}{https://doov.io/}$star{25}
+    title: Domain Object Oriented Validation (dOOv)
+    link: https://alexandredubreuil.com/projects/doov
+    star: 25
     date: September 2017 - today
     duration: 2.5 years
+    #logo: logo-doov.jpg
     content: |-
       Maintainer of $lang{dOOv}, a fluent API
       for type-safe bean validation and mapping.
@@ -361,7 +371,9 @@ project:
 
   # intellij save action plugin
   - show: True
-    title: $link{Intellij Save Action Plugin}{https://github.com/dubreuia/intellij-plugin-save-actions}$star{289}
+    title: Intellij Save Action Plugin
+    link: https://alexandredubreuil.com/projects/save-actions-plugin
+    star: 289
     date: January 2015 - today
     duration: 4 years
     content: |-
@@ -375,9 +387,12 @@ project:
 
   # git octopus
   - show: True
-    title: $link{Project git-octopus}{https://github.com/lesfurets/git-octopus}$star{171}
+    title: Project git-octopus
+    link: https://alexandredubreuil.com/projects/git-octopus
+    star: 171
     date: November 2014 - June 2017
     duration: 3.5 years
+    #logo: logo-git.jpg
     content: |-
       Evangelist and committer on $lang{git-octopus},
       a tool enabling the continuous merge
@@ -389,7 +404,8 @@ project:
 
   # climat
   - show: True
-    title: $link{Climat General at Venice Art Bienale}{https://alexandredubreuil.com/projects/climat-general}
+    title: Climat General at Venice Art Bienale
+    link: https://alexandredubreuil.com/projects/climat-general
     date: January 2017 - November 2017
     duration: 1 year
     content: |-
@@ -404,7 +420,8 @@ project:
 
   # ximista
   - show: False
-    title: $link{Odei / Ximista - Live video generation}{vimeo.com/130523273}
+    title: Odei / Ximista - Live video generation
+    link: https://vimeo.com/130523273
     date: February 2015 - August 2015
     duration: 6 months
     content: |-
@@ -425,7 +442,8 @@ project:
 
   # atlas du temps present
   - show: False
-    title: $link{Atlas du temps present}{atlas-du-temps-présent.fr}
+    title: Atlas du temps present
+    link: http://atlas-du-temps-présent.fr
     date: September 2013 - January 2014
     duration: 3 months
     content: |-
@@ -444,7 +462,8 @@ project:
 
   # paesine
   - show: False
-    title: $link{Interactive 3D exhibit}{http://www.behance.net/gallery/PAESINE-TRIPPER/12053619}
+    title: Interactive 3D exhibit
+    link: https://www.behance.net/gallery/PAESINE-TRIPPER/12053619
     date: January 2013 - May 2013
     duration: 4 months
     content: |-
@@ -471,6 +490,7 @@ education:
     duration: 4 months
     school: Computer Science Master - International exchange - CREPUQ
     location: Paris, France
+    #logo: logo-upmc.jpg
     content: |-
       International exchange student from
       University of Montreal.
@@ -482,6 +502,7 @@ education:
     duration: 4 years
     school: Computer Science Baccalaureate
     location: Montreal, Quebec
+    #logo: logo-udm.jpg
     content: |-
       Program with 1 semester of international
       exchange and 3 internships of 4 months
@@ -515,7 +536,7 @@ interest:
         cycling, squash, climbing
     - title: Geek
       content: |-
-        mechanical keyboards, gaming
+        mechanical keyboards, gaming, vim
     - title: Music
       content: |-
         modular synthesizer, music production, DJ

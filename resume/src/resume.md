@@ -1,7 +1,10 @@
-# $title$ - $person.name$ <br> $person.title$
+# $title$ - $person.name$
+## $person.title$
+
+<span class="icon icon-id">[Contact](/contact)</span>
 
 $if(summary.show)$
-## $summary.title$
+### $summary.title$
 
 $summary.content$
 
@@ -10,11 +13,15 @@ $for(summary.category)$
 $endfor$
 $endif$
 
-## Experience
+### Experience
 
 $for(experience)$
 $if(experience.show)$
-### $experience.title$ <br> $experience.duration$ ($experience.date$) <br> $experience.company$ <br> $experience.location$
+#### $experience.title$ <br> $experience.duration$ ($experience.date$) <br> $experience.company$ <br> $experience.location$
+$if(experience.logo)$
+
+![Logo $experience.company$]($experience.logo$)
+$endif$
 
 $experience.content$
 
@@ -29,11 +36,15 @@ $endfor$
 $endif$
 $endfor$
 
-## Conference
+### Conference
 
 $for(conference)$
 $if(conference.show)$
-### $conference.title$ <br> $conference.duration$ ($conference.date$)
+#### [$conference.title$]($conference.link$) <br> $conference.duration$ ($conference.date$)
+$if(conference.logo)$
+
+![Logo $conference.title$]($conference.logo$)
+$endif$
 
 $conference.content$
 
@@ -48,11 +59,15 @@ $endfor$
 $endif$
 $endfor$
 
-## Projects
+### Projects
 
 $for(project)$
 $if(project.show)$
-### $project.title$ <br> $project.duration$ ($project.date$)
+#### [$project.title$ (&#9733;$project.star$)]($project.link$) <br> $project.duration$ ($project.date$)
+$if(project.logo)$
+
+![Logo $project.title$]($project.logo$)
+$endif$
 
 $project.content$
 $for(project.category)$
@@ -63,11 +78,15 @@ $endfor$
 $endif$
 $endfor$
 
-## Education
+### Education
 
 $for(education)$
 $if(education.show)$
-### $education.title$ <br> $education.duration$ ($education.date$) <br> $education.location$
+#### $education.title$ <br> $education.duration$ ($education.date$) <br> $education.location$
+$if(education.logo)$
+
+![Logo $education.title$]($education.logo$)
+$endif$
 
 $education.content$
 
@@ -78,7 +97,7 @@ $endfor$
 $endif$
 $endfor$
 
-## Interests
+### Interests
 
 $interest.content$
 

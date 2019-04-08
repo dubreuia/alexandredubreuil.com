@@ -140,10 +140,11 @@ $if(project.show)$
 %%%%%%%%%%%%%%%%%%%%%%%%
 % $project.title$
 %%%%%%%%%%%%%%%%%%%%%%%%
-\cvexperiencetitlesmall%
-  {$project.title$}%
+\cvexperiencetitlesmalllink%
+  {$project.title$ \cvstar{$project.star$}}%
   {$project.date$}%
   {$project.duration$}%
+  {$project.link$}%
 
 \begin{cvexperiencesingle}%
   $project.content$%

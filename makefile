@@ -12,7 +12,8 @@ resume-md:
 	  mkdir -p build; \
 	  ./vars2yaml md resume.yml build/resume.yml; \
 	  pandoc build/resume.yml -o build/resume.md --template=resume.md;
-	cp resume/src/build/resume.md resume/resume.md
+	mkdir -p resume/web
+	cp resume/src/build/resume.md resume/web/README.md
 
 resume-tex:
 	cd resume/src; \
@@ -21,7 +22,8 @@ resume-tex:
 	  ./vars2yaml tex resume.yml build/resume.yml; \
 	  pandoc build/resume.yml -o build/resume.tex --template=resume.tex; \
 	  pandoc build/resume.yml -o build/resume.pdf --template=resume.tex --pdf-engine=xelatex;
-	cp resume/src/build/resume.pdf resume/resume.pdf
+	mkdir -p resume/pdf
+	cp resume/src/build/resume.pdf resume/pdf/resume-alexandre-dubreuil.pdf
 
 .PHONY: theme
 

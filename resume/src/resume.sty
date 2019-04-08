@@ -16,6 +16,7 @@
 \usepackage{keystroke}
 \usepackage[normalem]{ulem}
 \usepackage{ifthen}
+\usepackage{xifthen}
 \usepackage{lastpage}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
@@ -291,6 +292,6 @@
 % params:
 %   - 1: the thing to format
 %
-\newcommand{\cvstar}[1]{ \faStar #1}
+\newcommand{\cvstar}[1]{\ifthenelse{\isempty{#1}}{}{\small\faStar #1}}
 
 % vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:
