@@ -4,17 +4,7 @@
 
 ## Resources
 
-- [Website](https://doov.io)
-- [Source code](https://github.com/doov-io/doov)
-- [Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov)
-
-## [Conference slides](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html)
-
-<iframe class="slides" src="https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html" frameborder="0"></iframe>
-
-## [Conference video](https://www.youtube-nocookie.com/embed/a0PJ3NuSA_c)
-
-<iframe class="video" src="https://www.youtube-nocookie.com/embed/a0PJ3NuSA_c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<span class="icon icon-website">**[Website](https://doov.io)**</span> - <span class="icon icon-github">**[Source Code](https://github.com/doov-io/doov)**</span> - <span class="icon icon-link">**[Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov)**</span>
 
 ## Abstract
 

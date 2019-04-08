@@ -173,8 +173,8 @@ experience:
     content: >-
       Java EE consultant on a large scale
       front office and back office Java
-      application in the energy business (20,000
-      classes, 3,000,000 lines of code). Development,
+      application in the energy business
+      (3,000,000 lines of code).  Development,
       testing, delivery, training and documentation.
     description:
       - >-
@@ -251,7 +251,8 @@ experience:
 conference:
   # vault
   - show: True
-    title: $link{Hashicorp Vault and Continuous Delivery}{alexandredubreuil.com/conferences/secrets-with-hashicorp-vault}
+    title: Hashicorp Vault and Continuous Delivery
+    link: https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault
     date: April 2019 - June 2019
     duration: 3 conferences
     content: |-
@@ -273,7 +274,8 @@ conference:
 
   # doov
   - show: True
-    title: $link{Domain Object Oriented Validation (dOOv)}{alexandredubreuil.com/conferences/domain-object-oriented-validation-doov}
+    title: Domain Object Oriented Validation (dOOv)
+    link: https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov
     date: October 2017 - June 2018
     duration: 5 conferences
     content: |-
@@ -296,7 +298,8 @@ conference:
 
   # spark
   - show: True
-    title: $link{Apache Spark for Java Developers}{https://alexandredubreuil.com/conferences/apache-spark-for-java-developers}
+    title: Apache Spark for Java Developers
+    link: https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers
     date: January 2017 - October 2017
     duration: 6 conferences
     content: |-
@@ -318,10 +321,10 @@ conference:
 
   # continuous delivery
   - show: True
-    title: $link{Continuous Merge with git-octopus}{alexandredubreuil.com/conferences/git-octopus}
+    title: Continuous Merge with git-octopus
+    link: https://alexandredubreuil.com/conferences/continuous-merge-git-octopus
     date: September 2014 - June 2017
     duration: 7 conferences
-    link: 
     content: |-
       Conference on shipping code to production
       everyday in a feature branching environment with

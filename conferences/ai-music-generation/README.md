@@ -42,19 +42,19 @@ Voice generation
 Generative composition. Some pre-trained models are available in magenta.
 
 - image
-   - sketch rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn
-   - style transfert: https://github.com/tensorflow/magenta/tree/master/magenta/models/image_stylization
+   - [sketch rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn)
+   - [style transfert](https://github.com/tensorflow/magenta/tree/master/magenta/models/image_stylization)
 - score
-    - drums rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/drums_rnn
-    - improv rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/improv_rnn
-    - melody rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn
-    - music vae: https://github.com/tensorflow/magenta/tree/master/magenta/models/music_vae
-    - onsets and frames: https://github.com/tensorflow/magenta/tree/master/magenta/models/onsets_frames_transcription
-    - performance rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/performance_rnn
-    - pianoroll rnn-nade: https://github.com/tensorflow/magenta/tree/master/magenta/models/pianoroll_rnn_nade
-    - polyphony rnn: https://github.com/tensorflow/magenta/tree/master/magenta/models/polyphony_rnn
+    - [drums rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/drums_rnn)
+    - [improv rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/improv_rnn)
+    - [melody rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/melody_rnn)
+    - [music vae](https://github.com/tensorflow/magenta/tree/master/magenta/models/music_vae)
+    - [onsets and frames](https://github.com/tensorflow/magenta/tree/master/magenta/models/onsets_frames_transcription)
+    - [performance rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/performance_rnn)
+    - [pianoroll rnn-nade](https://github.com/tensorflow/magenta/tree/master/magenta/models/pianoroll_rnn_nade)
+    - [polyphony rnn](https://github.com/tensorflow/magenta/tree/master/magenta/models/polyphony_rnn)
 - music
-    - nsynth: https://github.com/tensorflow/magenta/tree/master/magenta/models/nsynth
+    - [nsynth](https://github.com/tensorflow/magenta/tree/master/magenta/models/nsynth)
 
 #### Installing Magenta
 
@@ -224,20 +224,20 @@ music_vae_generate --helpfull
 
 ## AI theory
 
-- RNN (https://en.wikipedia.org/wiki/Recurrent_neural_network): A recurrent
+- [RNN](https://en.wikipedia.org/wiki/Recurrent_neural_network): A recurrent
   neural network (RNN) is a class of artificial neural network where
   connections between nodes form a directed graph along a sequence. This allows
   it to exhibit temporal dynamic behavior for a time sequence. Unlike
   feedforward neural networks, RNNs can use their internal state (memory) to
   process sequences of inputs. This makes them applicable to tasks such as
   unsegmented, connected handwriting recognition or speech recognition.
-- LSTM (https://en.wikipedia.org/wiki/Long_short-term_memory): Long short-term
+- [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory): Long short-term
   memory (LSTM) units are units of a recurrent neural network (RNN). An RNN
   composed of LSTM units is often called an LSTM network.  A common LSTM unit
   is composed of a cell, an input gate, an output gate and a forget gate. The
   cell remembers values over arbitrary time intervals and the three gates
   regulate the flow of information into and out of the cell.
-- VAE (http://kvfrans.com/variational-autoencoders-explained/): An autoencoder
+- [VAE](http://kvfrans.com/variational-autoencoders-explained): An autoencoder
   is a type of artificial neural network used to learn efficient data codings
   in an unsupervised manner. The aim of an autoencoder is to learn a
   representation (encoding) for a set of data, typically for dimensionality
@@ -247,14 +247,14 @@ music_vae_generate --helpfull
 
 ## Tools (librairies / midi/ audio)
 
-- Tensorflow: an open source machine learning framework (https://github.com/tensorflow/tensorflow)
-- MuseScore: online library of scores (https://musescore.com/)
-- MuseScore: application for score composition (https://musescore.org/en)
-- TiMidity: midi player (http://timidity.sourceforge.net/)
-- VcRack: software modular (https://vcvrack.com/)
+- [Tensorflow](https://github.com/tensorflow/tensorflow): an open source machine learning framework
+- [MuseScore](https://musescore.com/): online library of scores
+- [MuseScore](https://musescore.org/en): application for score composition
+- [TiMidity](http://timidity.sourceforge.net/): midi player
+- [VcRack](https://vcvrack.com/): software modular
 
 ## State of the art
 
-- google wavenet (https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
-- facebook ai (https://www.youtube.com/watch?v=vdxCqNWTpUs / https://arxiv.org/abs/1805.07848)
+- [Google Wavenet](https://deepmind.com/blog/wavenet-generative-model-raw-audio)
+- [Facebook AI](https://www.youtube.com/watch?v=vdxCqNWTpUs): [paper](https://arxiv.org/abs/1805.07848)
 

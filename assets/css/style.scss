@@ -461,6 +461,34 @@ span.columns-two img:first-child {
 	margin-right: 10px;
 }
 
+span.icon:before {
+    display: inline-block;
+    height: 20px;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+    width: 20px;
+}
+
+span.icon-github:before {
+    content: url("/assets/img/icon-github.svg");
+}
+
+span.icon-link:before {
+    content: url("/assets/img/icon-link.svg");
+}
+
+span.icon-slideshare:before {
+    content: url("/assets/img/icon-slideshare.svg");
+}
+
+span.icon-website:before {
+    content: url("/assets/img/icon-website.svg");
+}
+
+span.icon-youtube:before {
+    content: url("/assets/img/icon-youtube.svg");
+}
+
 /*******************************************************/
 /* BACKGROUND COLOR
 /*******************************************************/

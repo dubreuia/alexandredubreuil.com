@@ -75,23 +75,66 @@
 \pagestyle{fancy}
 \lhead{%
   {\Large%
-  \ifx\cvname\undefined\else{\Huge{\textbf{\cvname}}}\fi%
-  \ifx\cvtitle\undefined\else{\\\Large{\textbf{\cvtitle}}}\fi%
-  \ifx\cvlocation\undefined\else{\\\small\textbf{\textcolor{darkgray}{\cvlocation}}}\fi}%
+  % cvname
+  \ifx\cvname%
+    \undefined%
+  \else%
+    {\Huge{\textbf{\cvname}}}%
+  \fi%
+  % cvtitle
+  \ifx\cvtitle%
+    \undefined%
+  \else%
+    {\\\Large{\textbf{\cvtitle}}}%
+  \fi%
+  % cvlocation
+  \ifx\cvlocation%
+    \undefined%
+  \else%
+    {\\\small\textbf{\textcolor{darkgray}{\cvlocation}}}%
+  \fi}%
 }
 \rhead{%
-  \ifx\cvtelephone\undefined\else{\Telefon}\ \ \cvtelephone\fi%
-  \ifx\cvwebsite\undefined\else{\\\faKeyboardO}\ \ \cvlink{\cvwebsite}{\cvwebsite}\fi%
-  \ifx\cvgithub\undefined\else{\\\faGithub}\ \ \cvlink{\cvgithub}{\cvgithub}\fi%
-  \ifx\cvtwitter\undefined\else{\\\faTwitter}\ \ \cvlink{\cvtwitter}{\cvtwitter}\fi%
-  \ifx\cvmail\undefined\else\\{\Letter}\ \ \href{mailto:\cvmail}{\cvmail}\fi%
-  \ifx\cvlinkedin\undefined\else{\\\Printer}\ \ \cvlink{\cvlinkedin}{\cvlinkedin}\fi%
+  % cvtelephone
+  \ifx\cvtelephone%
+    \undefined%
+  \else%
+    {\Telefon}\ \ \cvtelephone%
+  \fi%
+  % cvgithub
+  \ifx\cvgithub%
+    \undefined%
+  \else%
+    {\\\faGithub}\ \ \cvlink{\cvgithub}{https://\cvgithub}%
+  \fi%
+  % cvtwitter
+  \ifx\cvtwitter%
+    \undefined%
+  \else%
+    {\\\faTwitter}\ \ \cvlink{\cvtwitter}{https://\cvtwitter}%
+  \fi%
+  % cvwebsite
+  \ifx\cvwebsite%
+    \undefined%
+  \else%
+    {\\\faKeyboardO}\ \ \cvlink{\cvwebsite}{https://\cvwebsite}%
+  \fi%
+  % cvemail
+  \ifx\cvmail%
+    \undefined%
+  \else\\%
+    {\Letter}\ \ \href{mailto:\cvmail}{\cvmail}%
+  \fi%
+  % cvlinkedin
+  \ifx\cvlinkedin%
+    \undefined%
+  \else%
+    {\\\Printer}\ \ \cvlink{\cvlinkedin}{https://\cvlinkedin}%
+  \fi%
 }
 \lfoot{\texttt{\thepage\ / \pageref*{LastPage}}}
 \cfoot{}
 \rfoot{\ifthenelse{\value{page}=3}{\Esc}{\PgDown}}
-%\renewcommand{\footrulewidth}{0.4pt}
-
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %                                Environment                               %
@@ -197,6 +240,21 @@
 }
 
 %%
+% Formats an experience title with a link (small secondary section)
+% params:
+%   - 1: the experience title
+%   - 2: the start date and end date
+%   - 3: the length (in years or months)
+%   - 4: the link (need to start with http)
+%
+\newcommand{\cvexperiencetitlesmalllink}[4]{%
+  \vspace{1ex}%
+  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+    \subsection*{\cvlink{#1}{#4}\hfill{\small(#2)}\ #3}%
+  \end{tcolorbox}%
+}
+
+%%
 % Inside the cvexperiencedescription environment,
 % adds a new item.
 % params:
@@ -235,3 +293,4 @@
 %
 \newcommand{\cvstar}[1]{ \faStar #1}
 
+% vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:
