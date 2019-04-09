@@ -1,3 +1,7 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                  Config                                  %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
 \documentclass[a4paper]{article}
 
 \usepackage{resume}
@@ -11,12 +15,23 @@
 \newcommand{\cvgithub}{$person.github$}
 \newcommand{\cvtwitter}{$person.twitter$}
 
+% colors
+\definecolor{primarycolor}{RGB}{$colors.primarycolor.r$, $colors.primarycolor.g$, $colors.primarycolor.b$}
+\definecolor{secondarycolor}{RGB}{$colors.secondarycolor.r$, $colors.secondarycolor.g$, $colors.secondarycolor.b$}
+\definecolor{lightcolor}{RGB}{$colors.lightcolor.r$, $colors.lightcolor.g$, $colors.lightcolor.b$}
+\definecolor{complementcolor}{RGB}{$colors.complementcolor.r$, $colors.complementcolor.g$, $colors.complementcolor.b$}
+
+% package soul configuration (hightlight colors)
+\sethlcolor{lightcolor}
+
 \hypersetup{
   pdftitle={$title$ - \cvname},
   pdfsubject={$title$ - \cvname},
   pdfauthor={\cvname},
   pdfcreator={\cvname},
   pdfproducer={\cvname},
+  % color of external links
+  urlbordercolor=complementcolor
 }
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %

@@ -10,6 +10,27 @@ person:
   github: "github.com/dubreuia"
   twitter: "twitter.com/dubreuia"
   linkedin: "linkedin.com/in/alexandredubreuil"
+colors:
+  primarycolor: 
+    r: 175
+    g: 175
+    b: 175
+  secondarycolor: 
+    r: 200
+    g: 200
+    b: 200
+  lightcolor: 
+    r: 225
+    g: 225
+    b: 225
+  complementcolor: 
+    r: 25
+    g: 25
+    b: 25
+  linkcolor: 
+    r: 75
+    g: 75
+    b: 75
 
 summary:
   show: True

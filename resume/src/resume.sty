@@ -44,8 +44,6 @@
     %citebordercolor=green,
     % color of file links
     %filebordercolor=magenta,
-    % color of external links
-    urlbordercolor=gray
 }
 
 % package tcolorbox configuration (section backgrounds)
@@ -57,13 +55,11 @@
   outer arc=0pt,
 }
 
-% package soul configuration (hightlight colors)
-\definecolor{verylightgray}{gray}{0.95}
-\sethlcolor{verylightgray}
-
 % package fancyhdt configuration (headers and footers size)
-\setlength{\headheight}{45pt}
 \renewcommand{\headrulewidth}{5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{complementcolor}\leaders\hrule height \headrulewidth\hfill}}
+\setlength{\headheight}{45pt}
 \setlength{\headsep}{20pt}
 \setlength{\multicolsep}{0pt}
 \setlength{\columnsep}{0.6cm}
@@ -92,7 +88,7 @@
   \ifx\cvlocation%
     \undefined%
   \else%
-    {\\\small\textbf{\textcolor{darkgray}{\cvlocation}}}%
+    {\\\small\textbf{\cvlocation}}%
   \fi}%
 }
 \rhead{%
@@ -200,7 +196,7 @@
 \newcommand{\cvsection}[1]{%
   \vspace{-2em}%
   \section*{%
-    \begin{tcolorbox}[colback=gray!30, colframe=gray!30, width=\dimexpr1.20\textwidth\relax, boxsep=2pt, left=45pt, right=5pt, enlarge left by=-50pt]%
+    \begin{tcolorbox}[colback=primarycolor, colframe=primarycolor, width=\dimexpr1.20\textwidth\relax, boxsep=2pt, left=45pt, right=5pt, enlarge left by=-50pt]%
       #1%
     \end{tcolorbox}%
   }%
@@ -218,7 +214,7 @@
 %
 \newcommand{\cvexperiencetitle}[5]{%
   \vspace{1ex}%
-  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+  \begin{tcolorbox}[colback=secondarycolor, colframe=secondarycolor, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
     \subsection*{#1\hfill{\small(#2)}\ #3}%
     \tcblower%
     \vspace{-1ex}%
@@ -235,7 +231,7 @@
 %
 \newcommand{\cvexperiencetitlesmall}[3]{%
   \vspace{1ex}%
-  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+  \begin{tcolorbox}[colback=secondarycolor, colframe=secondarycolor, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
     \subsection*{#1\hfill{\small(#2)}\ #3}%
   \end{tcolorbox}%
 }
@@ -250,7 +246,7 @@
 %
 \newcommand{\cvexperiencetitlesmalllink}[4]{%
   \vspace{1ex}%
-  \begin{tcolorbox}[colback=gray!15, colframe=gray!15, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
+  \begin{tcolorbox}[colback=secondarycolor, colframe=secondarycolor, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
     \subsection*{\cvlink{#1}{#4}\hfill{\small(#2)}\ #3}%
   \end{tcolorbox}%
 }

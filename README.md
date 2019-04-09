@@ -17,17 +17,20 @@ Articles on music and technology.
 
 ## [Conferences](conferences)
 
-Conferences on software development and software craftsmanship, with slides and video recordings when available. Also some classes I give at Universities (software factory and version control).
+Conferences on domain driven design, infrastructure automation, big data,
+software factory, ai music generation and other subjects.
 
 ## [Music](music)
 
-Electronic music composition, djing and generative music.
+Electronic music composition with modular synthesizer, djing and generative
+music.
 
 ## [Projects](projects)
 
-Open-source or closed-source projects I've worked on.
+Maintainer or commiter on projects like a validation and mapping library,
+an Intellij plugin and an generative music system.
 
-## Resume
+## [Resume](resume/pdf)
 
 Web and portable format resume.
 
