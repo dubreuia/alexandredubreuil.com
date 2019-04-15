@@ -280,185 +280,201 @@ deep-orange-A700 #DD2C00
 /*******************************************************/
 
 html {
-	animation: background 10000s infinite;
-	background-color: #FAFAFA;
-	/* background-image: linear-gradient(to bottom right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
-	/* background-image: radial-gradient(ellipse at top right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
-	color: #212121;
-	font-family: monospace;
-	font-size: 15px;
-	height: 100%;
-	line-height: 24px;
-	overflow-y: scroll;
+    animation: background 10000s infinite;
+    background-color: #FAFAFA;
+    /* background-image: linear-gradient(to bottom right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
+    /* background-image: radial-gradient(ellipse at top right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
+    color: #212121;
+    font-family: monospace;
+    font-size: 15px;
+    height: 100%;
+    line-height: 24px;
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font-weight: 600;
-	line-height: 1.25;
-	margin-bottom: 16px;
-	margin-top: 24px;
-	padding: 0 5px;
-	transition: background 2500ms, color 2500ms;
+    clear: both;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    padding: 0 5px;
+    transition: background 2500ms, color 2500ms;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #0D47A1;
+    color: #0D47A1;
 }
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-	background-color: #B71C1C;
-	color: #FFFFFF;
+    background-color: #B71C1C;
+    color: #FFFFFF;
 }
 
 h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .page-header h1 {
-	background-color: #212121;
-	text-align: right;
-	font-size: 21px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+    background-color: #212121;
+    text-align: right;
+    font-size: 21px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .page-header h1 a {
-	color: white;
+    color: white;
 }
 
 h1 {
-	background-color: #424242;
-	color: #FFFFFF;
-	font-size: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+    background-color: #424242;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 h2 {
-	background-color: #E0E0E0;
-	font-size: 19px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+    background-color: #E0E0E0;
+    font-size: 19px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 h3 {
-	background-color: #EEEEEE;
-	font-size: 18px;
-	padding-top: 3px;
-	padding-bottom: 3px;
+    background-color: #EEEEEE;
+    font-size: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 h4 {
-	background-color: #F5F5F5;
-	font-size: 17px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+    background-color: #F5F5F5;
+    font-size: 17px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 h5 {
-	background-color: #FAFAFA;
-	font-size: 16px;
-	padding-top: 1px;
-	padding-bottom: 1px;
+    background-color: #FAFAFA;
+    font-size: 16px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 h6 {
-	background-color: #FAFAFA;
+    background-color: #FAFAFA;
 }
 
 a {
-	color: #222222;
+    color: #222222;
 }
 
 p {
-	text-align: justify;
+    text-align: justify;
 }
 
 img {
-	box-shadow: 0 0 5px gray;
-	float: left;
-	margin: 0 20px 20px 0;
-	max-width: 100%;
+    box-shadow: 0 0 5px gray;
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 100%;
 }
 
 code.highlighter-rouge {
-	padding: 0.2em 0.4em;
-	margin: 0;
-	font-size: 85%;
-	background-color: rgba(27,31,35,0.05);
-	border-radius: 3px
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px
 }
 
 iframe.star {
-	height: 20px;
-	width: 100px;
+    height: 20px;
+    width: 100px;
 }
 
 iframe.slides {
-	height: 50vw;
-	max-height: 430px;
-	width: 100%;
+    height: 50vw;
+    max-height: 430px;
+    width: 100%;
 }
 
 iframe.video {
-	height: 50vw;
-	max-height: 430px;
-	width: 100%;
+    height: 50vw;
+    max-height: 430px;
+    width: 100%;
 }
 
 blockquote {
-	border: 1px dashed #9E9E9E;
-	color: #414141;
-	padding: 5px 25px;
+    border: 1px dashed #9E9E9E;
+    color: #414141;
+    padding: 5px 25px;
 }
 
 blockquote a {
-	padding: 5px 25px;
+    padding: 0px;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px gray;
+    margin: 5px;
+}
+
+table, th, td {
+    border: 1px solid #9E9E9E;
+}
+
+th, td {
+    padding: 5px;
 }
 
 footer {
-	background-color: white;
-	border: 3px dashed #9E9E9E;
-	color: #333;
-	font-size: 12px;
-	margin: 50px 0 20px 0;
-	padding: 0 5px;
-	text-align: center;
+    background-color: white;
+    border: 3px dashed #9E9E9E;
+    color: #333;
+    font-size: 12px;
+    margin: 50px 0 20px 0;
+    padding: 0 5px;
+    text-align: center;
+    clear: both;
 }
 
 footer a {
-	color: #9E9E9E;
+    color: #9E9E9E;
 }
 
 .page-header,
 .main-content {
-	max-width: 768px;
-	margin-right: auto;
-	margin-left: auto;
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .main-content > p {
-	padding: 0 5px;
+    padding: 0 5px;
 }
 
 .main-content > ul {
-	padding: 0 0 0 20px;
+    padding: 0 0 0 20px;
 }
 
 p.columns-two ~ div.highlighter-rouge,
 span.columns-two img {
-	/* Value 5px is half the margin value between the cols */
-	display: inline-block;
-	margin-right: 0;
-	vertical-align: top;
-	width: calc(50% - 5px)
+    /* Value 5px is half the margin value between the cols */
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: top;
+    width: calc(50% - 5px)
 }
 
 span.columns-two img:first-child {
-	/* Value 10px is the margin value between the cols */
-	/* code blocks have space between they don't need margin */
-	margin-right: 10px;
+    /* Value 10px is the margin value between the cols */
+    /* code blocks have space between they don't need margin */
+    margin-right: 10px;
 }
 
 span.icon:before {
@@ -493,68 +509,72 @@ span.icon-id:before {
     content: url("/assets/img/icon-id.svg");
 }
 
+span.icon-soundcloud:before {
+    content: url("/assets/img/icon-soundcloud.svg");
+}
+
 /*******************************************************/
 /* BACKGROUND COLOR
 /*******************************************************/
 
 @keyframes background {
-	0% {
-		background-color: #FAFAFA;
-	}
-	15% {
-		background-color: #FBE9E7;
-	}
-	20% {
-		background-color: #FFF3E0;
-	}
-	25% {
-		background-color: #FFF8E1;
-	}
-	30% {
-		background-color: #FFFDE7;
-	}
-	35% {
-		background-color: #F9FBE7;
-	}
-	40% {
-		background-color: #F1F8E9;
-	}
-	45% {
-		background-color: #E8F5E9;
-	}
-	50% {
-		background-color: #E0F2F1;
-	}
-	55% {
-		background-color: #E0F7FA;
-	}
-	60% {
-		background-color: #E1F5FE;
-	}
-	65% {
-		background-color: #E3F2FD;
-	}
-	70% {
-		background-color: #E8EAF6;
-	}
-	75% {
-		background-color: #EDE7F6;
-	}
-	80% {
-		background-color: #F3E5F5;
-	}
-	85% {
-		background-color: #FCE4EC;
-	}
-	90% {
-		background-color: #FFEBEE;
-	}
-	95% {
-		background-color: #EFEBE9;
-	}
-	100% {
-		background-color: #FAFAFA;
-	}
+    0% {
+        background-color: #FAFAFA;
+    }
+    15% {
+        background-color: #FBE9E7;
+    }
+    20% {
+        background-color: #FFF3E0;
+    }
+    25% {
+        background-color: #FFF8E1;
+    }
+    30% {
+        background-color: #FFFDE7;
+    }
+    35% {
+        background-color: #F9FBE7;
+    }
+    40% {
+        background-color: #F1F8E9;
+    }
+    45% {
+        background-color: #E8F5E9;
+    }
+    50% {
+        background-color: #E0F2F1;
+    }
+    55% {
+        background-color: #E0F7FA;
+    }
+    60% {
+        background-color: #E1F5FE;
+    }
+    65% {
+        background-color: #E3F2FD;
+    }
+    70% {
+        background-color: #E8EAF6;
+    }
+    75% {
+        background-color: #EDE7F6;
+    }
+    80% {
+        background-color: #F3E5F5;
+    }
+    85% {
+        background-color: #FCE4EC;
+    }
+    90% {
+        background-color: #FFEBEE;
+    }
+    95% {
+        background-color: #EFEBE9;
+    }
+    100% {
+        background-color: #FAFAFA;
+    }
 }
 
 /*******************************************************/
@@ -563,285 +583,285 @@ span.icon-id:before {
 
 
 .highlight table td {
-	padding:5px
+    padding:5px
 }
 
 .highlight table pre {
-	margin:0
+    margin:0
 }
 
 .highlight .cm {
-	color:#999988;
-	font-style:italic
+    color:#999988;
+    font-style:italic
 }
 
 .highlight .cp {
-	color:#999999;
-	font-weight:bold
+    color:#999999;
+    font-weight:bold
 }
 
 .highlight .c1 {
-	color:#999988;
-	font-style:italic
+    color:#999988;
+    font-style:italic
 }
 
 .highlight .cs {
-	color:#999999;
-	font-weight:bold;
-	font-style:italic
+    color:#999999;
+    font-weight:bold;
+    font-style:italic
 }
 
 .highlight .c,.highlight .cd {
-	color:#999988;
-	font-style:italic
+    color:#999988;
+    font-style:italic
 }
 
 .highlight .err {
-	color:#a61717;
-	background-color:#e3d2d2
+    color:#a61717;
+    background-color:#e3d2d2
 }
 
 .highlight .gd {
-	color:#000000;
-	background-color:#ffdddd
+    color:#000000;
+    background-color:#ffdddd
 }
 
 .highlight .ge {
-	color:#000000;
-	font-style:italic
+    color:#000000;
+    font-style:italic
 }
 
 .highlight .gr {
-	color:#aa0000
+    color:#aa0000
 }
 
 .highlight .gh {
-	color:#999999
+    color:#999999
 }
 
 .highlight .gi {
-	color:#000000;
-	background-color:#ddffdd
+    color:#000000;
+    background-color:#ddffdd
 }
 
 .highlight .go {
-	color:#888888
+    color:#888888
 }
 
 .highlight .gp {
-	color:#555555
+    color:#555555
 }
 
 .highlight .gs {
-	font-weight:bold
+    font-weight:bold
 }
 
 .highlight .gu {
-	color:#aaaaaa
+    color:#aaaaaa
 }
 
 .highlight .gt {
-	color:#aa0000
+    color:#aa0000
 }
 
 .highlight .kc {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .kd {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .kn {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .kp {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .kr {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .kt {
-	color:#445588;
-	font-weight:bold
+    color:#445588;
+    font-weight:bold
 }
 
 .highlight .k,.highlight .kv {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .mf {
-	color:#009999
+    color:#009999
 }
 
 .highlight .mh {
-	color:#009999
+    color:#009999
 }
 
 .highlight .il {
-	color:#009999
+    color:#009999
 }
 
 .highlight .mi {
-	color:#009999
+    color:#009999
 }
 
 .highlight .mo {
-	color:#009999
+    color:#009999
 }
 
 .highlight .m,.highlight .mb,.highlight .mx {
-	color:#009999
+    color:#009999
 }
 
 .highlight .sb {
-	color:#d14
+    color:#d14
 }
 
 .highlight .sc {
-	color:#d14
+    color:#d14
 }
 
 .highlight .sd {
-	color:#d14
+    color:#d14
 }
 
 .highlight .s2 {
-	color:#d14
+    color:#d14
 }
 
 .highlight .se {
-	color:#d14
+    color:#d14
 }
 
 .highlight .sh {
-	color:#d14
+    color:#d14
 }
 
 .highlight .si {
-	color:#d14
+    color:#d14
 }
 
 .highlight .sx {
-	color:#d14
+    color:#d14
 }
 
 .highlight .sr {
-	color:#009926
+    color:#009926
 }
 
 .highlight .s1 {
-	color:#d14
+    color:#d14
 }
 
 .highlight .ss {
-	color:#990073
+    color:#990073
 }
 
 .highlight .s {
-	color:#d14
+    color:#d14
 }
 
 .highlight .na {
-	color:#008080
+    color:#008080
 }
 
 .highlight .bp {
-	color:#999999
+    color:#999999
 }
 
 .highlight .nb {
-	color:#0086B3
+    color:#0086B3
 }
 
 .highlight .nc {
-	color:#445588;
-	font-weight:bold
+    color:#445588;
+    font-weight:bold
 }
 
 .highlight .no {
-	color:#008080
+    color:#008080
 }
 
 .highlight .nd {
-	color:#3c5d5d;
-	font-weight:bold
+    color:#3c5d5d;
+    font-weight:bold
 }
 
 .highlight .ni {
-	color:#800080
+    color:#800080
 }
 
 .highlight .ne {
-	color:#990000;
-	font-weight:bold
+    color:#990000;
+    font-weight:bold
 }
 
 .highlight .nf {
-	color:#990000;
-	font-weight:bold
+    color:#990000;
+    font-weight:bold
 }
 
 .highlight .nl {
-	color:#990000;
-	font-weight:bold
+    color:#990000;
+    font-weight:bold
 }
 
 .highlight .nn {
-	color:#555555
+    color:#555555
 }
 
 .highlight .nt {
-	color:#000080
+    color:#000080
 }
 
 .highlight .vc {
-	color:#008080
+    color:#008080
 }
 
 .highlight .vg {
-	color:#008080
+    color:#008080
 }
 
 .highlight .vi {
-	color:#008080
+    color:#008080
 }
 
 .highlight .nv {
-	color:#008080
+    color:#008080
 }
 
 .highlight .ow {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .o {
-	color:#000000;
-	font-weight:bold
+    color:#000000;
+    font-weight:bold
 }
 
 .highlight .w {
-	color:#bbbbbb
+    color:#bbbbbb
 }
 
 .highlight {
-	background-color:#f8f8f8
+    background-color:#f8f8f8
 }
 
 .highlight pre {
-	border: 1px dashed #ccc;
-	overflow: auto;
-	padding: 5px;
+    border: 1px dashed #ccc;
+    overflow: auto;
+    padding: 5px;
 }
 
 /*******************************************************/
@@ -849,39 +869,39 @@ span.icon-id:before {
 /*******************************************************/
 
 @media only screen and (max-width: 768px) {
-	html {
-		font-size: 14px;
-		line-height: 22px;
-	}
+    html {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-	.fullscreen:before {
-		color: #333;
-		content: '(hover image for fullscreen)';
-		display: block;
-		font-size: small;
-		font-weight: bold;
-		text-align: center;
-	}
+    .fullscreen:before {
+        color: #333;
+        content: '(hover image for fullscreen)';
+        display: block;
+        font-size: small;
+        font-weight: bold;
+        text-align: center;
+    }
 
-	.fullscreen:hover {
-		background-color: #333;
-		height: 100%;
-		left: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
+    .fullscreen:hover {
+        background-color: #333;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
-	.fullscreen:hover:before {
-		color: #ccc;
-		content: '(mouse pointer outside of window to exit fullscreen)';
-	}
+    .fullscreen:hover:before {
+        color: #ccc;
+        content: '(mouse pointer outside of window to exit fullscreen)';
+    }
 
-	.fullscreen:hover img {
-		height: 100%;
-		width: 100%;
-	}
+    .fullscreen:hover img {
+        height: 100%;
+        width: 100%;
+    }
 }
 

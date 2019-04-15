@@ -57,3 +57,18 @@ if (result.isFalse()) {
 
 The result will return true or false depending on the result of the predicate, for example `Result#isTrue` means the predicate validated.
 
+Once the predicate AST is instanciated, you can enjoy the commodities, including AST to text.
+
+```java
+System.out.println(rule.readable());
+```
+
+```bash
+rule when 
+    "user age" at today is greater than 18
+        and "account email length" is lesser than "configuration max email size"
+        and "account country" equals "french"
+        and "account phone number" starts with "+33"
+    validate
+```
+

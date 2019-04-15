@@ -11,26 +11,17 @@ person:
   twitter: "twitter.com/dubreuia"
   linkedin: "linkedin.com/in/alexandredubreuil"
 colors:
-  primarycolor: 
-    r: 175
-    g: 175
-    b: 175
-  secondarycolor: 
-    r: 200
-    g: 200
-    b: 200
-  lightcolor: 
-    r: 225
-    g: 225
-    b: 225
-  complementcolor: 
-    r: 25
-    g: 25
-    b: 25
-  linkcolor: 
-    r: 75
-    g: 75
-    b: 75
+  primarycolor:    {r: 200, g: 200, b: 200}
+  secondarycolor:  {r: 220, g: 220, b: 220}
+  lightcolor:      {r: 240, g: 240, b: 240}
+  complementcolor: {r: 40,  g: 40,  b: 40}
+  linkcolor:       {r: 90,  g: 90,  b: 90}
+  #echo "linkcolor:  {r: $( cat /dev/urandom | tr -dc '0-9' | head -c2 ) , g: $( cat /dev/urandom | tr -dc '0-9' | head -c2 ), b: $( cat /dev/urandom | tr -dc '0-9' | head -c2 )}"
+  #primarycolor:    {r: 75 , g: 77, b: 15}
+  #secondarycolor:  {r: 99 , g: 29, b: 67}
+  #lightcolor:  {r: 63 , g: 43, b: 30}
+  #complementcolor:  {r: 32 , g: 94, b: 26}
+  #linkcolor:  {r: 41 , g: 9, b: 38}
 
 summary:
   show: True

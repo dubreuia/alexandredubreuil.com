@@ -12,3 +12,7 @@
 
 **2018/12/29** - This year has been rich in discovery of new sounds. From the alien sounding latest Clark EP to downright creepy Herndon's Godmother, it has been a strange year in music production (and also in pretty much everything else).
 
+## [dOOv revisits Bean Validation benchmark](2018-01-15-doov-revisits-bean-validation-benchmark)
+
+**2018/01/15** - The dOOv library (Domain Object Oriented Validation) takes a different approach to domain model validation than popular validation libraries. It doesn’t implement the Bean Validation specification, but we thought it would be interesting to compare the performance of the different paradigms.
+

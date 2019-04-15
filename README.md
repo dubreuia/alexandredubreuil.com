@@ -28,7 +28,7 @@ music.
 ## [Projects](projects)
 
 Maintainer or commiter on projects like a validation and mapping library,
-an Intellij plugin and an generative music system.
+an Intellij plugin and generetive music algorithms.
 
 ## [Resume](resume/pdf)
 
