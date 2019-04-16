@@ -2,7 +2,7 @@
 
 ## Resources
 
-<span class="icon icon-github">**[Source Code](https://github.com/dubreuia/alexandredubreuil.com/tree/master/conferences/apache-spark-for-java-developers/code/apache-spark)**</span>
+<span class="icon icon-github">[Source Code](https://github.com/dubreuia/alexandredubreuil.com/tree/master/conferences/apache-spark-for-java-developers/code/apache-spark)</span>
 
 ## Conferences
 

@@ -435,8 +435,8 @@ th, td {
 
 footer {
     background-color: white;
-    border: 3px dashed #9E9E9E;
-    color: #333;
+    border: 2px dashed #9E9E9E;
+    color: #666;
     font-size: 12px;
     margin: 50px 0 20px 0;
     padding: 0 5px;
@@ -480,10 +480,14 @@ span.columns-two img:first-child {
 
 span.icon:before {
     display: inline-block;
-    height: 20px;
+    height: 19px;
     margin: 0 5px 0 0;
     vertical-align: middle;
-    width: 20px;
+    width: 19px;
+}
+
+span.icon a {
+    vertical-align: middle;
 }
 
 span.icon-github:before {
@@ -516,6 +520,22 @@ span.icon-soundcloud:before {
 
 span.icon-pdf:before {
     content: url("/assets/img/icon-pdf.svg");
+}
+
+span.icon-mail:before {
+    content: url("/assets/img/icon-mail.svg");
+}
+
+span.icon-twitter:before {
+    content: url("/assets/img/icon-twitter.svg");
+}
+
+span.icon-instagram:before {
+    content: url("/assets/img/icon-instagram.svg");
+}
+
+span.icon-linkedin:before {
+    content: url("/assets/img/icon-linkedin.svg");
 }
 
 /*******************************************************/
@@ -914,6 +934,11 @@ span.icon-pdf:before {
         padding-top: 0px;
         padding-bottom: 0px;
     }
+
+    span.icon:before {
+        height: 18px;
+        width: 18px;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -957,6 +982,15 @@ span.icon-pdf:before {
         padding-top: 0px;
         padding-bottom: 0px;
     }
+
+    span.icon:before {
+        height: 17px;
+        width: 17px;
+    }
+
+    img {
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -999,6 +1033,11 @@ span.icon-pdf:before {
         font-size: 13px;
         padding-top: 0px;
         padding-bottom: 0px;
+    }
+
+    span.icon:before {
+        height: 16px;
+        width: 16px;
     }
 }
 

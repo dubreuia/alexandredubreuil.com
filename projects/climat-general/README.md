@@ -2,7 +2,7 @@
 
 ## Resources
 
-<span class="icon icon-soundcloud">**[Soundcloud](https://soundcloud.com/dubreuia/sets/climat-general)**</span>
+<span class="icon icon-soundcloud">[Soundcloud](https://soundcloud.com/dubreuia/sets/climat-general)</span>
 
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/625151271&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 

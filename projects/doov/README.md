@@ -4,7 +4,7 @@
 
 ## Resources
 
-<span class="icon icon-website">**[Website](https://doov.io)**</span> - <span class="icon icon-github">**[Source Code](https://github.com/doov-io/doov)**</span> - <span class="icon icon-link">**[Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov)**</span>
+<span class="icon icon-website">[Website](https://doov.io)</span> - <span class="icon icon-github">[Source Code](https://github.com/doov-io/doov)</span> - <span class="icon icon-link">[Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov)</span>
 
 ## Abstract
 

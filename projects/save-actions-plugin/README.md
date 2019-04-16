@@ -4,7 +4,7 @@
 
 ## Resources
 
-<span class="icon icon-github">**[Source Code](https://github.com/dubreuia/intellij-plugin-save-actions)**</span>
+<span class="icon icon-github">[Source Code](https://github.com/dubreuia/intellij-plugin-save-actions)</span>
 
 ## Abstract
 

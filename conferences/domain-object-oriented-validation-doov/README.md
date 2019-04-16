@@ -2,7 +2,7 @@
 
 ## Resources
 
-<span class="icon icon-website">**[Website](https://doov.io)**</span> 
+<span class="icon icon-website">[Website](https://doov.io)</span> 
 
 ## Conferences
 

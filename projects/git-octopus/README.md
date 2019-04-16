@@ -4,7 +4,7 @@
 
 ## Resources
 
-<span class="icon icon-github">**[Source Code](https://github.com/lesfurets/git-octopus)**</span> - <span class="icon icon-link">**[Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus)**</span>
+<span class="icon icon-github">[Source Code](https://github.com/lesfurets/git-octopus)</span> - <span class="icon icon-link">[Conferences](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus)</span>
 
 ## Abstract
 

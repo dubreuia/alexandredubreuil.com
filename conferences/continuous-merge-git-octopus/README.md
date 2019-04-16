@@ -2,7 +2,7 @@
 
 ## Resources
 
-<span class="icon icon-github">**[Source Code](https://github.com/lesfurets/git-octopus)**</span>
+<span class="icon icon-github">[Source Code](https://github.com/lesfurets/git-octopus)</span>
 
 ## Conferences
 
