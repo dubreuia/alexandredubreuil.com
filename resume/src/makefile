@@ -1,18 +1,18 @@
 all:
-	echo 'Usage: make [tex, md]'
-
-open:
-	vim -O resume-en.yml resume.tex resume.sty
-
-tex:
-	mkdir -p out
-	./vars2yaml tex resume-en.yml out/resume-en.yml
-	pandoc out/resume-en.yml -o out/resume-en.tex --template=resume.tex
-	pandoc out/resume-en.yml -o out/resume-en.pdf --template=resume.tex --pdf-engine=xelatex
-	evince out/resume-en.pdf &
+	echo "No default goal, use one of [md, tex]"
+	exit 1
 
 md:
-	mkdir -p out
-	./vars2yaml md resume-en.yml out/resume-en.yml
-	pandoc out/resume-en.yml -o out/resume-en.md --template=resume.md
+	mkdir -p build; \
+	./vars2yaml md resume.yml build/resume.yml; \
+	pandoc build/resume.yml -o build/resume.md --template=resume.md;
+
+tex:
+	mkdir -p build; \
+	./vars2yaml tex resume.yml build/resume.yml; \
+	pandoc build/resume.yml -o build/resume.tex --template=resume.tex; \
+	pandoc build/resume.yml -o build/resume.pdf --template=resume.tex --pdf-engine=xelatex; \
+	pdftoppm build/resume.pdf build/resume -r 30 -f 1 -singlefile -jpeg -jpegopt quality=90
+
+.PHONY: md tex
 

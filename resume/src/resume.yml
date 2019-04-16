@@ -53,7 +53,8 @@ summary:
       content: >-
         $lang{Linux},
         $lang{DevOps},
-        $lang{Continuous delivery}
+        $lang{Continuous delivery},
+        $lang{TDD}
     - title: Security
       content: |-
         $lang{Threat modeling}, 
@@ -114,7 +115,8 @@ experience:
       - title: Culture
         content: >-
           $lang{Domain Driven Design},
-          $lang{DevOps}
+          $lang{DevOps},
+          $lang{TDD}
 
   # LesFurets
   - show: True
@@ -145,11 +147,15 @@ experience:
       - >-
         Development of $lang{REST} and $lang{WSDL}
         web services.
+      - >-
+        Continuous delivery with $lang{Jenkins}
+        and $lang{Maven}.
     category:
       - title: Technologies
         content: >-
           $lang{Java},
           $lang{Maven},
+          $lang{Jenkins},
           $lang{REST},
           $lang{WSDL}
       - title: Culture
