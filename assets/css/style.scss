@@ -410,6 +410,7 @@ iframe.video {
 blockquote {
     border: 1px dashed #9E9E9E;
     color: #414141;
+    margin: 10px;
     padding: 5px 25px;
 }
 
@@ -876,6 +877,128 @@ span.icon-pdf:before {
     html {
         font-size: 14px;
         line-height: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 19px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    h3 {
+        font-size: 17px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    h4 {
+        font-size: 16px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    h5 {
+        font-size: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 19px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    h2 {
+        font-size: 17px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    h3 {
+        font-size: 16px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    h4 {
+        font-size: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h5 {
+        font-size: 14px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .page-header h1 {
+        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    h1 {
+        font-size: 17px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    h2 {
+        font-size: 16px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    h3 {
+        font-size: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h4 {
+        font-size: 14px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h5 {
+        font-size: 13px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
 
