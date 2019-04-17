@@ -101,20 +101,20 @@ public class ClientPasswordCallback implements CallbackHandler {
 They can also reside in infrastructure code, like this `server.xml` code declaring a new `JDBC` resource for a database connection, also with cleartext username and password.
 
 ```bash
-&lt;?xml version='1.0' encoding='utf-8'?&gt;
-&lt;Server port="1234" shutdown="SHUTDOWN"&gt;
-  &lt;!-- ... --&gt;
-  &lt;GlobalNamingResources&gt;
-    &lt;Resource name="jdbc/b2b2cDatabase" 
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="1234" shutdown="SHUTDOWN">
+  <!-- ... -->
+  <GlobalNamingResources>
+    <Resource name="jdbc/b2b2cDatabase" 
                  username="dev"
                  password="hunter2"
                  url="localhost:2345"
                  type="javax.sql.DataSource"
                  driverClassName="org.mariadb.jdbc.Driver"
-                 jdbcInterceptors="..."/&gt;
-  &lt;/GlobalNamingResources&gt;
-  &lt;!-- ... --&gt;
-&lt;/Server&gt;
+                 jdbcInterceptors="..."/>
+  </GlobalNamingResources>
+  <!-- ... -->
+</Server>
 ```
 
 ### Today's objective
@@ -221,7 +221,7 @@ TPM is a password manager (like Vault) containing our secrets, **but it is never
 - **Easier to migrate:** since the production doesn't depend on it (nobody likes to migrate a live system)
 - **Can be any database system:** any *secure* database system (ever another Vault)
 
-### Storage of key -&gt; values
+### Storage of key -> values
 
 What we need in terms of password manager solution is basically a key -> value storage. The key is the same as the in the code, the value is the secret we're protecting.
 
@@ -426,7 +426,7 @@ We're using <code>vault</code> client in Bash to bootstrap the Vault server. Imp
 
 ```bash
 # Start vault with data and log directory (in the background)
-nohup vault server -config="conf/install.json" &amp;&gt; logfile &amp;
+nohup vault server -config="conf/install.json" &> logfile &
 # (check for startup code omitted)
 
 # Init vault with 1 key, save it and save the root token
@@ -457,7 +457,7 @@ vault token create \
 -wrap-ttl="${TOKEN_TTL}" \
 -format="json" \
 | jq --raw-output .wrap_info.token \
-&gt; wrap
+> wrap
 
 # Write secrets in vault
 # ... (for each key)
@@ -670,22 +670,19 @@ Experience tells us it's easier to migrate the system part by part, so the teams
 
 ### In retrospective: is it a good specific solution?
 
-If we remember our goals and advantages, we wanted: disposable infrastructure, continuous delivery, version migration, reduced attack surface, easy staging, good SLA and performance.
+Remember our goals, mainly: disposable infrastructure, continuous delivery, version migration, reduced operation, performance (speed and network).
 
 ### In retrospective: disadvantages
 
-- It is a fairly complex solution compared to classic Vault (but in 6 months in production, no problem in sight)
-- Requires really good infrastructure automation and delivery (but we already had that)
-- Cannot restart a machine (but redeployment is not a problem if it's fast)
+- **Complex solution**: compared to a single Vault, this is more complicated to implement, but easier to maintain.
+- **Requires strong automation**: we had to port old Bash deployment to Ansible, but it is a healthy approach that benefits the whole system.
+- **Impossible application restart**: this is disposable infrastructure, it is not a problem if redeployment is fast.
 
 ### In retrospective: advantages
 
-- Integrates really well in a continuous deployment and disposable infrastructure environment
-- No additional maintenance for the ops team: no new machine to secure and maintain
-- No problem when OVH networking fails (spoiler: it fails a lot)
-- Easy migrations (spoiler: that's amazing)
-- Excellent performance
-- Easy staging
+- **Continuous deployment** and **disposable infrastructure**: easier to replace than migrate
+- **DevOps**: no additional infrastructure, less work for the operations team, and more freedom for the devs
+- We have no **network failures**, no **migration**, **excellent performance** and **easy staging** for new environment.
 
 ## Conclusion
 
