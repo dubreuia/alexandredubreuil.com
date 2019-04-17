@@ -315,16 +315,28 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     color: #FFFFFF;
 }
 
-.page-header h1 {
-    background-color: #212121;
-    text-align: right;
-    font-size: 21px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+.page-header {
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 0;
 }
 
-.page-header h1 a {
+.page-header a {
+    background-color: #212121;
     color: white;
+    display: block;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+.page-header a pre {
+    font-weight: bold;
+    margin: 0;
+}
+
+.page-header:hover a {
+    transform: scale(1.1);
 }
 
 h1 {
@@ -905,6 +917,10 @@ span.icon-linkedin:before {
         padding-bottom: 5px;
     }
 
+    .page-header a pre {
+        font-size: 0.75em;
+    }
+
     h1 {
         font-size: 19px;
         padding-top: 4px;
@@ -951,6 +967,10 @@ span.icon-linkedin:before {
         font-size: 19px;
         padding-top: 4px;
         padding-bottom: 4px;
+    }
+
+    .page-header a pre {
+        font-size: 0.6em;
     }
 
     h1 {
@@ -1003,6 +1023,10 @@ span.icon-linkedin:before {
         font-size: 18px;
         padding-top: 3px;
         padding-bottom: 3px;
+    }
+
+    .page-header a pre {
+        font-size: 0.5em;
     }
 
     h1 {
