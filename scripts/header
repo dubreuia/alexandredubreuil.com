@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function change_header_colors {
+    # Generate ASCII art alexandredubreuil.com with rainbow colors
+    echo "alexandredubreuil.com" | \
+        figlet -t | \
+        lolcat -f | \
+        ansi2html -n > \
+        /tmp/alexandredubreuil.html
+
+    # Create css file with one class per color
+    cat /tmp/alexandredubreuil.html | \
+        grep -o -e 'color:#\([a-f0-9]*\)' | \
+        sort | \
+        uniq | \
+        sed 's/color:#\([a-f0-9]*\)/.color-\1 { color: #\1; }/g' > \
+        assets/css/header.css
+
+    # Replace style in html to class
+    cat /tmp/alexandredubreuil.html | \
+        sed 's/span style/span class/g' | \
+        sed 's/color:#/color-/g' > \
+        _includes/header.html
+}
+
+change_header_colors
+
