@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# dependency: figlet (apt)
+# dependency: lolcat (apt)
+# dependency: ansi2html (https://github.com/ralphbean/ansi2html)
+
 function change_header_colors {
     # Generate ASCII art alexandredubreuil.com with rainbow colors
     echo "alexandredubreuil.com" | \

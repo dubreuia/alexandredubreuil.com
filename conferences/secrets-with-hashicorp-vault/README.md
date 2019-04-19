@@ -1,8 +1,12 @@
 # Deploying application secrets with Hashicorp Vault
 
+## Article
+
+- [Deploying your application secrets: Hashicorp Vault and continuous delivery](/articles/2019-03-01-hashicorp-vault-and-continuous-delivery)
+
 ## Conferences
 
-- 2019/04/25 - JUG @ Nantes, France - <span class="icon icon-slideshare">**[Slides](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-nantes-jug.html)**</span>
+- 2019/04/25 - JUG @ Nantes, France
 - 2019/04/18 - Devoxx @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-devoxx.html)**</span>
 
 ## Deploying your application secrets: Hashicorp Vault and continuous delivery
