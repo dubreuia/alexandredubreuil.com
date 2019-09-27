@@ -6,6 +6,7 @@
 
 ## Conferences
 
+- 2019/06/12 - Open R&Day @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-openrnday.html)** - <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=Hm_3hEc0mMk)**</span>
 - 2019/04/25 - JUG @ Nantes, France - <span class="icon icon-slideshare">**[Slides](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-nantes-jug.html)**</span>
 - 2019/04/18 - Devoxx @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-devoxx.html)**</span>
 
