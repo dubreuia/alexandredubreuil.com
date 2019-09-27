@@ -7,6 +7,10 @@ Conference speaker since 2014, I've talked about subjects like [Continuous Deliv
 
 ## Main conferences
 
+### [Music Generation with Magenta: Using Machine Learning in Arts](music-generation-with-magenta)
+
+Composing music is hard and the lack of inspiration can be daunting. A lot of elements are required to make it work: musical score, instruments, musicality, feeling, groove, originality. Music generation has been around for ages, even before the digital era, as a tool for musician to create new music and get inspired. What about machine learning? Can we use it as a tool for music generation? With Magenta, a music generation library based on Tensorflow, you can use the power of machine learning to help musical creation. In this presentation, we'll see why specific neural networks, such as RNN, LSTM and VAE, have specific usage in music generation. We'll then live code a small music generation application using Magenta. Finally, we'll see how to train a model on your own style, used to then generate new rhythms, melodies and audio clips.
+
 ### [Deploying your application secrets with Hashicorp Vault](secrets-with-hashicorp-vault)
 
 Managing application secrets, like database credentials, passphrases, salts and private keys, is hard. The availability of those elements are critical to the application, yet they need to be properly secured to reduce the attack surface on your system. Most secret management systems, like Hashicorp Vault, are used as a centralized database, but it creates a single point of failure and it requires extra care in hardening the security of that system. How about deploying your secrets, in Hashicorp Vault, alongside your application? By leveraging your build infrastructure, you can deploy a copy of your secrets, in a Vault that is secured using a one-time token, accessible only by your application. In this presentation, we'll show a continuous delivery pipeline that enables that approach, talk about the implications of handling secrets in your build infrastructure, and use threat modeling to verify the security of the deployed Vault.
