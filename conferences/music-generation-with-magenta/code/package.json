@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "socket.io-client": "^2.2.0"
+  }
+}

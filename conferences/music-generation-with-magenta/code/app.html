@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Music Generation with Magenta - Live Demo</title>
+  <script src="/static/js/jquery/jquery.js"></script>
+  <script src="/static/js/socket.io/socket.io.js"></script>
+  <script>
+      $(function () {
+          const socket = io('http://127.0.0.1:5000');
+          socket.on('connect', function () {
+              console.log("Connected");
+          });
+          socket.on('disconnect', function () {
+              console.log("Disconnected");
+          });
+
+          $(".button").click(function (e) {
+              e.preventDefault();
+
+              const message = $(this).data("message");
+              const data = {};
+
+              if (message === "model") {
+                  data["model"] = $(this).data("model");
+                  data["value"] = $(this).data("value");
+              }
+
+              socket.emit(message, data);
+          });
+      });
+  </script>
+  <style>
+    body {
+      font-family: monospace;
+    }
+
+    .label {
+      display: inline-block;
+      font-weight: bold;
+      width: 100px;
+      vertical-align: top;
+    }
+
+    .button {
+      width: 175px;
+    }
+
+    iframe {
+      width: 510px;
+      height: 220px;
+      border: none;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+<h1>Music Generation with Magenta - Live Demo</h1>
+<h2>Using Machine Learning in Arts</h2>
+<!-- MODEL MELODY -->
+<div>
+  <span class="label">melody model</span>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="loop">
+    loop
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="generate">
+    generate
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="generate_once">
+    generate once
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="generate_4_bars">
+    generate each 4 bars
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="reset_once">
+    reset once
+  </button>
+</div>
+<!-- MODEL DRUMS -->
+<div>
+  <span class="label">drums model</span>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="loop">
+    loop
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="generate">
+    generate
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="generate_once">
+    generate once
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="generate_4_bars">
+    generate each 4 bars
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="reset_once">
+    reset once
+  </button>
+</div>
+<!-- PLOT -->
+<div>
+  <span class="label">drums</span>
+  <iframe src="http://127.0.0.1:5000/output/models/drums"></iframe>
+</div>
+<div>
+  <span class="label">melody</span>
+  <iframe src="http://127.0.0.1:5000/output/models/melody"></iframe>
+</div>
+</body>
+</html>

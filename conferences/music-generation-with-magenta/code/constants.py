@@ -1,0 +1,12 @@
+# TODO
+MAX_DREAM_LENGTH_CHARS: int = 100
+
+# TODO
+MIDI_INPUT_PORT: str = "magenta_in"
+MIDI_OUTPUT_PORT: str = "magenta_out"
+
+WS_CLIENT_HOST: str = "192.168.1.79"
+WS_CLIENT_PORT: int = 9090
+
+WS_SERVER_HOST: str = "127.0.0.1"
+WS_SERVER_PORT: int = 5000

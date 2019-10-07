@@ -1,5 +1,18 @@
+# IDE
+.idea
+
 # Vim
 *.swp
 
 # Build
 build
+
+# Magenta
+*.mag
+
+# Javascript
+node_modules
+package-lock.json
+
+# Python
+__pycache__
