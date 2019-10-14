@@ -1,26 +1,147 @@
 <!doctype html>
 <html lang="en">
-	<head>
-        <meta charset="utf-8">
-        <title>Music Generation with Magenta: Using Machine Learning in Arts</title>
-        <link rel="stylesheet" href="../common/bower_components/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../common/bower_components/reveal.js/css/theme/white.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-                    <h1>Music Generation with Magenta</h1>
-                    <h2>Using Machine Learning in Arts</h2>
-                </section>
-				<section>
-                    <p>Upcoming presentation</p>
-                </section>
-			</div>
-		</div>
-		<script src="../common/bower_components/reveal.js/js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+<head>
+  <meta charset="utf-8">
+  <title>Music Generation with Magenta: Using Machine Learning in Arts</title>
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/reveal.css">
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet"
+        href="./code/css/theme/magenta.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <section>
+        <h1>Music Generation with <strong style="color:#4c1130ff">Magenta</strong></h1>
+        <h2>Using Machine Learning in Arts</h2>
+        <h3>Alexandre DuBreuil</h3>
+        <h4>@dubreuia</h4>
+      </section>
+      <section>
+        <h3>Alexandre DuBreuil</h3>
+        <p>TODO</p>
+      </section>
+      <section>
+        <h3>Works</h3>
+        <p>TODO climat</p>
+        <p>TODO dreambank</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Generative Music</h3>
+        <p>(in 5 minutes)</p>
+      </section>
+      <section>
+        <h4>Why / Examples</h4>
+        <ul>
+          <li>fun: mozart</li>
+          <li>art / inspiration: brian eno airport</li>
+          <li>live system: algorave (orca, tidal)</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Methods</h4>
+        <ul>
+          <li>random (mozart)</li>
+          <li>stochastic (illiac)</li>
+          <li>machine learning (also stochastic)</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Machine learning</h4>
+        <ul>
+          <li>lstm</li>
+          <li>vae</li>
+          <li>wavenet</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Magenta</h4>
+        <ul>
+          <li>drumsrnn, melodyrnn, etc. (lstm, midi)</li>
+          <li>musicvae, groovae (vae, midi)</li>
+          <li>nsynth, gansynth (audio)</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Magenta - Live code</h3>
+        <p>(in 15 minutes)</p>
+      </section>
+      <section>
+        <h4>Goal</h4>
+        <p>Make a generative track</p>
+      </section>
+      <section>
+        <h4>Step 1: nsynth sounds</h4>
+        <ul>
+          <li>sum the encodings</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Step 2: score</h4>
+        <ul>
+          <li>command line</li>
+          <li>arguments, steps, etc.</li>
+          <li>using the midi files</li>
+          <li>transforming to plot</li>
+          <li>generative system</li>
+          <li>loading a sequence generator (bundle)</li>
+          <li>using note sequences (protobuf, pretty midi)</li>
+          <li>looping</li>
+          <li>generating</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Training</h3>
+        <p>TODO 5 minutes</p>
+      </section>
+      <section>
+        <h4>Content</h4>
+        <ul>
+          <li>dataset</li>
+          <li>tensorboard example</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Interaction with the outside world</h3>
+        <p>TODO 5 minutes</p>
+      </section>
+      <section>
+        <h4>Content</h4>
+        <ul>
+          <li>daw / synth</li>
+          <li>magenta studio</li>
+          <li>magenta js</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Closing</h3>
+      </section>
+      <section>
+        <h4>Content</h4>
+        <ul>
+          <li>book</li>
+          <li>dreambank</li>
+        </ul>
+      </section>
+    </section>
+  </div>
+</div>
+<script src="../common/bower_components/reveal.js/js/reveal.js"></script>
+<script>
+    Reveal.initialize();
+</script>
+</body>
 </html>

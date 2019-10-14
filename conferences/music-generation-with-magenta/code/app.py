@@ -12,6 +12,7 @@ from model import SequenceLooper
 from timing import Metronome
 from timing import Timing
 from ws import ActionServer
+import platform
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -30,16 +31,21 @@ def app(unused_argv):
 
   # Init midi ports, keep direct references to output_ports for
   # direct sending without the hub player
-  # input_ports = [port for port in midi_hub.get_available_input_ports()
-  #                if MIDI_INPUT_PORT in port]
-  # output_ports = [port for port in midi_hub.get_available_output_ports()
-  #                 if MIDI_OUTPUT_PORT in port]
-  # if len(input_ports) is not 1 or len(output_ports) is not 1:
-  #   raise Exception(f"Need exactly 1 midi input ({input_ports}) "
-  #                   f"matching {MIDI_INPUT_PORT}"
-  #                   f"and 1 midi output port ({output_ports}) "
-  #                   f"matching {MIDI_OUTPUT_PORT}")
-  hub = midi_hub.MidiHub(MIDI_INPUT_PORT, MIDI_OUTPUT_PORT, None)
+  if platform.system() ==  "Windows":
+    input_ports = [port for port in midi_hub.get_available_input_ports()
+                   if MIDI_INPUT_PORT in port]
+    output_ports = [port for port in midi_hub.get_available_output_ports()
+                    if MIDI_OUTPUT_PORT in port]
+    if len(input_ports) is not 1 or len(output_ports) is not 1:
+      raise Exception(f"Need exactly 1 midi input ({input_ports}) "
+                      f"matching {MIDI_INPUT_PORT}"
+                      f"and 1 midi output port ({output_ports}) "
+                      f"matching {MIDI_OUTPUT_PORT},"
+                      f"you can use LoopMIDI for that")
+  else:
+    input_ports = [MIDI_INPUT_PORT]
+    output_ports = [MIDI_OUTPUT_PORT]
+  hub = midi_hub.MidiHub(input_ports, output_ports, None)
   output_port = hub._outport.ports[0]
 
   # Panic to stop all current messages (note off everywhere)
@@ -53,7 +59,6 @@ def app(unused_argv):
   timing = Timing(qpm)
 
   loopers = []
-
   try:
     # Init and start the loopers, they block on the event
     drum_looper = SequenceLooper(
