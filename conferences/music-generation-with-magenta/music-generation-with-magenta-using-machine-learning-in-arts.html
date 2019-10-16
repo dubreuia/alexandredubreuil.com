@@ -291,19 +291,146 @@ def encode(wav: str,
       <section>
         <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
         <p>
-          See "code/app.py" for the app startup.
+          See "code/sequences.py" and method reset in this repo.
         </p>
-        <ul>
-          <li>command line</li>
-          <li>arguments, steps, etc.</li>
-          <li>using the midi files</li>
-          <li>transforming to plot</li>
-          <li>generative system</li>
-          <li>loading a sequence generator (bundle)</li>
-          <li>using note sequences (protobuf, pretty midi)</li>
-          <li>looping</li>
-          <li>generating</li>
-        </ul>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+def reset(loop_start_time: float,
+          loop_end_time: float,
+          seconds_per_loop: float):
+  sequence = music_pb2.NoteSequence()
+  sequence = loop(sequence,
+                  loop_start_time,
+                  loop_end_time,
+                  seconds_per_loop)
+  return sequence
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <p>
+          See "code/sequences.py" and method loop in this repo.
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+def loop(sequence: NoteSequence,
+         loop_start_time: float,
+         loop_end_time: float,
+         seconds_per_loop: float):
+  sequence = ss.trim_note_sequence(sequence,
+                                   loop_start_time,
+                                   loop_end_time)
+  sequence = ss.shift_sequence_times(sequence,
+                                     seconds_per_loop)
+  return sequence
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <p>
+          See "code/sequences.py" and method generate in this repo.
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+def generate(sequence: NoteSequence,
+             name: str,
+             bundle_filename: str,
+             config_name: str,
+             generation_start_time: float,
+             generation_end_time: float):
+  generator_options = generator_pb2.GeneratorOptions()
+  generator_options.args['temperature'].float_value = 1
+  generator_options.generate_sections.add(
+    start_time=generation_start_time,
+    end_time=generation_end_time)
+  sequence_generator = get_sequence_generator(name,
+                                              bundle_filename,
+                                              config_name)
+  sequence = sequence_generator.generate(sequence,
+                                         generator_options)
+  sequence = ss.trim_note_sequence(sequence,
+                                   generation_start_time,
+                                   generation_end_time)
+  return sequence
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <p>
+          See "code/sequences.py" and method get_sequence_generator
+          in this repo.
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+def get_sequence_generator(name: str,
+                           bundle_filename: str,
+                           config_name: str):
+  if name == "drums":
+    generator = drums_rnn_sequence_generator
+  elif name == "melody":
+    generator = melody_rnn_sequence_generator
+  else:
+    raise Exception(f"Unknown sequence generator {name}")
+
+  mm.notebook_utils.download_bundle(bundle_filename, "bundles")
+  bundle = mm.sequence_generator_bundle.read_bundle_file(
+    os.path.join("bundles", bundle_filename))
+
+  generator_map = generator.get_generator_map()
+  sequence_generator = generator_map[config_name](
+    checkpoint=None, bundle=bundle)
+  sequence_generator.initialize()
+
+  return sequence_generator
+            </code>
+          </pre>
+        </div>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section>
+        <h3>Interaction with the outside world</h3>
+        <p>(in 5 minutes)</p>
+      </section>
+
+      <section>
+        <h4>Python to everything using MIDI</h4>
+        <p>
+          Magenta can send MIDI, which is understood by basically everything
+          that makes sound: DAWs (like Ableton Live), software synthesizers
+          (like fluidsynth), hardware synthesizers (though USB or MIDI cable),
+          etc.
+        </p>
+      </section>
+
+      <section>
+        <h4>Javascript for the win with Magenta.js</h4>
+        <p>
+          TODO
+        </p>
+      </section>
+
+      <section>
+        <h4>Funky stuff with Magenta Studio</h4>
+        <p>
+          TODO
+        </p>
       </section>
 
     </section>
@@ -321,24 +448,6 @@ def encode(wav: str,
         <ul>
           <li>dataset</li>
           <li>tensorboard example</li>
-        </ul>
-      </section>
-
-    </section>
-
-    <section>
-
-      <section>
-        <h3>Interaction with the outside world</h3>
-        <p>(in 5 minutes)</p>
-      </section>
-
-      <section>
-        <h4>Content</h4>
-        <ul>
-          <li>daw / synth</li>
-          <li>magenta studio</li>
-          <li>magenta js</li>
         </ul>
       </section>
 

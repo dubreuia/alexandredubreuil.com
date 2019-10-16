@@ -63,11 +63,11 @@ def app(unused_argv):
     # Init and start the loopers, they block on the event
     drum_looper = SequenceLooper(
       "drums", bar_start_event, action_server, hub,
-      "drum_kit_rnn", "drum_kit", drums_rnn_sequence_generator,
+      "drum_kit_rnn", "drum_kit",
       timing, midi_channel=9, bar_per_loop=2)
     melody_looper = SequenceLooper(
       "melody", bar_start_event, action_server, hub,
-      "attention_rnn", "attention_rnn", melody_rnn_sequence_generator,
+      "attention_rnn", "attention_rnn",
       timing, midi_channel=0, bar_per_loop=4)
 
     loopers.append(drum_looper)
