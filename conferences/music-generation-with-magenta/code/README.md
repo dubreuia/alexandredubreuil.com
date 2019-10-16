@@ -2,7 +2,7 @@
 
 ## Installation
 
-Installing with conda or [miniconda](https://docs.conda.io/en/latest/miniconda.html) is easier.
+Installing with [miniconda](https://docs.conda.io/en/latest/miniconda.html) is easier.
 
 ```bash
 # Create and activate new conda environment
@@ -28,14 +28,14 @@ python app.py
 curl --output "checkpoints/wavenet-ckpt.tar" "http://download.magenta.tensorflow.org/models/nsynth/wavenet-ckpt.tar"
 
 # TODO
-python nsynth.py --checkpoint="checkpoints/wavenet-ckpt/model.ckpt-200000" --wav1="synth/83249__zgump__bass-0205-crop.wav" --wav2="synth/371192__karolist__acoustic-kick-long.wav" --sample_length="80000"
+python nsynth.py --checkpoint="checkpoints/wavenet-ckpt/model.ckpt-200000" --wav1="sounds/83249__zgump__bass-0205-crop.wav" --wav2="sounds/371192__karolist__acoustic-kick-long.wav" --sample_length="80000"
 ```
 
 ## Freesounds
 
 CC0 1.0 Universal (CC0 1.0) Public Domain Dedication:
 
-- The wav file "synth/83249__zgump__bass-0205-crop.wav" is a derived 
-version of https://freesound.org/people/zgump/sounds/83249/
-- The wav file "synth/371192__karolist__acoustic-kick-long.wav" is a derived 
-version of https://freesound.org/people/karolist/sounds/371192/
+- The wav file "sounds/83249__zgump__bass-0205.wav" is from
+https://freesound.org/people/zgump/sounds/83249/
+- The wav file "sounds/371192__karolist__acoustic-kick.wav" is from
+https://freesound.org/people/karolist/sounds/371192/

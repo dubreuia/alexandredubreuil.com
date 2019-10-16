@@ -13,12 +13,12 @@ tf.app.flags.DEFINE_string(
 
 tf.app.flags.DEFINE_string(
   "wav1",
-  "synth/83249__zgump__bass-0205-crop.wav",
+  "sounds/83249__zgump__bass-0205-crop.wav",
   "TODO")
 
 tf.app.flags.DEFINE_string(
   "wav2",
-  "synth/371192__karolist__acoustic-kick-long.wav",
+  "sounds/371192__karolist__acoustic-kick-long.wav",
   "TODO")
 
 tf.app.flags.DEFINE_integer(
