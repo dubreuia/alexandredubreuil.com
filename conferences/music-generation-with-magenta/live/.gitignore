@@ -1,0 +1,8 @@
+# Project info
+*.ico
+
+# Backups
+Backup
+
+# Windows
+Desktop.ini

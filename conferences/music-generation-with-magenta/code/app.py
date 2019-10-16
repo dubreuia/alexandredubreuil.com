@@ -1,3 +1,4 @@
+import platform
 import threading
 import time
 
@@ -12,12 +13,11 @@ from model import SequenceLooper
 from timing import Metronome
 from timing import Timing
 from ws import ActionServer
-import platform
 
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string(
-  "log", "WARN",
+  "log", "DEBUG",
   "The threshold for what messages will be logged. DEBUG, INFO, WARN, ERROR, "
   "or FATAL.")
 
@@ -31,7 +31,7 @@ def app(unused_argv):
 
   # Init midi ports, keep direct references to output_ports for
   # direct sending without the hub player
-  if platform.system() ==  "Windows":
+  if platform.system() == "Windows":
     input_ports = [port for port in midi_hub.get_available_input_ports()
                    if MIDI_INPUT_PORT in port]
     output_ports = [port for port in midi_hub.get_available_output_ports()
@@ -80,7 +80,7 @@ def app(unused_argv):
 
     # Start metronome (wait to make sure everything is started)
     time.sleep(1)
-    metronome = Metronome(output_port, bar_start_event, timing)
+    metronome = Metronome(bar_start_event, timing)
     loopers.append(metronome)
     metronome.start()
 

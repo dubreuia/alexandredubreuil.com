@@ -32,6 +32,7 @@
   <style>
     body {
       font-family: monospace;
+      color: #333;
     }
 
     .label {
@@ -39,57 +40,67 @@
       font-weight: bold;
       width: 100px;
       vertical-align: top;
+      height: 20px;
+      padding: 0 1px;
     }
 
     .button {
-      width: 175px;
+      width: 120px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      border: 1px solid #666;
+      background-color: #fafafa;
     }
 
+    .response {
+      /*font-size: smaller;*/
+    }
+
+    .response-infos {
+      margin-left: 111px;
+    }
+
+    input {
+      height: 12px;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 1px;
+      width: 150px;
+      border: 1px solid #666;
+      background-color: #fafafa;
+    }
+
+    .plot {
+      display: inline-block;
+    }
+
+    .plot span {
+      display: block;
+    }
+
+
     iframe {
-      width: 510px;
+      display: inline-block;
+      width: 508px;
       height: 220px;
       border: none;
       margin: 5px 0;
+    }
+
+    div {
+      background-color: #eee;
+      padding: 1px;
+      margin: 1px;
+      border: 1px dashed #ccc;
     }
   </style>
 </head>
 <body>
 <h1>Music Generation with Magenta - Live Demo</h1>
 <h2>Using Machine Learning in Arts</h2>
-<!-- MODEL MELODY -->
-<div>
-  <span class="label">melody model</span>
-  <button class="button"
-          data-message="model"
-          data-model="melody"
-          data-value="loop">
-    loop
-  </button>
-  <button class="button"
-          data-message="model"
-          data-model="melody"
-          data-value="generate">
-    generate
-  </button>
-  <button class="button"
-          data-message="model"
-          data-model="melody"
-          data-value="generate_once">
-    generate once
-  </button>
-  <button class="button"
-          data-message="model"
-          data-model="melody"
-          data-value="generate_4_bars">
-    generate each 4 bars
-  </button>
-  <button class="button"
-          data-message="model"
-          data-model="melody"
-          data-value="reset_once">
-    reset once
-  </button>
-</div>
+
 <!-- MODEL DRUMS -->
 <div>
   <span class="label">drums model</span>
@@ -114,24 +125,51 @@
   <button class="button"
           data-message="model"
           data-model="drums"
-          data-value="generate_4_bars">
-    generate each 4 bars
-  </button>
-  <button class="button"
-          data-message="model"
-          data-model="drums"
           data-value="reset_once">
     reset once
   </button>
 </div>
-<!-- PLOT -->
+
+<!-- PLOT DRUMS -->
 <div>
   <span class="label">drums</span>
   <iframe src="http://127.0.0.1:5000/output/models/drums"></iframe>
 </div>
+
+<!-- MODEL MELODY -->
+<div>
+  <span class="label">melody model</span>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="loop">
+    loop
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="generate">
+    generate
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="generate_once">
+    generate once
+  </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="reset_once">
+    reset once
+  </button>
+</div>
+
+<!-- PLOT MELODY -->
 <div>
   <span class="label">melody</span>
   <iframe src="http://127.0.0.1:5000/output/models/melody"></iframe>
 </div>
+
 </body>
 </html>

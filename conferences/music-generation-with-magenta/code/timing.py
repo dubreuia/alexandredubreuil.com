@@ -64,12 +64,10 @@ class Timing:
 class Metronome(threading.Thread):
 
   def __init__(self,
-               output_port,
                bar_start_event,
                timing: Timing):
     super(Metronome, self).__init__()
     self._stop_signal = False
-    self._output_port = output_port
     self._bar_start_event = bar_start_event
     self._timing = timing
 

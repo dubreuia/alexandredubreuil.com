@@ -175,11 +175,6 @@ class SequenceLooper(threading.Thread):
       elif action is ActionType.GENERATE_ONCE:
         sequence = generate(sequence)
         self._action_server.context[self.name] = ActionType.LOOP
-      elif action is ActionType.GENERATE_4_BARS:
-        if bar_count % 4 == 0:
-          sequence = generate(sequence)
-        else:
-          sequence = loop(sequence)
       elif action is ActionType.RESET_ONCE:
         sequence = reset(sequence)
         self._action_server.context[self.name] = ActionType.LOOP
