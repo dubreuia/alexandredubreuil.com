@@ -8,18 +8,28 @@
   <link rel="stylesheet"
         href="../common/bower_components/reveal.js/css/theme/white.css">
   <link rel="stylesheet"
-        href="./code/css/theme/magenta.css">
+        href="../common/css/magenta-theme.css">
   <script
       src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 </head>
 <body>
 
 
+<footer>
+  <img class="logo"
+       src="../common/img/magenta-logo-01.png"
+       alt="Magenta logo">
+  <div class="title">
+    <div>Music Generation with Magenta</div>
+    <div class="subtitle">Using Machine Learning in Arts</div>
+  </div>
+  <div class="title right">
+    <div>Alexandre DuBreuil</div>
+    <div class="subtitle">alexandredubreuil.com</div>
+  </div>
+</footer>
 
 <div class="reveal">
-  <footer>
-  <div></div>
-</footer>
 
   <div class="slides">
 
@@ -56,8 +66,16 @@
           Back in the 18th century, a "musical dice game" was popular, where
           the result of a dice throw would choose a segment of a predefined
           score, creating a score when repeated.
-          (https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel)
         </p>
+        <p>
+          <strong style="color:darkmagenta">Random</strong> <strong>generative
+          art:</strong> the outcome of the generated art is partially or
+          completely defined by the chance's outcome
+        </p>
+        <span class="figure-caption"><a
+            href="https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel">
+          en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel
+        </a></span>
       </section>
 
       <section>
@@ -65,9 +83,17 @@
         <p>
           An Algorave is an event where people dance to music generated from
           algorithms, often using live coding techniques, and short for
-          "algorithmic rave."
-          (https://en.wikipedia.org/wiki/Algorave)
+          "algorithmic rave".
         </p>
+        <p>
+          <strong style="color:darkmagenta;">Rule based / algorithmic</strong>
+          <strong>generative art: </strong> the result of such generation is
+          deterministic and defined by a set of rules.
+        </p>
+        <span class="figure-caption"><a
+            href="https://en.wikipedia.org/wiki/Algorave">
+          en.wikipedia.org/wiki/Algorave
+        </a></span>
       </section>
 
       <section>
@@ -75,60 +101,74 @@
         <p>
           The Illiac Suite is one of the first score composed by an electronic
           computer. In one of the fourth movement, Markov Chains are used.
-          (https://en.wikipedia.org/wiki/Illiac_Suite)
+        </p>
+        <p>
+          <strong style="color:darkmagenta;">Stochastic</strong>
+          <strong>generative art: </strong> the artwork generation is
+          probabilistic.
+        </p>
+        <span class="figure-caption"><a
+            href="https://en.wikipedia.org/wiki/Illiac_Suite">
+          en.wikipedia.org/wiki/Illiac_Suite
+        </a></span>
+      </section>
+
+      <section>
+        <h4>What?</h4>
+        <p>
+          "Generative art is an artwork partially or completely
+          created by an autonomous system"
         </p>
       </section>
 
       <section>
-        <h4>Wat?</h4>
-        <p>"Generative art is an artwork partially or completely
-          created by an autonomous system"</p>
-      </section>
-
-      <section>
-        <h4>Types of generative art</h4>
-        <ul>
-          <li>
-            <strong>Random:</strong> the outcome of the generated art is
-            partially or completely defined by the chance's outcome
-            (example: Musikalisches Würfelspiel)
-          </li>
-          <li>
-            <strong>Rule based / algorithmic:</strong> the result of such
-            generation is deterministic and defined by a set of rules
-            (example: Algorave)
-          </li>
-          <li>
-            <strong>Stochastic:</strong> the artwork generation is
-            probabilistic.
-            (example: Illiac Suite)
-          </li>
-        </ul>
+        <h4>Why?</h4>
+        <p>
+          Helps inspiration.
+          Help content creators (artists).
+          Make music without being a musician.
+          Create autonomous generation systems (infinite radios, etc.)
+        </p>
       </section>
 
       <section>
         <h4>And Machine Learning?</h4>
         <p>
           Hand crafting the rules of a painting or the rules of a music style
-          might be a hard task. That's why ML is so interesting in arts:
+          might be a hard task. That's why Machine Learning is so interesting
+          in arts:
           it can learn complex function.
-          In many way, ML generative art is stochastic.
+        </p>
+        <p>
+          In many ways, Machine Learning generative art is stochastic.
         </p>
       </section>
 
-      <section>
+      <section class="align-left">
         <h4>Music generation with RNNs</h4>
         <p>
+          <img width="250"
+               class="figure"
+               src="../common/img/magenta/rnn.png"
+               alt="RNN diagram"/>
           Recurrent Neural Networks (RNNs) solves two important problems for
           music generation: <strong>operating on sequences for the inputs
           and outputs</strong> and <strong>keeping an internal state of
           past events</strong>.
         </p>
+        <span class="figure-caption">
+          <a href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png">
+            www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png</a>
+        </span>
       </section>
 
-      <section>
+      <section class="align-left">
         <h4>Long-term structure with LSTMs</h4>
         <p>
+          <img width="250"
+               class="figure"
+               src="../common/img/magenta/lstm.png"
+               alt="LSTM diagram"/>
           Most RNN uses Long Short-Term Memory (LSTM) cells, because by
           themselves, RNNs are hard to train because of the problems of
           vanishing and exploding gradient, making long-term dependencies
@@ -138,34 +178,64 @@
           By using input, output and forget gates in the cell, LSTMs
           can learn mechanisms to keep or forget information as they go.
         </p>
+        <span class="figure-caption">
+          <a href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png">
+            https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png
+          </a>
+        </span>
       </section>
 
-      <section>
+      <section class="align-left">
         <h4>Latent space interpolation with VAEs</h4>
         <p>
-          Autoencoders AE are networks that reduces the input to a lower
-          dimentionality, in what's called the "latent space", using an encoder.
-          Given an instance of a latent space, a decoder can reproduce the
+          <img width="250"
+               class="figure"
+               src="../common/img/magenta/vae.png"
+               alt="VAE diagram"/>
+          Variational Autoencoders (VAEs) are a pair of networks where an
+          encoder reduces the input to a lower dimentionality (<strong>latent
+          space</strong>), from which a decoder tries to reproduce the
           input.
         </p>
         <p>
-          Variational Autoencoders (VAEs) are a special type of Autoencoders
-          (AEs) where their latent space is continuous and follows a
-          probability distribution, meaning it is possible to sample from it.
+          The latent space is continuous and follows a probability
+          distribution, meaning it is possible to sample from it.
           VAEs are inherently generative models: they can
           <strong>sample</strong> and <strong>interpolate</strong> (move in
           the latent space) between two points.
         </p>
+        <span class="figure-caption">
+          <a href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png">
+            https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png
+          </a>
+        </span>
+      </section>
+
+      <section class="align-left">
+        <h4>Audio generation with WaveNet Autoencoders</h4>
+        <p>
+          <img width="500"
+               class="figure"
+               src="../common/img/magenta/wavenet.png"
+               alt="Wavenet diagram"/>
+          WaveNet is a convolutional neural network (CNN) taking raw signal
+          as an input and synthesizing output audio sample by sample. The
+          WaveNet Autoencoder present in Magenta is a AE network capable of
+          learning its own temporal embedding, resulting in a latent space
+          from which is it possible to <strong>sample</strong> and
+          <strong>mix</strong> elements.
+        </p>
+        <span class="figure-caption">
+          <a href="https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png">
+            magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png
+          </a>
+        </span>
       </section>
 
       <section>
-        <h4>Audio generation with Wavenet</h4>
-        <p>TODO</p>
-      </section>
-
-      <section>
-        <h4>What's in the box of Magenta</h4>
-        <table>
+        <h4>What's in the box?</h4>
+        <p>Interesting networks from Magenta for music generation:</p>
+        <table class="smaller">
           <thead>
           <tr>
             <th>Model</th>
@@ -233,7 +303,15 @@
       </section>
 
       <section>
-        <h4>Step 1: Sound generation with NSynth</h4>
+        <h4>Step 1: Sound generation - NSynth</h4>
+        <ul>
+          <li>TODO use cat + bass sound</li>
+          <li>TODO introduce GANSynth (also in closing, book)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Step 1: Sound generation - NSynth</h4>
         <p>See "code/nsynth.py" and method app in this repo.</p>
         <div class="code-wrapper">
           <pre class="prettyprint">
@@ -255,7 +333,7 @@ def app(unused_argv):
       </section>
 
       <section>
-        <h4>Step 1: Sound generation with NSynth</h4>
+        <h4>Step 1: Sound generation - NSynth</h4>
         <p>See "code/nsynth.py" and method mix in this repo.</p>
         <div class="code-wrapper">
           <pre class="prettyprint">
@@ -277,7 +355,7 @@ def mix(wav1: str,
       </section>
 
       <section>
-        <h4>Step 1: Sound generation with NSynth</h4>
+        <h4>Step 1: Sound generation - NSynth</h4>
         <p>See "code/nsynth.py" and method encode in this repo.</p>
         <div class="code-wrapper">
           <pre class="prettyprint">
@@ -297,7 +375,12 @@ def encode(wav: str,
       </section>
 
       <section>
-        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
+      </section>
+
+
+      <section>
+        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
         <p>
           See "code/sequences.py" and method reset in this repo.
         </p>
@@ -319,7 +402,7 @@ def reset(loop_start_time: float,
       </section>
 
       <section>
-        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
         <p>
           See "code/sequences.py" and method loop in this repo.
         </p>
@@ -342,7 +425,7 @@ def loop(sequence: NoteSequence,
       </section>
 
       <section>
-        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
         <p>
           See "code/sequences.py" and method generate in this repo.
         </p>
@@ -375,7 +458,7 @@ def generate(sequence: NoteSequence,
       </section>
 
       <section>
-        <h4>Step 2: Score generation with DrumsRNN and MelodyRNN</h4>
+        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
         <p>
           See "code/sequences.py" and method get_sequence_generator
           in this repo.
@@ -428,16 +511,51 @@ def get_sequence_generator(name: str,
       </section>
 
       <section>
-        <h4>Javascript for the win with Magenta.js</h4>
+        <h4>Magenta in the browser with Magenta.js (1/2)</h4>
         <p>
-          TODO
+          https://tensorflow.github.io/magenta-js/music/index.html
+          TODO explain
         </p>
       </section>
 
       <section>
-        <h4>Funky stuff with Magenta Studio</h4>
+        <h4>Magenta in the browser with Magenta.js</h4>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-html" data-trim data-noescape>
+&lt;html&gt;
+&lt;head&gt;
+  ...
+  &lt;!-- You need to bring your own Tone.js for the player, and tfjs for the model --&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.21/Tone.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"&gt;&lt;/script&gt;
+  &lt;!-- Core library, since we're going to use a player --&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"&gt;&lt;/script&gt;
+  &lt;!--Model we want to use --&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/music_vae.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;script&gt;
+  // Each bundle exports a global object with the name of the bundle.
+  const player = new core.Player();
+  //...
+  const mvae = new music_vae.MusicVAE('https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small');
+  mvae.initialize().then(() =&gt; {
+    //...
+  });
+&lt;/script&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Magenta in your DAW with Magenta Studio</h4>
         <p>
-          TODO
+          <video autoplay="" loop="" muted="" playsinline="">
+            <source src="../common/video/hero.mp4" type="video/mp4">
+          </video>
+          <span class="figure-caption">https://magenta.tensorflow.org/studio/assets/studio/hero.mp4</span>
         </p>
       </section>
 
@@ -452,10 +570,19 @@ def get_sequence_generator(name: str,
       </section>
 
       <section>
-        <h4>Content</h4>
+        <h4>Dataset</h4>
         <ul>
-          <li>dataset</li>
-          <li>tensorboard example</li>
+          <li>TODO lakhs dataset https://colinraffel.com/projects/lmd/</li>
+          <li>TODO msd dataset http://millionsongdataset.com/</li>
+          <li>TODO nsynth</li>
+          <li>TODO custom</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Tensorboard / tensorflow</h4>
+        <ul>
+          <li>TODO</li>
         </ul>
       </section>
 
@@ -468,10 +595,16 @@ def get_sequence_generator(name: str,
       </section>
 
       <section>
-        <h4>Content</h4>
+        <h4>Dreambank</h4>
         <ul>
-          <li>book</li>
-          <li>dreambank</li>
+          <li>TODO</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Book</h4>
+        <ul>
+          <li>TODO</li>
         </ul>
       </section>
 

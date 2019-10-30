@@ -17,7 +17,7 @@ from ws import ActionServer
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string(
-  "log", "DEBUG",
+  "log", "INFO",
   "The threshold for what messages will be logged. DEBUG, INFO, WARN, ERROR, "
   "or FATAL.")
 

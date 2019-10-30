@@ -66,8 +66,7 @@ class SequenceLooper(threading.Thread):
       # Number of seconds we should be at the beginning of this loop
       expected_start_time = self._timing.get_expected_start_time(bar_count)
       # Number of actual seconds since we started this thread from wall clock,
-      # which is smaller then the expected start time because
-      # TODO I don't know why actually but it works
+      # which is smaller then the expected start time
       # The difference is between: the actual wakeup time and the expected
       # (calculated) start time. By keeping this we can adjust the sequence
       # according to the drift.

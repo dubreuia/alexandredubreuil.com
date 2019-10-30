@@ -55,7 +55,7 @@ class ServerNamespace(socketio.Namespace):
     tf.logging.debug(f"Client {sid} disconnected")
 
   def on_model(self, sid, data):
-    tf.logging.error(f"On model {data} as {sid}")
+    tf.logging.info(f"On model {data} as {sid}")
     model, value = data["model"], data["value"]
     try:
       value = ActionType[value.upper()]
