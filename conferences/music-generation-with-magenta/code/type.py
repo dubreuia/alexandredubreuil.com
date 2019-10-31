@@ -1,9 +1,10 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class ActionType(Enum):
-  LOOP = 0
-  GENERATE = 1
-  GENERATE_ONCE = 2
-  RESET_ONCE = 4
-  STOP = 5
+  LOOP = auto()
+  GENERATE = auto()
+  GENERATE_ONCE = auto()
+  RESET_ONCE = auto()
+  RESET_GENERATE = auto()
+  STOP = auto()

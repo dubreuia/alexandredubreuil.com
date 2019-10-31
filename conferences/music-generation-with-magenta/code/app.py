@@ -55,7 +55,7 @@ def app(unused_argv):
   bar_start_event = threading.Event()
 
   # Common stuff
-  qpm = 120
+  qpm = 80
   timing = Timing(qpm)
 
   loopers = []

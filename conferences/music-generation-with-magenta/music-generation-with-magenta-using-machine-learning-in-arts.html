@@ -46,8 +46,10 @@
 
       <section>
         <h3>Alexandre DuBreuil</h3>
-        <p>Software engineer, conference speaker, open source maintainer and
-          sound designer</p>
+        <p>
+          Software engineer, sound designer, conference speaker and open source
+          maintainer.
+        </p>
         <p>@dubreuia</p>
       </section>
 
@@ -60,7 +62,56 @@
         <p>(in 5 minutes)</p>
       </section>
 
+      <section data-background="../common/img/magenta/ableton-live-02.png"
+               class="background">
+        <h5>
+          Make music without being a musician
+        </h5>
+        <p>
+          Maybe you don't know how to improvise, maybe you need help to
+          compose and that's okay.
+        </p>
+        <span class="figure-caption"><a
+            href="https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg">
+          https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg
+        </a></span>
+      </section>
+
+      <section data-background="../common/img/magenta/ableton-live-02.png"
+               class="background">
+        <h5>
+          "Why you should build silly things" - Monica Dinculescu
+        </h5>
+        <p>
+          It is okay to make mistakes, and generative systems makes
+          tons of them (also humans). It doesn't always sound good.
+        </p>
+        <p>
+          The weird and the strange is good (Brian Eno)
+        </p>
+        <span class="figure-caption"><a
+            href="https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg">
+          https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg
+        </a></span>
+      </section>
+
+      <section data-background="../common/img/magenta/ableton-live-02.png"
+               class="background">
+        <h5>
+          Helping people build generative systems
+        </h5>
+        <p>
+          Art exhibit, generative radio, interactive art.
+        </p>
+        <span class="figure-caption"><a
+            href="https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg">
+          https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg
+        </a></span>
+      </section>
+
+      <!--
       <section>
+        <p>TODO remove (or compress to 1 slide)</p>
         <h4>Example: Musikalisches Würfelspiel</h4>
         <p>
           Back in the 18th century, a "musical dice game" was popular, where
@@ -112,22 +163,13 @@
           en.wikipedia.org/wiki/Illiac_Suite
         </a></span>
       </section>
+      -->
 
       <section>
         <h4>What?</h4>
         <p>
           "Generative art is an artwork partially or completely
-          created by an autonomous system"
-        </p>
-      </section>
-
-      <section>
-        <h4>Why?</h4>
-        <p>
-          Helps inspiration.
-          Help content creators (artists).
-          Make music without being a musician.
-          Create autonomous generation systems (infinite radios, etc.)
+          created by an autonomous system."
         </p>
       </section>
 
@@ -136,11 +178,7 @@
         <p>
           Hand crafting the rules of a painting or the rules of a music style
           might be a hard task. That's why Machine Learning is so interesting
-          in arts:
-          it can learn complex function.
-        </p>
-        <p>
-          In many ways, Machine Learning generative art is stochastic.
+          in arts: it can learn complex functions.
         </p>
       </section>
 
@@ -233,6 +271,37 @@
       </section>
 
       <section>
+        <h4>Representation: MIDI</h4>
+        <p>
+          More interesting to work with MIDI because it shows the underlying
+          structure of music, but doesn't define the actual sound, you need
+          to use instruments (numeric or analogic).
+        </p>
+        <img width=""
+             class="figure"
+             src="../common/img/magenta/midi.png"
+             alt="MIDI diagram"/>
+      </section>
+
+      <section>
+        <h4>Representation: audio</h4>
+        <p>
+          Working with audio is harder more direct: the generation doesn't
+          need the extra step of adding instruments.
+        </p>
+        <img
+            class="figure"
+            src="../common/img/magenta/spectrogram.png"
+            alt="Audio diagram"/>
+        <p></p>
+        <span class="figure-caption">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png">
+            https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png
+          </a>
+        </span>
+      </section>
+
+      <section>
         <h4>What's in the box?</h4>
         <p>Interesting networks from Magenta for music generation:</p>
         <table class="smaller">
@@ -294,20 +363,41 @@
         <p>(in 15 minutes)</p>
       </section>
 
-      <section>
-        <h4>Goal</h4>
+      <section data-background="../common/img/magenta/ableton-live-02.png"
+               class="background">
+        <h5>
+          Step 1: make everything sound like a cat.
+        </h5>
         <p>
-          Lets generate a small track by generating the samples and
-          the underlying score.
+          We'll use NSynth to mix cat sounds with other sounds.
         </p>
+        <span class="figure-caption"><a
+            href="https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg">
+          https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg
+        </a></span>
       </section>
 
       <section>
-        <h4>Step 1: Sound generation - NSynth</h4>
-        <ul>
-          <li>TODO use cat + bass sound</li>
-          <li>TODO introduce GANSynth (also in closing, book)</li>
-        </ul>
+        <h4>Step 1: The sounds</h4>
+        <p>
+          <audio controls>
+            <source src="code/sounds/83249__zgump__bass-0205__crop.wav"
+                    type="audio/wav"/>
+          </audio>
+          <audio controls>
+            <source
+                src="code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
+                type="audio/wav"/>
+          </audio>
+          <audio controls>
+            <source src="code/sounds/412017__skymary__cat-meow-short__crop.wav"
+                    type="audio/wav"/>
+          </audio>
+          <audio controls>
+            <source src="code/sounds/427567__maria-mannone__flute__crop.wav"
+                    type="audio/wav"/>
+          </audio>
+        </p>
       </section>
 
       <section>
@@ -375,9 +465,23 @@ def encode(wav: str,
       </section>
 
       <section>
-        <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
+        <h4>Step 1: TODO gansynth</h4>
       </section>
 
+      <section data-background="../common/img/magenta/ableton-live-02.png"
+               class="background">
+        <h5>
+          Step 2: sequence the cats
+        </h5>
+        <p>
+          We'll use DrumsRNN and MelodyRNN to generate MIDI to play the
+          samples.
+        </p>
+        <span class="figure-caption"><a
+            href="https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg">
+          https://media.pitbullaudio.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/u/suite_3_1.jpeg
+        </a></span>
+      </section>
 
       <section>
         <h4>Step 2: Score generation - DrumsRNN + MelodyRNN</h4>
@@ -489,6 +593,18 @@ def get_sequence_generator(name: str,
             </code>
           </pre>
         </div>
+      </section>
+
+      <section>
+        <h4>Let's take a step back: why have we done this app?</h4>
+        <p>
+          Because it enabled us to explore music together, it serves as a
+          creation tool. Was it perfect? No, we had little happy accidents.
+        </p>
+        <img width="250"
+               class="figure"
+               src="../common/img/magenta/rnn.png"
+               alt="RNN diagram"/>
       </section>
 
     </section>

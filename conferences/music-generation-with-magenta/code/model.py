@@ -131,6 +131,11 @@ class SequenceLooper(threading.Thread):
                                    loop_end_time,
                                    seconds_per_loop)
         self._action_server.context[self.name] = ActionType.LOOP
+      elif action is ActionType.RESET_GENERATE:
+        sequence = sequences.reset(loop_start_time,
+                                   loop_end_time,
+                                   seconds_per_loop)
+        self._action_server.context[self.name] = ActionType.GENERATE_ONCE
       else:
         raise Exception(f"Unknown action {action}")
 

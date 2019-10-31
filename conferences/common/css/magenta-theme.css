@@ -28,12 +28,22 @@
 }
 
 .reveal h4 {
+    font-size: 1.25em;
+}
+
+.reveal h5 {
     font-size: 1.2em;
 }
 
 .reveal .figure-caption {
     font-size: 0.5em;
     color: #666;
+}
+
+.reveal .background h5,
+.reveal .background p,
+.reveal .background .figure-caption a {
+    color: white;
 }
 
 .reveal .figure {
@@ -54,7 +64,6 @@
 .align-right {
     text-align: right;
 }
-
 
 
 /* FOOTER ******************************************************************/

@@ -99,7 +99,7 @@
 </head>
 <body>
 <h1>Music Generation with Magenta - Live Demo</h1>
-<h2>Using Machine Learning in Arts</h2>
+<h2>Using Machine Learning in Arts - &#x1F63A;</h2>
 
 <!-- MODEL DRUMS -->
 <div>
@@ -128,11 +128,16 @@
           data-value="reset_once">
     reset once
   </button>
+  <button class="button"
+          data-message="model"
+          data-model="drums"
+          data-value="reset_generate">
+    reset generate
+  </button>
 </div>
 
 <!-- PLOT DRUMS -->
 <div>
-  <span class="label">drums</span>
   <iframe src="http://127.0.0.1:5000/output/models/drums"></iframe>
 </div>
 
@@ -163,11 +168,16 @@
           data-value="reset_once">
     reset once
   </button>
+  <button class="button"
+          data-message="model"
+          data-model="melody"
+          data-value="reset_generate">
+    reset generate
+  </button>
 </div>
 
 <!-- PLOT MELODY -->
 <div>
-  <span class="label">melody</span>
   <iframe src="http://127.0.0.1:5000/output/models/melody"></iframe>
 </div>
 
