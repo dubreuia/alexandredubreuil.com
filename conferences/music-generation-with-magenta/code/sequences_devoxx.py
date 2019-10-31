@@ -9,10 +9,12 @@ from magenta.protobuf import music_pb2
 from magenta.protobuf.music_pb2 import NoteSequence
 
 
-def reset(loop_start_time: float,
+def reset(sequence: NoteSequence,
+          loop_start_time: float,
           loop_end_time: float,
           seconds_per_loop: float):
-  sequence = music_pb2.NoteSequence()
+  # TODO reset the sequence before looping it
+  sequence = NoteSequence()
   sequence = loop(sequence,
                   loop_start_time,
                   loop_end_time,
@@ -38,6 +40,7 @@ def generate(sequence: NoteSequence,
              config_name: str,
              generation_start_time: float,
              generation_end_time: float):
+  # TODO generate a new sequence using the sequence generator
   generator_options = generator_pb2.GeneratorOptions()
   generator_options.args['temperature'].float_value = 1
   generator_options.generate_sections.add(

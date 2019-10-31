@@ -21,6 +21,9 @@ npm install
 ```bash
 # Start application, then go to http://127.0.0.1:5000/ and click stuff
 python app.py
+
+# TODO start live
+# TODO check cello sounds for the synth like https://www.youtube.com/watch?time_continue=97&v=rU2ieu5o5DQ
 ```
 
 ```bash

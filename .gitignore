@@ -16,3 +16,6 @@ package-lock.json
 
 # Python
 __pycache__
+
+# Ableton Live
+*.asd

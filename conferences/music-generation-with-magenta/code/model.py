@@ -44,7 +44,7 @@ class SequenceLooper(threading.Thread):
     self._output_midi = os.path.join("output", "models", self.name + ".mid")
     self._plotter = Plotter(plot_max_length_bar=16,
                             live_reload=True,
-                            preset=Preset(config="PRESET_SMALL"))
+                            preset_name="PRESET_SMALL")
 
   def stop(self):
     self._stop_signal = True
@@ -127,12 +127,14 @@ class SequenceLooper(threading.Thread):
                                       generation_end_time)
         self._action_server.context[self.name] = ActionType.LOOP
       elif action is ActionType.RESET_ONCE:
-        sequence = sequences.reset(loop_start_time,
+        sequence = sequences.reset(sequence,
+                                   loop_start_time,
                                    loop_end_time,
                                    seconds_per_loop)
         self._action_server.context[self.name] = ActionType.LOOP
       elif action is ActionType.RESET_GENERATE:
-        sequence = sequences.reset(loop_start_time,
+        sequence = sequences.reset(sequence,
+                                   loop_start_time,
                                    loop_end_time,
                                    seconds_per_loop)
         self._action_server.context[self.name] = ActionType.GENERATE_ONCE

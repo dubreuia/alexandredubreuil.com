@@ -9,7 +9,8 @@ from magenta.protobuf import music_pb2
 from magenta.protobuf.music_pb2 import NoteSequence
 
 
-def reset(loop_start_time: float,
+def reset(sequence: NoteSequence,
+          loop_start_time: float,
           loop_end_time: float,
           seconds_per_loop: float):
   sequence = music_pb2.NoteSequence()

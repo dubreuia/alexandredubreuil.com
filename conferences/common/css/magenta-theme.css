@@ -41,9 +41,10 @@
 }
 
 .reveal .background h5,
-.reveal .background p,
-.reveal .background .figure-caption a {
+.reveal .background p {
     color: white;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0px 0px 5px white;*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .reveal .figure {
@@ -55,6 +56,16 @@
     font-size: smaller;
 }
 
+.reveal pre code {
+    padding: 10px;
+}
+
+.reveal p > code {
+    background-color: #333;
+    color: #fff;
+    padding: 0 5px;
+}
+
 /* FORMAT ******************************************************************/
 
 .align-left {
@@ -64,7 +75,6 @@
 .align-right {
     text-align: right;
 }
-
 
 /* FOOTER ******************************************************************/
 

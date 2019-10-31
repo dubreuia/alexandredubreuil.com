@@ -1,9 +1,10 @@
 import os
 import time
+from typing import List
 
 import numpy as np
 import tensorflow as tf
-from magenta.models.nsynth import utils
+from magenta.models.nsynth.utils import load_audio
 from magenta.models.nsynth.wavenet import fastgen
 
 FLAGS = tf.app.flags.FLAGS
@@ -31,45 +32,55 @@ tf.app.flags.DEFINE_string(
 tf.app.flags.DEFINE_integer(
   "sample_length",
   16000,
-  "The sample length of the provided samples (and the resultig generation), "
+  "The sample length of the provided samples (and the resulting generation), "
   "the samples needs to have the same length, defaults to 1 second")
 
-
-def app(unused_argv):
-  encoding_mix = mix(FLAGS.wav1,
-                     FLAGS.wav2,
-                     FLAGS.sample_length,
-                     checkpoint=FLAGS.checkpoint)
-  date_and_time = time.strftime("%Y-%m-%d_%H%M%S")
-  output = os.path.join("output", "synth", f"{date_and_time}.wav")
-  synthesize(encoding_mix, output)
+tf.app.flags.DEFINE_integer(
+  "sample_rate",
+  16000,
+  "The sample rate of the provided samples, defaults to 16000 second")
 
 
-def mix(wav1: str,
-        wav2: str,
-        sample_length: int = 16000,
-        sample_rate: int = 16000,
-        checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000") \
-    -> np.ndarray:
-  encoding1 = encode(wav1, sample_length, sample_rate, checkpoint)
-  encoding2 = encode(wav2, sample_length, sample_rate, checkpoint)
-  # TODO mix the encodings together
-  pass
-
-
-def encode(wav: str,
+def encode(paths: List[str],
            sample_length: int = 16000,
            sample_rate: int = 16000,
            checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000") \
     -> np.ndarray:
-  # TODO load the audio and encode it
-  pass
+  audios = []
+  for path in paths:
+    audio = load_audio(path,
+                       sample_length=sample_length,
+                       sr=sample_rate)
+    audios.append(audio)
+  audios = np.array(audios)
+  encodings = fastgen.encode(audios, checkpoint, sample_length)
+  return encodings
 
 
-def synthesize(encoding_mix: np.ndarray, output: str) -> None:
+def mix(encoding1: np.ndarray,
+        encoding2: np.ndarray) \
+    -> np.ndarray:
+  return (encoding1 + encoding2) / 2.0
+
+
+def synthesize(encoding_mix: np.ndarray,
+               checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000"):
+  os.makedirs(os.path.join("output", "synth"), exist_ok=True)
+  date_and_time = time.strftime("%Y-%m-%d_%H%M%S")
+  output = os.path.join("output", "synth", f"{date_and_time}.wav")
+  encoding_mix = np.array([encoding_mix])
   fastgen.synthesize(encoding_mix,
-                     checkpoint_path=FLAGS.checkpoint,
+                     checkpoint_path=checkpoint,
                      save_paths=[output])
+
+
+def app(unused_argv):
+  encoding1, encoding2 = encode([FLAGS.wav1, FLAGS.wav2],
+                                sample_length=FLAGS.sample_length,
+                                sample_rate=FLAGS.sample_rate,
+                                checkpoint=FLAGS.checkpoint)
+  encoding_mix = mix(encoding1, encoding2)
+  synthesize(encoding_mix, checkpoint=FLAGS.checkpoint)
 
 
 if __name__ == "__main__":
