@@ -40,6 +40,10 @@
     color: #666;
 }
 
+.reveal section.background {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 .reveal .background h5,
 .reveal .background p {
     color: white;
@@ -50,6 +54,27 @@
 .reveal .figure {
     float: left;
     margin: 20px;
+    border: 2px solid #222;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.reveal .sound_clip {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+}
+
+.reveal .sound_clip audio {
+    width: 191px;
+}
+
+.reveal .sound_clip img {
+    width: 200px;
+}
+
+.reveal .no_border {
+    border: none;
+    box-shadow: none;
 }
 
 .reveal .smaller {

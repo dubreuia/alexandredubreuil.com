@@ -24,7 +24,7 @@
     <div class="subtitle">Using Machine Learning in Arts</div>
   </div>
   <div class="title right">
-    <div>Alexandre DuBreuil</div>
+    <div>Alexandre DuBreuil @dubreuia</div>
     <div class="subtitle">alexandredubreuil.com</div>
   </div>
 </footer>
@@ -36,6 +36,10 @@
     <section>
 
       <section>
+        <img width="250px"
+             class="logo figure no_border"
+             src="resources/magenta-logo-02.png"
+             alt="Magenta logo">
         <h1 class="align-left">
           Music Generation with <strong style="color:#4c1130ff">Magenta</strong>
         </h1>
@@ -68,8 +72,8 @@
           Make music without being a musician
         </h5>
         <p>
-          Maybe you don't know how to improvise, maybe you need help to
-          compose and that's okay.
+          Maybe you don't know how to <strong>improvise</strong>, maybe you
+          need help to <strong>compose</strong>.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -83,11 +87,9 @@
           "Why you should build silly things" - Monica Dinculescu
         </h5>
         <p>
-          It is okay to make mistakes, and generative systems makes
-          tons of them (also humans). It doesn't always sound good.
-        </p>
-        <p>
-          The weird and the strange is good (Brian Eno)
+          It is okay to make art without taking ourselves seriously. The
+          important is to <strong>create systems that makes interaction
+          possible</strong>.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -106,6 +108,21 @@
         <p>
           <span class="figure-caption"><a
               href="https://i.pinimg.com/originals/07/3e/86/073e862a13e4bacc7589f0d4eff4b873.jpg">https://i.pinimg.com/originals/07/3e/86/073e862a13e4bacc7589f0d4eff4b873.jpg</a></span>
+        </p>
+      </section>
+
+      <section data-background="resources/silly-01.jpg"
+               class="background">
+        <h5>
+          "The weird and the strange is good" - Brian Eno
+        </h5>
+        <p>
+          Generative systems makes tons of mistakes (also humans), <strong>but
+          mistakes are good</strong>.
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg">https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg</a></span>
         </p>
       </section>
 
@@ -166,7 +183,6 @@
       -->
 
       <section>
-        <h4>What?</h4>
         <p>
           "Generative art is an artwork partially or completely
           created by an autonomous system."
@@ -174,7 +190,7 @@
       </section>
 
       <section>
-        <h4>And Machine Learning?</h4>
+        <h4>Machine Learning</h4>
         <p>
           Hand crafting the rules of a painting or the rules of a music style
           might be a hard task. That's why Machine Learning is so interesting
@@ -189,10 +205,10 @@
                class="figure"
                src="resources/rnn.png"
                alt="RNN diagram"/>
-          Recurrent Neural Networks (RNNs) solves two important problems for
-          music generation: <strong>operating on sequences for the inputs
-          and outputs</strong> and <strong>keeping an internal state of
-          past events</strong>.
+          Recurrent Neural Networks (RNNs) solves two important properties for
+          music generation: they <strong>operate on sequences for the inputs
+          and outputs</strong> and they <strong>can remember past
+          events</strong>.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -203,18 +219,19 @@
       <section class="align-left">
         <h4>Long-term structure with LSTMs</h4>
         <p>
-          <img width="250"
+          <img width="250px"
                class="figure"
                src="resources/lstm.png"
                alt="LSTM diagram"/>
-          Most RNN uses Long Short-Term Memory (LSTM) cells, because by
+          Most RNN uses Long Short-Term Memory (LSTM) cells, since by
           themselves, RNNs are hard to train because of the problems of
           vanishing and exploding gradient, making long-term dependencies
           hard to learn.
         </p>
         <p>
-          By using input, output and forget gates in the cell, LSTMs
-          can learn mechanisms to keep or forget information as they go.
+          By using <strong>input, output and forget gates</strong> in
+          the cell, LSTMs can learn mechanisms to keep or forget information
+          as they go.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -225,12 +242,12 @@
       <section class="align-left">
         <h4>Latent space interpolation with VAEs</h4>
         <p>
-          <img width="250"
+          <img width="250px"
                class="figure"
                src="resources/vae.png"
                alt="VAE diagram"/>
           Variational Autoencoders (VAEs) are a pair of networks where an
-          encoder reduces the input to a lower dimentionality (<strong>latent
+          encoder reduces the input to a lower dimensionality (<strong>latent
           space</strong>), from which a decoder tries to reproduce the
           input.
         </p>
@@ -238,8 +255,8 @@
           The latent space is continuous and follows a probability
           distribution, meaning it is possible to sample from it.
           VAEs are inherently generative models: they can
-          <strong>sample</strong> and <strong>interpolate</strong> (move in
-          the latent space) between two points.
+          <strong>sample</strong> and <strong>interpolate</strong>
+          (smoothly move in the latent space) between two points.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -250,16 +267,19 @@
       <section class="align-left">
         <h4>Audio generation with WaveNet Autoencoders</h4>
         <p>
-          <img width="500"
+          <img width="500px"
                class="figure"
                src="resources/wavenet.png"
                alt="Wavenet diagram"/>
           WaveNet is a convolutional neural network (CNN) taking raw signal
-          as an input and synthesizing output audio sample by sample. The
-          WaveNet Autoencoder present in Magenta is a AE network capable of
-          learning its own temporal embedding, resulting in a latent space
-          from which is it possible to <strong>sample</strong> and
-          <strong>mix</strong> elements.
+          as an input and synthesizing output audio sample by sample.
+        </p>
+        <p>TODO check this out</p>
+        <p>
+          The WaveNet Autoencoder present in Magenta is a Wavenet-style AE
+          network capable of learning its own temporal embedding, resulting
+          in a latent space from which is it possible to <strong>sample
+        </strong> and <strong>mix</strong> elements.
         </p>
         <p>
           <span class="figure-caption"><a
@@ -270,11 +290,16 @@
       <section>
         <h4>Representation: MIDI</h4>
         <p>
-          More interesting to work with MIDI because it shows the underlying
-          structure of music, but doesn't define the actual sound, you need
-          to use instruments (numeric or analogic).
+          MIDI is a musical representation analogous to <strong>sheet
+          music</strong>, where each note as a pitch, velocity, start and end
+          time.
         </p>
-        <img width=""
+        <p>
+          Working with MIDI shows the underlying <strong>structure of the
+          music</strong>, but doesn't define the actual sound, you'll need to
+          use instruments (numeric or analogic).
+        </p>
+        <img width="90%"
              src="resources/midi.png"
              alt="MIDI diagram"/>
       </section>
@@ -282,13 +307,14 @@
       <section>
         <h4>Representation: audio</h4>
         <p>
-          Working with audio is harder more direct: the generation doesn't
-          need the extra step of adding instruments.
+          Working with audio is harder because you have to handle 16000
+          samples per seconds (at least) and keep track of the general
+          structure. Generating audio is more direct than MIDI.
         </p>
         <p>
-          <img
-              src="resources/spectrogram.png"
-              alt="Audio diagram"/>
+          <img width="50%"
+               src="resources/spectrogram.png"
+               alt="Audio diagram"/>
         </p>
         <p>
           <span class="figure-caption"><a
@@ -297,8 +323,7 @@
       </section>
 
       <section>
-        <h4>What's in the box?</h4>
-        <p>Interesting networks from Magenta for music generation:</p>
+        <h4>What's in Magenta?</h4>
         <table class="smaller">
           <thead>
           <tr>
@@ -331,7 +356,7 @@
             <td>PerformanceRNN</td>
             <td>LSTM</td>
             <td>MIDI</td>
-            <td>polyphonic, expressive timing</td>
+            <td>polyphonic, groove</td>
           </tr>
           <tr>
             <td>MusicVAE</td>
@@ -341,7 +366,13 @@
           </tr>
           <tr>
             <td>NSynth</td>
-            <td>Wavenet</td>
+            <td>Wavenet AE</td>
+            <td>Audio</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>GANSynth</td>
+            <td>GAN</td>
             <td>Audio</td>
             <td>-</td>
           </tr>
@@ -374,25 +405,43 @@
 
       <section>
         <h4>STEP 1: The sounds</h4>
-        <p>
+        <div class="sound_clip">
+          <img src="resources/rainbowgram-bass-01.png"
+               class="no_border"
+               alt="Audio diagram"/>
           <audio controls>
             <source src="code/sounds/83249__zgump__bass-0205__crop.wav"
                     type="audio/wav"/>
           </audio>
+        </div>
+        <div class="sound_clip">
+          <img src="resources/rainbowgram-metal-01.png"
+               class="no_border"
+               alt="Audio diagram"/>
           <audio controls>
             <source
                 src="code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
                 type="audio/wav"/>
           </audio>
+        </div>
+        <div class="sound_clip">
+          <img src="resources/rainbowgram-cat-01.png"
+               class="no_border"
+               alt="Audio diagram"/>
           <audio controls>
             <source src="code/sounds/412017__skymary__cat-meow-short__crop.wav"
                     type="audio/wav"/>
           </audio>
+        </div>
+        <div class="sound_clip">
+          <img src="resources/rainbowgram-flute-01.png"
+               class="no_border"
+               alt="Audio diagram"/>
           <audio controls>
             <source src="code/sounds/427567__maria-mannone__flute__crop.wav"
                     type="audio/wav"/>
           </audio>
-        </p>
+        </div>
       </section>
 
       <section>
@@ -483,7 +532,56 @@ def synthesize(encoding_mix: np.ndarray,
       </section>
 
       <section>
-        <h4>STEP 1: TODO gansynth</h4>
+        <h4>STEP 1: GANSynth</h4>
+        <p>
+          As shown, the NSynth instrument is nice, but really slow for the
+          audio synthesis. You should use <strong>GANSynth</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h4>STEP 1: The results</h4>
+        <p>TODO describe</p>
+        <div class="sound_clip">
+          <!--          <img src="resources/rainbowgram-bass-01.png"-->
+          <!--               class="no_border"-->
+          <!--               alt="Audio diagram"/>-->
+          Cat + bass
+          <audio controls>
+            <source src="code/sounds/generated/83249_160045.wav"
+                    type="audio/wav"/>
+          </audio>
+        </div>
+        <div class="sound_clip">
+          <!--          <img src="resources/rainbowgram-metal-01.png"-->
+          <!--               class="no_border"-->
+          <!--               alt="Audio diagram"/>-->
+          Cat + bass
+          <audio controls>
+            <source src="code/sounds/generated/83249_160045.wav"
+                    type="audio/wav"/>
+          </audio>
+        </div>
+        <div class="sound_clip">
+          <!--          <img src="resources/rainbowgram-cat-01.png"-->
+          <!--               class="no_border"-->
+          <!--               alt="Audio diagram"/>-->
+          Cat + bass
+          <audio controls>
+            <source src="code/sounds/generated/83249_160045.wav"
+                    type="audio/wav"/>
+          </audio>
+        </div>
+        <div class="sound_clip">
+          <!--          <img src="resources/rainbowgram-flute-01.png"-->
+          <!--               class="no_border"-->
+          <!--               alt="Audio diagram"/>-->
+          Cat + bass
+          <audio controls>
+            <source src="code/sounds/generated/83249_160045.wav"
+                    type="audio/wav"/>
+          </audio>
+        </div>
       </section>
 
       <section data-background="resources/cats.jpg"
@@ -614,24 +712,23 @@ def get_sequence_generator(name: str,
       </section>
 
       <section>
-        <h4>Let's take a step back: why have we done this app?</h4>
+        <h4>Wrapping up</h4>
         <p>
-          Because it enabled us to explore music together, it serves as a
-          creation tool.
+          This generative music demo helped us improvise and compose around an
+          idea: a track composed of a percussion, a melody, and a cat.
         </p>
-        <p>
+        <p class="fragment">
           Was it perfect? No, we had little happy accidents.
         </p>
-        <p>
-          <img width="250"
-               class="fragment"
+        <div class="fragment">
+          <img width="25%"
                src="resources/bob-ross.jpg"
                alt="RNN diagram"/>
-        </p>
-        <p>
+          <div>
           <span class="figure-caption"><a
               href="https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg">https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg</a></span>
-        </p>
+          </div>
+        </div>
       </section>
 
     </section>
@@ -816,15 +913,25 @@ def get_sequence_generator(name: str,
         <div class="code-wrapper">
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
-INPUT_DIRECTORY=TODO
-
-# TFRecord file that will contain NoteSequence protocol buffers.
-SEQUENCES_TFRECORD=/tmp/notesequences.tfrecord
-
 convert_dir_to_note_sequences \
-  --input_dir=$INPUT_DIRECTORY \
-  --output_file=$SEQUENCES_TFRECORD \
+  --input_dir="jazz_dir_with_midi_files" \
+  --output_file="/tmp/notesequences.tfrecord" \
   --recursive
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Create SequenceExamples</h4>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-bash smaller" data-trim data-noescape>
+drums_rnn_dataset \
+	--config="drum_kit" \
+	--input="/tmp/notesequences.tfrecord" \
+	--output_dir="/tmp/drums_rnn/sequence_examples" \
+	--eval_ratio=0.10
             </code>
           </pre>
         </div>
@@ -835,12 +942,10 @@ convert_dir_to_note_sequences \
         <div class="code-wrapper">
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
-drums_rnn_train \
---config=drum_kit \
---run_dir=/tmp/drums_rnn/logdir/run1 \
---sequence_example_file=/tmp/drums_rnn/sequence_examples/training_drum_tracks.tfrecord \
---hparams="batch_size=64,rnn_layer_sizes=[64,64]" \
---num_training_steps=20000
+drum_rnn_train \
+	--config="drum_kit" \
+	--run_dir="/tmp/drums_rnn/logdir/run1" \
+	--sequence_example_file="/tmp/drums_rnn/sequence_examples/training_performances.tfrecord"
             </code>
           </pre>
         </div>
