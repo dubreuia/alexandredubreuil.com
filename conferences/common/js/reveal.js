@@ -7,10 +7,19 @@ $('.prettyprint .code').each(function () {
 });
 
 const setBodyClass = function () {
-    $("body").removeClass();
-    const className = ("slide-" + Reveal.getState()["indexh"]
-        + "-" + Reveal.getState()["indexv"])
-    $("body").addClass(className)
+    let body = $("body");
+    let indexh = Reveal.getState()["indexh"];
+    let indexv = Reveal.getState()["indexv"];
+    let firstSlide = Reveal.isFirstSlide();
+    let lastSlide = Reveal.isLastSlide();
+    body.removeClass();
+    body.addClass(`slide-${indexh}-${indexv}`);
+    if (firstSlide) {
+        body.addClass(`slide-first`);
+    }
+    if (lastSlide) {
+        body.addClass(`slide-last`);
+    }
 };
 
 Reveal.addEventListener('ready', function (event) {

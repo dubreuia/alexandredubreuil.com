@@ -1,9 +1,5 @@
 /* REVEAL ******************************************************************/
 
-.slide-0-0 .reveal {
-    height: 100%;
-}
-
 .reveal {
     font-family: sans-serif;
     font-size: 35px;
@@ -124,12 +120,13 @@
 
 /* FOOTER ******************************************************************/
 
-.slide-0-0 footer {
-    display: none;
-    /*f5af33*/
+.slide-first footer,
+.slide-last footer {
+    background-color: #f5af33;
 }
 
 footer {
+    transition: background-color 1000ms;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -163,7 +160,6 @@ footer .title {
 }
 
 footer .title .subtitle {
-    color: #CCC;
     font-size: 0.75em;
 }
 

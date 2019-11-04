@@ -40,7 +40,7 @@
 
       <section data-background="../common/img/devoxx-background-03.png"
                data-background-size="contain"
-      data-background-position="left">
+               data-background-position="left">
         <img width="250px"
              class="logo figure no_border"
              src="resources/magenta-logo-02.png"
@@ -145,8 +145,7 @@
         <h4>Representation: MIDI</h4>
         <p>
           MIDI is a musical representation analogous to <strong>sheet
-          music</strong>, where each note as a pitch, velocity, start and end
-          time.
+          music</strong>, where note has a pitch, velocity, and time.
         </p>
         <p>
           Working with MIDI shows the underlying <strong>structure of the
@@ -774,7 +773,8 @@ def get_sequence_generator(name: str,
 &lt;html&gt;
   &lt;head&gt;
     &lt;!-- Load @magenta/music --&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/<mark class="fragment highlight-current-blue">music@^1.0.0</mark>"&gt
+    &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/<mark
+                class="fragment highlight-current-blue">music@^1.0.0</mark>"&gt
     ;&lt;/script&gt;
     &lt;script&gt;
       // Instantiate model by loading desired config.
@@ -872,9 +872,19 @@ def get_sequence_generator(name: str,
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
 convert_dir_to_note_sequences \
-  --input_dir="jazz_dir_with_midi_files" \
+  --input_dir="/path/to/dataset/jazz_midi/drums/v1" \
   --output_file="/tmp/notesequences.tfrecord" \
   --recursive
+            </code>
+          </pre>
+        </div>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-bash smaller" data-trim data-noescape>
+...
+Converted MIDI file /path/to/dataset/jazz_midi/drums/v1/TRVUCSW12903CF536D.mid.
+Converted MIDI file /path/to/dataset/jazz_midi/drums/v1/TRWSJLM128F92DF651.mid.
+...
             </code>
           </pre>
         </div>
@@ -882,14 +892,34 @@ convert_dir_to_note_sequences \
 
       <section>
         <h4>Create SequenceExamples</h4>
+        <p>
+          The sequence examples are fed into the model, it contains a sequence
+          of inputs and a sequence of labels that represents the drum track.
+          Those are split to eval and training sets.
+        </p>
         <div class="code-wrapper">
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
-drums_rnn_dataset \
-	--config="drum_kit" \
-	--input="/tmp/notesequences.tfrecord" \
-	--output_dir="/tmp/drums_rnn/sequence_examples" \
-	--eval_ratio=0.10
+drums_rnn_create_dataset \
+  --config="drum_kit" \
+  --input="/tmp/notesequences.tfrecord" \
+  --output_dir="/tmp/drums_rnn/sequence_examples" \
+  --eval_ratio=0.10
+            </code>
+          </pre>
+        </div>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-bash smaller" data-trim data-noescape>
+...
+DAGPipeline_DrumsExtractor_training_drum_track_lengths_in_bars:
+  [8,10): 1
+  [10,20): 8
+  [20,30): 8
+  [30,40): 29
+  [40,50): 1
+  [50,100): 2
+...
             </code>
           </pre>
         </div>
@@ -897,13 +927,32 @@ drums_rnn_dataset \
 
       <section>
         <h4>Train and evaluate the model</h4>
+        <p>
+          Launch the training, using a specific configuration and
+          hyperparameters.
+        </p>
         <div class="code-wrapper">
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
-drum_rnn_train \
-	--config="drum_kit" \
-	--run_dir="/tmp/drums_rnn/logdir/run1" \
-	--sequence_example_file="/tmp/drums_rnn/sequence_examples/training_performances.tfrecord"
+drums_rnn_train \
+  --config="drum_kit" \
+  --run_dir="/tmp/drums_rnn/logdir/run1" \
+  --sequence_example_file="/tmp/drums_rnn/sequence_examples/training_drum_tracks.tfrecord" \
+  --hparams="batch_size=64,rnn_layer_sizes=[64,64]" \
+  --num_training_steps=20000
+            </code>
+          </pre>
+        </div>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-bash smaller" data-trim data-noescape>
+...
+Saving checkpoints for 0 into /tmp/drums_rnn/logdir/run1/train/model.ckpt.
+Accuracy = 0.013341025, Global Step = 1, Loss = 6.2323294, Perplexity = 508.9396
+Accuracy = 0.43837976, Global Step = 11, Loss = 5.1239195, Perplexity = 167.99252 (50.009 sec)
+global_step/sec: 0.199963
+Saving checkpoints for 12 into /tmp/drums_rnn/logdir/run1/train/model.ckpt.
+...
             </code>
           </pre>
         </div>
@@ -911,19 +960,17 @@ drum_rnn_train \
 
       <section>
         <h4>Tensorboard</h4>
-        <p>Then go to http://localhost:6006 to view the TensorBoard
-          dashboard.</p>
+        <p>
+          You can launch TensorBoard and go to http://localhost:6006 to view
+          the TensorBoard dashboard.
+        </p>
         <div class="code-wrapper">
           <pre class="prettyprint">
             <code class="code lang-bash smaller" data-trim data-noescape>
-tensorboard --logdir=/tmp/drums_rnn/logdir
+tensorboard --logdir="/tmp/drums_rnn/logdir"
             </code>
           </pre>
         </div>
-        <img
-            width="33%"
-            src="resources/neural-drum-machine.png"
-            alt="RNN diagram"/>
       </section>
 
     </section>
@@ -935,32 +982,42 @@ tensorboard --logdir=/tmp/drums_rnn/logdir
       </section>
 
       <section>
-        <h4>Dreambank</h4>
-        <ul>
-          <li>TODO</li>
-        </ul>
+        <h4>Dreambank - Can a machine dream?</h4>
+        <p>Generative music using Magenta and Ableton Live</p>
+        <img width="50%"
+             src="resources/dreambank.jpg"
+             alt="Dreambank image"/>
       </section>
 
       <section>
-        <h4>Book</h4>
-        <ul>
-          <li>TODO</li>
-        </ul>
+        <h4>Hands-on Music Generation with Magenta</h4>
+        <p>
+          Upcoming book on Packt Publishing, expected publication date:
+          January 2020.
+        </p>
+        <img width="33%"
+             class="no_border"
+             src="resources/magenta-book-icon.png"
+             alt="Dreambank image"/>
       </section>
 
     </section>
 
+    <!--
+    TODO
+    - devoxx template
+    - fix visual midi loop time
+    - change drum kit
+    - add generate for the training at the end
+    - test training commands
+    -->
+
     <section>
 
-      <section>
-        <h3>TODO</h3>
-        <ul>
-          <li>devoxx template</li>
-          <li>fix visual midi loop time</li>
-          <li>change drum kit</li>
-          <li>add generate for the training at the end</li>
-          <li>test training commands</li>
-        </ul>
+      <section data-background="../common/img/devoxx-background-03.png"
+               data-background-size="contain"
+               data-background-position="left">
+        <h3>Thank you!</h3>
       </section>
 
     </section>
