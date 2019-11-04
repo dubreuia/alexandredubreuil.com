@@ -100,7 +100,7 @@
         </h5>
         <p>
           It is okay to make art without taking ourselves seriously. The
-          important is to <strong>create systems that makes interaction
+          important thing is to <strong>create systems that makes this
           possible</strong>.
         </p>
         <p>
@@ -685,9 +685,15 @@ def get_sequence_generator(name: str,
         <h4>Wrapping up</h4>
         <p>
           This generative music demo helped us improvise and compose around an
-          idea: a track composed of a percussion, a melody, and a cat.
+          idea: a track composed of a percussion, a melody, and a cat
+          &#x1F63A;. We could <strong>interact</strong> with the system
+          and it helped us improvise around a theme.
         </p>
-        <p class="fragment">
+      </section>
+
+      <section>
+        <h4>Can we do better?</h4>
+        <p>
           Was it perfect? No, we had little happy accidents.
         </p>
         <div class="fragment">
@@ -699,137 +705,10 @@ def get_sequence_generator(name: str,
               href="https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg">https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg</a></span>
           </div>
         </div>
-      </section>
-
-    </section>
-
-    <section>
-
-      <section>
-        <h3>Interaction with the outside world</h3>
-        <p>(in 5 minutes)</p>
-      </section>
-
-      <section>
-        <h4>Python to everything using MIDI</h4>
         <p>
-          Magenta can send MIDI, which is understood by basically everything
-          that makes sound: <strong>DAWs</strong> (like Ableton Live),
-          <strong>software synthesizers</strong> (like fluidsynth),
-          <strong>hardware synthesizers</strong> (though USB or MIDI cable),
-          etc.
-        </p>
-      </section>
-
-      <section>
-        <h4>Magenta in the browser with Magenta.js</h4>
-        <p>
-          You can use Magenta and most of its models in the browser, using
-          Magenta.js (which in turns uses Tensorflow.js).
-        </p>
-      </section>
-
-      <section>
-        <h4>Melody Mixer</h4>
-        <p>
-          <img
-              width="75%"
-              src="resources/melody-mixer.png"
-              alt="RNN diagram"/>
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://experiments.withgoogle.com/ai/melody-mixer/view/">https://experiments.withgoogle.com/ai/melody-mixer/view/</a></span>
-        </p>
-      </section>
-
-      <section>
-        <h4>Beat Blender</h4>
-        <p>
-          <img
-              width="75%"
-              src="resources/beat-blender.png"
-              alt="RNN diagram"/>
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://experiments.withgoogle.com/ai/beat-blender/view/">https://experiments.withgoogle.com/ai/beat-blender/view/</a></span>
-        </p>
-      </section>
-
-      <section>
-        <h4>Neural Drum Machine</h4>
-        <p>
-          <img
-              width="75%"
-              src="resources/neural-drum-machine.png"
-              alt="RNN diagram"/>
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://codepen.io/teropa/full/JLjXGK">https://codepen.io/teropa/full/JLjXGK</a></span>
-        </p>
-      </section>
-
-      <section>
-        <h4>GANHarp</h4>
-        <p>
-          <img
-              width="75%"
-              src="resources/ganharp.png"
-              alt="RNN diagram"/>
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://ganharp.ctpt.co">https://ganharp.ctpt.co</a></span>
-        </p>
-      </section>
-
-      <section>
-        <h4>Easy peasy</h4>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code lang-html" data-trim data-noescape>
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;!-- Load @magenta/music --&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/<mark
-                class="fragment highlight-current-blue">music@^1.0.0</mark>"&gt
-    ;&lt;/script&gt;
-    &lt;script&gt;
-      // Instantiate model by loading desired config.
-      const model = new mm.<mark class="fragment highlight-current-blue">MusicVAE</mark>(
-        'https://storage.googleapis.com/magentadata/' +
-        'js/checkpoints/music_vae/<mark class="fragment highlight-current-blue">trio_4bar</mark>');
-      const player = new mm.Player();
-
-      // Samples from MusicVAE and play the sample
-      function play() {
-        player.resumeContext();
-        model.<mark class="fragment highlight-current-blue">sample(1)</mark>
-          .then((samples) =&gt; player.start(samples[0], 80));
-      }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;button onclick="play()"&gt;&lt;h1&gt;Play Trio&lt;/h1&gt;&lt;/button&gt;&lt;/body&gt;
-&lt;/html&gt;
-            </code>
-          </pre>
-        </div>
-      </section>
-
-      <section>
-        <h4>Magenta in your DAW with Magenta Studio</h4>
-        <p>
-          Using Magenta.js and Max4Live (MaxMSP) process, Magenta Studio can
-          be used directly in Ableton Live.
-        </p>
-        <p>
-          <video autoplay="" loop="" muted="" playsinline="">
-            <source src="../common/video/hero.mp4" type="video/mp4">
-          </video>
-          <span class="figure-caption"><a
-              href="https://magenta.tensorflow.org/studio/assets/studio/hero.mp4">https://magenta.tensorflow.org/studio/assets/studio/hero.mp4</a></span>
+          Maybe we could have had more control over the sequences. Maybe we
+          wanted to improvise around a <strong>musical style</strong>,
+          or a <strong>specific structure</strong>.
         </p>
       </section>
 
@@ -848,7 +727,7 @@ def get_sequence_generator(name: str,
           The pre-trained models in Magenta are good, but if for example
           you want to generate a <strong>specific style</strong>, generate a
           <strong>specific time signature</strong> (3/4 for example), or a
-          <strong>specific instrument</strong>(cello for example) you'll
+          <strong>specific instrument </strong>(cello for example) you'll
           need to train your own.
         </p>
       </section>
@@ -991,6 +870,138 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
             </code>
           </pre>
         </div>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section>
+        <h3>Interaction with the outside world</h3>
+        <p>(in 5 minutes)</p>
+      </section>
+
+      <section>
+        <h4>Python to everything using MIDI</h4>
+        <p>
+          Magenta can send MIDI, which is understood by basically everything
+          that makes sound: <strong>DAWs</strong> (like Ableton Live),
+          <strong>software synthesizers</strong> (like fluidsynth),
+          <strong>hardware synthesizers</strong> (though USB or MIDI cable),
+          etc.
+        </p>
+      </section>
+
+      <section>
+        <h4>Magenta in the browser with Magenta.js</h4>
+        <p>
+          You can use Magenta and most of its models in the browser, using
+          Magenta.js (which in turns uses Tensorflow.js).
+        </p>
+      </section>
+
+      <section>
+        <h4>Melody Mixer</h4>
+        <p>
+          <img
+              width="75%"
+              src="resources/melody-mixer.png"
+              alt="RNN diagram"/>
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://experiments.withgoogle.com/ai/melody-mixer/view/">https://experiments.withgoogle.com/ai/melody-mixer/view/</a></span>
+        </p>
+      </section>
+
+      <!--      <section>-->
+      <!--        <h4>Beat Blender</h4>-->
+      <!--        <p>-->
+      <!--          <img-->
+      <!--              width="75%"-->
+      <!--              src="resources/beat-blender.png"-->
+      <!--              alt="RNN diagram"/>-->
+      <!--        </p>-->
+      <!--        <p>-->
+      <!--          <span class="figure-caption"><a-->
+      <!--              href="https://experiments.withgoogle.com/ai/beat-blender/view/">https://experiments.withgoogle.com/ai/beat-blender/view/</a></span>-->
+      <!--        </p>-->
+      <!--      </section>-->
+
+      <section>
+        <h4>Neural Drum Machine</h4>
+        <p>
+          <img
+              width="75%"
+              src="resources/neural-drum-machine.png"
+              alt="RNN diagram"/>
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://codepen.io/teropa/full/JLjXGK">https://codepen.io/teropa/full/JLjXGK</a></span>
+        </p>
+      </section>
+
+      <section>
+        <h4>GANHarp</h4>
+        <p>
+          <img
+              width="75%"
+              src="resources/ganharp.png"
+              alt="RNN diagram"/>
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://ganharp.ctpt.co">https://ganharp.ctpt.co</a></span>
+        </p>
+      </section>
+
+      <section>
+        <h4>Easy peasy</h4>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-html" data-trim data-noescape>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Load @magenta/music --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/<mark
+                class="fragment highlight-current-blue">music@^1.0.0</mark>"&gt
+    &lt;/script&gt;
+    &lt;script&gt;
+      // Instantiate model by loading desired config.
+      const model = new mm.<mark class="fragment highlight-current-blue">MusicVAE</mark>(
+        'https://storage.googleapis.com/magentadata/' +
+        'js/checkpoints/music_vae/<mark class="fragment highlight-current-blue">trio_4bar</mark>');
+      const player = new mm.Player();
+
+      // Samples from MusicVAE and play the sample
+      function play() {
+        player.resumeContext();
+        model.<mark class="fragment highlight-current-blue">sample(1)</mark>
+          .then((samples) =&gt; player.start(samples[0], 80));
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;button onclick="play()"&gt;&lt;h1&gt;Play Trio&lt;/h1&gt;&lt;/button&gt;&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Magenta in your DAW with Magenta Studio</h4>
+        <p>
+          Using Magenta.js and Max4Live (MaxMSP) process, Magenta Studio can
+          be used directly in Ableton Live.
+        </p>
+        <p>
+          <video autoplay="" loop="" muted="" playsinline="">
+            <source src="../common/video/hero.mp4" type="video/mp4">
+          </video>
+          <span class="figure-caption"><a
+              href="https://magenta.tensorflow.org/studio/assets/studio/hero.mp4">https://magenta.tensorflow.org/studio/assets/studio/hero.mp4</a></span>
+        </p>
       </section>
 
     </section>
