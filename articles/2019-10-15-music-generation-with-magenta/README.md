@@ -10,14 +10,14 @@
     - [Make music without being a musician](#make-music-without-being-a-musician)
     - ["Why you should build silly things" - Monica Dinculescu](#why-you-should-build-silly-things---monica-dinculescu)
     - [Helping people build generative systems](#helping-people-build-generative-systems)
-    - ["The weird and the strange is good" - Brian Eno](#the-weird-and-the-strange-is-good---brian_eno)
+    - ["The weird and the strange is good" - Brian Eno](#the-weird-and-the-strange-is-good---brian-eno)
     - [Representation: MIDI](#representation-midi)
     - [Representation: audio](#representation-audio)
     - [Machine Learning](#machine-learning)
-    - [Music generation with RNNs (#MIDI)](music-generation-with-rnns-midi)
-    - [Long-term structure with LSTMs (#MIDI)](long-term-structure-with-lstms-midi)
-    - [Latent space interpolation with VAEs (#MIDI)](latent-space-interpolation-with-vaes-midi)
-    - [Audio generation with WaveNet Autoencoders (#audio)](audio-generation-with-wavenet-autoencoders-audio)
+    - [Music generation with RNNs (MIDI)](#music-generation-with-rnns-midi)
+    - [Long-term structure with LSTMs (MIDI)](#long-term-structure-with-lstms-midi)
+    - [Latent space interpolation with VAEs (MIDI)](#latent-space-interpolation-with-vaes-midi)
+    - [Audio generation with WaveNet Autoencoders (audio)](#audio-generation-with-wavenet-autoencoders-audio)
     - [What's in Magenta?](#whats-in-magenta)
 - [Live code: Generate a track](#live-code-generate-a-track)
     - [STEP 1: make everything sound like a cat](#step-1-make-everything-sound-like-a-cat)
@@ -37,8 +37,8 @@
     - [Can we do better?](#can-we-do-better)
 - [Training](#training)
     - [Why?](#why)
-    - [Datasets: LAKHS (#midi)](datasets-lakhs-midi)
-    - [Datasets: NSynth (#audio)](datasets-nsynth-audio)
+    - [Datasets: LAKHS (midi)](#datasets-lakhs-midi)
+    - [Datasets: NSynth (audio)](#datasets-nsynth-audio)
     - [Building the dataset](#building-the-dataset)
     - [Create SequenceExamples](#create-sequenceexamples)
     - [Train and evaluate the model](#train-and-evaluate-the-model)
@@ -82,13 +82,13 @@ MIDI is a musical representation analogous to <strong>sheet music</strong>, wher
 
 Working with MIDI shows the underlying <strong>structure of the music</strong>, but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
 
-<img width="90%" src="resources/midi.png" alt="MIDI diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/midi.png" alt="MIDI diagram"/>
 
 ### Representation: audio
 
 Working with audio is harder because you have to handle 16000 samples per seconds (at least) and keep track of the general structure. Generating audio is more direct than MIDI.
 
-<img width="50%" src="resources/spectrogram.png" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/spectrogram.png" alt="Audio diagram"/>
 <!-- https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png -->
 
 ### Machine Learning
@@ -97,14 +97,14 @@ Hand crafting the rules of a painting or the rules of a music style might be a h
 
 ### Music generation with RNNs (MIDI)
 
-<img width="250" class="figure" src="resources/rnn.png" alt="RNN diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/rnn.png" alt="RNN diagram"/>
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png -->
 
 Recurrent Neural Networks (RNNs) solves two important properties for music generation: they <strong>operate on sequences for the inputs and outputs</strong> and they <strong>can remember past events</strong>.
 
 ### Long-term structure with LSTMs (MIDI)
 
-<img width="250px" class="figure" src="resources/lstm.png" alt="LSTM diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/lstm.png" alt="LSTM diagram"/>
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png -->
           
 Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs are hard to train because of the problems of vanishing and exploding gradient, making long-term dependencies hard to learn.
@@ -113,7 +113,7 @@ By using <strong>input, output and forget gates</strong> in the cell, LSTMs can 
 
 ### Latent space interpolation with VAEs (MIDI)
 
-<img width="250px" class="figure" src="resources/vae.png" alt="VAE diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/vae.png" alt="VAE diagram"/>
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png -->
 
 Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces the input to a lower dimensionality (<strong>latent space</strong>), from which a decoder tries to reproduce the input.
@@ -124,7 +124,7 @@ href="">https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png</a></
 
 ### Audio generation with WaveNet Autoencoders (audio)
 
-<img width="500px" class="figure" src="resources/wavenet.png" alt="Wavenet diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/wavenet.png" alt="Wavenet diagram"/>
 <!-- https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png -->
 
 WaveNet is a convolutional neural network (CNN) taking raw signal as an input and synthesizing output audio sample by sample.
@@ -195,30 +195,30 @@ The WaveNet Autoencoder present in Magenta is a Wavenet-style AE network capable
 
 We'll use NSynth to mix cat sounds with other sounds.
 
-### STEP 1: The sounds</h4>
+### STEP 1: The sounds
 
-<img src="resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
-<source src="code/sounds/83249__zgump__bass-0205__crop.wav"
+<source src="../../conferences/music-generation-with-magenta/code/sounds/83249__zgump__bass-0205__crop.wav"
         type="audio/wav"/>
 </audio>
         
-<img src="resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source
-    src="code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
+    src="../../conferences/music-generation-with-magenta/code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
     type="audio/wav"/>
 </audio>
 
-<img src="resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
-<source src="code/sounds/412017__skymary__cat-meow-short__crop.wav"
+<source src="../../conferences/music-generation-with-magenta/code/sounds/412017__skymary__cat-meow-short__crop.wav"
         type="audio/wav"/>
 </audio>
 
-<img src="resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
-<source src="code/sounds/427567__maria-mannone__flute__crop.wav"
+<source src="../../conferences/music-generation-with-magenta/code/sounds/427567__maria-mannone__flute__crop.wav"
         type="audio/wav"/>
 </audio>
 
@@ -292,45 +292,45 @@ audio synthesis. You should use <strong>GANSynth</strong>.
 
 ### STEP 1: The results
 
-<img src="resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Cat</span>
 <audio controls>
-  <source src="code/sounds/83249_412017_bass_cat.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_412017_bass_cat.wav"
           type="audio/wav"/>
 </audio>
 
-<img src="resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Flute</span>
 <audio controls>
-  <source src="code/sounds/83249_427567_bass_flute.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_427567_bass_flute.wav"
           type="audio/wav"/>
 </audio>
 
-<img src="resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Metal</span>
 <audio controls>
-  <source src="code/sounds/83249_160045_bass_metal.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_160045_bass_metal.wav"
           type="audio/wav"/>
 </audio>
 
-<img src="resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Bass</span>
 <audio controls>
-  <source src="code/sounds/160045_83249_metal_bass.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_83249_metal_bass.wav"
           type="audio/wav"/>
 </audio>
 
-<img src="resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Cat</span>
 <audio controls>
-  <source src="code/sounds/160045_412017_metal_cat.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_412017_metal_cat.wav"
           type="audio/wav"/>
 </audio>
 
-<img src="resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Flute</span>
 <audio controls>
-  <source src="code/sounds/160045_427567_metal_flute.wav"
+  <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_427567_metal_flute.wav"
           type="audio/wav"/>
 </audio>
 
@@ -438,7 +438,7 @@ and it helped us improvise around a theme.
 
 Was it perfect? No, we had little happy accidents.
 
-<img width="25%" src="resources/bob-ross.jpg" alt="RNN diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/bob-ross.jpg" alt="RNN diagram"/>
 <!-- https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg -->
 
 Maybe we could have had more control over the sequences. Maybe we
@@ -467,7 +467,7 @@ dataset, (partially) matched with the Million Song Dataset
 ### Datasets: NSynth (audio)
 
 A large-scale and high-quality dataset of annotated musical notes.
-Training audio requires lots of resources, but can be achieved using
+Training audio requires lots of ../../conferences/music-generation-with-magenta/resources, but can be achieved using
 GANSynth.
 
 - https://magenta.tensorflow.org/datasets/nsynth
@@ -563,42 +563,43 @@ Magenta.js (which in turns uses Tensorflow.js).
 
 ### Melody Mixer
 
-<img width="75%" src="resources/melody-mixer.png" alt="RNN diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/melody-mixer.png" alt="RNN diagram"/>
 <!-- https://experiments.withgoogle.com/ai/melody-mixer/view/ -->
 
 ### Neural Drum Machine
 
-<img width="75%" src="resources/neural-drum-machine.png" alt="RNN diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/neural-drum-machine.png" alt="RNN diagram"/>
 <!-- https://codepen.io/teropa/full/JLjXGK -->
 
 ### GANHarp
 
-<img width="75%" src="resources/ganharp.png" alt="RNN diagram"/>
+<img src="../../conferences/music-generation-with-magenta/resources/ganharp.png" alt="RNN diagram"/>
 <!-- https://ganharp.ctpt.co -->
 
 ### Easy peasy
 
 ```html
 <html>
-<head>
-<!-- Load @magenta/music -->
-<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
-<script>
-// Instantiate model by loading desired config.
-const model = new mm.MusicVAE(
-    'https://storage.googleapis.com/magentadata/' +
-    'js/checkpoints/music_vae/trio_4bar');
-const player = new mm.Player();
-
-// Samples from MusicVAE and play the sample
-function play() {
-    player.resumeContext();
-    model.sample(1)
-      .then((samples) => player.start(samples[0], 80));
-}
-</script>
-</head>
-<body><button onclick="play()"><h1>Play Trio</h1></button></body>
+    <head>
+        <!-- Load @magenta/music -->
+        <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0">
+        </script>
+        <script>
+            // Instantiate model by loading desired config.
+            const model = new mm.MusicVAE(
+                'https://storage.googleapis.com/magentadata/' +
+                'js/checkpoints/music_vae/trio_4bar');
+            const player = new mm.Player();
+            
+            // Samples from MusicVAE and play the sample
+            function play() {
+                player.resumeContext();
+                model.sample(1)
+                     .then((samples) => player.start(samples[0], 80));
+            }
+        </script>
+    </head>
+    <body><button onclick="play()"><h1>Play Trio</h1></button></body>
 </html>
 ```
 
@@ -617,12 +618,12 @@ be used directly in Ableton Live.
 ### Dreambank - Can a machine dream?
 
 Generative music using Magenta and Ableton Live.
-<img width="50%" src="resources/dreambank.jpg" alt="Dreambank image"/>
+<img src="../../conferences/music-generation-with-magenta/resources/dreambank.jpg" alt="Dreambank image"/>
 
 ### Hands-on Music Generation with Magenta
 
 Upcoming book on <strong>Packt Publishing</strong>, expected
 publication date in <strong>January 2020</strong>.
 
-<img width="33%" class="no_border" src="resources/magenta-book-icon.png" alt="Dreambank image"/>
-<img width="33%" class="no_border" src="resources/packt-logo.png" alt="Dreambank image"/>
+<img src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Dreambank image"/>
+<img src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Dreambank image"/>
