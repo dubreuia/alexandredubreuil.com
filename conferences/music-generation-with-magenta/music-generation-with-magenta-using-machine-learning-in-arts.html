@@ -15,7 +15,7 @@
 <body>
 
 
-<footer>
+<footer id="footer" class="hide">
   <img class="logo"
        src="resources/magenta-logo-01.png"
        alt="Magenta logo">
@@ -27,6 +27,9 @@
     <div>Alexandre DuBreuil @dubreuia</div>
     <div class="subtitle">alexandredubreuil.com</div>
   </div>
+  <img class="devoxx"
+       src="../common/img/devoxx-logo-transparent.png"
+       alt="Devoxx logo">
 </footer>
 
 <div class="reveal">
@@ -35,7 +38,9 @@
 
     <section>
 
-      <section>
+      <section data-background="../common/img/devoxx-background-03.png"
+               data-background-size="contain"
+      data-background-position="left">
         <img width="250px"
              class="logo figure no_border"
              src="resources/magenta-logo-02.png"
@@ -64,6 +69,13 @@
       <section>
         <h3>Generative Music</h3>
         <p>(in 10 minutes)</p>
+      </section>
+
+      <section>
+        <p>
+          "Generative art is an artwork partially or completely
+          created by an autonomous system."
+        </p>
       </section>
 
       <section data-background="resources/ableton-live-02.jpg"
@@ -117,173 +129,15 @@
           "The weird and the strange is good" - Brian Eno
         </h5>
         <p>
+          TODO change background
+        </p>
+        <p>
           Generative systems makes tons of mistakes (also humans), <strong>but
           mistakes are good</strong>.
         </p>
         <p>
           <span class="figure-caption"><a
               href="https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg">https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg</a></span>
-        </p>
-      </section>
-
-      <!--
-      <section>
-        <p>TODO remove (or compress to 1 slide)</p>
-        <h4>Example: Musikalisches Würfelspiel</h4>
-        <p>
-          Back in the 18th century, a "musical dice game" was popular, where
-          the result of a dice throw would choose a segment of a predefined
-          score, creating a score when repeated.
-        </p>
-        <p>
-          <strong style="color:darkmagenta">Random</strong> <strong>generative
-          art:</strong> the outcome of the generated art is partially or
-          completely defined by the chance's outcome
-        </p>
-        <span class="figure-caption"><a
-            href="https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel">
-          en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel
-        </a></span>
-      </section>
-
-      <section>
-        <h4>Example: Algorave</h4>
-        <p>
-          An Algorave is an event where people dance to music generated from
-          algorithms, often using live coding techniques, and short for
-          "algorithmic rave".
-        </p>
-        <p>
-          <strong style="color:darkmagenta;">Rule based / algorithmic</strong>
-          <strong>generative art: </strong> the result of such generation is
-          deterministic and defined by a set of rules.
-        </p>
-        <span class="figure-caption"><a
-            href="https://en.wikipedia.org/wiki/Algorave">
-          en.wikipedia.org/wiki/Algorave
-        </a></span>
-      </section>
-
-      <section>
-        <h4>Example: Illiac Suite</h4>
-        <p>
-          The Illiac Suite is one of the first score composed by an electronic
-          computer. In one of the fourth movement, Markov Chains are used.
-        </p>
-        <p>
-          <strong style="color:darkmagenta;">Stochastic</strong>
-          <strong>generative art: </strong> the artwork generation is
-          probabilistic.
-        </p>
-        <span class="figure-caption"><a
-            href="https://en.wikipedia.org/wiki/Illiac_Suite">
-          en.wikipedia.org/wiki/Illiac_Suite
-        </a></span>
-      </section>
-      -->
-
-      <section>
-        <p>
-          "Generative art is an artwork partially or completely
-          created by an autonomous system."
-        </p>
-      </section>
-
-      <section>
-        <h4>Machine Learning</h4>
-        <p>
-          Hand crafting the rules of a painting or the rules of a music style
-          might be a hard task. That's why Machine Learning is so interesting
-          in arts: it can learn complex functions.
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Music generation with RNNs</h4>
-        <p>
-          <img width="250"
-               class="figure"
-               src="resources/rnn.png"
-               alt="RNN diagram"/>
-          Recurrent Neural Networks (RNNs) solves two important properties for
-          music generation: they <strong>operate on sequences for the inputs
-          and outputs</strong> and they <strong>can remember past
-          events</strong>.
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png">www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png</a></span>
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Long-term structure with LSTMs</h4>
-        <p>
-          <img width="250px"
-               class="figure"
-               src="resources/lstm.png"
-               alt="LSTM diagram"/>
-          Most RNN uses Long Short-Term Memory (LSTM) cells, since by
-          themselves, RNNs are hard to train because of the problems of
-          vanishing and exploding gradient, making long-term dependencies
-          hard to learn.
-        </p>
-        <p>
-          By using <strong>input, output and forget gates</strong> in
-          the cell, LSTMs can learn mechanisms to keep or forget information
-          as they go.
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png">https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png</a></span>
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Latent space interpolation with VAEs</h4>
-        <p>
-          <img width="250px"
-               class="figure"
-               src="resources/vae.png"
-               alt="VAE diagram"/>
-          Variational Autoencoders (VAEs) are a pair of networks where an
-          encoder reduces the input to a lower dimensionality (<strong>latent
-          space</strong>), from which a decoder tries to reproduce the
-          input.
-        </p>
-        <p>
-          The latent space is continuous and follows a probability
-          distribution, meaning it is possible to sample from it.
-          VAEs are inherently generative models: they can
-          <strong>sample</strong> and <strong>interpolate</strong>
-          (smoothly move in the latent space) between two points.
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png">https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png</a></span>
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Audio generation with WaveNet Autoencoders</h4>
-        <p>
-          <img width="500px"
-               class="figure"
-               src="resources/wavenet.png"
-               alt="Wavenet diagram"/>
-          WaveNet is a convolutional neural network (CNN) taking raw signal
-          as an input and synthesizing output audio sample by sample.
-        </p>
-        <p>TODO check this out</p>
-        <p>
-          The WaveNet Autoencoder present in Magenta is a Wavenet-style AE
-          network capable of learning its own temporal embedding, resulting
-          in a latent space from which is it possible to <strong>sample
-        </strong> and <strong>mix</strong> elements.
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png">magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png</a></span>
         </p>
       </section>
 
@@ -319,6 +173,103 @@
         <p>
           <span class="figure-caption"><a
               href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png">https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png</a></span>
+        </p>
+      </section>
+
+      <section>
+        <h4>Machine Learning</h4>
+        <p>
+          Hand crafting the rules of a painting or the rules of a music style
+          might be a hard task. That's why Machine Learning is so interesting
+          in arts: it can learn complex functions.
+        </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Music generation with RNNs (MIDI)</h4>
+        <p>
+          <img width="250"
+               class="figure"
+               src="resources/rnn.png"
+               alt="RNN diagram"/>
+          Recurrent Neural Networks (RNNs) solves two important properties for
+          music generation: they <strong>operate on sequences for the inputs
+          and outputs</strong> and they <strong>can remember past
+          events</strong>.
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png">www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png</a></span>
+        </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Long-term structure with LSTMs (MIDI)</h4>
+        <p>
+          <img width="250px"
+               class="figure"
+               src="resources/lstm.png"
+               alt="LSTM diagram"/>
+          Most RNN uses Long Short-Term Memory (LSTM) cells, since by
+          themselves, RNNs are hard to train because of the problems of
+          vanishing and exploding gradient, making long-term dependencies
+          hard to learn.
+        </p>
+        <p>
+          By using <strong>input, output and forget gates</strong> in
+          the cell, LSTMs can learn mechanisms to keep or forget information
+          as they go.
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png">https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png</a></span>
+        </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Latent space interpolation with VAEs (MIDI)</h4>
+        <p>
+          <img width="250px"
+               class="figure"
+               src="resources/vae.png"
+               alt="VAE diagram"/>
+          Variational Autoencoders (VAEs) are a pair of networks where an
+          encoder reduces the input to a lower dimensionality (<strong>latent
+          space</strong>), from which a decoder tries to reproduce the
+          input.
+        </p>
+        <p>
+          The latent space is continuous and follows a probability
+          distribution, meaning it is possible to sample from it.
+          VAEs are inherently generative models: they can
+          <strong>sample</strong> and <strong>interpolate</strong>
+          (smoothly move in the latent space) between two points.
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png">https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png</a></span>
+        </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Audio generation with WaveNet Autoencoders (audio)</h4>
+        <p>
+          <img width="500px"
+               class="figure"
+               src="resources/wavenet.png"
+               alt="Wavenet diagram"/>
+          WaveNet is a convolutional neural network (CNN) taking raw signal
+          as an input and synthesizing output audio sample by sample.
+        </p>
+        <p>
+          The WaveNet Autoencoder present in Magenta is a Wavenet-style AE
+          network capable of learning its own temporal embedding, resulting
+          in a latent space from which is it possible to <strong>sample
+        </strong> and <strong>mix</strong> elements.
+        </p>
+        <p>
+          <span class="figure-caption"><a
+              href="https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png">magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png</a></span>
         </p>
       </section>
 
@@ -744,8 +695,9 @@ def get_sequence_generator(name: str,
         <h4>Python to everything using MIDI</h4>
         <p>
           Magenta can send MIDI, which is understood by basically everything
-          that makes sound: DAWs (like Ableton Live), software synthesizers
-          (like fluidsynth), hardware synthesizers (though USB or MIDI cable),
+          that makes sound: <strong>DAWs</strong> (like Ableton Live),
+          <strong>software synthesizers</strong> (like fluidsynth),
+          <strong>hardware synthesizers</strong> (though USB or MIDI cable),
           etc.
         </p>
       </section>
@@ -801,16 +753,16 @@ def get_sequence_generator(name: str,
       </section>
 
       <section>
-        <h4>TODO harp synth</h4>
+        <h4>GANHarp</h4>
         <p>
           <img
               width="75%"
-              src="resources/neural-drum-machine.png"
+              src="resources/ganharp.png"
               alt="RNN diagram"/>
         </p>
         <p>
           <span class="figure-caption"><a
-              href="https://codepen.io/teropa/full/JLjXGK">https://codepen.io/teropa/full/JLjXGK</a></span>
+              href="https://ganharp.ctpt.co">https://ganharp.ctpt.co</a></span>
         </p>
       </section>
 
@@ -818,27 +770,28 @@ def get_sequence_generator(name: str,
         <h4>Easy peasy</h4>
         <div class="code-wrapper">
           <pre class="prettyprint">
-            <code class="code lang-html smaller" data-trim data-noescape>
+            <code class="code lang-html" data-trim data-noescape>
 &lt;html&gt;
-&lt;head&gt;
-  ...
-  &lt;!-- You need to bring your own Tone.js for the player, and tfjs for the model --&gt;
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.21/Tone.js"&gt;&lt;/script&gt;
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"&gt;&lt;/script&gt;
-  &lt;!-- Core library, since we're going to use a player --&gt;
-  &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"&gt;&lt;/script&gt;
-  &lt;!--Model we want to use --&gt;
-  &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/music_vae.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;script&gt;
-  // Each bundle exports a global object with the name of the bundle.
-  const player = new core.Player();
-  //...
-  const mvae = new music_vae.MusicVAE('https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small');
-  mvae.initialize().then(() =&gt; {
-    //...
-  });
-&lt;/script&gt;
+  &lt;head&gt;
+    &lt;!-- Load @magenta/music --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@magenta/<mark class="fragment highlight-current-blue">music@^1.0.0</mark>"&gt
+    ;&lt;/script&gt;
+    &lt;script&gt;
+      // Instantiate model by loading desired config.
+      const model = new mm.<mark class="fragment highlight-current-blue">MusicVAE</mark>(
+        'https://storage.googleapis.com/magentadata/' +
+        'js/checkpoints/music_vae/<mark class="fragment highlight-current-blue">trio_4bar</mark>');
+      const player = new mm.Player();
+
+      // Samples from MusicVAE and play the sample
+      function play() {
+        player.resumeContext();
+        model.<mark class="fragment highlight-current-blue">sample(1)</mark>
+          .then((samples) =&gt; player.start(samples[0], 80));
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;button onclick="play()"&gt;&lt;h1&gt;Play Trio&lt;/h1&gt;&lt;/button&gt;&lt;/body&gt;
 &lt;/html&gt;
             </code>
           </pre>
@@ -872,7 +825,11 @@ def get_sequence_generator(name: str,
       <section>
         <h4>Why?</h4>
         <p>
-          TODO if you want a specific style
+          The pre-trained models in Magenta are good, but if for example
+          you want to generate a <strong>specific style</strong>, generate a
+          <strong>specific time signature</strong> (3/4 for example), or a
+          <strong>specific instrument</strong>(cello for example) you'll
+          need to train your own.
         </p>
       </section>
 
@@ -880,7 +837,8 @@ def get_sequence_generator(name: str,
         <h4>Datasets: LAKHS (MIDI)</h4>
         <p>
           A good place to start is the LAKHS dataset, a 180,000 MIDI files
-          dataset, matched with the Million Song Dataset (metadata).
+          dataset, (partially) matched with the Million Song Dataset
+          (metadata like artist, release, genre).
         </p>
         <p>
           <span class="figure-caption"><a
@@ -896,7 +854,7 @@ def get_sequence_generator(name: str,
         <h4>Datasets: NSynth (audio)</h4>
         <p>
           A large-scale and high-quality dataset of annotated musical notes.
-          Training audio is ressource intensive, but can be acheived using
+          Training audio requires lots of resources, but can be achieved using
           GANSynth.
         </p>
         <p>
@@ -987,6 +945,21 @@ tensorboard --logdir=/tmp/drums_rnn/logdir
         <h4>Book</h4>
         <ul>
           <li>TODO</li>
+        </ul>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section>
+        <h3>TODO</h3>
+        <ul>
+          <li>devoxx template</li>
+          <li>fix visual midi loop time</li>
+          <li>change drum kit</li>
+          <li>add generate for the training at the end</li>
+          <li>test training commands</li>
         </ul>
       </section>
 

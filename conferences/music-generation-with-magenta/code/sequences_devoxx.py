@@ -13,12 +13,8 @@ def reset(sequence: NoteSequence,
           loop_start_time: float,
           loop_end_time: float,
           seconds_per_loop: float):
-  # TODO reset the sequence before looping it
-  sequence = NoteSequence()
-  sequence = loop(sequence,
-                  loop_start_time,
-                  loop_end_time,
-                  seconds_per_loop)
+  sequence = music_pb2.NoteSequence()
+  sequence = loop(sequence, loop_start_time, loop_end_time, seconds_per_loop)
   return sequence
 
 
@@ -42,15 +38,13 @@ def generate(sequence: NoteSequence,
              generation_end_time: float):
   # TODO generate a new sequence using the sequence generator
   generator_options = generator_pb2.GeneratorOptions()
-  generator_options.args['temperature'].float_value = 1
+  generator_options["temperature"] = 1.0
   generator_options.generate_sections.add(
     start_time=generation_start_time,
     end_time=generation_end_time)
-  sequence_generator = get_sequence_generator(name,
-                                              bundle_filename,
+  sequence_generator = get_sequence_generator(name, bundle_filename,
                                               config_name)
-  sequence = sequence_generator.generate(sequence,
-                                         generator_options)
+  sequence_generator.generate(sequence, generator_options)
   sequence = ss.trim_note_sequence(sequence,
                                    generation_start_time,
                                    generation_end_time)

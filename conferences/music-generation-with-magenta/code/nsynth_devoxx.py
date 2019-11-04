@@ -48,19 +48,16 @@ def encode(paths: List[str],
     -> np.ndarray:
   audios = []
   for path in paths:
-    audio = load_audio(path,
-                       sample_length=sample_length,
-                       sr=sample_rate)
+    audio = load_audio(path, sample_length, sample_rate)
     audios.append(audio)
   audios = np.array(audios)
-  encodings = fastgen.encode(audios, checkpoint, sample_length)
-  return encodings
+  return fastgen.encode(audios, checkpoint, sample_length)
 
 
 def mix(encoding1: np.ndarray,
         encoding2: np.ndarray) \
     -> np.ndarray:
-  return (encoding1 + encoding2) / 2.0
+  return encoding1 + encoding2 / 2.0
 
 
 def synthesize(encoding_mix: np.ndarray,
@@ -69,9 +66,7 @@ def synthesize(encoding_mix: np.ndarray,
   date_and_time = time.strftime("%Y-%m-%d_%H%M%S")
   output = os.path.join("output", "synth", f"{date_and_time}.wav")
   encoding_mix = np.array([encoding_mix])
-  fastgen.synthesize(encoding_mix,
-                     checkpoint_path=checkpoint,
-                     save_paths=[output])
+  fastgen.synthesize(encoding_mix, [output], checkpoint)
 
 
 def app(unused_argv):
