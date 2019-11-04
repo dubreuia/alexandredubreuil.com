@@ -60,12 +60,30 @@
 
 .reveal .sound_clip {
     display: inline-block;
-    text-align: left;
+    text-align: center;
     width: 200px;
+    vertical-align: top;
+}
+
+.reveal .sound_clip.smaller {
+    width: 150px;
+}
+
+.reveal .sound_clip.smaller span {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.reveal .sound_clip.smaller img {
+    margin: 0;
 }
 
 .reveal .sound_clip audio {
     width: 191px;
+}
+
+.reveal .sound_clip.smaller audio {
+    width: 141px;
 }
 
 .reveal .sound_clip img {

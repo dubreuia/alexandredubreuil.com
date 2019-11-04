@@ -123,21 +123,18 @@
         </p>
       </section>
 
-      <section data-background="resources/silly-01.jpg"
+      <section data-background="resources/brian-eno.jpg"
                class="background">
         <h5>
           "The weird and the strange is good" - Brian Eno
         </h5>
-        <p>
-          TODO change background
-        </p>
         <p>
           Generative systems makes tons of mistakes (also humans), <strong>but
           mistakes are good</strong>.
         </p>
         <p>
           <span class="figure-caption"><a
-              href="https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg">https://www.corelogic.com.au/sites/default/files/2018-08/1200px-800px--tworobots.jpg</a></span>
+              href="https://i.ytimg.com/vi/Dwo-tvmEKhk/maxresdefault.jpg">https://i.ytimg.com/vi/Dwo-tvmEKhk/maxresdefault.jpg</a></span>
         </p>
       </section>
 
@@ -491,46 +488,69 @@ def synthesize(encoding_mix: np.ndarray,
 
       <section>
         <h4>STEP 1: The results</h4>
-        <p>TODO describe</p>
-        <div class="sound_clip">
-          <!--          <img src="resources/rainbowgram-bass-01.png"-->
-          <!--               class="no_border"-->
-          <!--               alt="Audio diagram"/>-->
-          Cat + bass
-          <audio controls>
-            <source src="code/sounds/generated/83249_160045.wav"
-                    type="audio/wav"/>
-          </audio>
+        <div>
+          <div class="sound_clip smaller">
+            <img src="resources/83249_412017_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Bass + Cat</span>
+            <audio controls>
+              <source src="code/sounds/83249_412017_bass_cat.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
+          <div class="sound_clip smaller">
+            <img src="resources/83249_427567_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Bass + Flute</span>
+            <audio controls>
+              <source src="code/sounds/83249_427567_bass_flute.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
+          <div class="sound_clip smaller">
+            <img src="resources/83249_160045_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Bass + Metal</span>
+            <audio controls>
+              <source src="code/sounds/83249_160045_bass_metal.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
         </div>
-        <div class="sound_clip">
-          <!--          <img src="resources/rainbowgram-metal-01.png"-->
-          <!--               class="no_border"-->
-          <!--               alt="Audio diagram"/>-->
-          Cat + bass
-          <audio controls>
-            <source src="code/sounds/generated/83249_160045.wav"
-                    type="audio/wav"/>
-          </audio>
-        </div>
-        <div class="sound_clip">
-          <!--          <img src="resources/rainbowgram-cat-01.png"-->
-          <!--               class="no_border"-->
-          <!--               alt="Audio diagram"/>-->
-          Cat + bass
-          <audio controls>
-            <source src="code/sounds/generated/83249_160045.wav"
-                    type="audio/wav"/>
-          </audio>
-        </div>
-        <div class="sound_clip">
-          <!--          <img src="resources/rainbowgram-flute-01.png"-->
-          <!--               class="no_border"-->
-          <!--               alt="Audio diagram"/>-->
-          Cat + bass
-          <audio controls>
-            <source src="code/sounds/generated/83249_160045.wav"
-                    type="audio/wav"/>
-          </audio>
+        <div>
+          <div class="sound_clip smaller">
+            <img src="resources/160045_83249_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Metal + Bass</span>
+            <audio controls>
+              <source src="code/sounds/160045_83249_metal_bass.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
+          <div class="sound_clip smaller">
+            <img src="resources/160045_412017_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Metal + Cat</span>
+            <audio controls>
+              <source src="code/sounds/160045_412017_metal_cat.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
+          <div class="sound_clip smaller">
+            <img src="resources/160045_427567_rainbowgram_trim.png"
+                 class="no_border"
+                 alt="Audio diagram"/>
+            <span>Metal + Flute</span>
+            <audio controls>
+              <source src="code/sounds/160045_427567_metal_flute.wav"
+                      type="audio/wav"/>
+            </audio>
+          </div>
         </div>
       </section>
 
@@ -992,24 +1012,35 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
       <section>
         <h4>Hands-on Music Generation with Magenta</h4>
         <p>
-          Upcoming book on Packt Publishing, expected publication date:
-          January 2020.
+          Upcoming book on <strong>Packt Publishing</strong>, expected
+          publication date in <strong>January 2020</strong>.
         </p>
         <img width="33%"
              class="no_border"
              src="resources/magenta-book-icon.png"
              alt="Dreambank image"/>
+        <img width="33%"
+             class="no_border"
+             src="resources/packt-logo.png"
+             alt="Dreambank image"/>
+      </section>
+
+      <section>
+        <h4>
+          <a href="https://alexandredubreuil.com">https://alexandredubreuil.com</a>
+        </h4>
+        <p>Slides of this presentation, blog articles on Magenta, etc.</p>
       </section>
 
     </section>
 
     <!--
     TODO
-    - devoxx template
     - fix visual midi loop time
-    - change drum kit
     - add generate for the training at the end
-    - test training commands
+    - AD: add article on magenta
+    - AD: add project on dreambank
+    - AD: add slide overview on conference page
     -->
 
     <section>

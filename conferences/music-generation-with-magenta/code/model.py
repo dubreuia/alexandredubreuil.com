@@ -42,7 +42,7 @@ class SequenceLooper(threading.Thread):
       os.makedirs(model_dir)
     self._output_plot = os.path.join("output", "models", self.name + ".html")
     self._output_midi = os.path.join("output", "models", self.name + ".mid")
-    self._plotter = Plotter(plot_max_length_bar=16,
+    self._plotter = Plotter(plot_max_length_bar=bar_per_loop,
                             live_reload=True,
                             preset_name="PRESET_SMALL")
 
