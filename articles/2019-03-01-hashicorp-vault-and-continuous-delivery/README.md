@@ -2,7 +2,7 @@
 
 **2019/03/01**
 
-> This is the english text transcript of the presentation [Déploiement de vos secrets applicatifs : Hashicorp Vault et la livraison en continue](https://cfp.devoxx.fr/2019/talk/LTI-4983/Deploiement_de_vos_secrets_applicatifs_:_Hashicorp_Vault_et_la_livraison_en_continue), made at Devoxx France 2019.
+> This is the text transcript of the presentation [Déploiement de vos secrets applicatifs : Hashicorp Vault et la livraison en continue](https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-devoxx.html), made at Devoxx France 2019.
 
 Everybody has secrets: people, machines and web applications. Pretty much any application needs to access external or protected resources: databases, web services, secure tunnels, etc. Today we'll look into securing the resources that gives access to those external systems: **application secrets**.
 
