@@ -735,5 +735,5 @@ Generative music using Magenta and Ableton Live.
 Upcoming book on **Packt Publishing**, expected
 publication date in **January 2020**.
 
-<img width="200px" src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Magenta book icon"/>
-<img width="200px" src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Packt logo"/>
+<img width="150px" src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Magenta book icon"/>
+<img width="150px" src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Packt logo"/>

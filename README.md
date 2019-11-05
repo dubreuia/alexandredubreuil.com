@@ -10,6 +10,10 @@ Hello, I'm a software engineer, conference speaker, open source maintainer and s
 
 Articles on music and technology.
 
+## [Books](books)
+
+Current and upcoming books.
+
 ## [Conferences](conferences)
 
 Conferences on domain driven design, infrastructure automation, big data,
