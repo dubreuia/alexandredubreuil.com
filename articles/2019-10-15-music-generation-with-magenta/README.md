@@ -239,14 +239,14 @@ We'll use NSynth to mix cat sounds with other sounds.
 ### STEP 1: The sounds
 
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/83249__zgump__bass-0205__crop.wav"
         type="audio/wav"/>
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source
     src="../../conferences/music-generation-with-magenta/code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
@@ -254,14 +254,14 @@ We'll use NSynth to mix cat sounds with other sounds.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/412017__skymary__cat-meow-short__crop.wav"
         type="audio/wav"/>
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/427567__maria-mannone__flute__crop.wav"
         type="audio/wav"/>
@@ -365,7 +365,7 @@ audio synthesis. You should use **GANSynth**.
 ### STEP 1: The results
 
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_412017_bass_cat.wav"
@@ -373,7 +373,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_427567_bass_flute.wav"
@@ -381,7 +381,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Metal</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_160045_bass_metal.wav"
@@ -389,7 +389,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Bass</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_83249_metal_bass.wav"
@@ -397,7 +397,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_412017_metal_cat.wav"
@@ -405,7 +405,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img src="../../conferences/music-generation-with-magenta/resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_427567_metal_flute.wav"
@@ -671,17 +671,20 @@ Magenta.js (which in turns uses Tensorflow.js).
 ### Melody Mixer
 
 <img src="../../conferences/music-generation-with-magenta/resources/melody-mixer.png" alt="RNN diagram"/>
-<!-- https://experiments.withgoogle.com/ai/melody-mixer/view/ -->
+
+[Melody Mixer](https://experiments.withgoogle.com/ai/melody-mixer/view/)
 
 ### Neural Drum Machine
 
 <img src="../../conferences/music-generation-with-magenta/resources/neural-drum-machine.png" alt="RNN diagram"/>
-<!-- https://codepen.io/teropa/full/JLjXGK -->
+
+[Neural Drum Machine](https://codepen.io/teropa/full/JLjXGK)
 
 ### GANHarp
 
 <img src="../../conferences/music-generation-with-magenta/resources/ganharp.png" alt="RNN diagram"/>
-<!-- https://ganharp.ctpt.co -->
+
+[GANHarp](https://ganharp.ctpt.co)
 
 ### Easy peasy
 
@@ -716,7 +719,7 @@ Using Magenta.js and Max4Live (MaxMSP) process, Magenta Studio can
 be used directly in Ableton Live.
 
 <video autoplay="" loop="" muted="" playsinline="">
-<source src="../common/video/hero.mp4" type="video/mp4">
+<source src="../../conferences/common/video/hero.mp4" type="video/mp4">
 </video>
 <!-- https://magenta.tensorflow.org/studio/assets/studio/hero.mp4 -->
 
@@ -732,5 +735,5 @@ Generative music using Magenta and Ableton Live.
 Upcoming book on **Packt Publishing**, expected
 publication date in **January 2020**.
 
-<img src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Dreambank image"/>
-<img src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Dreambank image"/>
+<img width="200px" src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Magenta book icon"/>
+<img width="200px" src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Packt logo"/>
