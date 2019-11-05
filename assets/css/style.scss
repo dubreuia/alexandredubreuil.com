@@ -427,7 +427,7 @@ blockquote {
 }
 
 blockquote a {
-    padding: 0px;
+    padding: 0;
 }
 
 table {
@@ -548,6 +548,21 @@ span.icon-instagram:before {
 
 span.icon-linkedin:before {
     content: url("/assets/img/icon-linkedin.svg");
+}
+
+div.sound_clip {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    vertical-align: top;
+}
+
+.div.sound_clip audio {
+    width: 191px;
+}
+
+.div.sound_clip img {
+    width: 200px;
 }
 
 /*******************************************************/
@@ -947,8 +962,8 @@ span.icon-linkedin:before {
 
     h5 {
         font-size: 15px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     span.icon:before {
@@ -993,14 +1008,14 @@ span.icon-linkedin:before {
 
     h4 {
         font-size: 15px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     h5 {
         font-size: 14px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     span.icon:before {
@@ -1043,20 +1058,20 @@ span.icon-linkedin:before {
 
     h3 {
         font-size: 15px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     h4 {
         font-size: 14px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     h5 {
         font-size: 13px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     span.icon:before {

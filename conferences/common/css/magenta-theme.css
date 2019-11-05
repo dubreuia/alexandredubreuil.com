@@ -44,6 +44,7 @@
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+.reveal .background h4,
 .reveal .background h5,
 .reveal .background p {
     color: white;

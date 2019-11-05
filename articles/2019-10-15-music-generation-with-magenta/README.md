@@ -58,80 +58,121 @@
 
 ## Generative Music
 
-"Generative art is an artwork partially or completely created by an autonomous system."
+"Generative art is an artwork partially or completely created by an autonomous 
+system." This definition is good, but not really fun. Let's other ways of
+seeing generative music. 
 
 ### Make music without being a musician
 
-Maybe you don't know how to <strong>improvise</strong>, maybe you need help to <strong>compose</strong>.
+Maybe you don't know how to **improvise**, maybe you need help 
+to **compose**. Either way, a generative algorithm can help you
+do it.
+
+By interacting with a machine, you can find new ideas, discover new
+sounds, or do even things you cannot by yourself. The machine becomes an
+extension of our creativity.
 
 ### "Why you should build silly things" - Monica Dinculescu
     
-It is okay to make art without taking ourselves seriously. The important thing is to <strong>create systems that makes this possible</strong>.
+It is okay to make art without taking ourselves seriously. Generative
+music is a good way of doing that, because those kind of systems can
+be **interacted with** easily.
+
+[Monica Dinculescu - Why you should build silly things](https://www.youtube.com/watch?v=DkiFjzQgJtg)
 
 ### Helping people build generative systems
 
-Art exhibit, generative radio, interactive art.
+To make generative art, you need **autonomous systems**
+that makes it possible. As software developers, this is our role
+to provide that, whether it is for an art exhibit, a generative
+radio, or a fun website.
 
 ### "The weird and the strange is good" - Brian Eno
 
-Generative systems makes tons of mistakes (also humans), <strong>but mistakes are good</strong>.
+Generative systems makes tons of mistakes (also humans), 
+**but mistakes are good**. They form the basic mechanism with
+which we learn and are important in the creation process. 
 
 ### Representation: MIDI
 
-MIDI is a musical representation analogous to <strong>sheet music</strong>, where note has a pitch, velocity, and time.
+MIDI is a musical representation analogous to **sheet music**,
+where note has a pitch, velocity, and time.
 
-Working with MIDI shows the underlying <strong>structure of the music</strong>, but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
+Working with MIDI shows the underlying **structure of the music**,
+but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
 
-<img src="../../conferences/music-generation-with-magenta/resources/midi.png" alt="MIDI diagram"/>
+![MIDI diagram](../../conferences/music-generation-with-magenta/resources/midi.png)
 
 ### Representation: audio
 
-Working with audio is harder because you have to handle 16000 samples per seconds (at least) and keep track of the general structure. Generating audio is more direct than MIDI.
+Working with audio is harder because you have to handle 16000 samples per 
+seconds (at least) and keep track of the general structure. Generating audio 
+is more direct than MIDI.
 
-<img src="../../conferences/music-generation-with-magenta/resources/spectrogram.png" alt="Audio diagram"/>
+It is more direct because you don't need the extra step of using instruments
+to play the score.
+
+![Audio diagram](../../conferences/music-generation-with-magenta/resources/spectrogram.png)
 <!-- https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png -->
 
 ### Machine Learning
 
-Hand crafting the rules of a painting or the rules of a music style might be a hard task. That's why Machine Learning is so interesting in arts: it can learn complex functions.
+Hand crafting the rules of a painting or the rules of a music style might be
+a hard task. That's why Machine Learning is so interesting in arts: it can
+learn complex functions.
 
 ### Music generation with RNNs (MIDI)
 
-<img src="../../conferences/music-generation-with-magenta/resources/rnn.png" alt="RNN diagram"/>
+<img width="300px" alt="RNN diagram" src="../../conferences/music-generation-with-magenta/resources/rnn.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png -->
 
-Recurrent Neural Networks (RNNs) solves two important properties for music generation: they <strong>operate on sequences for the inputs and outputs</strong> and they <strong>can remember past events</strong>.
+Recurrent Neural Networks (RNNs) solves two important properties 
+for music generation: they **operate on sequences for the inputs 
+and outputs** and they **can remember past events**.
 
 ### Long-term structure with LSTMs (MIDI)
 
-<img src="../../conferences/music-generation-with-magenta/resources/lstm.png" alt="LSTM diagram"/>
+<img width="300px" alt="LSTM diagram" src="../../conferences/music-generation-with-magenta/resources/lstm.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png -->
           
-Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs are hard to train because of the problems of vanishing and exploding gradient, making long-term dependencies hard to learn.
+Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs
+are hard to train because of the problems of vanishing and exploding gradient,
+making long-term dependencies hard to learn.
 
-By using <strong>input, output and forget gates</strong> in the cell, LSTMs can learn mechanisms to keep or forget information as they go.
+By using **input, output and forget gates** in the cell, LSTMs can
+learn mechanisms to keep or forget information as they go.
 
 ### Latent space interpolation with VAEs (MIDI)
 
-<img src="../../conferences/music-generation-with-magenta/resources/vae.png" alt="VAE diagram"/>
+<img width="300px" alt="VAE diagram" src="../../conferences/music-generation-with-magenta/resources/vae.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png -->
 
-Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces the input to a lower dimensionality (<strong>latent space</strong>), from which a decoder tries to reproduce the input.
+Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces
+the input to a lower dimensionality (**latent space**), from which
+a decoder tries to reproduce the input.
 
-The latent space is continuous and follows a probability distribution, meaning it is possible to sample from it. VAEs are inherently generative models: they can <strong>sample</strong> and <strong>interpolate</strong> (smoothly move in the latent space) between two points.
-
-href="">https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png</a></span>
+The latent space is continuous and follows a probability distribution, meaning
+it is possible to sample from it. VAEs are inherently generative models: they
+can **sample** and **interpolate** (smoothly move in
+the latent space) between two points.
 
 ### Audio generation with WaveNet Autoencoders (audio)
 
-<img src="../../conferences/music-generation-with-magenta/resources/wavenet.png" alt="Wavenet diagram"/>
+![Wavenet diagram](../../conferences/music-generation-with-magenta/resources/wavenet.png)
 <!-- https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png -->
 
-WaveNet is a convolutional neural network (CNN) taking raw signal as an input and synthesizing output audio sample by sample.
+WaveNet is a convolutional neural network (CNN) taking raw signal as an input
+and synthesizing output audio sample by sample.
 
-The WaveNet Autoencoder present in Magenta is a Wavenet-style AE network capable of learning its own temporal embedding, resulting in a latent space from which is it possible to <strong>sample </strong> and <strong>mix</strong> elements.
+The WaveNet Autoencoder present in Magenta is a Wavenet-style AE network
+capable of learning its own temporal embedding, resulting in a latent space
+from which is it possible to **sample ** and **mix**
+elements.
 
 ### What's in Magenta?
+
+Here are some networks we'll be using in this presentation and live code.
+Not all Magenta models are listed, but the main ones for music generation are. 
 
 <table class="smaller">
   <thead>
@@ -197,61 +238,77 @@ We'll use NSynth to mix cat sounds with other sounds.
 
 ### STEP 1: The sounds
 
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/83249__zgump__bass-0205__crop.wav"
         type="audio/wav"/>
 </audio>
-        
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source
     src="../../conferences/music-generation-with-magenta/code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
     type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/412017__skymary__cat-meow-short__crop.wav"
         type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/427567__maria-mannone__flute__crop.wav"
         type="audio/wav"/>
 </audio>
+</div>
 
 ### STEP 1: Entry point
 
-See "code/nsynth.py" and method <code>app</code> in this repo.
+See the file "nsynth.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>app</code>.
+
+<!-- TODO describe -->
 
 ```python
 def app(unused_argv):
-encoding1, encoding2 = encode([FLAGS.wav1, FLAGS.wav2],
-                    sample_length=FLAGS.sample_length,
-                    sample_rate=FLAGS.sample_rate,
-                    checkpoint=FLAGS.checkpoint)
-encoding_mix = mix(encoding1, encoding2)
-synthesize(encoding_mix, checkpoint=FLAGS.checkpoint)
+    encoding1, encoding2 = encode([FLAGS.wav1, FLAGS.wav2],
+                                  sample_length=FLAGS.sample_length,
+                                  sample_rate=FLAGS.sample_rate,
+                                  checkpoint=FLAGS.checkpoint)
+    encoding_mix = mix(encoding1, encoding2)
+    synthesize(encoding_mix, checkpoint=FLAGS.checkpoint)
 ```
 
 ### STEP 1: Encode
 
-See "code/nsynth.py" and method <code>encode</code> in this repo.
+See the file "nsynth.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>encode</code>.
+
+<!-- TODO describe -->
 
 ```python
+import numpy as np
+from typing import List
+from magenta.models.nsynth import utils
+from magenta.models.nsynth.wavenet import fastgen
+
 def encode(paths: List[str],
-sample_length: int = 16000,
-sample_rate: int = 16000,
-checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000") \
-    -> np.ndarray:
+           sample_length: int = 16000,
+           sample_rate: int = 16000,
+          checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000") \
+  -> np.ndarray:
     audios = []
     for path in paths:
-    audio = utils.load_audio(path,
-                     sample_length=sample_length,
-                     sr=sample_rate)
-    audios.append(audio)
+        audio = utils.load_audio(path, sample_length, sample_rate)
+        audios.append(audio)
     audios = np.array(audios)
     encodings = fastgen.encode(audios, checkpoint, sample_length)
     return encodings
@@ -259,11 +316,17 @@ checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000") \
 
 ### STEP 1: Mix
 
-See "code/nsynth.py" and method <code>mix</code> in this repo.
+See the file "nsynth.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>mix</code>.
+
+<!-- TODO describe -->
 
 ```python
+import numpy as np
+
 def mix(encoding1: np.ndarray,
-encoding2: np.ndarray) \
+        encoding2: np.ndarray) \
     -> np.ndarray:
     encoding_mix = (encoding1 + encoding2) / 2.0
     return encoding_mix
@@ -271,68 +334,84 @@ encoding2: np.ndarray) \
 
 ### STEP 1: Synthesize
 
-See "code/nsynth.py" and method <code>synthesize</code> in this repo.
+See the file "nsynth.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>synthesize</code>.
+
+<!-- TODO describe -->
 
 ```python
+import os
+import time
+import numpy as np
+from magenta.models.nsynth.wavenet import fastgen
+
 def synthesize(encoding_mix: np.ndarray,
-   checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000"):
+               checkpoint: str = "checkpoints/wavenet-ckpt/model.ckpt-200000"):
     os.makedirs(os.path.join("output", "synth"), exist_ok=True)
     date_and_time = time.strftime("%Y-%m-%d_%H%M%S")
     output = os.path.join("output", "synth", f"{date_and_time}.wav")
     encoding_mix = np.array([encoding_mix])
     fastgen.synthesize(encoding_mix,
-             checkpoint_path=checkpoint,
-             save_paths=[output])
+                       checkpoint_path=checkpoint,
+                       save_paths=[output])
 ```
 
 ### STEP 1: GANSynth
 
 As shown, the NSynth instrument is nice, but really slow for the
-audio synthesis. You should use <strong>GANSynth</strong>.
+audio synthesis. You should use **GANSynth**.
 
 ### STEP 1: The results
 
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_412017_bass_cat.wav"
           type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_427567_bass_flute.wav"
           type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Metal</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_160045_bass_metal.wav"
           type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Bass</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_83249_metal_bass.wav"
           type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_412017_metal_cat.wav"
           type="audio/wav"/>
 </audio>
-
+</div>
+<div class="sound_clip">
 <img src="../../conferences/music-generation-with-magenta/resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_427567_metal_flute.wav"
           type="audio/wav"/>
 </audio>
+</div>
 
 ### STEP 2: sequence the cats
 
@@ -341,73 +420,102 @@ samples.
 
 ### STEP 2: Reset
 
-See "code/sequences.py" and method <code>reset</code> in this repo.
+See the file "sequences.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>reset</code>.
+
+<!-- TODO describe -->
 
 ```python
+from magenta.protobuf.music_pb2 import NoteSequence
+
 def reset(loop_start_time: float,
-loop_end_time: float,
-seconds_per_loop: float):
-    sequence = music_pb2.NoteSequence()
+          loop_end_time: float,
+          seconds_per_loop: float):
+    sequence = NoteSequence()
     sequence = loop(sequence,
-          loop_start_time,
-          loop_end_time,
-          seconds_per_loop)
+                    loop_start_time,
+                    loop_end_time,
+                    seconds_per_loop)
     return sequence
 ```
 
 ### STEP 2: Loop
 
-See "code/sequences.py" and method <code>loop</code> in this repo.
+See the file "sequences.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>loop</code>.
+
+<!-- TODO describe -->
 
 ```python
+from magenta.music import sequences_lib as ss
+from magenta.protobuf.music_pb2 import NoteSequence
+
 def loop(sequence: NoteSequence,
-loop_start_time: float,
-loop_end_time: float,
-seconds_per_loop: float):
+         loop_start_time: float,
+         loop_end_time: float,
+         seconds_per_loop: float):
     sequence = ss.trim_note_sequence(sequence,
-                           loop_start_time,
-                           loop_end_time)
+                                     loop_start_time,
+                                     loop_end_time)
     sequence = ss.shift_sequence_times(sequence,
-                             seconds_per_loop)
+                                       seconds_per_loop)
     return sequence
 ```
 
 ### STEP 2: Generate
 
-See "code/sequences.py" and method <code>generate</code> in this repo.
+See the file "sequences.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>generate</code>.
+
+<!-- TODO describe -->
+<!-- TODO describe -->
 
 ```python
+from magenta.protobuf import generator_pb2
+from magenta.protobuf.music_pb2 import NoteSequence
+
 def generate(sequence: NoteSequence,
- name: str,
- bundle_filename: str,
- config_name: str,
- generation_start_time: float,
- generation_end_time: float):
+             name: str,
+             bundle_filename: str,
+             config_name: str,
+             generation_start_time: float,
+             generation_end_time: float):
     generator_options = generator_pb2.GeneratorOptions()
     generator_options.args['temperature'].float_value = 1
     generator_options.generate_sections.add(
     start_time=generation_start_time,
     end_time=generation_end_time)
     sequence_generator = get_sequence_generator(name,
-                                      bundle_filename,
-                                      config_name)
+                                                bundle_filename,
+                                                config_name)
     sequence = sequence_generator.generate(sequence,
-                                 generator_options)
+                                           generator_options)
     sequence = ss.trim_note_sequence(sequence,
-                           generation_start_time,
-                           generation_end_time)
+                                     generation_start_time,
+                                     generation_end_time)
     return sequence
 ```
 
 ### STEP 2: Sequence generator
 
-See "code/sequences.py" and method
-<code>get_sequence_generator</code> in this repo.
+See the file "sequences.py" in the 
+[conference code](../../conferences/music-generation-with-magenta/code)
+and method <code>get_sequence_generator</code>.
+
+<!-- TODO describe -->
 
 ```python
+import os
+import magenta.music as mm
+from magenta.models.drums_rnn import drums_rnn_sequence_generator
+from magenta.models.melody_rnn import melody_rnn_sequence_generator
+
 def get_sequence_generator(name: str,
-               bundle_filename: str,
-               config_name: str):
+                           bundle_filename: str,
+                           config_name: str):
     if name == "drums":
       generator = drums_rnn_sequence_generator
     elif name == "melody":
@@ -417,11 +525,11 @@ def get_sequence_generator(name: str,
     
     mm.notebook_utils.download_bundle(bundle_filename, "bundles")
     bundle = mm.sequence_generator_bundle.read_bundle_file(
-    os.path.join("bundles", bundle_filename))
+        os.path.join("bundles", bundle_filename))
     
     generator_map = generator.get_generator_map()
     sequence_generator = generator_map[config_name](
-    checkpoint=None, bundle=bundle)
+        checkpoint=None, bundle=bundle)
     sequence_generator.initialize()
     
     return sequence_generator
@@ -431,46 +539,45 @@ def get_sequence_generator(name: str,
 
 This generative music demo helped us improvise and compose around an
 idea: a track composed of a percussion, a melody, and a cat
-&#x1F63A;. We could <strong>interact</strong> with the system
+&#x1F63A;. We could **interact** with the system
 and it helped us improvise around a theme.
 
 ### Can we do better?
 
 Was it perfect? No, we had little happy accidents.
 
-<img src="../../conferences/music-generation-with-magenta/resources/bob-ross.jpg" alt="RNN diagram"/>
+![Bob Ross](../../conferences/music-generation-with-magenta/resources/bob-ross.jpg)
 <!-- https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg -->
 
 Maybe we could have had more control over the sequences. Maybe we
-wanted to improvise around a <strong>musical style</strong>,
-or a <strong>specific structure</strong>.
+wanted to improvise around a **musical style**,
+or a **specific structure**.
 
 ## Training
 
 ### Why?
 
 The pre-trained models in Magenta are good, but if for example
-you want to generate a <strong>specific style</strong>, generate a
-<strong>specific time signature</strong> (3/4 for example), or a
-<strong>specific instrument </strong>(cello for example) you'll
+you want to generate a **specific style**, generate a
+**specific time signature** (3/4 for example), or a
+**specific instrument** (cello for example) you'll
 need to train your own.
 
 ### Datasets: LAKHS (MIDI)
 
-A good place to start is the LAKHS dataset, a 180,000 MIDI files
-dataset, (partially) matched with the Million Song Dataset
+A good place to start is the 
+[LAKHS dataset](https://colinraffel.com/projects/lmd/), a 
+180,000 MIDI files dataset, (partially) matched with the 
+[Million Song Dataset](http://millionsongdataset.com/)
 (metadata like artist, release, genre).
-
-- https://colinraffel.com/projects/lmd/
-- http://millionsongdataset.com/
 
 ### Datasets: NSynth (audio)
 
 A large-scale and high-quality dataset of annotated musical notes.
-Training audio requires lots of ../../conferences/music-generation-with-magenta/resources, but can be achieved using
+Training audio requires lots of resources, but can be achieved using
 GANSynth.
 
-- https://magenta.tensorflow.org/datasets/nsynth
+See the [NSynth Dataset](https://magenta.tensorflow.org/datasets/nsynth).
 
 ### Building the dataset
 
@@ -551,9 +658,9 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
 ### Python to everything using MIDI
 
 Magenta can send MIDI, which is understood by basically everything
-that makes sound: <strong>DAWs</strong> (like Ableton Live),
-<strong>software synthesizers</strong> (like fluidsynth),
-<strong>hardware synthesizers</strong> (though USB or MIDI cable),
+that makes sound: **DAWs** (like Ableton Live),
+**software synthesizers** (like fluidsynth),
+**hardware synthesizers** (though USB or MIDI cable),
 etc.
 
 ### Magenta in the browser with Magenta.js
@@ -622,8 +729,8 @@ Generative music using Magenta and Ableton Live.
 
 ### Hands-on Music Generation with Magenta
 
-Upcoming book on <strong>Packt Publishing</strong>, expected
-publication date in <strong>January 2020</strong>.
+Upcoming book on **Packt Publishing**, expected
+publication date in **January 2020**.
 
 <img src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Dreambank image"/>
 <img src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Dreambank image"/>
