@@ -14,4 +14,3 @@ Music of the "Climat General" exhibits by Claire Malrieux. Generative music by A
 - [Claire Malrieux - Climat General College des Bernardins](http://claire-malrieux.com/Climat-General-College-des-Bernardins)
 
 ![Climat General Bernardins 2017](climat-general-bernardins-2017.jpg)
-

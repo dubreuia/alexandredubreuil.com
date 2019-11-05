@@ -1,5 +1,9 @@
 # Projects
 
+## [Dreambank](dreambank)
+
+Generative music using Magenta, exhibit by Claire Malrieux.
+
 ## [Domain Object Oriented Validation (dOOv)](doov)
 
 <iframe src="https://ghbtns.com/github-btn.html?user=doov-io&repo=doov&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
