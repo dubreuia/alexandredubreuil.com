@@ -546,7 +546,7 @@ and it helped us improvise around a theme.
 
 Was it perfect? No, we had little happy accidents.
 
-![Bob Ross](../../conferences/music-generation-with-magenta/resources/bob-ross.jpg)
+<img width="33%" alt="Bob Ross" src="../../conferences/music-generation-with-magenta/resources/bob-ross.jpg">
 <!-- https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg -->
 
 Maybe we could have had more control over the sequences. Maybe we
@@ -727,7 +727,8 @@ be used directly in Ableton Live.
 
 ### Dreambank - Can a machine dream?
 
-Generative music using Magenta and Ableton Live.
+Generative music using Magenta and Ableton Live, exhibit by Claire Malrieux.
+
 <img src="../../conferences/music-generation-with-magenta/resources/dreambank.jpg" alt="Dreambank image"/>
 
 ### Hands-on Music Generation with Magenta

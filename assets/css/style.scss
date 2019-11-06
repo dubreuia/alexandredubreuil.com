@@ -387,7 +387,7 @@ p {
     text-align: justify;
 }
 
-img {
+img, video {
     box-shadow: 0 0 5px gray;
     float: left;
     margin: 0 20px 20px 0;
@@ -557,11 +557,11 @@ div.sound_clip {
     vertical-align: top;
 }
 
-.div.sound_clip audio {
+div.sound_clip audio {
     width: 191px;
 }
 
-.div.sound_clip img {
+div.sound_clip img {
     width: 200px;
 }
 
