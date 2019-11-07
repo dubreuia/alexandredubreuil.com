@@ -1,8 +1,12 @@
 # Music Generation with Magenta: Using Machine Learning in Arts
 
+## Article
+
+- [Music Generation with Magenta: Using Machine Learning in Arts](/articles/2019-10-15-music-generation-with-magenta)
+
 ## Conferences
 
-- 2019/11/07 - Devoxx @ Antwerp, Belgium - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)** - <span class="icon icon-youtube">**Video (upcoming)**</span>
+- 2019/11/07 - Devoxx @ Antwerp, Belgium - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)** - <span class="icon icon-youtube">**Video (upcoming)** - <span class="icon icon-soundcloud">**[Sound](https://soundcloud.com/dubreuia/2019-11-07-devoxx-belgium-live-code?in=dubreuia/sets/generative-music)**</span>
 
 ## Music Generation with Magenta: Using Machine Learning in Arts
 
