@@ -6,7 +6,7 @@
 
 ## Conferences
 
-- 2017/06/14 - Open R&Day @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus/continuous-delivery-open-r-and-d-day.html)**</span> - <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=SL9fuglqBH4)**</span>
+- 2017/06/14 - Open R&Day @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus/continuous-delivery-open-r-and-d-day.html)**</span><span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=SL9fuglqBH4)**</span>
 - 2016/11/07 - BBL WorkIT @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus/continuous-delivery-workit-2016.html)**</span>
 - 2016/11/13 - JUG @ Marseille, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus/continuous-delivery-marseille-jug-2016.html)**</span>
 - 2016/06/29 - BBL Societe Generale @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/continuous-merge-git-octopus/continuous-delivery-marseille-jug-2016.html)**</span>

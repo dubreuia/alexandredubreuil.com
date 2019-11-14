@@ -7,4 +7,3 @@ Using `pandoc` to generate a web version and a latex version from a common sourc
 You can download the pdf here:
 
 <span class="icon icon-pdf">**[Resume Alexandre DuBreuil](resume-alexandre-dubreuil.pdf)**</span>
-

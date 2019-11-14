@@ -7,7 +7,7 @@
 ## Conferences
 
 - 2020/01/22 - Snowcamp @ Grenoble, France - <span class="icon icon-slideshare">**Slides (upcoming)**</span>
-- 2019/11/07 - Devoxx @ Antwerp, Belgium - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)**</span> - <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=O4uBa0KMeNY)**</span> - <span class="icon icon-soundcloud">**[Soundcloud](https://soundcloud.com/dubreuia/2019-11-07-devoxx-belgium-live-code?in=dubreuia/sets/generative-music)**</span> - <span class="icon icon-github">**[Github](https://github.com/dubreuia/alexandredubreuil.com/tree/master/conferences/music-generation-with-magenta/code)**</span>
+- 2019/11/07 - Devoxx @ Antwerp, Belgium - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)**</span><span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=O4uBa0KMeNY)**</span><span class="icon icon-soundcloud">**[Soundcloud](https://soundcloud.com/dubreuia/2019-11-07-devoxx-belgium-live-code?in=dubreuia/sets/generative-music)**</span><span class="icon icon-github">**[Github](https://github.com/dubreuia/alexandredubreuil.com/tree/master/conferences/music-generation-with-magenta/code)**</span>
 
 ## Music Generation with Magenta: Using Machine Learning in Arts
 

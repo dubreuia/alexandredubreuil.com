@@ -6,8 +6,8 @@
 
 ## Conferences
 
-- 2018/06/20 - Open R&Day @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html)**</span> - <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=a0PJ3NuSA_c)**</span>
-- 2018/06/10 - JDK.IO @ Copenhagen, Danmark - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_jdk_io.html)**</span> - <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=2R1ByMSVHa8)**</span>
+- 2018/06/20 - Open R&Day @ Paris, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_openrday.html)**</span><span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=a0PJ3NuSA_c)**</span>
+- 2018/06/10 - JDK.IO @ Copenhagen, Danmark - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_jdk_io.html)**</span><span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=2R1ByMSVHa8)**</span>
 - 2018/05/09 - BGL META @ London, UK - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_meta.html)**</span>
 - 2018/01/24 - Snowcamp @ Grenobles, France - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_snowcamp.html)**</span>
 - 2018/10/26 - Softshake @ Geneva, Switzerland - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/domain-object-oriented-validation-doov/dsl_to_go_beyond_bean_validation_softshake.html)**</span>
