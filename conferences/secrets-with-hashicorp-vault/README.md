@@ -22,3 +22,6 @@ La gestion des secrets applicatifs, tels que les identifiants de connexion aux b
 
 <iframe class="slides" src="https://lesfurets.github.io/vault-continuous-secret-deployment/vault-continuous-secret-deployment-devoxx.html" frameborder="0"></iframe>
 
+## [Latest video](https://www.youtube-nocookie.com/embed/ffz1tY_8vgE)
+
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/ffz1tY_8vgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -28,5 +28,3 @@ Apache Spark propose une API Java comme langage principal, mais est-elle aussi p
 ## [Latest video](https://www.youtube-nocookie.com/embed/cr3wCNwKQWY)
 
 <iframe class="video" src="https://www.youtube-nocookie.com/embed/cr3wCNwKQWY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-

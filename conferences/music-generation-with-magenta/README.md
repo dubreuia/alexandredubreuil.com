@@ -20,3 +20,7 @@ Composer de la musique est difficile et le manque d'inspiration peut être déco
 ## [Latest slides](https://alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)
 
 <iframe class="slides" src="https://alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html" frameborder="0"></iframe>
+
+## [Latest video](https://www.youtube-nocookie.com/embed/O4uBa0KMeNY)
+
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/O4uBa0KMeNY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
