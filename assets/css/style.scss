@@ -286,9 +286,9 @@ html {
     /* background-image: radial-gradient(ellipse at top right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
     color: #212121;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 14px;
     height: 100%;
-    line-height: 24px;
+    line-height: 22px;
     overflow-y: scroll;
 }
 
@@ -342,35 +342,35 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
 h1 {
     background-color: #424242;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 140%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 h2 {
     background-color: #E0E0E0;
-    font-size: 19px;
+    font-size: 120%;
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
 h3 {
     background-color: #EEEEEE;
-    font-size: 18px;
+    font-size: 110%;
     padding-top: 3px;
     padding-bottom: 3px;
 }
 
 h4 {
     background-color: #F5F5F5;
-    font-size: 17px;
+    font-size: 105%;
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
 h5 {
     background-color: #FAFAFA;
-    font-size: 16px;
+    font-size: 102%;
     padding-top: 1px;
     padding-bottom: 1px;
 }
