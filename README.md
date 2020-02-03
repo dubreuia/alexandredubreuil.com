@@ -1,18 +1,14 @@
 # Alexandre DuBreuil
 
-Hello, I'm a software engineer, conference speaker, open source maintainer and sound designer.
+Hello, I'm a software engineer, sound designer, book author, conference speaker, and open source maintainer.
 
 ## [Contact](contact)
 
 <span class="icon icon-mail">[Mail](mailto:contact@alexandredubreuil.com)</span> - <span class="icon icon-github">[Github](https://github.com/dubreuia)</span> - <span class="icon icon-twitter">[Twitter](https://twitter.com/dubreuia)</span> - <span class="icon icon-soundcloud">[Soundcloud](https://soundcloud.com/dubreuia)</span>
 
-## [Articles](articles)
+## [Publications](publications)
 
-Articles on music and technology.
-
-## [Books](books)
-
-Current and upcoming books.
+Publications on music and technology, including articles and books.
 
 ## [Conferences](conferences)
 
