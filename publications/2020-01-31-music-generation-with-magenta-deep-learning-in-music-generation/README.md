@@ -10,7 +10,7 @@ Design and use machine learning models for music generation using Magenta and ma
 
 ## Description
 
-<img width="500px" src="cover-music-generation-with-magenta-book.jpeg" alt="Cover Music Generation With Magenta Book"/>
+<img width="35%" src="cover-music-generation-with-magenta-book.jpeg" alt="Cover Music Generation With Magenta Book"/>
 
 The importance of machine learning (ML) in art is growing at a rapid pace due to recent advancements in the field, and Magenta is at the forefront of this innovation. With this book, you’ll follow a hands-on approach to using ML models for music generation, learning how to integrate them into an existing music production workflow. Complete with practical examples and explanations of the theoretical background required to understand the underlying technologies, this book is the perfect starting point to begin exploring music generation.
 
