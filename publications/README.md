@@ -2,7 +2,7 @@
 
 ## Books
 
-### Hands-On Music Generation with Magenta: Explore the role of deep learning in music generation and assisted music composition
+### [Hands-On Music Generation with Magenta: Explore the role of deep learning in music generation and assisted music composition](2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation)
 
 **2020/01/31** - Design and use machine learning models for music generation using Magenta and make them interact with existing music creation tools.
 

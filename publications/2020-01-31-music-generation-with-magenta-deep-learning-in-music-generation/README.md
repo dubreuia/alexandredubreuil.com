@@ -30,3 +30,8 @@ By the end of this book, you'll be well-versed with Magenta and have developed t
 - Chapter 8: Magenta in the browser with Magenta.js
 - Chapter 9: Making Magenta interact with music applications
 
+## Online contents
+
+- [Source code](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) - Python and JavaScript code for the examples in the book.
+- [Code in Action](https://www.youtube.com/playlist?list=PLeLcvrwLe186dwWOUTuGBpU9azZiEbQJL) - Videos that shows the code being executed and the resulting generation.
+
