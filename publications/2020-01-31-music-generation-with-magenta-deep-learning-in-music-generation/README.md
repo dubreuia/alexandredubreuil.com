@@ -2,11 +2,12 @@
 
 Design and use machine learning models for music generation using Magenta and make them interact with existing music creation tools.
 
-## Buy links
+## Links
 
-- **[Packt Publishing](https://www.packtpub.com/eu/data/hands-on-music-generation-with-magenta)**
-- [Amazon Kindle](https://www.amazon.com/Hands-Music-Generation-Magenta-composition-ebook/dp/B0847S8R48)
-- [Amazon Paperback](https://www.amazon.com/Hands-Music-Generation-Magenta-composition/dp/1838824413)
+- **[Packt Publishing](https://www.packtpub.com/eu/data/hands-on-music-generation-with-magenta)** - Buy the book in ebook format or paperback
+- [Amazon Kindle](https://www.amazon.com/Hands-Music-Generation-Magenta-composition-ebook/dp/B0847S8R48) or [Amazon Paperback](https://www.amazon.com/Hands-Music-Generation-Magenta-composition/dp/1838824413)
+- [Source code](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) - Python and JavaScript code for the examples in the book
+- [Code in Action](https://www.youtube.com/playlist?list=PLWPX7CYPrFFqvJW-vPU0puAo8vqyzq0A6) - Videos that shows the code examples being executed and the resulting generation
 
 ## Description
 
@@ -29,9 +30,4 @@ By the end of this book, you'll be well-versed with Magenta and have developed t
 - Chapter 7: Training Magenta models
 - Chapter 8: Magenta in the browser with Magenta.js
 - Chapter 9: Making Magenta interact with music applications
-
-## Online contents
-
-- [Source code](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) - Python and JavaScript code for the examples in the book.
-- [Code in Action](https://www.youtube.com/playlist?list=PLWPX7CYPrFFqvJW-vPU0puAo8vqyzq0A6) - Videos that shows the code being executed and the resulting generation.
 
