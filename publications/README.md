@@ -2,25 +2,9 @@
 
 ## Books
 
-### Hands-on Music Generation with Magenta: Using Machine Learning in arts
+### Hands-On Music Generation with Magenta: Explore the role of deep learning in music generation and assisted music composition
 
-Expected publication date in **February 2020** on **Packt Publishing**. You can
-see the code on the [Packt Publishing github](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta).
-
-<img width="150px" src="magenta-book-icon.png" alt="Magenta book icon"/>
-<img width="150px" src="packt-logo.png" alt="Packt logo"/>
-
-Table of Contents:
-
-- Chapter 1: Introduction on Magenta and generative art
-- Chapter 2: Generating drum sequences with Drums RNN
-- Chapter 3: Generating polyphonic melodies
-- Chapter 4: Latent space interpolation with Music VAE
-- Chapter 5: Audio generation with GANSynth
-- Chapter 6: Data Preparation for Training
-- Chapter 7: Training Magenta models
-- Chapter 8: Magenta in the browser with Magenta.js
-- Chapter 9: Making Magenta interact with music applications
+**2020/01/31** - Design and use machine learning models for music generation using Magenta and make them interact with existing music creation tools.
 
 ## Articles
 
