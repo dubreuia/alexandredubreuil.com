@@ -1,9 +1,8 @@
 # Conferences
 
-Conference speaker since 2014, I've talked about subjects like [Continuous Delivery](#continuous-merge-with-git-octopus), [Apache Spark](#apache-spark-for-java-developers), [Domain Object Oriented Validation](#domain-object-oriented-validation-doov), [AI Music Generation using Magenta and Tensorflow](#ai-music-generation-using-magenta-and-tensorflow), software craftsmanship, software factory and other subjects, in many conferences, universities (Telecom Paris Tech, Rouen University, INSTA Paris), JUG (Java User Groups), BBL (Brown Bag Lunch), and meetups, in France and internationally.
+Conference speaker since 2014, I've talked about subjects like [Music Generation with Magenta](#music-generation-with-magenta), [Continuous Delivery](#continuous-merge-with-git-octopus), [Apache Spark](#apache-spark-for-java-developers), [Domain Object Oriented Validation](#domain-object-oriented-validation-doov), software craftsmanship, software factory and other subjects.
 
 ![Conference picture 01](conferences-cover-01.jpg)
-![Conference picture 02](conferences-cover-02.jpg)
 
 ## Main conferences
 
