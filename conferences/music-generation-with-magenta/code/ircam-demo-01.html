@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <title>Music Generation With Magenta.js - IRCAM demo 01</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <style>
+    * {
+      font-family: monospace;
+    }
+
+    canvas {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h1>Music Generation With Magenta.js - IRCAM demo 01</h1>
+  <img src="../resources/logo-ircam.png" alt="Logo IRCAM">
+  <p>
+    <button disabled id="button-sample-gansynth-note">
+      Sample GANSynth note
+    </button>
+  </p>
+  <div id="container-plots"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/tone@13.8.25/build/Tone.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.12.1/es6/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.12.1/es6/gansynth.js"></script>
+<script>
+  // Plots the spectrogram of the given channel
+  // see music/demos/gansynth.ts:28 in magenta.js source code
+  async function plotSpectra(spectra, channel) {
+    const spectraPlot = tf.tidy(() => {
+      // Slice a single example.
+      let spectraPlot = tf.slice(spectra, [0, 0, 0, channel], [1, -1, -1, 1])
+          .reshape([128, 1024]);
+      // Scale to [0, 1].
+      spectraPlot = tf.sub(spectraPlot, tf.min(spectraPlot));
+      spectraPlot = tf.div(spectraPlot, tf.max(spectraPlot));
+      return spectraPlot;
+    });
+    // Plot on canvas.
+    const canvas = document.createElement("canvas");
+    containerPlots.appendChild(canvas);
+    await tf.browser.toPixels(spectraPlot, canvas);
+    spectraPlot.dispose();
+  }
+</script>
+<script>
+  // Get DOM elements
+  const buttonSampleGanSynthNote = document.getElementById("button-sample-gansynth-note");
+  const containerPlots = document.getElementById("container-plots");
+
+  // Add on click handler to call the GANSynth sampling
+  buttonSampleGanSynthNote.addEventListener("click", () => {
+    sampleGanNote();
+  });
+
+  // Calls the initialization of GANSynth
+  try {
+    Promise.all([startGanSynth()]);
+  } catch (error) {
+    console.error(error);
+  }
+
+  // Starts the GANSynth model and initializes it. When finished, enables
+  // the button to start the sampling
+  async function startGanSynth() {
+    const checkpointURL = "https://storage.googleapis.com/magentadata/js/checkpoints/gansynth/acoustic_only";
+    const ganSynth = new gansynth.GANSynth(checkpointURL);
+    await ganSynth.initialize();
+    window.ganSynth = ganSynth;
+    buttonSampleGanSynthNote.disabled = false;
+  }
+
+  // Samples a single note of 4 seconds from GANSynth and plays it repeatedly
+  async function sampleGanNote() {
+    const lengthInSeconds = 4.0;
+    const sampleRate = 16000;
+    const length = lengthInSeconds * sampleRate;
+
+    // The sampling returns a spectrogram, convert that to audio in
+    // a tone.js buffer
+    const specgrams = await ganSynth.randomSample(60);
+    const audio = await ganSynth.specgramsToAudio(specgrams);
+    const audioBuffer = Tone.context.createBuffer(1, length, sampleRate);
+    audioBuffer.copyToChannel(audio, 0, 0);
+
+    // Play the sample audio using tone.js and loop it
+    const playerOptions = {"url": audioBuffer, "loop": true, "volume": -25};
+    const player = new Tone.Player(playerOptions).toMaster();
+    player.start();
+
+    // Plots the resulting spectrograms
+    await plotSpectra(specgrams, 0);
+    await plotSpectra(specgrams, 1);
+  }
+</script>
+</body>
+</html>
