@@ -2,7 +2,7 @@
 
 ## Installation
 
-Installing with [miniconda](https://docs.conda.io/en/latest/miniconda.html) is easier.
+Installing with [miniconda](https://docs.conda.io/en/latest/miniconda.html) is easier, we need Magenta version 1.1.7.
 
 ```bash
 # Create and activate new conda environment
@@ -10,7 +10,11 @@ conda create --name magenta python=3.6
 conda activate magenta
 
 # Install python dependencies
-pip install magenta python-socketio eventlet scikit-image
+pip install magenta==1.1.7 \
+            visual_midi \
+            python-socketio \ 
+            eventlet \
+            scikit-image
 
 # Install javascript dependencies
 npm install
@@ -33,6 +37,11 @@ curl --output "checkpoints/wavenet-ckpt.tar" "http://download.magenta.tensorflow
 # TODO
 python nsynth.py --checkpoint="checkpoints/wavenet-ckpt/model.ckpt-200000" --wav1="sounds/83249__zgump__bass-0205-crop.wav" --wav2="sounds/371192__karolist__acoustic-kick-long.wav" --sample_length="80000"
 ```
+
+## Magenta.js demos
+
+- [IRCAM demo 01](https://alexandredubreuil.com/conferences/music-generation-with-magenta/code/ircam-demo-01.html): Showcase a simple usage of GanSynth
+- [IRCAM demo 02](https://alexandredubreuil.com/conferences/music-generation-with-magenta/code/ircam-demo-02.html): Showcase a combined usage of MusicVae and GanSynth
 
 ## Freesounds
 

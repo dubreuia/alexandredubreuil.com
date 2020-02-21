@@ -17,14 +17,11 @@
   <h1>Music Generation With Magenta.js - IRCAM demo 02</h1>
   <img src="../resources/logo-ircam.png" alt="Logo IRCAM">
   <p>
-    <button disabled id="button-sample-musicae-trio">
-      Sample MusicVAE trio
+    <button disabled id="button-sample-musicae-melody">
+      Sample MusicVAE melody sequence
     </button>
     <button disabled id="button-sample-gansynth-note">
-      Sample GANSynth note for the lead synth
-    </button>
-    <button disabled id="button-remove-gansynth-note">
-      Remove GANSynth note for the lead synth
+      Sample GANSynth note as instrument
     </button>
   </p>
   <p>
@@ -65,10 +62,7 @@
     constructor() {
       super();
       this.bassDrumSynth = new Tone.MembraneSynth().toMaster();
-      this.bassSynth = new Tone.Synth({
-        volume: 0,
-        oscillator: {type: "triangle"}
-      }).toMaster();
+      this.bassSynth = new Tone.Synth({oscillator: {type: "triangle"}}).toMaster();
       this.leadSynth = null;
     }
 
@@ -104,8 +98,7 @@
 <script>
   // Get DOM elements
   const buttonSampleGanSynthNote = document.getElementById("button-sample-gansynth-note");
-  const buttonRemoveGanSynthNote = document.getElementById("button-remove-gansynth-note");
-  const buttonSampleMusicVaeTrio = document.getElementById("button-sample-musicae-trio");
+  const buttonSampleMusicVaeTrio = document.getElementById("button-sample-musicae-melody");
   const containerPlots = document.getElementById("container-plots");
   const canvasMusicVaePlot = document.getElementById("canvas-musicvae-plot");
 
@@ -119,12 +112,6 @@
   // Add on click handler to call the GANSynth sampling
   buttonSampleGanSynthNote.addEventListener("click", () => {
     sampleGanNote();
-    buttonRemoveGanSynthNote.disabled = false;
-  });
-
-  // Add on click handler to remove the GANSynth note
-  buttonRemoveGanSynthNote.addEventListener("click", () => {
-    window.player.leadSynth = null;
   });
 
   // Calls the initialization of MusicVAE and GanSynth
@@ -137,7 +124,7 @@
   // Starts the MusicVAE model and initializes it. When finished, enables
   // the button to start the sampling
   async function startMusicVae() {
-    const checkpointURL = "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/trio_4bar";
+    const checkpointURL = "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_16bar_small_q2";
     const musicVae = new music_vae.MusicVAE(checkpointURL);
     await musicVae.initialize();
     window.musicVae = musicVae;
@@ -152,8 +139,7 @@
     window.ganSynth = ganSynth
   }
 
-  // Samples a trio of drum kit, bass and lead from MusicVAE and
-  // plays it repeatedly at 120 QPM
+  // Samples a melody from MusicVAE and plays it repeatedly at 120 QPM
   async function sampleMusicVaeTrio() {
     const samples = await window.musicVae.sample(1);
     const sample = samples[0];
