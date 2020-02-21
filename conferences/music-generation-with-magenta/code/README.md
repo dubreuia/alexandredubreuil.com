@@ -1,4 +1,4 @@
-# Code for: Music Generation with Magenta
+# Music Generation with Magenta Code Samples
 
 ## Installation
 

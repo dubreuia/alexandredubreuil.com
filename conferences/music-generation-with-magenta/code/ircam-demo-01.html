@@ -20,6 +20,9 @@
     <button disabled id="button-sample-gansynth-note">
       Sample GANSynth note
     </button>
+    <button id="button-reload">
+      Reload
+    </button>
   </p>
   <div id="container-plots"></div>
 </div>
@@ -50,11 +53,17 @@
 <script>
   // Get DOM elements
   const buttonSampleGanSynthNote = document.getElementById("button-sample-gansynth-note");
+  const buttonReload = document.getElementById("button-reload");
   const containerPlots = document.getElementById("container-plots");
 
   // Add on click handler to call the GANSynth sampling
   buttonSampleGanSynthNote.addEventListener("click", () => {
     sampleGanNote();
+  });
+
+  // Add on click handler to call reloding
+  buttonReload.addEventListener("click", () => {
+    location.reload();
   });
 
   // Calls the initialization of GANSynth
@@ -88,7 +97,7 @@
     audioBuffer.copyToChannel(audio, 0, 0);
 
     // Play the sample audio using tone.js and loop it
-    const playerOptions = {"url": audioBuffer, "loop": true, "volume": -25};
+    const playerOptions = {"url": audioBuffer, "loop": true, "volume": -10};
     const player = new Tone.Player(playerOptions).toMaster();
     player.start();
 

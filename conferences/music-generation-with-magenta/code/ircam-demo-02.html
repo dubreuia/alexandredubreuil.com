@@ -23,6 +23,9 @@
     <button disabled id="button-sample-gansynth-note">
       Sample GANSynth note as instrument
     </button>
+    <button id="button-reload">
+      Reload
+    </button>
   </p>
   <p>
     <canvas id="canvas-musicvae-plot"></canvas>
@@ -99,6 +102,7 @@
   // Get DOM elements
   const buttonSampleGanSynthNote = document.getElementById("button-sample-gansynth-note");
   const buttonSampleMusicVaeTrio = document.getElementById("button-sample-musicae-melody");
+  const buttonReload = document.getElementById("button-reload");
   const containerPlots = document.getElementById("container-plots");
   const canvasMusicVaePlot = document.getElementById("canvas-musicvae-plot");
 
@@ -112,6 +116,11 @@
   // Add on click handler to call the GANSynth sampling
   buttonSampleGanSynthNote.addEventListener("click", () => {
     sampleGanNote();
+  });
+
+  // Add on click handler to call reloding
+  buttonReload.addEventListener("click", () => {
+    location.reload();
   });
 
   // Calls the initialization of MusicVAE and GanSynth
@@ -171,7 +180,7 @@
     // since this is what we asked the model for (MIDI pitch 60).
     // If the sequence contains other notes, the pitch will be
     // changed automatically
-    const volume = new Tone.Volume(-25);
+    const volume = new Tone.Volume(-10);
     const instrument = new Tone.Sampler({"C4": audioBuffer});
     instrument.chain(volume, Tone.Master);
     window.player.leadSynth = instrument;

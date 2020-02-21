@@ -4,6 +4,10 @@
 
 - [Music Generation with Magenta: Using Machine Learning in Arts](/articles/2019-10-15-music-generation-with-magenta)
 
+## Book
+
+- [Music Generation with Magenta](https://alexandredubreuil.com/publications/2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation/)
+
 ## Conferences
 
 - 2020/02/21 - Creative Code @ IRCAM, Paris - <span class="icon icon-slideshare">**[Slides](https://dubreuia.github.io/alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-js-using-javascript-and-machine-learning-in-arts.html)**</span><span class="icon icon-github">**[Github](https://github.com/dubreuia/alexandredubreuil.com/tree/master/conferences/music-generation-with-magenta/code#magenta-js-demos)**</span>
@@ -28,7 +32,6 @@ Composer de la musique peut sembler difficile, puisque beaucoup d'éléments son
 With Magenta, a music generation library based on Tensorflow, we can use the power of machine learning to help musical creation. In this presentation, we'll talk about Magenta.js, the JavaScript implementation of Magenta, which makes it possible to generate audio and MIDI directly in the browser, by using the Web Audio API (with Tone.js) and the Web MIDI API. We'll code a music generation application, which will generate a simple rhythmic and an accompanying melody composed of generated audio samples.
 
 (french - Génération musicale avec Magenta.js : machine learning et Web Audio API) Avec Magenta, une librairie de génération musicale basée sur Tensorflow, nous pouvons utiliser la puissance de l'apprentissage machine pour aider la création. Dans cette présentation, nous abordons Magenta.js, l'implémentattion JavaScript de Magenta, permettant de générer audio et MIDI directement dans le navigateur, en utilisant le Web Audio API (avec Tone.js) et le Web MIDI API. Nous allons coder une application de génération musicale, permettant de générer une rythmique simple accompagnée d'une mélodie composée de samples audio générés.
-
 
 ## [Latest slides](https://alexandredubreuil.com/conferences/music-generation-with-magenta/music-generation-with-magenta-using-machine-learning-in-arts.html)
 
