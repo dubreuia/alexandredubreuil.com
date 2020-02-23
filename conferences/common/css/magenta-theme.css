@@ -126,6 +126,13 @@
     font-weight: bold;
 }
 
+.reveal img.float {
+    border: none;
+    width: 25%;
+    float: left;
+    padding: 20px;
+    margin: 0 20px;
+}
 
 /* FORMAT ******************************************************************/
 
@@ -139,11 +146,6 @@
 
 /* FOOTER ******************************************************************/
 
-.slide-first footer,
-.slide-last footer {
-    background-color: #f5af33;
-}
-
 footer {
     transition: background-color 1000ms;
     position: absolute;
@@ -155,6 +157,10 @@ footer {
     width: 100%;
     white-space: nowrap;
     vertical-align: middle;
+}
+
+footer a {
+    color: white;
 }
 
 footer .logo {
@@ -191,4 +197,8 @@ footer .title.right {
 
 .color-magenta-blue {
     color: #072940;
+}
+
+.color-magenta {
+    color: #4c1130ff;
 }

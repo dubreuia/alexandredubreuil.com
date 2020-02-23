@@ -28,7 +28,7 @@
     </button>
   </p>
   <p>
-    <canvas id="canvas-musicvae-plot"></canvas>
+    <canvas style="width: 100%" id="canvas-musicvae-plot"></canvas>
   </p>
   <div id="container-plots">
   </div>
@@ -64,35 +64,15 @@
 
     constructor() {
       super();
-      this.bassDrumSynth = new Tone.MembraneSynth().toMaster();
-      this.bassSynth = new Tone.Synth({oscillator: {type: "triangle"}}).toMaster();
       this.leadSynth = null;
     }
 
     // Plays the note at the proper time using tone.js
     playNote(time, note) {
-      let frequency, duration, synth;
-      if (note.isDrum) {
-        if (note.pitch === 35 || note.pitch === 36) {
-          // If this is a bass drum, we use the kick pitch for
-          // an eight note and the bass drum synth
-          frequency = "C2";
-          duration = "8n";
-          synth = this.bassDrumSynth;
-        }
-      } else {
-        // If this is a bass note or lead note, we convert the
-        // frequency and the duration for tone.js and fetch
-        // the proper synth
-        frequency = new Tone.Frequency(note.pitch, "midi");
-        duration = note.endTime - note.startTime;
-        if (note.program >= 32 && note.program <= 39) {
-          synth = this.bassSynth;
-        } else {
-          synth = this.leadSynth;
-        }
-      }
+      const synth = this.leadSynth;
       if (synth) {
+        const frequency = new Tone.Frequency(note.pitch, "midi");
+        const duration = note.endTime - note.startTime;
         synth.triggerAttackRelease(frequency, duration, time, 1);
       }
     }
@@ -101,14 +81,14 @@
 <script>
   // Get DOM elements
   const buttonSampleGanSynthNote = document.getElementById("button-sample-gansynth-note");
-  const buttonSampleMusicVaeTrio = document.getElementById("button-sample-musicae-melody");
+  const buttonSampleMusicVaeMelody = document.getElementById("button-sample-musicae-melody");
   const buttonReload = document.getElementById("button-reload");
   const containerPlots = document.getElementById("container-plots");
   const canvasMusicVaePlot = document.getElementById("canvas-musicvae-plot");
 
   // Add on click handler to call the MusicVAE sampling
-  buttonSampleMusicVaeTrio.addEventListener("click", (event) => {
-    sampleMusicVaeTrio();
+  buttonSampleMusicVaeMelody.addEventListener("click", (event) => {
+    sampleMusicVaeMelody();
     event.target.disabled = true;
     buttonSampleGanSynthNote.disabled = false;
   });
@@ -133,23 +113,25 @@
   // Starts the MusicVAE model and initializes it. When finished, enables
   // the button to start the sampling
   async function startMusicVae() {
-    const checkpointURL = "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_16bar_small_q2";
+    const checkpointURL = "https://storage.googleapis.com/magentadata" +
+        "/js/checkpoints/music_vae/mel_4bar_small_q2";
     const musicVae = new music_vae.MusicVAE(checkpointURL);
     await musicVae.initialize();
     window.musicVae = musicVae;
-    buttonSampleMusicVaeTrio.disabled = false;
+    buttonSampleMusicVaeMelody.disabled = false;
   }
 
   // Starts the GANSynth model and initializes it
   async function startGanSynth() {
-    const checkpointURL = "https://storage.googleapis.com/magentadata/js/checkpoints/gansynth/acoustic_only";
+    const checkpointURL = "https://storage.googleapis.com/magentadata" +
+        "/js/checkpoints/gansynth/acoustic_only";
     const ganSynth = new gansynth.GANSynth(checkpointURL);
     await ganSynth.initialize();
     window.ganSynth = ganSynth
   }
 
   // Samples a melody from MusicVAE and plays it repeatedly at 120 QPM
-  async function sampleMusicVaeTrio() {
+  async function sampleMusicVaeMelody() {
     const samples = await window.musicVae.sample(1);
     const sample = samples[0];
     new core.PianoRollCanvasVisualizer(sample, canvasMusicVaePlot,
