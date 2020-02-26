@@ -166,10 +166,6 @@
     const instrument = new Tone.Sampler({"C4": audioBuffer});
     instrument.chain(volume, Tone.Master);
     window.player.leadSynth = instrument;
-
-    // Plots the resulting spectrograms
-    await plotSpectra(specgrams, 0);
-    await plotSpectra(specgrams, 1);
   }
 </script>
 </body>

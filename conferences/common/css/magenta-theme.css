@@ -1,4 +1,4 @@
-/* REVEAL ******************************************************************/
+/* REVEAL **************************************************/
 
 .reveal {
     font-family: sans-serif;
@@ -16,7 +16,7 @@
 }
 
 .reveal h1 {
-    font-size: 3em;
+    font-size: 2.75em;
 }
 
 .reveal h2 {
@@ -126,6 +126,10 @@
     font-weight: bold;
 }
 
+.reveal section img {
+    background: none;
+}
+
 .reveal img.float {
     border: none;
     width: 25%;
@@ -134,7 +138,7 @@
     margin: 0 20px;
 }
 
-/* FORMAT ******************************************************************/
+/* FORMAT **************************************************/
 
 .align-left {
     text-align: left;
@@ -144,7 +148,7 @@
     text-align: right;
 }
 
-/* FOOTER ******************************************************************/
+/* FOOTER **************************************************/
 
 footer {
     transition: background-color 1000ms;
@@ -192,13 +196,49 @@ footer .title.right {
     margin-left: 1em;
 }
 
+/* CONDITIONNAL ********************************************/
 
-/* COLORS ******************************************************************/
+.slide-first-vertical {
+    background-color: #072940;
+}
+
+.slide-first-vertical h1,
+.slide-first-vertical h2,
+.slide-first-vertical h3,
+.slide-first-vertical h4,
+.slide-first-vertical h5,
+.slide-first-vertical h6 {
+    color: white;
+}
+
+.slide-first-vertical footer {
+    background-color: white;
+}
+
+.slide-first-vertical footer .title,
+.slide-first-vertical footer a {
+    color: black;
+}
+
+.slide-first-vertical footer {
+  background-color: white;
+}
+
+/* COLORS **************************************************/
+
+.color-magenta {
+    color: #4c1130ff;
+}
 
 .color-magenta-blue {
     color: #072940;
 }
 
-.color-magenta {
-    color: #4c1130ff;
+.color-magenta-light-01 {
+    color: #ef5475;
 }
+
+.color-magenta-light-02 {
+    color: #a83b86;
+}
+

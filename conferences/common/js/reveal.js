@@ -20,6 +20,9 @@ const setBodyClass = function () {
     if (lastSlide) {
         body.addClass(`slide-last`);
     }
+    if (indexv === 0) {
+        body.addClass(`slide-first-vertical`);
+    }
 };
 
 Reveal.addEventListener('ready', function (event) {
