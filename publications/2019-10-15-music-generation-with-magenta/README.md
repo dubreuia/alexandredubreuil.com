@@ -101,7 +101,7 @@ where note has a pitch, velocity, and time.
 Working with MIDI shows the underlying **structure of the music**,
 but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
 
-![MIDI diagram](../../conferences/music-generation-with-magenta/resources/midi.png)
+![MIDI diagram](../../conferences/common/img/magenta/midi.png)
 
 ### Representation: audio
 
@@ -112,7 +112,7 @@ is more direct than MIDI.
 It is more direct because you don't need the extra step of using instruments
 to play the score.
 
-![Audio diagram](../../conferences/music-generation-with-magenta/resources/spectrogram.png)
+![Audio diagram](../../conferences/common/img/magenta/spectrogram.png)
 <!-- https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png -->
 
 ### Machine Learning
@@ -123,7 +123,7 @@ learn complex functions.
 
 ### Music generation with RNNs (MIDI)
 
-<img width="300px" alt="RNN diagram" src="../../conferences/music-generation-with-magenta/resources/rnn.png">
+<img width="300px" alt="RNN diagram" src="../../conferences/common/img/magenta/rnn.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png -->
 
 Recurrent Neural Networks (RNNs) solves two important properties 
@@ -132,7 +132,7 @@ and outputs** and they **can remember past events**.
 
 ### Long-term structure with LSTMs (MIDI)
 
-<img width="300px" alt="LSTM diagram" src="../../conferences/music-generation-with-magenta/resources/lstm.png">
+<img width="300px" alt="LSTM diagram" src="../../conferences/common/img/magenta/lstm.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png -->
           
 Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs
@@ -144,7 +144,7 @@ learn mechanisms to keep or forget information as they go.
 
 ### Latent space interpolation with VAEs (MIDI)
 
-<img width="300px" alt="VAE diagram" src="../../conferences/music-generation-with-magenta/resources/vae.png">
+<img width="300px" alt="VAE diagram" src="../../conferences/common/img/magenta/vae.png">
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png -->
 
 Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces
@@ -158,7 +158,7 @@ the latent space) between two points.
 
 ### Audio generation with WaveNet Autoencoders (audio)
 
-![Wavenet diagram](../../conferences/music-generation-with-magenta/resources/wavenet.png)
+![Wavenet diagram](../../conferences/common/img/magenta/wavenet.png)
 <!-- https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png -->
 
 WaveNet is a convolutional neural network (CNN) taking raw signal as an input
@@ -239,14 +239,14 @@ We'll use NSynth to mix cat sounds with other sounds.
 ### STEP 1: The sounds
 
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/rainbowgram-bass-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/83249__zgump__bass-0205__crop.wav"
         type="audio/wav"/>
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/rainbowgram-metal-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source
     src="../../conferences/music-generation-with-magenta/code/sounds/160045__jorickhoofd__metal-hit-with-metal-bar-resonance__crop.wav"
@@ -254,14 +254,14 @@ We'll use NSynth to mix cat sounds with other sounds.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/rainbowgram-cat-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/412017__skymary__cat-meow-short__crop.wav"
         type="audio/wav"/>
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/rainbowgram-flute-01.png" class="no_border" alt="Audio diagram"/>
 <audio controls>
 <source src="../../conferences/music-generation-with-magenta/code/sounds/427567__maria-mannone__flute__crop.wav"
         type="audio/wav"/>
@@ -365,7 +365,7 @@ audio synthesis. You should use **GANSynth**.
 ### STEP 1: The results
 
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/83249_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_412017_bass_cat.wav"
@@ -373,7 +373,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/83249_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_427567_bass_flute.wav"
@@ -381,7 +381,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/83249_160045_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Bass + Metal</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/83249_160045_bass_metal.wav"
@@ -389,7 +389,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/160045_83249_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Bass</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_83249_metal_bass.wav"
@@ -397,7 +397,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/160045_412017_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Cat</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_412017_metal_cat.wav"
@@ -405,7 +405,7 @@ audio synthesis. You should use **GANSynth**.
 </audio>
 </div>
 <div class="sound_clip">
-<img width="100px" src="../../conferences/music-generation-with-magenta/resources/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
+<img width="100px" src="../../conferences/common/img/magenta/160045_427567_rainbowgram_trim.png" class="no_border" alt="Audio diagram"/>
 <span>Metal + Flute</span>
 <audio controls>
   <source src="../../conferences/music-generation-with-magenta/code/sounds/160045_427567_metal_flute.wav"
@@ -546,7 +546,7 @@ and it helped us improvise around a theme.
 
 Was it perfect? No, we had little happy accidents.
 
-<img width="33%" alt="Bob Ross" src="../../conferences/music-generation-with-magenta/resources/bob-ross.jpg">
+<img width="33%" alt="Bob Ross" src="../../conferences/common/img/magenta/bob-ross.jpg">
 <!-- https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg -->
 
 Maybe we could have had more control over the sequences. Maybe we
@@ -670,19 +670,19 @@ Magenta.js (which in turns uses Tensorflow.js).
 
 ### Melody Mixer
 
-<img src="../../conferences/music-generation-with-magenta/resources/melody-mixer.png" alt="RNN diagram"/>
+<img src="../../conferences/common/img/magenta/melody-mixer.png" alt="RNN diagram"/>
 
 [Melody Mixer](https://experiments.withgoogle.com/ai/melody-mixer/view/)
 
 ### Neural Drum Machine
 
-<img src="../../conferences/music-generation-with-magenta/resources/neural-drum-machine.png" alt="RNN diagram"/>
+<img src="../../conferences/common/img/magenta/neural-drum-machine.png" alt="RNN diagram"/>
 
 [Neural Drum Machine](https://codepen.io/teropa/full/JLjXGK)
 
 ### GANHarp
 
-<img src="../../conferences/music-generation-with-magenta/resources/ganharp.png" alt="RNN diagram"/>
+<img src="../../conferences/common/img/magenta/ganharp.png" alt="RNN diagram"/>
 
 [GANHarp](https://ganharp.ctpt.co)
 
@@ -729,12 +729,12 @@ be used directly in Ableton Live.
 
 Generative music using Magenta and Ableton Live, exhibit by Claire Malrieux.
 
-<img src="../../conferences/music-generation-with-magenta/resources/dreambank.jpg" alt="Dreambank image"/>
+<img src="../../conferences/common/img/magenta/dreambank.jpg" alt="Dreambank image"/>
 
 ### Hands-on Music Generation with Magenta
 
 Upcoming book on **Packt Publishing**, expected
 publication date in **January 2020**.
 
-<img width="150px" src="../../conferences/music-generation-with-magenta/resources/magenta-book-icon.png" alt="Magenta book icon"/>
-<img width="150px" src="../../conferences/music-generation-with-magenta/resources/packt-logo.png" alt="Packt logo"/>
+<img width="150px" src="../../conferences/common/img/magenta/magenta-book-icon.png" alt="Magenta book icon"/>
+<img width="150px" src="../../conferences/common/img/magenta/packt-logo.png" alt="Packt logo"/>

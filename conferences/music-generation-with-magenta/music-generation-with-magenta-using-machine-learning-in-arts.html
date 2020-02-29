@@ -34,7 +34,7 @@
 
 <footer id="footer" class="hide">
   <img class="logo"
-       src="resources/magenta-logo-01.png"
+       src="../common/img/magenta/magenta-logo-01.png"
        alt="Magenta logo">
   <div class="title">
     <div>Music Generation with Magenta</div>
@@ -60,7 +60,7 @@
                data-background-position="left">
         <img width="250px"
              class="logo figure no_border"
-             src="resources/magenta-logo-02.png"
+             src="../common/img/magenta/magenta-logo-02.png"
              alt="Magenta logo">
         <h1 class="align-left">
           Music Generation with <strong style="color:#4c1130ff">Magenta</strong>
@@ -180,7 +180,7 @@
           use instruments (numeric or analogic).
         </p>
         <img width="90%"
-             src="resources/midi.png"
+             src="../common/img/magenta/midi.png"
              alt="MIDI diagram"/>
       </section>
 
@@ -193,7 +193,7 @@
         </p>
         <p>
           <img width="50%"
-               src="resources/spectrogram.png"
+               src="../common/img/magenta/spectrogram.png"
                alt="Audio diagram"/>
         </p>
         <p>
@@ -207,7 +207,7 @@
         <p>
           <img width="250"
                class="figure"
-               src="resources/rnn.png"
+               src="../common/img/magenta/rnn.png"
                alt="RNN diagram"/>
           Recurrent Neural Networks (RNNs) solves two important properties for
           music generation: they <strong>operate on sequences for the inputs
@@ -225,7 +225,7 @@
         <p>
           <img width="250px"
                class="figure"
-               src="resources/lstm.png"
+               src="../common/img/magenta/lstm.png"
                alt="LSTM diagram"/>
           Most RNN uses Long Short-Term Memory (LSTM) cells, since by
           themselves, RNNs are hard to train because of the problems of
@@ -248,7 +248,7 @@
         <p>
           <img width="250px"
                class="figure"
-               src="resources/vae.png"
+               src="../common/img/magenta/vae.png"
                alt="VAE diagram"/>
           Variational Autoencoders (VAEs) are a pair of networks where an
           encoder reduces the input to a lower dimensionality (<strong>latent
@@ -273,7 +273,7 @@
         <p>
           <img width="500px"
                class="figure"
-               src="resources/wavenet.png"
+               src="../common/img/magenta/wavenet.png"
                alt="Wavenet diagram"/>
           WaveNet is a convolutional neural network (CNN) taking raw signal
           as an input and synthesizing output audio sample by sample.
@@ -374,7 +374,7 @@
       <section>
         <h4>STEP 1: The sounds</h4>
         <div class="sound_clip">
-          <img src="resources/rainbowgram-bass-01.png"
+          <img src="../common/img/magenta/rainbowgram-bass-01.png"
                class="no_border"
                alt="Audio diagram bass"/>
           <audio controls>
@@ -383,7 +383,7 @@
           </audio>
         </div>
         <div class="sound_clip">
-          <img src="resources/rainbowgram-metal-01.png"
+          <img src="../common/img/magenta/rainbowgram-metal-01.png"
                class="no_border"
                alt="Audio diagram metal"/>
           <audio controls>
@@ -393,7 +393,7 @@
           </audio>
         </div>
         <div class="sound_clip">
-          <img src="resources/rainbowgram-cat-01.png"
+          <img src="../common/img/magenta/rainbowgram-cat-01.png"
                class="no_border"
                alt="Audio diagram cat"/>
           <audio controls>
@@ -402,7 +402,7 @@
           </audio>
         </div>
         <div class="sound_clip">
-          <img src="resources/rainbowgram-flute-01.png"
+          <img src="../common/img/magenta/rainbowgram-flute-01.png"
                class="no_border"
                alt="Audio diagram flute"/>
           <audio controls>
@@ -511,7 +511,7 @@ def synthesize(encoding_mix: np.ndarray,
         <h4>STEP 1: The results</h4>
         <div>
           <div class="sound_clip smaller">
-            <img src="resources/83249_412017_rainbowgram_trim.png"
+            <img src="../common/img/magenta/83249_412017_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram bass cat"/>
             <span>Bass + Cat</span>
@@ -521,7 +521,7 @@ def synthesize(encoding_mix: np.ndarray,
             </audio>
           </div>
           <div class="sound_clip smaller">
-            <img src="resources/83249_427567_rainbowgram_trim.png"
+            <img src="../common/img/magenta/83249_427567_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram bass flute"/>
             <span>Bass + Flute</span>
@@ -531,7 +531,7 @@ def synthesize(encoding_mix: np.ndarray,
             </audio>
           </div>
           <div class="sound_clip smaller">
-            <img src="resources/83249_160045_rainbowgram_trim.png"
+            <img src="../common/img/magenta/83249_160045_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram bass metal"/>
             <span>Bass + Metal</span>
@@ -543,7 +543,7 @@ def synthesize(encoding_mix: np.ndarray,
         </div>
         <div>
           <div class="sound_clip smaller">
-            <img src="resources/160045_83249_rainbowgram_trim.png"
+            <img src="../common/img/magenta/160045_83249_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram metal bass"/>
             <span>Metal + Bass</span>
@@ -553,7 +553,7 @@ def synthesize(encoding_mix: np.ndarray,
             </audio>
           </div>
           <div class="sound_clip smaller">
-            <img src="resources/160045_412017_rainbowgram_trim.png"
+            <img src="../common/img/magenta/160045_412017_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram metal cat"/>
             <span>Metal + Cat</span>
@@ -563,7 +563,7 @@ def synthesize(encoding_mix: np.ndarray,
             </audio>
           </div>
           <div class="sound_clip smaller">
-            <img src="resources/160045_427567_rainbowgram_trim.png"
+            <img src="../common/img/magenta/160045_427567_rainbowgram_trim.png"
                  class="no_border"
                  alt="Audio diagram metal flute"/>
             <span>Metal + Flute</span>
@@ -719,7 +719,7 @@ def get_sequence_generator(name: str,
         </p>
         <div class="fragment">
           <img width="25%"
-               src="resources/bob-ross.jpg"
+               src="../common/img/magenta/bob-ross.jpg"
                alt="Bob Ross image"/>
           <div>
           <span class="figure-caption"><a
@@ -930,7 +930,7 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
         <p>
           <img
               width="75%"
-              src="resources/melody-mixer.png"
+              src="../common/img/magenta/melody-mixer.png"
               alt="Melody mixer"/>
         </p>
         <p>
@@ -944,7 +944,7 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
         <p>
           <img
               width="75%"
-              src="resources/neural-drum-machine.png"
+              src="../common/img/magenta/neural-drum-machine.png"
               alt="Neural Drum Machine"/>
         </p>
         <p>
@@ -958,7 +958,7 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
         <p>
           <img
               width="75%"
-              src="resources/ganharp.png"
+              src="../common/img/magenta/ganharp.png"
               alt="GANHarp"/>
         </p>
         <p>
@@ -1030,7 +1030,7 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
           Claire Malrieux.
         </p>
         <img width="33%"
-             src="resources/dreambank.jpg"
+             src="../common/img/magenta/dreambank.jpg"
              alt="Dreambank image"/>
       </section>
 
@@ -1043,11 +1043,11 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
         </p>
         <img width="25%"
              class="no_border"
-             src="resources/magenta-book-icon.png"
+             src="../common/img/magenta/magenta-book-icon.png"
              alt="Magenta book icon"/>
         <img width="25%"
              class="no_border"
-             src="resources/packt-logo.png"
+             src="../common/img/magenta/packt-logo.png"
              alt="Packt logo"/>
       </section>
 
