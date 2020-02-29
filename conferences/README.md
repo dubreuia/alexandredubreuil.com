@@ -32,10 +32,6 @@ This presentation tackles the subject of continuous delivery with tangible solut
 
 Writing a book is hard, but with the proper resources and some courage, it's feasible. But is it worth it? How much work does it take?
 
-### [AI Music Generation using Magenta and Tensorflow](ai-music-generation)
-
-Overview of some AI music generation tools. We'll talk about music generation in general, real world examples, wavenet for voice, magenta for music, AI theory and state of the art.
-
 ### [Code Review](code-review)
 
 Overview of our code review process based on a `git flow` branching strategy that does not require any tool.
