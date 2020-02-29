@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Music Generation with Magenta.js: Using JavaScript and Machine Learning in Arts</title>
+  <title>Writing a Technical Book - The Journey to Publication</title>
   <link rel="stylesheet"
         href="../common/bower_components/reveal.js/css/reveal.css">
   <link rel="stylesheet"
@@ -18,11 +18,11 @@
 
 <footer id="footer" class="hide">
   <img class="logo"
-       src="resources/magenta-logo-01.png"
+       src="../common/img/magenta/magenta-logo-01.png"
        alt="Magenta logo">
   <div class="title">
-    <div>Music Generation with Magenta.js</div>
-    <div class="subtitle">Using JavaScript and Machine Learning in Arts</div>
+    <div>Writing a Technical Book</div>
+    <div class="subtitle">The Journey to Publication</div>
   </div>
   <div class="title right">
     <div>Alexandre DuBreuil (<a href="https://twitter.com/dubreuia">@dubreuia</a>)</div>
@@ -39,12 +39,12 @@
       <section>
         <img width="200px"
              class="logo figure no_border"
-             src="resources/magenta-logo-02.png"
+             src="../common/img/magenta/magenta-logo-02.png"
              alt="Magenta logo">
         <h1 class="align-left">
-          Music Generation with <span class="color-magenta-light-01">Magenta.js</span>
+          Writing a Technical Book
         </h1>
-        <h2 class="align-right">Using JavaScript and Machine Learning in Arts</h2>
+        <h2 class="align-right">The Journey to Publication</h2>
         <h3 class="align-right">Alexandre DuBreuil (<a href="https://twitter.com/dubreuia">@dubreuia</a>)</h3>
       </section>
 
@@ -61,162 +61,14 @@
     <section>
 
       <section>
-        <h3>Introduction to <span class="color-magenta-light-01">Magenta</span></h3>
+        <h3>TODO <span class="color-magenta-light-01">Magenta</span></h3>
       </section>
 
       <section>
-        <h4>Make Music and Art Using Machine Learning</h4>
+        <h4>TODO</h4>
         <p class="align-left">
-          <img style="width: 25%" class="float" src="resources/magenta-logo-02.png" title="Magenta Logo"
-               alt="Magenta Logo">
-          <span>"An open source research project exploring the role of machine learning as a tool in the creative process." - Google Magenta (<a href="https://magenta.tensorflow.org/">https://magenta.tensorflow.org</a>)</span>
+          TODO
         </p>
-      </section>
-
-      <section>
-        <h4><strong class="color-magenta-light-02">Magenta</strong> in Python</h4>
-        <p>
-          <img style="width: 25%" class="float" src="resources/logo-python.png"
-               title="Python Logo" alt="Python Logo">
-          <img style="width: 25%" class="float" src="resources/logo-tensorflow.png"
-               title="Tensorflow Logo" alt="Tensorflow Logo">
-          <img style="width: 25%" class="float" src="resources/tensorboard.png"
-               title="Tensorboard" alt="Tensorboard">
-        </p>
-      </section>
-
-      <section>
-        <h4><strong class="color-magenta-light-02">Magenta.js</strong> in JavaScript</h4>
-        <p>
-          <img style="width: 25%" class="float" src="resources/logo-javascript.png"
-               title="JavaScript Logo" alt="JavaScript Logo">
-          <img style="width: 25%" class="float" src="resources/logo-tensorflow.png"
-               title="Tensorflow Logo" alt="Tensorflow Logo">
-          <img style="width: 25%" class="float" src="resources/logo-webgl.png"
-               title="WebGL Logo" alt="WebGL Logo">
-          <img style="width: 25%" class="float" src="resources/logo-tone-js.png"
-               title="Tone.js Logo" alt="Tone.js Logo">
-        </p>
-      </section>
-
-    </section>
-
-    <section>
-
-      <section>
-        <h3>Demo 01 - Generating audio 🔊</h3>
-      </section>
-
-      <section class="align-left">
-        <h4>Generating audio using GANSynth</h4>
-        <p>
-          <img style="width: 33%" class="float" src="resources/gan.png"
-               title="GAN diagram" alt="GAN diagram">
-          <span>The Generative Adversarial Network has been trained on short instrument notes (<a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth dataset</a>)</span>
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Generating audio using GANSynth</h4>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-&lt;script src="(...)/npm/tone@13.8.25/build/Tone.min.js"&gt;&lt;/script&gt;
-&lt;script src="(...)/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"&gt;&lt;/script&gt;
-&lt;script src="(...)/npm/@magenta/music@^1.12.1/es6/core.js"&gt;&lt;/script&gt;
-&lt;script src="(...)/npm/@magenta/music@^1.12.1/es6/gansynth.js"&gt;&lt;/script&gt;
-            </code>
-          </pre>
-        </div>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-const checkpointURL = "https://storage.googleapis.com/magentadata" +
-                      "/js/checkpoints/gansynth/acoustic_only";
-const ganSynth = new gansynth.GANSynth(checkpointURL);
-await ganSynth.initialize();
-            </code>
-          </pre>
-        </div>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-const specgrams = await ganSynth.randomSample(60);
-const audio = await ganSynth.specgramsToAudio(specgrams);
-const audioBuffer = Tone.context.createBuffer(1, length, sampleRate);
-audioBuffer.copyToChannel(audio, 0, 0);
-            </code>
-          </pre>
-        </div>
-      </section>
-
-      <section>
-        <iframe width="100%"
-                height="500px"
-                style="overflow: scroll; border: 1px solid gray; box-shadow: 0 0 25px gray"
-                data-src="code/ircam-demo-01.html">
-        </iframe>
-
-      </section>
-
-    </section>
-
-    <section>
-
-      <section>
-        <h3>Demo 02 - Generating melodies 🎶</h3>
-      </section>
-
-      <section class="align-left">
-        <h4>Generating melodies using MusicVAE</h4>
-        <p>
-          <img style="width: 15%" class="float" src="resources/vae.png"
-               title="VAE diagram" alt="VAE diagram">
-          <span>The Variational Autoencoder has been trained on 4 bars melodies from MIDI files of various sources</span>
-        </p>
-      </section>
-
-      <section class="align-left">
-        <h4>Generating melodies using MusicVAE</h4>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-&lt;!-- ... --&gt;
-&lt;script src="(...)/npm/@magenta/music@^1.12.1/es6/music_vae.js"&gt;&lt;/script&gt;
-&lt;!-- ... --&gt;
-            </code>
-          </pre>
-        </div>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-const samples = await window.musicVae.sample(1);
-const sample = samples[0];
-const player = new Player();
-Tone.Transport.loop = true;
-Tone.Transport.loopStart = 0;
-Tone.Transport.loopEnd = 8;
-player.start(sample, 120);
-            </code>
-          </pre>
-        </div>
-        <div class="code-wrapper">
-          <pre class="prettyprint">
-            <code class="code javascript" data-trim data-noescape>
-const frequency = new Tone.Frequency(note.pitch, "midi");
-const duration = note.endTime - note.startTime;
-synth.triggerAttackRelease(frequency, duration, time, 1);
-            </code>
-          </pre>
-        </div>
-      </section>
-
-      <section>
-        <iframe width="100%"
-                height="500px"
-                style="overflow: scroll; border: 1px solid gray; box-shadow: 0 0 25px gray"
-                data-src="code/ircam-demo-02.html">
-        </iframe>
       </section>
 
     </section>
@@ -225,32 +77,6 @@ synth.triggerAttackRelease(frequency, duration, time, 1);
 
       <section>
         <h3>More <span class="color-magenta-light-01">Magenta</span></h3>
-      </section>
-
-      <section>
-        <h4>The power of the browser and Web Audio</h4>
-        <p>Does it sound good? Let's say it's interesting... But with minimal code, we can get started on music generation, and distribute music generation applications easily 🤩</p>
-      </section>
-
-      <section>
-        <h4>GANHarp</h4>
-        <p>
-          <img width="75%" src="resources/ganharp.png" alt="GANHarp"/>
-        </p>
-        <p>
-          <span class="figure-caption"><a
-              href="https://ganharp.ctpt.co">https://ganharp.ctpt.co</a></span>
-        </p>
-      </section>
-
-      <section>
-        <h4>Music Generation with <strong class="color-magenta-light-02">Magenta</strong></h4>
-        <p>
-          <img style="width: 40%" class="float" src="resources/book-cover.png"
-               title="Music Generation with Magenta book cover" alt="Music Generation with Magenta book cover">
-          <span>Explore the role of deep learning in music generation and assisted music composition</span>
-        </p>
-        <div><strong>Chapter 8:</strong> Magenta in the Browser with Magenta.js</div>
       </section>
 
       <section>
