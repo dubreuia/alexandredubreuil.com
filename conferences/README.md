@@ -26,7 +26,11 @@ Apache Spark proposes a Java API as a first class citizen, but is it as powerful
 
 This presentation tackles the subject of continuous delivery with tangible solutions, that covers code versioning, handling of multiple parallel developments and deployment of artifacts. The concept of "continuous merge", made possible by the open-source tool git-octopus developed at LesFurets.com, is the most important part of our continuous delivery process. Continuous merge is a process that emerged from 2 years of daily delivery and enables the early detection of merge problems between branches. It is therefore possible to push to production everyday without sacrificing quality and without adding a burden on our development process.
 
-## Older
+## Other
+
+### [Writing a Technical Book: The Journey to Publication](writing-a-technical-book-the-journey-to-publication)
+
+Writing a book is hard, but with the proper resources and some courage, it's feasible. But is it worth it? How much work does it take?
 
 ### [AI Music Generation using Magenta and Tensorflow](ai-music-generation)
 
