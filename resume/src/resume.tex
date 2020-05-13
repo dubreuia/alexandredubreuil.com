@@ -78,6 +78,8 @@ $if(experience.show)$
   {$experience.company$}%
   {$experience.location$}%
 
+\cvlabel{$experience.label$}%
+
 $if(experience.single)$
 \begin{cvexperiencesingle}%
 $else$
@@ -93,15 +95,23 @@ $endfor$
   \end{cvexperiencedescription}%
 $endif$
 $for(experience.category)$
-
+  $if(experience.single)$
+  \ %
+  \cvexperiencetechitem{$experience.category.title$}{$experience.category.content$}%
+  $else$
   \begin{cvexperiencetech}%
     \cvexperiencetechitem{$experience.category.title$}{$experience.category.content$}%
   \end{cvexperiencetech}%
+  $endif$
 $endfor$
 $if(experience.single)$
 \end{cvexperiencesingle}%
 $else$
 \end{cvexperience}%
+$endif$
+
+$if(experience.pagebreak)$
+\pagebreak
 $endif$
 
 $endif$
@@ -111,7 +121,7 @@ $endfor$
                    %               Conferences             %
                    % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
-\cvsection{Conferences}
+\cvsectionn{Publications}{Conferences}
 
 $for(conference)$
 $if(conference.show)$
@@ -124,7 +134,13 @@ $if(conference.show)$
   {$conference.duration$}%
   {$conference.link$}%
 
+\cvlabel{$conference.label$}%
+
+$if(conference.single)$
+\begin{cvexperiencesingle}%
+$else$
 \begin{cvexperience}%
+$endif$
   $conference.content$%
 $if(conference.description)$
 
@@ -140,7 +156,15 @@ $for(conference.category)$
     \cvexperiencetechitem{$conference.category.title$}{$conference.category.content$}%
   \end{cvexperiencetech}%
 $endfor$
+$if(conference.single)$
+\end{cvexperiencesingle}%
+$else$
 \end{cvexperience}%
+$endif$
+
+$if(conference.pagebreak)$
+\pagebreak
+$endif$
 
 $endif$
 $endfor$
@@ -162,6 +186,8 @@ $if(project.show)$
   {$project.duration$}%
   {$project.link$}%
 
+\cvlabel{$project.label$}%
+
 \begin{cvexperiencesingle}%
   $project.content$%
 $if(project.description)$
@@ -177,6 +203,10 @@ $for(project.category)$
   \cvexperiencetechitem{$project.category.title$}{$project.category.content$}%
 $endfor$
 \end{cvexperiencesingle}%
+
+$if(project.pagebreak)$
+\pagebreak
+$endif$
 
 $endif$
 $endfor$
@@ -198,6 +228,8 @@ $if(education.show)$
   {$education.duration$}%
   {$education.school$}%
   {$education.location$}%
+
+\cvlabel{$education.label$}%
 
 $if(education.single)$
 \begin{cvexperiencesingle}%
@@ -223,6 +255,10 @@ $if(education.single)$
 \end{cvexperiencesingle}%
 $else$
 \end{cvexperience}%
+$endif$
+
+$if(education.pagebreak)$
+\pagebreak
 $endif$
 
 $endif$

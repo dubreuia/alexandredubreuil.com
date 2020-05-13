@@ -2,8 +2,8 @@
 title: "Resume"
 person:
   name: "Alexandre DuBreuil"
-  title: "Java Developer"
-  location: "Paris, France + Montreal, Canada"
+  title: "Software Developer"
+  location: "Paris, France -- Montreal, Canada"
   telephone: "+33 (0)6 27 71 46 75"
   mail: "contact@alexandredubreuil.com"
   website: "alexandredubreuil.com"
@@ -27,34 +27,31 @@ summary:
   show: True
   title: "Summary"
   content: |-
-    Java developer with 10 years of experience, as
-    a freelancer, technical lead and architect. Full
-    stack web developer, strong background on software
-    craftsmanship, devops and agile culture,
-    infrastructure automation, and security.
-    Open source maintainer, speaker in conferences,
-    trainer and teacher on $lang{git} and software
-    factory.
+    Software developer with 10 years of experience, as a
+    freelancer, technical lead, and architect. Experience
+    in full stack web development, DevOps, software factory
+    automation, and application security. Also book author, open
+    source maintainer, conference speaker, and trainer for
+    web developers.
   category:
-    - title: Language
+    - title: Languages
       content: |-
         $lang{Java},
         $lang{Python}, 
-        $lang{Javascript},
-        $lang{SQL}
+        $lang{JavaScript}
     - title: DevOps
       content: |-
         $lang{git}, 
         $lang{Maven}, 
         $lang{Ansible}, 
-        $lang{Jenkins Pipeline}, 
+        $lang{Jenkins}, 
         $lang{Docker}
     - title: Culture
       content: >-
         $lang{Linux},
-        $lang{DevOps},
-        $lang{Continuous delivery},
-        $lang{TDD}
+        $lang{Open Source},
+        $lang{Continuous Delivery},
+        $lang{DevOps}
     - title: Security
       content: |-
         $lang{Threat modeling}, 
@@ -65,21 +62,75 @@ summary:
         $lang{Agile}
     
 experience:
-  # DuBreuil Consulting
+  # dubreuil consulting (simplon.co)
   - show: True
-    single: True
-    title: Freelance Software Developer
-    date: December 2018 - today
-    duration: 6 months
-    company: DuBreuil Consulting (self-employed)
+    #single: True
+    title: Web Development Trainer
+    date: January 2020 - May 2020
+    duration: 4 months
+    company: DuBreuil Consulting (Simplon.co)
     location: Paris, France
+    label: experience:dc:simplon
     content: |-
-      Freelance developer on full stack web
-      development, software architecture, infrastructure
-      automation, devops tooling, security solutions
-      and artificial intelligence.
+      Trainer on web languages and technologies for full
+      stack web developers (see
+      $link{recorded classes}{https://youtu.be/SVBHPcNAoE8}).
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java},
+          $lang{JavaScript},
+          $lang{Spring Boot},
+          $lang{Angular},
+          $lang{UML},
+          $lang{TDD}
 
-  # LesFurets
+  # dubreuil consulting (dreambank)
+  - show: True
+    #single: True
+    title: Generative Music Composer
+    date: July 2018 - December 2018
+    duration: 6 months
+    company: DuBreuil Consulting (DreamBank)
+    location: Paris, France
+    label: experience:dc:dreambank
+    content: |-
+      Composer of generative music, for the DreamBank art
+      exhibit of Claire Malrieux, using machine learning and
+      $lang{Magenta} (see
+      $link{technical content}{https://alexandredubreuil.com/projects/dreambank/}).
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Python},
+          $lang{Magenta},
+          $lang{Tensorflow},
+          $lang{Ableton Live},
+          $lang{Machine Learning},
+          $lang{Generative Music}
+
+  # dubreuil consulting (lesfurets)
+  - show: True
+    #single: True
+    title: Security Consultant
+    date: April 2018 - June 2018
+    duration: 3 months
+    company: DuBreuil Consulting (LesFurets)
+    location: Paris, France
+    label: experience:dc:lesfurets
+    content: |-
+      Security architecture on secrets management with
+      $lang{Hashicorp Vault} for passwords (see
+      $link{technical content}{https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault/}).  
+    category:
+      - title: Technologies
+        content: >-
+          $lang{Java},
+          $lang{Bash},
+          $lang{Ansible},
+          $lang{Hashicorp Vault}
+
+  # lesfurets architect
   - show: True
     title: Software Architect
     date: June 2016 - October 2018
@@ -87,8 +138,9 @@ experience:
     company: LesFurets.com
     location: Paris, France
     logo: logo-lesfurets.jpg
+    label: experience:lesfurets:architect
     content: |-
-      Software Architect on a 500,000 lines 
+      Software architect on a 500,000 lines 
       web application, working on full stack
       refactoring, domain driven design,
       infrastructure automation, software factory,
@@ -97,14 +149,11 @@ experience:
       - |-
         Refactoring of the legacy insurance
         product domain model code and the insurance
-        validation rules in $lang{Java}.
+        validation rules in $lang{dOOv}.
       - |-
         Modernizing of the infrastructure
         automation with $lang{Ansible} and
         $lang{Docker}.
-      - |-
-        Security architecture on secrets
-        management with $lang{Hashicorp Vault}.
     category:
       - title: Technologies
         content: >-
@@ -118,7 +167,7 @@ experience:
           $lang{DevOps},
           $lang{TDD}
 
-  # LesFurets
+  # lesfurets lead
   - show: True
     title: Technical Lead
     date: January 2014 - June 2016
@@ -126,6 +175,7 @@ experience:
     company: LesFurets.com
     location: Paris, France
     logo: logo-lesfurets.jpg
+    label: experience:lesfurets:lead
     content: |-
       Technical leader of an Agile team of 5
       developers responsible for the 60 web services
@@ -142,11 +192,9 @@ experience:
         Team mentoring on code review and code
         quality, as well as pair programming.
       - >-
-        Development and architecture of frontend
-        and backend services in $lang{Java}.
-      - >-
-        Development of $lang{REST} and $lang{WSDL}
-        web services.
+        Development and architecture of services in
+        $lang{Java}, as $lang{REST} and $lang{WSDL} web
+        services.
       - >-
         Continuous delivery with $lang{Jenkins}
         and $lang{Maven}.
@@ -165,13 +213,14 @@ experience:
           $lang{Daily stand-ups},
           $lang{One-on-One}
 
-  # Telecom
+  # telecom
   - show: False
     title: Research Engineer
     date: September 2013 - Decembre 2013
     duration: 4 months
     company: University Telecom ParisTech
     location: Paris, France
+    label: experience:telecom
     content: >-
       Research engineer on the subject of type safety in
       web service orchestration with the $lang{Orc}
@@ -183,7 +232,7 @@ experience:
           $lang{Scala},
           $lang{WSDL}
 
-  # CGI
+  # cgi
   - show: True
     title: Java EE Consultant
     date: January 2010 - August 2013
@@ -191,6 +240,7 @@ experience:
     company: CGI France
     location: Paris, France
     logo: logo-cgi.jpg
+    label: experience:cgi
     content: >-
       Java EE consultant on a large scale
       front office and back office Java
@@ -208,7 +258,7 @@ experience:
         of points) efficiently, for the energy market on
         price optimisation and energy curve manipulation.
       - >-
-        Development of a $lang{Javascript} curve
+        Development of a $lang{JavaScript} curve
         visualisation component used to visualise energy
         curves and apply operations on them.
     category:
@@ -218,17 +268,18 @@ experience:
           $lang{JSP},
           $lang{Maven},
           $lang{SQL},
-          $lang{Javascript},
+          $lang{JavaScript},
           $lang{jQuery},
           $lang{jQPlot}
 
-  # CHUM (intern)
+  # chum (intern)
   - show: False
     title: Java Developer (intern)
     date: May 2009 - August 2009
     duration: 4 months
     company: University of Montreal Hospital (CHUM)
     location: Montreal, Quebec
+    label: experience:intern:chum
     content: >-
       Java developer for a client server patient
       diagnosis application, $strong{SPR}. Database
@@ -247,13 +298,14 @@ experience:
           $lang{Vim},
           $lang{UNIX}
 
-  # CGI (intern)
+  # intern cgi
   - show: False
     title: Java Consultant (intern)
     date: September 2008 - December 2008
     duration: 4 months
     company: CGI Montreal
     location: Montreal, Quebec
+    label: experience:intern:cgi
     content: >-
       Java developer for an internal project tracking
       application, $strong{Radar}, on Hibernate and
@@ -270,49 +322,96 @@ experience:
           $lang{Windows}
 
 conference:
+  # magenta book
+  - show: True
+    title: Hands-On Music Generation with Magenta
+    link: https://alexandredubreuil.com/publications/2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation/
+    date: June 2019 - January 2020
+    duration: 8 months
+    label: conference:book:magenta
+    content: |-
+      Book published on Packt Publishing. Explore the role
+      of deep learning in music generation and assisted music
+      composition.
+    category:
+      - title: Tags
+        content: >-
+          $lang{Python},
+          $lang{Magenta},
+          $lang{Tensorflow},
+          $lang{Machine Learning},
+          $lang{Generative Music},
+          $lang{Ableton Live}
+
+  # magenta presentation
+  - show: True
+    title: "Music Generation with Magenta: Using Machine Learning in Arts"
+    link: https://alexandredubreuil.com/conferences/music-generation-with-magenta/
+    label: conference:magenta
+    content: |-
+      Conference on leveraging machine learning technologies
+      for music generation using $lang{Magenta}.
+      \parbox[t][10pt]{10pt}{}
+    category:
+      - title: Conferences
+        content: >-
+          $lang{Devoxx Belgium 2019},
+          $lang{IRCAM Paris 2020}
+      - title: Tags
+        content: >-
+          $lang{Python},
+          $lang{Magenta},
+          $lang{Tensorflow},
+          $lang{Machine Learning},
+          $lang{Generative Music},
+          $lang{Ableton Live}
+
   # vault
   - show: True
     title: Hashicorp Vault and Continuous Delivery
     link: https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault
-    date: April 2019 - June 2019
-    duration: 3 conferences
+    #date: April 2019 - June 2019
+    #duration: 3 conferences
     #logo: logo-vault.jpg
+    label: conference:vault
     content: |-
       Conference on securing your
       application secrets with infrastructure
       automation, continuous delivery and
       $lang{Hashicorp Vault}.
-    description:
-      - 2019/06/12 -- Open R&Day @ Paris, France
-      - 2019/04/25 -- JUG @ Nantes, France
-      - 2019/04/17 -- Devoxx @ Paris, France
     category:
+      - title: Conferences
+        #$lang{Open RDay Paris 2019},
+        content: >-
+          $lang{Devoxx UK 2020},
+          $lang{Devoxx France 2019},
+          $lang{JUG Nantes 2019}
       - title: Tags
         content: >-
           $lang{Hashicorp Vault},
           $lang{Continuous Delivery},
-          $lang{DevOps},
-          $lang{Security}
+          $lang{DevOps}
 
   # doov
   - show: True
     title: Domain Object Oriented Validation (dOOv)
     link: https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov
-    date: October 2017 - June 2018
-    duration: 5 conferences
+    #date: October 2017 - June 2018
+    #duration: 5 conferences
     #logo: logo-doov.jpg
+    label: conference:doov
     content: |-
-      Conference our library,
-      $lang{dOOv}, a fluent API for type-safe domain
-      model validation and mapping (see
-      $link{doov.io}{https://doov.io})
-    description:
-      - 2018/06/20 -- Open R&Day @ Paris, France
-      - 2018/06/10 -- JDK.IO @ Copenhagen, Danmark
-      - 2018/05/09 -- BGL META @ London, UK
-      - 2018/01/24 -- Snowcamp @ Grenobles, France
-      - 2017/10/26 -- Softshake @ Geneva, Switzerland
+      Conference on $lang{dOOv}, a fluent API for type-safe
+      domain model validation and mapping (see
+      \hyperref[project:doov]{Project -- Domain Object Oriented Validation}).
     category:
+      - title: Conferences
+        #$lang{Open RDay Paris 2018},
+        #$lang{BGL META London 2018},
+        content: >-
+          $lang{JDK IO Copenhagen 2018},
+          $lang{Snowcamp 2018},
+          $lang{Softshake Geneva 2017}
       - title: Tags
         content: >-
           $lang{dOOv},
@@ -323,20 +422,23 @@ conference:
   - show: True
     title: Apache Spark for Java Developers
     link: https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers
-    date: January 2017 - October 2017
-    duration: 6 conferences
+    #date: January 2017 - October 2017
+    #duration: 6 conferences
     #logo: logo-spark.jpg
+    label: conference:spark
     content: |-
       Conference on using $lang{Apache Spark}
       with $lang{Java}.
-    description:
-      - 2017/10/27 -- Softshake @ Geneva, Switzerland
-      - 2017/06/22 -- Devoxx @ Krakow, Poland
-      - 2017/04/19 -- Breizhcamp @ Rennes, France
-      - 2017/02/09 -- Snowcamp @ Grenoble, France
-      - 2017/01/31 -- BBL Whoz @ Paris, France
-      - 2017/01/24 -- BBL Murex @ Paris, France
+      \parbox[t][10pt]{10pt}{}
     category:
+      - title: Conferences
+        #$lang{BBL Whoz Paris 2017}
+        #$lang{BBL Murex Paris 2017}
+        content: >-
+          $lang{Softshake Geneva 2017},
+          $lang{Devoxx Krakow 2017},
+          $lang{Breizhcamp Rennes 2017},
+          $lang{Snowcamp Grenoble 2017}
       - title: Tags
         content: >-
           $lang{Java},
@@ -347,22 +449,26 @@ conference:
   - show: True
     title: Continuous Merge with git-octopus
     link: https://alexandredubreuil.com/conferences/continuous-merge-git-octopus
-    date: September 2014 - June 2017
-    duration: 7 conferences
+    #date: September 2014 - June 2017
+    #duration: 7 conferences
     #logo: logo-git.jpg
+    label: conference:cd
+    pagebreak: True
     content: |-
       Conference on shipping code to production
       everyday in a feature branching environment with
       $lang{git-octopus}.
-    description:
-      - 2017/06/14 -- Open R&Day @ Paris, France
-      - 2016/11/07 -- BBL WorkIT @ Paris, France
-      - 2016/11/13 -- JUG @ Marseille, France
-      - 2016/06/29 -- BBL SG @ Paris, France
-      - 2016/01/31 -- JUG @ Tours, France
-      - 2015/12/10 -- BBL Octo @ Paris, France
-      - 2014/11/01 -- AgileTour @ Rennes, France
+      \parbox[t][10pt]{10pt}{}
     category:
+      - title: Conferences
+        #$lang{BBL WorkIT Paris 2016},
+        #$lang{BBL SG 2016},
+        #$lang{BBL Octo 2015},
+        content: >-
+          $lang{Open RDay Paris 2017},
+          $lang{JUG Marseille 2016},
+          $lang{JUG Tours 2016},
+          $lang{AgileTour Rennes 2014}
       - title: Tags
         content: >-
           $lang{git},
@@ -370,62 +476,86 @@ conference:
           $lang{Continuous delivery}
 
 project:
-  # doov
-  - show: True
-    title: Domain Object Oriented Validation (dOOv)
-    link: https://alexandredubreuil.com/projects/doov
-    star: 25
-    date: September 2017 - today
-    duration: 2.5 years
-    #logo: logo-doov.jpg
-    content: |-
-      Maintainer of $lang{dOOv}, a fluent API
-      for type-safe bean validation and mapping.
-    category:
-      - title: Tags
-        content: >-
-          $lang{Java},
-          $lang{Domain Driven Design}
-
   # intellij save action plugin
   - show: True
     title: Intellij Save Action Plugin
     link: https://alexandredubreuil.com/projects/save-actions-plugin
-    star: 289
+    star: 382
     date: January 2015 - today
-    duration: 4 years
+    duration: 5 years
+    label: project:save-actions
     content: |-
-      Creator and maintainer of an $lang{Intellij}
-      plugin that adds save actions to the IDE.
+      Creator and maintainer of an $lang{Intellij} plugin
+      that adds save actions to the IDE. Five stars rating on the
+      JetBrains plugin website and 75,000 unique downloads
+      per version.
     category:
       - title: Tags
         content: >-
           $lang{Java},
           $lang{Intellij}
 
+  # dreambank
+  - show: False
+    title: Dreambank
+    link: https://alexandredubreuil.com/projects/dreambank
+    date: June 2019 - December 2019
+    duration: 6 months
+    label: project:dreambank
+    content: |-
+      Generative music algorithms using machine learning and
+      sound design for the Dreambank exhibit of the artist Claire
+      Malrieux.
+    category:
+      - title: Tags
+        content: >-
+          $lang{Python},
+          $lang{Magenta},
+          $lang{Ableton Live}
+
+  # doov
+  - show: True
+    title: Domain Object Oriented Validation (dOOv)
+    link: https://alexandredubreuil.com/projects/doov
+    star: 50
+    date: September 2017 - September 2019
+    duration: 2 years
+    label: project:doov
+    #logo: logo-doov.jpg
+    content: |-
+      Creator, maintainer and evangelist on $lang{dOOv}, a
+      fluent API for type-safe bean validation and mapping.
+    category:
+      - title: Tags
+        content: >-
+          $lang{Java},
+          $lang{Domain Driven Design}
+
+
   # git octopus
   - show: True
     title: Project git-octopus
     link: https://alexandredubreuil.com/projects/git-octopus
-    star: 171
+    star: 193
     date: November 2014 - June 2017
     duration: 3.5 years
     #logo: logo-git.jpg
+    label: project:git-octopus
     content: |-
-      Evangelist and committer on $lang{git-octopus},
-      a tool enabling the continuous merge
-      workflow.
+      Evangelist and commiter on $lang{git-octopus}, a tool
+      enabling the continuous merge workflow.
     category:
       - title: Tags
         content: >-
           $lang{git}
 
   # climat
-  - show: True
+  - show: False
     title: Climat General at Venice Art Bienale
     link: https://alexandredubreuil.com/projects/climat-general
     date: January 2017 - November 2017
     duration: 1 year
+    label: project:climat
     content: |-
       Generative music algorithms and sound design
       for the Climat General exhibit of the artist
@@ -442,6 +572,7 @@ project:
     link: https://vimeo.com/130523273
     date: February 2015 - August 2015
     duration: 6 months
+    label: project:ximista
     content: |-
       Development of a video generation software
       for live musical perfomance, Ximista, which
@@ -464,18 +595,19 @@ project:
     link: http://atlas-du-temps-présent.fr
     date: September 2013 - January 2014
     duration: 3 months
+    label: project:atlas
     content: |-
       Exhibit at the Exhibit at the Arts
       Decoratifs Museum in Paris, on the composition of
       generative random drawings with Photoshop and
-      Javascript. The project was done in collaboration
+      JavaScript. The project was done in collaboration
       with the artist Claire Malrieux. A website of
       daily automatically generated drawing is
       available.
     category:
       - title: Technologies
         content: >-
-          $lang{Javascript},
+          $lang{JavaScript},
           $lang{Photoshop}
 
   # paesine
@@ -484,6 +616,7 @@ project:
     link: https://www.behance.net/gallery/PAESINE-TRIPPER/12053619
     date: January 2013 - May 2013
     duration: 4 months
+    label: project:paesine
     content: |-
       Interactive exhibit at Exposition at the
       Arts Forains Museum, Enghien-les-Bains, France for
@@ -509,6 +642,7 @@ education:
     school: Computer Science Master - International exchange - CREPUQ
     location: Paris, France
     #logo: logo-upmc.jpg
+    label: education:upmc
     content: |-
       International exchange student from
       University of Montreal.
@@ -521,6 +655,7 @@ education:
     school: Computer Science Baccalaureate
     location: Montreal, Quebec
     #logo: logo-udm.jpg
+    label: education:udm
     content: |-
       Program with 1 semester of international
       exchange and 3 internships of 4 months
@@ -545,6 +680,7 @@ education:
     duration: 2 years
     school: DEC in science, letters and arts
     location: Montreal, Quebec
+    label: education:brebeuf
 
 interest:
   content: Big music geek, listen at $link{alexandredubreuil.com/music}{https://alexandredubreuil.com/music}, also
@@ -561,5 +697,5 @@ interest:
 
 ---
 
-# vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:
+# vim: set tw=60 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:
 

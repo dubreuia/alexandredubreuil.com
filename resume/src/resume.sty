@@ -200,6 +200,24 @@
       #1%
     \end{tcolorbox}%
   }%
+  \label{#1}%
+  \vspace{-1em}%
+}%
+
+%%
+% Formats cv section with 2 subjects (main section)
+% params:
+%   - 1: the cv section
+%   - 2: the second cv section
+%
+\newcommand{\cvsectionn}[2]{%
+  \vspace{-2em}%
+  \section*{%
+    \begin{tcolorbox}[colback=primarycolor, colframe=primarycolor, width=\dimexpr1.20\textwidth\relax, boxsep=2pt, left=45pt, right=5pt, enlarge left by=-50pt]%
+      #1 \& #2%
+    \end{tcolorbox}%
+  }%
+  \label{#1}%
   \vspace{-1em}%
 }%
 
@@ -247,7 +265,9 @@
 \newcommand{\cvexperiencetitlesmalllink}[4]{%
   \vspace{1ex}%
   \begin{tcolorbox}[colback=secondarycolor, colframe=secondarycolor, width=\dimexpr1.02\textwidth\relax, boxsep=1pt, left=2pt, right=2pt, enlarge left by=-5pt, lower separated=false]%
-    \subsection*{\cvlink{#1}{#4}\hfill{\small(#2)}\ #3}%
+    \subsection*{\cvlink{#1}{#4}\hfill%
+      \ifthenelse{\isempty{#2}}{}{\small(#2)}\ %
+      \ifthenelse{\isempty{#3}}{}{\large#3}}
   \end{tcolorbox}%
 }
 
@@ -277,6 +297,13 @@
 \newcommand{\cvlink}[2]{\href{#2}{#1}}
 
 %%
+% Formats an internal reference to a label
+% params:
+%   - 1: the label and text
+%
+\newcommand{\cvref}[1]{\hyperref[#1]{#1}}
+
+%%
 % Formats language or technology.
 % params:
 %   - 1: the thing to format
@@ -289,5 +316,12 @@
 %   - 1: the thing to format
 %
 \newcommand{\cvstar}[1]{\ifthenelse{\isempty{#1}}{}{\small\faStar #1}}
+
+%%
+% Add a latex label to use with ref or hyperref
+% params:
+%   - 1: the thing to format
+%
+\newcommand{\cvlabel}[1]{\ifthenelse{\isempty{#1}}{}{\label{#1}}}
 
 % vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:

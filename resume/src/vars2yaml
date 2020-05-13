@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LANGUAGE=${1?"Missing argument 'language': one of [tex,md]"}
+LANGUAGE=${1?"Missing argument 'language': one of [tex,markdown]"}
 INPUT=${2?"Missing argument 'input' file"}
 OUTPUT=${3?"Missing argument 'output' file"}
 
@@ -32,13 +32,13 @@ function replace_variable_for_tex {
 }
 
 #
-# Replaces the variables for md yaml
+# Replaces the variables for markdown yaml
 # (like "$strong{toto} -> "**toto**")
 #
 # Params:
 #   - 1: the input file
 #   - 2: the output file
-function replace_variable_for_md {
+function replace_variable_for_markdown {
     local lang="\1"
     local strong="**\1**"
     local emph="*\1*"
@@ -57,9 +57,9 @@ then
     exit 0
 fi
 
-if [[ "${LANGUAGE}" == "md" ]]
+if [[ "${LANGUAGE}" == "markdown" ]]
 then
-    replace_variable_for_md "${INPUT}" "${OUTPUT}"
+    replace_variable_for_markdown "${INPUT}" "${OUTPUT}"
     exit 0
 fi
 

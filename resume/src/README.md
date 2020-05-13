@@ -16,10 +16,16 @@ sudo apt install pandoc texlive-full pdftoppm
 
 ```bash
 # For the web version, this command generates build/resume.md
-make md
+make markdown
 
 # For the latex version, this command generates build/resume.pdf and build/resume.jpg (thumbnail)
 make tex
+
+# To install the generated pdf in the proper folder
+make install target=pdf
+
+# To install the generated markdown in the proper folder
+make install target=markdown
 ```
 
 ## Files

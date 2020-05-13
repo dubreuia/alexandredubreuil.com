@@ -1,10 +1,10 @@
 all:
-	echo "No default goal, use one of [md, tex]"
+	echo "No default goal, use one of [markdown, tex]"
 	exit 1
 
-md:
+markdown:
 	mkdir -p build; \
-	./vars2yaml md resume.yml build/resume.yml; \
+	./vars2yaml markdown resume.yml build/resume.yml; \
 	pandoc build/resume.yml -o build/resume.md --template=resume.md;
 
 tex:
@@ -14,5 +14,9 @@ tex:
 	pandoc build/resume.yml -o build/resume.pdf --template=resume.tex --pdf-engine=xelatex; \
 	pdftoppm build/resume.pdf build/resume -r 30 -f 1 -singlefile -jpeg -jpegopt quality=90
 
-.PHONY: md tex
+install:
+	cp build/resume.$(target) ../$(target)/resume-alexandre-dubreuil.$(target)
+	cp build/resume.jpg ../$(target)/resume-alexandre-dubreuil.jpg
+
+.PHONY: markdown tex
 
