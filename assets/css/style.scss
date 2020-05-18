@@ -294,6 +294,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
+    color: #FFFFFF;
     font-weight: 600;
     line-height: 1.25;
     margin-bottom: 16px;
@@ -303,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #0D47A1;
+    color: #E0F7FF;
 }
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
@@ -340,43 +341,42 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
 }
 
 h1 {
-    background-color: #424242;
-    color: #FFFFFF;
+    background-color: #323232;
     font-size: 140%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 h2 {
-    background-color: #E0E0E0;
+    background-color: #424242;
     font-size: 120%;
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
 h3 {
-    background-color: #EEEEEE;
+    background-color: #474747;
     font-size: 110%;
     padding-top: 3px;
     padding-bottom: 3px;
 }
 
 h4 {
-    background-color: #F5F5F5;
+    background-color: #505050;
     font-size: 105%;
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
 h5 {
-    background-color: #FAFAFA;
+    background-color: #525252;
     font-size: 102%;
     padding-top: 1px;
     padding-bottom: 1px;
 }
 
 h6 {
-    background-color: #FAFAFA;
+    background-color: #535353;
 }
 
 a {
