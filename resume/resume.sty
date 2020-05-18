@@ -301,7 +301,7 @@
 % params:
 %   - 1: the label and text
 %
-\newcommand{\cvref}[1]{\hyperref[#1]{#1}}
+\newcommand{\cvref}[2]{\hyperref[#1]{#2}}
 
 %%
 % Formats language or technology.
@@ -323,5 +323,13 @@
 %   - 1: the thing to format
 %
 \newcommand{\cvlabel}[1]{\ifthenelse{\isempty{#1}}{}{\label{#1}}}
+
+%%
+% Add a latex spacing with parbox, useful to break a column when in two colum
+% layout.
+% params:
+%   - 1: the spacing size
+%
+\newcommand{\cvspacing}[1]{\parbox[t][#1]{10pt}{}}
 
 % vim: set tw=79 tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab:

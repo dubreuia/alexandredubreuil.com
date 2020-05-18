@@ -351,7 +351,7 @@ conference:
     content: |-
       Conference on leveraging machine learning technologies
       for music generation using $lang{Magenta}.
-      \parbox[t][10pt]{10pt}{}
+      $spacing{10pt}
     category:
       - title: Conferences
         content: >-
@@ -403,7 +403,7 @@ conference:
     content: |-
       Conference on $lang{dOOv}, a fluent API for type-safe
       domain model validation and mapping (see
-      \hyperref[project:doov]{Project -- Domain Object Oriented Validation}).
+      $ref{project:doov}{Project -- Domain Object Oriented Validation}).
     category:
       - title: Conferences
         #$lang{Open RDay Paris 2018},
@@ -429,7 +429,7 @@ conference:
     content: |-
       Conference on using $lang{Apache Spark}
       with $lang{Java}.
-      \parbox[t][10pt]{10pt}{}
+      $spacing{10pt}
     category:
       - title: Conferences
         #$lang{BBL Whoz Paris 2017}
@@ -458,7 +458,7 @@ conference:
       Conference on shipping code to production
       everyday in a feature branching environment with
       $lang{git-octopus}.
-      \parbox[t][10pt]{10pt}{}
+      $spacing{10pt}
     category:
       - title: Conferences
         #$lang{BBL WorkIT Paris 2016},

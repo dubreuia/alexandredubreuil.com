@@ -10,6 +10,8 @@ SED_LANG="\$lang{${SED}}"
 SED_STRONG="\$strong{${SED}}"
 SED_EMPH="\$emph{${SED}}"
 SED_LINK="\$link{${SED_ALL}}{${SED_ALL}}"
+SED_SPACING="\$spacing{$SED}"
+SED_REF="\$ref{${SED_ALL}}{${SED_ALL}}"
 
 # Replaces the variables for tex yaml
 # (like "$strong{toto} -> "\textbf{toto}")
@@ -22,11 +24,15 @@ function replace_variable_for_tex {
     local strong="\\\\textbf{\1}"
     local emph="\\\\emph{\1}"
     local link="\\\\cvlink{\1}{\2}"
+    local spacing="\\\\cvspacing{\1}"
+    local ref="\\\\cvref{\1}{\2}"
 
     sed -e "s/${SED_LANG}/${lang}/g" \
         -e "s/${SED_STRONG}/${strong}/g" \
         -e "s/${SED_EMPH}/${emph}/g" \
         -e "s/${SED_LINK}/${link}/g" \
+        -e "s/${SED_SPACING}/${spacing}/g" \
+        -e "s/${SED_REF}/${ref}/g" \
         $1 > $2
 }
 
@@ -41,11 +47,15 @@ function replace_variable_for_markdown {
     local strong="**\1**"
     local emph="*\1*"
     local link="[\1](\2)"
+    local spacing=""
+    local ref="\2"
 
     sed -e "s/${SED_LANG}/${lang}/g" \
         -e "s/${SED_STRONG}/${strong}/g" \
         -e "s/${SED_EMPH}/${emph}/g" \
         -e "s/${SED_LINK}/${link}/g" \
+        -e "s/${SED_SPACING}/${spacing}/g" \
+        -e "s/${SED_REF}/${ref}/g" \
         $1 > $2
 }
 

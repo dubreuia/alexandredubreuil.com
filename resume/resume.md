@@ -40,7 +40,7 @@ $endfor$
 
 $for(conference)$
 $if(conference.show)$
-#### [$conference.title$]($conference.link$) <br> $conference.duration$ $if(conferecen.date)$($conference.date$)$endif$
+#### [$conference.title$]($conference.link$) $if(conferecen.duraction)$<br> $conference.duration$ ($conference.date$)$endif$
 $if(conference.logo)$
 
 ![Logo $conference.title$]($conference.logo$)

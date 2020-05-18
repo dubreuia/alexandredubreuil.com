@@ -1,4 +1,4 @@
-# Resume - Alexandre DuBreuil
+# Resume - Alexandre DuBreuil - HTML
 ## Software Developer
 
 <span class="icon icon-id">[Contact](/contact)</span>
@@ -101,9 +101,9 @@ visualise energy curves and apply operations on them.
 **Technologies:** Java EE, JSP, Maven, SQL, JavaScript, jQuery, jQPlot
 
 
-### Conference
+### Publications &amp; Conferences
 
-#### [Hands-On Music Generation with Magenta](https://alexandredubreuil.com/publications/2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation/) <br> 8 months (June 2019 - January 2020)
+#### [Hands-On Music Generation with Magenta](https://alexandredubreuil.com/publications/2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation/) 
 
 Book published on Packt Publishing. Explore the role of deep learning in
 music generation and assisted music composition.
@@ -112,11 +112,10 @@ music generation and assisted music composition.
 **Tags:** Python, Magenta, Tensorflow, Machine Learning, Generative Music, Ableton
 Live
 
-#### [Music Generation with Magenta: Using Machine Learning in Arts](https://alexandredubreuil.com/conferences/music-generation-with-magenta/) <br>  ()
+#### [Music Generation with Magenta: Using Machine Learning in Arts](https://alexandredubreuil.com/conferences/music-generation-with-magenta/) 
 
 Conference on leveraging machine learning technologies for music
 generation using Magenta.
-\parbox[t][10pt]{10pt}{}
 
 
 **Conferences:** Devoxx Belgium 2019, IRCAM Paris 2020
@@ -124,7 +123,7 @@ generation using Magenta.
 **Tags:** Python, Magenta, Tensorflow, Machine Learning, Generative Music, Ableton
 Live
 
-#### [Hashicorp Vault and Continuous Delivery](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault) <br>  ()
+#### [Hashicorp Vault and Continuous Delivery](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault) 
 
 Conference on securing your application secrets with infrastructure
 automation, continuous delivery and Hashicorp Vault.
@@ -134,21 +133,19 @@ automation, continuous delivery and Hashicorp Vault.
 
 **Tags:** Hashicorp Vault, Continuous Delivery, DevOps
 
-#### [Domain Object Oriented Validation (dOOv)](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov) <br>  ()
+#### [Domain Object Oriented Validation (dOOv)](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov) 
 
 Conference on dOOv, a fluent API for type-safe domain model validation
-and mapping (see
-\hyperref[project:doov]{Project -- Domain Object Oriented Validation}).
+and mapping (see Project -- Domain Object Oriented Validation).
 
 
 **Conferences:** JDK IO Copenhagen 2018, Snowcamp 2018, Softshake Geneva 2017
 
 **Tags:** dOOv, Java, Domain Driven Design
 
-#### [Apache Spark for Java Developers](https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers) <br>  ()
+#### [Apache Spark for Java Developers](https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers) 
 
 Conference on using Apache Spark with Java.
-\parbox[t][10pt]{10pt}{}
 
 
 **Conferences:** Softshake Geneva 2017, Devoxx Krakow 2017, Breizhcamp Rennes 2017,
@@ -156,11 +153,10 @@ Snowcamp Grenoble 2017
 
 **Tags:** Java, Apache Spark, Big Data
 
-#### [Continuous Merge with git-octopus](https://alexandredubreuil.com/conferences/continuous-merge-git-octopus) <br>  ()
+#### [Continuous Merge with git-octopus](https://alexandredubreuil.com/conferences/continuous-merge-git-octopus) 
 
 Conference on shipping code to production everyday in a feature
 branching environment with git-octopus.
-\parbox[t][10pt]{10pt}{}
 
 
 **Conferences:** Open RDay Paris 2017, JUG Marseille 2016, JUG Tours 2016, AgileTour
