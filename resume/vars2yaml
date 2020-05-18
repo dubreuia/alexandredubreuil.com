@@ -11,7 +11,6 @@ SED_STRONG="\$strong{${SED}}"
 SED_EMPH="\$emph{${SED}}"
 SED_LINK="\$link{${SED_ALL}}{${SED_ALL}}"
 
-#
 # Replaces the variables for tex yaml
 # (like "$strong{toto} -> "\textbf{toto}")
 #
@@ -31,7 +30,6 @@ function replace_variable_for_tex {
         $1 > $2
 }
 
-#
 # Replaces the variables for markdown yaml
 # (like "$strong{toto} -> "**toto**")
 #
@@ -63,6 +61,6 @@ then
     exit 0
 fi
 
-echo "Unrecognized language argument '${LANGUAGE}'"
+echo "ERROR: Unrecognized language argument '${LANGUAGE}'"
 exit 1
 

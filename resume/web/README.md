@@ -1,47 +1,66 @@
 # Resume - Alexandre DuBreuil
-## Java Developer
+## Software Developer
 
 <span class="icon icon-id">[Contact](/contact)</span>
 
 ### Summary
 
-Java developer with 10 years of experience, as a freelancer, technical
-lead and architect. Full stack web developer, strong background on
-software craftsmanship, devops and agile culture, infrastructure
-automation, and security. Open source maintainer, speaker in
-conferences, trainer and teacher on git and software factory.
+Software developer with 10 years of experience, as a freelancer,
+technical lead, and architect. Experience in full stack web development,
+DevOps, software factory automation, and application security. Also book
+author, open source maintainer, conference speaker, and trainer for web
+developers.
 
-- **Language:** Java, Python, Javascript, SQL
-- **DevOps:** git, Maven, Ansible, Jenkins Pipeline, Docker
-- **Culture:** Linux, DevOps, Continuous delivery
+- **Languages:** Java, Python, JavaScript
+- **DevOps:** git, Maven, Ansible, Jenkins, Docker
+- **Culture:** Linux, Open Source, Continuous Delivery, DevOps
 - **Security:** Threat modeling, Hashicorp Vault
 - **Methodology:** Kanban, Agile
 
 ### Experience
 
-#### Freelance Software Developer <br> 6 months (December 2018 - today) <br> DuBreuil Consulting (self-employed) <br> Paris, France
+#### Web Development Trainer <br> 4 months (January 2020 - May 2020) <br> DuBreuil Consulting (Simplon.co) <br> Paris, France
 
-Freelance developer on full stack web development, software
-architecture, infrastructure automation, devops tooling, security
-solutions and artificial intelligence.
+Trainer on web languages and technologies for full stack web developers
+(see [recorded classes](https://youtu.be/SVBHPcNAoE8)).
 
+
+**Technologies:** Java, JavaScript, Spring Boot, Angular, UML, TDD
+
+#### Generative Music Composer <br> 6 months (July 2018 - December 2018) <br> DuBreuil Consulting (DreamBank) <br> Paris, France
+
+Composer of generative music, for the DreamBank art exhibit of Claire
+Malrieux, using machine learning and Magenta (see [technical
+content](https://alexandredubreuil.com/projects/dreambank/)).
+
+
+**Technologies:** Python, Magenta, Tensorflow, Ableton Live, Machine Learning, Generative
+Music
+
+#### Security Consultant <br> 3 months (April 2018 - June 2018) <br> DuBreuil Consulting (LesFurets) <br> Paris, France
+
+Security architecture on secrets management with Hashicorp Vault for
+passwords (see [technical
+content](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault/)).
+
+
+**Technologies:** Java, Bash, Ansible, Hashicorp Vault
 
 #### Software Architect <br> 2.5 years (June 2016 - October 2018) <br> LesFurets.com <br> Paris, France
 
 ![Logo LesFurets.com](logo-lesfurets.jpg)
 
-Software Architect on a 500,000 lines web application, working on full
+Software architect on a 500,000 lines web application, working on full
 stack refactoring, domain driven design, infrastructure automation,
 software factory, continuous delivery and devops tooling.
 
 - Refactoring of the legacy insurance product domain model code and the
-insurance validation rules in Java.
+insurance validation rules in dOOv.
 - Modernizing of the infrastructure automation with Ansible and Docker.
-- Security architecture on secrets management with Hashicorp Vault.
 
 **Technologies:** Java, Docker, Ansible, Hashicorp Vault
 
-**Culture:** Domain Driven Design, DevOps
+**Culture:** Domain Driven Design, DevOps, TDD
 
 #### Technical Lead <br> 2.5 years (January 2014 - June 2016) <br> LesFurets.com <br> Paris, France
 
@@ -56,10 +75,11 @@ software craftsmanship.
 stand ups, weekly One-on-One with team members.
 - Team mentoring on code review and code quality, as well as pair
 programming.
-- Development and architecture of frontend and backend services in Java.
-- Development of REST and WSDL web services.
+- Development and architecture of services in Java, as REST and WSDL web
+services.
+- Continuous delivery with Jenkins and Maven.
 
-**Technologies:** Java, Maven, REST, WSDL
+**Technologies:** Java, Maven, Jenkins, REST, WSDL
 
 **Culture:** Kanban, Visual management, Daily stand-ups, One-on-One
 
@@ -75,96 +95,103 @@ Development, testing, delivery, training and documentation.
 - Development of multi-threaded algorithms, handling large datasets
 (1,000+ curves, millions of points) efficiently, for the energy market
 on price optimisation and energy curve manipulation.
-- Development of a Javascript curve visualisation component used to
+- Development of a JavaScript curve visualisation component used to
 visualise energy curves and apply operations on them.
 
-**Technologies:** Java EE, JSP, Maven, SQL, Javascript, jQuery, jQPlot
+**Technologies:** Java EE, JSP, Maven, SQL, JavaScript, jQuery, jQPlot
 
 
 ### Conference
 
-#### [Hashicorp Vault and Continuous Delivery](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault) <br> 3 conferences (April 2019 - June 2019)
+#### [Hands-On Music Generation with Magenta](https://alexandredubreuil.com/publications/2020-01-31-music-generation-with-magenta-deep-learning-in-music-generation/) <br> 8 months (June 2019 - January 2020)
+
+Book published on Packt Publishing. Explore the role of deep learning in
+music generation and assisted music composition.
+
+
+**Tags:** Python, Magenta, Tensorflow, Machine Learning, Generative Music, Ableton
+Live
+
+#### [Music Generation with Magenta: Using Machine Learning in Arts](https://alexandredubreuil.com/conferences/music-generation-with-magenta/) <br>  ()
+
+Conference on leveraging machine learning technologies for music
+generation using Magenta.
+\parbox[t][10pt]{10pt}{}
+
+
+**Conferences:** Devoxx Belgium 2019, IRCAM Paris 2020
+
+**Tags:** Python, Magenta, Tensorflow, Machine Learning, Generative Music, Ableton
+Live
+
+#### [Hashicorp Vault and Continuous Delivery](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault) <br>  ()
 
 Conference on securing your application secrets with infrastructure
 automation, continuous delivery and Hashicorp Vault.
 
-- 2019/06/12 -- Open R&Day @ Paris, France
-- 2019/04/25 -- JUG @ Nantes, France
-- 2019/04/17 -- Devoxx @ Paris, France
 
-**Tags:** Hashicorp Vault, Continuous Delivery, DevOps, Security
+**Conferences:** Devoxx UK 2020, Devoxx France 2019, JUG Nantes 2019
 
-#### [Domain Object Oriented Validation (dOOv)](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov) <br> 5 conferences (October 2017 - June 2018)
+**Tags:** Hashicorp Vault, Continuous Delivery, DevOps
 
-Conference our library, dOOv, a fluent API for type-safe domain model
-validation and mapping (see [doov.io](https://doov.io))
+#### [Domain Object Oriented Validation (dOOv)](https://alexandredubreuil.com/conferences/domain-object-oriented-validation-doov) <br>  ()
 
-- 2018/06/20 -- Open R&Day @ Paris, France
-- 2018/06/10 -- JDK.IO @ Copenhagen, Danmark
-- 2018/05/09 -- BGL META @ London, UK
-- 2018/01/24 -- Snowcamp @ Grenobles, France
-- 2017/10/26 -- Softshake @ Geneva, Switzerland
+Conference on dOOv, a fluent API for type-safe domain model validation
+and mapping (see
+\hyperref[project:doov]{Project -- Domain Object Oriented Validation}).
+
+
+**Conferences:** JDK IO Copenhagen 2018, Snowcamp 2018, Softshake Geneva 2017
 
 **Tags:** dOOv, Java, Domain Driven Design
 
-#### [Apache Spark for Java Developers](https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers) <br> 6 conferences (January 2017 - October 2017)
+#### [Apache Spark for Java Developers](https:///alexandredubreuil.com/conferences/apache-spark-for-java-developers) <br>  ()
 
 Conference on using Apache Spark with Java.
+\parbox[t][10pt]{10pt}{}
 
-- 2017/10/27 -- Softshake @ Geneva, Switzerland
-- 2017/06/22 -- Devoxx @ Krakow, Poland
-- 2017/04/19 -- Breizhcamp @ Rennes, France
-- 2017/02/09 -- Snowcamp @ Grenoble, France
-- 2017/01/31 -- BBL Whoz @ Paris, France
-- 2017/01/24 -- BBL Murex @ Paris, France
+
+**Conferences:** Softshake Geneva 2017, Devoxx Krakow 2017, Breizhcamp Rennes 2017,
+Snowcamp Grenoble 2017
 
 **Tags:** Java, Apache Spark, Big Data
 
-#### [Continuous Merge with git-octopus](https://alexandredubreuil.com/conferences/continuous-merge-git-octopus) <br> 7 conferences (September 2014 - June 2017)
+#### [Continuous Merge with git-octopus](https://alexandredubreuil.com/conferences/continuous-merge-git-octopus) <br>  ()
 
 Conference on shipping code to production everyday in a feature
 branching environment with git-octopus.
+\parbox[t][10pt]{10pt}{}
 
-- 2017/06/14 -- Open R&Day @ Paris, France
-- 2016/11/07 -- BBL WorkIT @ Paris, France
-- 2016/11/13 -- JUG @ Marseille, France
-- 2016/06/29 -- BBL SG @ Paris, France
-- 2016/01/31 -- JUG @ Tours, France
-- 2015/12/10 -- BBL Octo @ Paris, France
-- 2014/11/01 -- AgileTour @ Rennes, France
+
+**Conferences:** Open RDay Paris 2017, JUG Marseille 2016, JUG Tours 2016, AgileTour
+Rennes 2014
 
 **Tags:** git, DevOps, Continuous delivery
 
 
 ### Projects
 
-#### [Domain Object Oriented Validation (dOOv) (&#9733;25)](https://alexandredubreuil.com/projects/doov) <br> 2.5 years (September 2017 - today)
-
-Maintainer of dOOv, a fluent API for type-safe bean validation and
-mapping.
-
-**Tags:** Java, Domain Driven Design
-
-#### [Intellij Save Action Plugin (&#9733;289)](https://alexandredubreuil.com/projects/save-actions-plugin) <br> 4 years (January 2015 - today)
+#### [Intellij Save Action Plugin (&#9733;382)](https://alexandredubreuil.com/projects/save-actions-plugin) <br> 5 years (January 2015 - today)
 
 Creator and maintainer of an Intellij plugin that adds save actions to
-the IDE.
+the IDE. Five stars rating on the JetBrains plugin website and 75,000
+unique downloads per version.
 
 **Tags:** Java, Intellij
 
-#### [Project git-octopus (&#9733;171)](https://alexandredubreuil.com/projects/git-octopus) <br> 3.5 years (November 2014 - June 2017)
+#### [Domain Object Oriented Validation (dOOv) (&#9733;50)](https://alexandredubreuil.com/projects/doov) <br> 2 years (September 2017 - September 2019)
 
-Evangelist and committer on git-octopus, a tool enabling the continuous
+Creator, maintainer and evangelist on dOOv, a fluent API for type-safe
+bean validation and mapping.
+
+**Tags:** Java, Domain Driven Design
+
+#### [Project git-octopus (&#9733;193)](https://alexandredubreuil.com/projects/git-octopus) <br> 3.5 years (November 2014 - June 2017)
+
+Evangelist and commiter on git-octopus, a tool enabling the continuous
 merge workflow.
 
 **Tags:** git
-
-#### [Climat General at Venice Art Bienale (&#9733;)](https://alexandredubreuil.com/projects/climat-general) <br> 1 year (January 2017 - November 2017)
-
-Generative music algorithms and sound design for the Climat General
-exhibit of the artist Claire Malrieux.
-
-**Tags:** NodeJS, Ableton Live
 
 
 ### Education

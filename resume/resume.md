@@ -1,4 +1,4 @@
-# $title$ - $person.name$
+# $title$ - $person.name$ - HTML
 ## $person.title$
 
 <span class="icon icon-id">[Contact](/contact)</span>
@@ -36,11 +36,11 @@ $endfor$
 $endif$
 $endfor$
 
-### Conference
+### Publications &amp; Conferences
 
 $for(conference)$
 $if(conference.show)$
-#### [$conference.title$]($conference.link$) <br> $conference.duration$ ($conference.date$)
+#### [$conference.title$]($conference.link$) <br> $conference.duration$ $if(conferecen.date)$($conference.date$)$endif$
 $if(conference.logo)$
 
 ![Logo $conference.title$]($conference.logo$)
