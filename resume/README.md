@@ -1,14 +1,16 @@
 # Resume
 
-## Resume Portable Format (PDF)
+## Resume - PDF version
 
-<span class="icon icon-link">**[PDF version](pdf)**</span>
+<span class="icon icon-link">**[Resume Alexandre DuBreuil - PDF version](resume-alexandre-dubreuil-pdf)**</span>
 
-## Resume HTML (web)
+## Resume - HTML vesion
 
-<span class="icon icon-website">**[Web version](web)**</span>
+<span class="icon icon-website">**[Resume Alexandre DuBreuil - Web version](resume-alexandre-dubreuil-web)**</span>
 
 ## Source
+
+## References
 
 <span class="icon icon-github">**[Source Code](https://github.com/dubreuia/alexandredubreuil.com/tree/master/resume)**</span>
 

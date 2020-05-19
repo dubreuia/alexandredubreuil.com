@@ -15,9 +15,9 @@ build:
 	pdftoppm build/resume.pdf build/resume -r 30 -f 1 -singlefile -jpeg -jpegopt quality=90
 
 install:
-	cp build/resume.pdf pdf/resume-alexandre-dubreuil.pdf
-	cp build/resume.jpg pdf/resume-alexandre-dubreuil.jpg
-	cp build/resume.md web/README.md
+	cp build/resume.pdf resume-alexandre-dubreuil-pdf/resume-alexandre-dubreuil.pdf
+	cp build/resume.jpg resume-alexandre-dubreuil-pdf/resume-alexandre-dubreuil.jpg
+	cp build/resume.md resume-alexandre-dubreuil-web/README.md
 
 .PHONY: build install
 
