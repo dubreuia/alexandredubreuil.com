@@ -27,7 +27,7 @@ Trainer on web languages and technologies for full stack web developers
 
 **Technologies:** Java, JavaScript, Spring Boot, Angular, UML, TDD
 
-#### Generative Music Composer <br> 6 months (July 2018 - December 2018) <br> DuBreuil Consulting (DreamBank) <br> Paris, France
+#### Generative Music Composer <br> 6 months (July 2019 - December 2019) <br> DuBreuil Consulting (DreamBank) <br> Paris, France
 
 Composer of generative music, for the DreamBank art exhibit of Claire
 Malrieux, using machine learning and Magenta (see [technical
@@ -37,7 +37,7 @@ content](https://alexandredubreuil.com/projects/dreambank/)).
 **Technologies:** Python, Magenta, Tensorflow, Ableton Live, Machine Learning, Generative
 Music
 
-#### Security Consultant <br> 3 months (April 2018 - June 2018) <br> DuBreuil Consulting (LesFurets) <br> Paris, France
+#### Security Consultant <br> 3 months (April 2019 - June 2019) <br> DuBreuil Consulting (LesFurets) <br> Paris, France
 
 Security architecture on secrets management with Hashicorp Vault for
 passwords (see [technical
