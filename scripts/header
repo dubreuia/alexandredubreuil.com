@@ -8,7 +8,7 @@ function change_header_colors {
     # Generate ASCII art alexandredubreuil.com with rainbow colors
     echo "alexandredubreuil.com" | \
         figlet -t | \
-        lolcat -f | \
+        lolcat -f --seed ${1:-0} | \
         ansi2html -i > \
         /tmp/alexandredubreuil.html
 
