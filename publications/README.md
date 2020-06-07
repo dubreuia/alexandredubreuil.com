@@ -10,7 +10,7 @@
 
 ### [Music Generation with Magenta 2.0.1: A migration guide from version 1.1.7](2020-06-06-music-generation-with-magenta-2-0-1-a-migration-guide-from-version-1-1-7)
 
-**2020/06/06** - Writing a book about a software library like Google Magenta inhevitably ends by the code evolving while the book slowly becomes obsolete. In my book [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta), we use [Magenta v1.1.7](https://github.com/magenta/magenta/releases/tag/v1.1.7) because at the time of writing, that version was one of the most recent and seemed like the most stable. On June 2rd 2020, the Magenta team has released [Magenta v2.0.1](https://github.com/magenta/magenta/releases/tag/2.0.1), adding support for the Tensorflow 2 package. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
+**2020/06/06** - Writing a book about a software library like Google Magenta inhevitably ends by the code evolving while the book slowly becomes obsolete. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
 
 ### [Music Generation with Magenta: Using Machine Learning in Arts](2019-10-15-music-generation-with-magenta)
 
