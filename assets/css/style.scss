@@ -288,8 +288,9 @@ html {
     font-family: monospace;
     font-size: 14px;
     height: 100%;
-    line-height: 22px;
+    line-height: 24px;
     overflow-y: scroll;
+    letter-spacing: -0.3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -304,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #E0F7FF;
+    color: #FFFFFF;
 }
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
@@ -317,38 +318,40 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
 }
 
 .page-header {
-    text-align: center;
-    font-size: 10px;
+    background-color: black;
+    height: 100px;
     padding: 5px 0;
+    text-align: center;
 }
 
 .page-header a {
-    background-color: #212121;
     color: white;
     display: block;
     line-height: 1;
+    margin: 10px 0 0 0;
     text-decoration: none;
+    transform: scaleY(125%);
     transition: all 500ms;
 }
 
 .page-header a pre {
-    font-weight: bold;
     margin: 0;
+    font-size: 12px;
 }
 
-.page-header:hover a {
-    transform: scale(1.1);
+.page-header a pre span {
+    font-weight: bold;
 }
 
 h1 {
-    background-color: #323232;
-    font-size: 140%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    background-color: #101010;
+    font-size: 150%;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 h2 {
-    background-color: #424242;
+    background-color: #323232;
     font-size: 125%;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -392,17 +395,23 @@ p {
 
 img, video {
     box-shadow: 0 0 5px gray;
-    float: left;
-    margin: 0 20px 20px 0;
+    margin: 0 0 20px 0;
     max-width: 100%;
 }
 
+img[alt^=Inline], video[attr^=Inline] {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 33%;
+    min-width: 150px;
+}
+
 code.highlighter-rouge {
-    padding: 0.2em 0.4em;
-    margin: 0;
-    font-size: 85%;
     background-color: rgba(27,31,35,0.05);
-    border-radius: 3px
+    font-size: 100%;
+    margin: 0;
+    padding: 0.0em 0.2em;
+    width: 100%;
 }
 
 iframe.star {
@@ -484,7 +493,7 @@ span.columns-two img {
     display: inline-block;
     margin-right: 0;
     vertical-align: top;
-    width: calc(50% - 5px)
+    width: calc(50% - 10px)
 }
 
 span.columns-two img:first-child {
@@ -561,19 +570,19 @@ span.icon-linkedin:before {
     content: url("/assets/img/icon-linkedin.svg");
 }
 
-div.sound_clip {
+div.sound-clip {
     display: inline-block;
     text-align: center;
-    width: 200px;
+    width: 185px;
     vertical-align: top;
 }
 
-div.sound_clip audio {
-    width: 191px;
+div.sound-clip img {
+    width: 185px;
 }
 
-div.sound_clip img {
-    width: 200px;
+div.sound-clip audio {
+    width: 185px;
 }
 
 /*******************************************************/
@@ -918,13 +927,14 @@ div.sound_clip img {
 }
 
 .highlight {
-    background-color:#f8f8f8
+    /* background-color:#f8f8f8 */
+    background-color: white;
 }
 
 .highlight pre {
     border: 1px dashed #ccc;
     overflow: auto;
-    padding: 5px;
+    padding: 10px;
 }
 
 /*******************************************************/
@@ -937,14 +947,28 @@ div.sound_clip img {
         line-height: 22px;
     }
 
-    .page-header h1 {
-        font-size: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+    .page-header {
+        height: 15vw;
+    }
+
+    .page-header a {
+        transform: scaleY(150%);
+    }
+
+    .page-header a {
+        margin-top: 2.5vw;
     }
 
     .page-header a pre {
-        font-size: 0.75em;
+        font-size: 1.5vw;
+    }
+
+    .main-content > p {
+        padding: 0 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding: 0 10px;
     }
 
     h1 {
@@ -989,22 +1013,8 @@ div.sound_clip img {
         line-height: 20px;
     }
 
-    .page-header h1 {
-        font-size: 19px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-
-    .page-header a pre {
-        font-size: 0.6em;
-    }
-
-    .main-content > p {
-        padding: 0 10px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        padding: 0 10px;
+    .page-header a {
+        transform: scaleY(175%);
     }
 
     h1 {
@@ -1053,14 +1063,8 @@ div.sound_clip img {
         line-height: 18px;
     }
 
-    .page-header h1 {
-        font-size: 18px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
-
-    .page-header a pre {
-        font-size: 0.5em;
+    .page-header a {
+        transform: scaleY(200%);
     }
 
     .main-content > p {

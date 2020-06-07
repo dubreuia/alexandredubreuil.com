@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+# Creates an outline to be included in an article
+
+
+URL="${1?Usage: $0 URL}"
+TIMESTAMP=$( date +%s )
+FILEPATH="/tmp/outline-${TIMESTAMP}"
+SOURCE=$( curl "${URL}" -o "${FILEPATH}" )
+
+cat "${FILEPATH}" | grep "h2\|h3"
+

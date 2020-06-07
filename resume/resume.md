@@ -20,7 +20,7 @@ $if(experience.show)$
 #### $experience.title$ <br> $experience.duration$ ($experience.date$) <br> $experience.company$ <br> $experience.location$
 $if(experience.logo)$
 
-![Logo $experience.company$]($experience.logo$)
+![Inline - Logo $experience.company$]($experience.logo$)
 $endif$
 
 $experience.content$
@@ -43,7 +43,7 @@ $if(conference.show)$
 #### [$conference.title$]($conference.link$) $if(conferecen.duraction)$<br> $conference.duration$ ($conference.date$)$endif$
 $if(conference.logo)$
 
-![Logo $conference.title$]($conference.logo$)
+![Inline - Logo $conference.title$]($conference.logo$)
 $endif$
 
 $conference.content$
@@ -66,7 +66,7 @@ $if(project.show)$
 #### [$project.title$ (&#9733;$project.star$)]($project.link$) <br> $project.duration$ ($project.date$)
 $if(project.logo)$
 
-![Logo $project.title$]($project.logo$)
+![Inline - Logo $project.title$]($project.logo$)
 $endif$
 
 $project.content$
@@ -85,7 +85,7 @@ $if(education.show)$
 #### $education.title$ <br> $education.duration$ ($education.date$) <br> $education.location$
 $if(education.logo)$
 
-![Logo $education.title$]($education.logo$)
+![Inline - Logo $education.title$]($education.logo$)
 $endif$
 
 $education.content$

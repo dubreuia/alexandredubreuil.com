@@ -59,35 +59,35 @@
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
 }
 
-.reveal .sound_clip {
+.reveal .sound-clip {
     display: inline-block;
     text-align: center;
     width: 200px;
     vertical-align: top;
 }
 
-.reveal .sound_clip.smaller {
+.reveal .sound-clip.smaller {
     width: 150px;
 }
 
-.reveal .sound_clip.smaller span {
+.reveal .sound-clip.smaller span {
     font-size: smaller;
     font-weight: bold;
 }
 
-.reveal .sound_clip.smaller img {
+.reveal .sound-clip.smaller img {
     margin: 0;
 }
 
-.reveal .sound_clip audio {
+.reveal .sound-clip audio {
     width: 191px;
 }
 
-.reveal .sound_clip.smaller audio {
+.reveal .sound-clip.smaller audio {
     width: 141px;
 }
 
-.reveal .sound_clip img {
+.reveal .sound-clip img {
     width: 200px;
 }
 

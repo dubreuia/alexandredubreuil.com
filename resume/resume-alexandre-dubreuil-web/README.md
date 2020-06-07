@@ -48,7 +48,7 @@ content](https://alexandredubreuil.com/conferences/secrets-with-hashicorp-vault/
 
 #### Software Architect <br> 2.5 years (June 2016 - October 2018) <br> LesFurets.com <br> Paris, France
 
-![Logo LesFurets.com](logo-lesfurets.jpg)
+![Inline - Logo LesFurets.com](logo-lesfurets.jpg)
 
 Software architect on a 500,000 lines web application, working on full
 stack refactoring, domain driven design, infrastructure automation,
@@ -64,7 +64,7 @@ insurance validation rules in dOOv.
 
 #### Technical Lead <br> 2.5 years (January 2014 - June 2016) <br> LesFurets.com <br> Paris, France
 
-![Logo LesFurets.com](logo-lesfurets.jpg)
+![Inline - Logo LesFurets.com](logo-lesfurets.jpg)
 
 Technical leader of an Agile team of 5 developers responsible for the 60
 web services communicating with the insurers, providing agile
@@ -85,7 +85,7 @@ services.
 
 #### Java EE Consultant <br> 3.5 years (January 2010 - August 2013) <br> CGI France <br> Paris, France
 
-![Logo CGI France](logo-cgi.jpg)
+![Inline - Logo CGI France](logo-cgi.jpg)
 
 Java EE consultant on a large scale front office and back office Java
 application in the energy business (3,000,000 lines of code).
