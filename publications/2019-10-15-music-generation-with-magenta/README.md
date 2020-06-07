@@ -58,121 +58,86 @@
 
 ## Generative Music
 
-"Generative art is an artwork partially or completely created by an autonomous 
-system." This definition is good, but not really fun. Let's other ways of
-seeing generative music. 
+"Generative art is an artwork partially or completely created by an autonomous system." This definition is good, but not really fun. Let's other ways of seeing generative music. 
 
 ### Make music without being a musician
 
-Maybe you don't know how to **improvise**, maybe you need help 
-to **compose**. Either way, a generative algorithm can help you
-do it.
+Maybe you don't know how to **improvise**, maybe you need help to **compose**. Either way, a generative algorithm can help you do it.
 
-By interacting with a machine, you can find new ideas, discover new
-sounds, or do even things you cannot by yourself. The machine becomes an
-extension of our creativity.
+By interacting with a machine, you can find new ideas, discover new sounds, or do even things you cannot by yourself. The machine becomes an extension of our creativity.
 
 ### "Why you should build silly things" - Monica Dinculescu
     
-It is okay to make art without taking ourselves seriously. Generative
-music is a good way of doing that, because those kind of systems can
-be **interacted with** easily.
+It is okay to make art without taking ourselves seriously. Generative music is a good way of doing that, because those kind of systems can be **interacted with** easily.
 
 [Monica Dinculescu - Why you should build silly things](https://www.youtube.com/watch?v=DkiFjzQgJtg)
 
 ### Helping people build generative systems
 
-To make generative art, you need **autonomous systems**
-that makes it possible. As software developers, this is our role
-to provide that, whether it is for an art exhibit, a generative
-radio, or a fun website.
+To make generative art, you need **autonomous systems** that makes it possible. As software developers, this is our role to provide that, whether it is for an art exhibit, a generative radio, or a fun website.
 
 ### "The weird and the strange is good" - Brian Eno
 
-Generative systems makes tons of mistakes (also humans), 
-**but mistakes are good**. They form the basic mechanism with
-which we learn and are important in the creation process. 
+Generative systems makes tons of mistakes (also humans), **but mistakes are good**. They form the basic mechanism with which we learn and are important in the creation process. 
 
 ### Representation: MIDI
 
-MIDI is a musical representation analogous to **sheet music**,
-where note has a pitch, velocity, and time.
+MIDI is a musical representation analogous to **sheet music**, where note has a pitch, velocity, and time.
 
-Working with MIDI shows the underlying **structure of the music**,
-but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
+Working with MIDI shows the underlying **structure of the music**, but doesn't define the actual sound, you'll need to use instruments (numeric or analogic).
 
 ![MIDI diagram](../../conferences/common/img/magenta/midi.png)
 
 ### Representation: audio
 
-Working with audio is harder because you have to handle 16000 samples per 
-seconds (at least) and keep track of the general structure. Generating audio 
-is more direct than MIDI.
+Working with audio is harder because you have to handle 16000 samples per seconds (at least) and keep track of the general structure. Generating audio is more direct than MIDI.
 
-It is more direct because you don't need the extra step of using instruments
-to play the score.
+It is more direct because you don't need the extra step of using instruments to play the score.
 
 ![Audio diagram](../../conferences/common/img/magenta/spectrogram.png)
 <!-- https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png -->
 
 ### Machine Learning
 
-Hand crafting the rules of a painting or the rules of a music style might be
-a hard task. That's why Machine Learning is so interesting in arts: it can
-learn complex functions.
+Hand crafting the rules of a painting or the rules of a music style might be a hard task. That's why Machine Learning is so interesting in arts: it can learn complex functions.
 
 ### Music generation with RNNs (MIDI)
 
 ![Inline - RNN diagram](../../conferences/common/img/magenta/rnn.png)
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/rnn.png -->
 
-Recurrent Neural Networks (RNNs) solves two important properties 
-for music generation: they **operate on sequences for the inputs 
-and outputs** and they **can remember past events**.
+Recurrent Neural Networks (RNNs) solves two important properties for music generation: they **operate on sequences for the inputs and outputs** and they **can remember past events**.
 
 ### Long-term structure with LSTMs (MIDI)
 
 ![Inline - LSTM diagram](../../conferences/common/img/magenta/lstm.png)
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/lstm.png -->
-          
-Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs
-are hard to train because of the problems of vanishing and exploding gradient,
-making long-term dependencies hard to learn.
 
-By using **input, output and forget gates** in the cell, LSTMs can
-learn mechanisms to keep or forget information as they go.
+Most RNN uses Long Short-Term Memory (LSTM) cells, since by themselves, RNNs are hard to train because of the problems of vanishing and exploding gradient, making long-term dependencies hard to learn.
+
+By using **input, output and forget gates** in the cell, LSTMs can learn mechanisms to keep or forget information as they go.
 
 ### Latent space interpolation with VAEs (MIDI)
 
 ![Inline VAE diagram](../../conferences/common/img/magenta/vae.png)
 <!-- https://www.asimovinstitute.org/wp-content/uploads/2016/09/vae.png -->
 
-Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces
-the input to a lower dimensionality (**latent space**), from which
-a decoder tries to reproduce the input.
+Variational Autoencoders (VAEs) are a pair of networks where an encoder reduces the input to a lower dimensionality (**latent space**), from which a decoder tries to reproduce the input.
 
-The latent space is continuous and follows a probability distribution, meaning
-it is possible to sample from it. VAEs are inherently generative models: they
-can **sample** and **interpolate** (smoothly move in
-the latent space) between two points.
+The latent space is continuous and follows a probability distribution, meaning it is possible to sample from it. VAEs are inherently generative models: they can **sample** and **interpolate** (smoothly move in the latent space) between two points.
 
 ### Audio generation with WaveNet Autoencoders (audio)
 
 ![Wavenet diagram](../../conferences/common/img/magenta/wavenet.png)
 <!-- https://magenta.tensorflow.org/assets/nsynth_05_18_17/encoder-decoder.png -->
 
-WaveNet is a convolutional neural network (CNN) taking raw signal as an input
-and synthesizing output audio sample by sample.
+WaveNet is a convolutional neural network (CNN) taking raw signal as an input and synthesizing output audio sample by sample.
 
-The WaveNet Autoencoder present in Magenta is a Wavenet-style AE network
-capable of learning its own temporal embedding, resulting in a latent space
-from which is it possible to **sample** and **mix**
-elements.
+The WaveNet Autoencoder present in Magenta is a Wavenet-style AE network capable of learning its own temporal embedding, resulting in a latent space from which is it possible to **sample** and **mix** elements.
 
 ### What's in Magenta?
 
-Here are some networks we'll be using in this presentation and live code.
-Not all Magenta models are listed, but the main ones for music generation are. 
+Here are some networks we'll be using in this presentation and live code. Not all Magenta models are listed, but the main ones for music generation are. 
 
 <table class="smaller">
   <thead>
@@ -270,9 +235,7 @@ We'll use NSynth to mix cat sounds with other sounds.
 
 ### STEP 1: Entry point
 
-See the file "nsynth.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>app</code>.
+See the file "nsynth.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>app</code>.
 
 <!-- TODO describe -->
 
@@ -288,9 +251,7 @@ def app(unused_argv):
 
 ### STEP 1: Encode
 
-See the file "nsynth.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>encode</code>.
+See the file "nsynth.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>encode</code>.
 
 <!-- TODO describe -->
 
@@ -316,9 +277,7 @@ def encode(paths: List[str],
 
 ### STEP 1: Mix
 
-See the file "nsynth.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>mix</code>.
+See the file "nsynth.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>mix</code>.
 
 <!-- TODO describe -->
 
@@ -334,9 +293,7 @@ def mix(encoding1: np.ndarray,
 
 ### STEP 1: Synthesize
 
-See the file "nsynth.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>synthesize</code>.
+See the file "nsynth.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>synthesize</code>.
 
 <!-- TODO describe -->
 
@@ -359,8 +316,7 @@ def synthesize(encoding_mix: np.ndarray,
 
 ### STEP 1: GANSynth
 
-As shown, the NSynth instrument is nice, but really slow for the
-audio synthesis. You should use **GANSynth**.
+As shown, the NSynth instrument is nice, but really slow for the audio synthesis. You should use **GANSynth**.
 
 ### STEP 1: The results
 
@@ -415,14 +371,11 @@ audio synthesis. You should use **GANSynth**.
 
 ### STEP 2: sequence the cats
 
-We'll use DrumsRNN and MelodyRNN to generate MIDI to play the
-samples.
+We'll use DrumsRNN and MelodyRNN to generate MIDI to play the samples.
 
 ### STEP 2: Reset
 
-See the file "sequences.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>reset</code>.
+See the file "sequences.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>reset</code>.
 
 <!-- TODO describe -->
 
@@ -442,9 +395,7 @@ def reset(loop_start_time: float,
 
 ### STEP 2: Loop
 
-See the file "sequences.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>loop</code>.
+See the file "sequences.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>loop</code>.
 
 <!-- TODO describe -->
 
@@ -466,9 +417,7 @@ def loop(sequence: NoteSequence,
 
 ### STEP 2: Generate
 
-See the file "sequences.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>generate</code>.
+See the file "sequences.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>generate</code>.
 
 <!-- TODO describe -->
 <!-- TODO describe -->
@@ -501,9 +450,7 @@ def generate(sequence: NoteSequence,
 
 ### STEP 2: Sequence generator
 
-See the file "sequences.py" in the 
-[conference code](../../conferences/music-generation-with-magenta/code)
-and method <code>get_sequence_generator</code>.
+See the file "sequences.py" in the [conference code](../../conferences/music-generation-with-magenta/code) and method <code>get_sequence_generator</code>.
 
 <!-- TODO describe -->
 
@@ -537,10 +484,7 @@ def get_sequence_generator(name: str,
 
 ### Wrapping up
 
-This generative music demo helped us improvise and compose around an
-idea: a track composed of a percussion, a melody, and a cat
-&#x1F63A;. We could **interact** with the system
-and it helped us improvise around a theme.
+This generative music demo helped us improvise and compose around an idea: a track composed of a percussion, a melody, and a cat &#x1F63A;. We could **interact** with the system and it helped us improvise around a theme.
 
 ### Can we do better?
 
@@ -549,33 +493,21 @@ Was it perfect? No, we had little happy accidents.
 ![Inline - Bob Ross](../../conferences/common/img/magenta/bob-ross.jpg)
 <!-- https://2.bp.blogspot.com/_s5_5vgBh1Zo/TJVmnBJW-bI/AAAAAAAAAHc/Mcgu8_el_84/s1600/Bob_Ross.jpg -->
 
-Maybe we could have had more control over the sequences. Maybe we
-wanted to improvise around a **musical style**,
-or a **specific structure**.
+Maybe we could have had more control over the sequences. Maybe we wanted to improvise around a **musical style**, or a **specific structure**.
 
 ## Training
 
 ### Why?
 
-The pre-trained models in Magenta are good, but if for example
-you want to generate a **specific style**, generate a
-**specific time signature** (3/4 for example), or a
-**specific instrument** (cello for example) you'll
-need to train your own.
+The pre-trained models in Magenta are good, but if for example you want to generate a **specific style**, generate a **specific time signature** (3/4 for example), or a **specific instrument** (cello for example) you'll need to train your own.
 
 ### Datasets: LAKHS (MIDI)
 
-A good place to start is the 
-[LAKHS dataset](https://colinraffel.com/projects/lmd/), a 
-180,000 MIDI files dataset, (partially) matched with the 
-[Million Song Dataset](http://millionsongdataset.com/)
-(metadata like artist, release, genre).
+A good place to start is the [LAKHS dataset](https://colinraffel.com/projects/lmd/), a 180,000 MIDI files dataset, (partially) matched with the [Million Song Dataset](http://millionsongdataset.com/) (metadata like artist, release, genre).
 
 ### Datasets: NSynth (audio)
 
-A large-scale and high-quality dataset of annotated musical notes.
-Training audio requires lots of resources, but can be achieved using
-GANSynth.
+A large-scale and high-quality dataset of annotated musical notes. Training audio requires lots of resources, but can be achieved using GANSynth.
 
 See the [NSynth Dataset](https://magenta.tensorflow.org/datasets/nsynth).
 
@@ -598,9 +530,7 @@ Converted MIDI file /path/to/dataset/jazz_midi/drums/v1/TRWSJLM128F92DF651.mid.
 
 ### Create SequenceExamples
 
-The sequence examples are fed into the model, it contains a sequence
-of inputs and a sequence of labels that represents the drum track.
-Those are split to eval and training sets.
+The sequence examples are fed into the model, it contains a sequence of inputs and a sequence of labels that represents the drum track. Those are split to eval and training sets.
 
 ```bash
 drums_rnn_create_dataset \
@@ -623,8 +553,7 @@ DAGPipeline_DrumsExtractor_training_drum_track_lengths_in_bars:
 
 ### Train and evaluate the model
 
-Launch the training, using a specific configuration and
-hyperparameters.
+Launch the training, using a specific configuration and hyperparameters.
 
 ```bash
 drums_rnn_train \
@@ -646,8 +575,7 @@ Saving checkpoints for 12 into /tmp/drums_rnn/logdir/run1/train/model.ckpt.
 
 ### Tensorboard
 
-You can launch TensorBoard and go to http://localhost:6006 to view
-the TensorBoard dashboard.
+You can launch TensorBoard and go to http://localhost:6006 to view the TensorBoard dashboard.
 
 ```bash
 tensorboard --logdir="/tmp/drums_rnn/logdir"
@@ -657,16 +585,11 @@ tensorboard --logdir="/tmp/drums_rnn/logdir"
 
 ### Python to everything using MIDI
 
-Magenta can send MIDI, which is understood by basically everything
-that makes sound: **DAWs** (like Ableton Live),
-**software synthesizers** (like fluidsynth),
-**hardware synthesizers** (though USB or MIDI cable),
-etc.
+Magenta can send MIDI, which is understood by basically everything that makes sound: **DAWs** (like Ableton Live), **software synthesizers** (like fluidsynth), **hardware synthesizers** (though USB or MIDI cable), etc.
 
 ### Magenta in the browser with Magenta.js
 
-You can use Magenta and most of its models in the browser, using
-Magenta.js (which in turns uses Tensorflow.js).
+You can use Magenta and most of its models in the browser, using Magenta.js (which in turns uses Tensorflow.js).
 
 ### Melody Mixer
 
@@ -715,8 +638,7 @@ Magenta.js (which in turns uses Tensorflow.js).
 
 ### Magenta in your DAW with Magenta Studio
 
-Using Magenta.js and Max4Live (MaxMSP) process, Magenta Studio can
-be used directly in Ableton Live.
+Using Magenta.js and Max4Live (MaxMSP) process, Magenta Studio can be used directly in Ableton Live.
 
 <video autoplay="" loop="" muted="" playsinline="">
 <source src="../../conferences/common/video/hero.mp4" type="video/mp4">
@@ -733,8 +655,7 @@ Generative music using Magenta and Ableton Live, exhibit by Claire Malrieux.
 
 ### Hands-on Music Generation with Magenta
 
-Upcoming book on **Packt Publishing**, expected
-publication date in **January 2020**.
+Upcoming book on **Packt Publishing**, expected publication date in **January 2020**.
 
 <img width="150px" src="../../conferences/common/img/magenta/magenta-book-icon.png" alt="Magenta book icon"/>
 <img width="150px" src="../../conferences/common/img/magenta/packt-logo.png" alt="Packt logo"/>

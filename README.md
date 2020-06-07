@@ -12,18 +12,15 @@ Publications on music and technology, including articles and books.
 
 ## [Conferences](conferences)
 
-Conferences on domain driven design, infrastructure automation, big data,
-software factory, ai music generation and other subjects.
+Conferences on domain driven design, infrastructure automation, big data, software factory, ai music generation and other subjects.
 
 ## [Music](music)
 
-Electronic music composition with modular synthesizer, djing and generative
-music.
+Electronic music composition with modular synthesizer, djing and generative music.
 
 ## [Projects](projects)
 
-Maintainer or commiter on projects like a validation and mapping library,
-an Intellij plugin and generetive music algorithms.
+Maintainer or commiter on projects like a validation and mapping library, an Intellij plugin and generetive music algorithms.
 
 ## [Resume](resume)
 
