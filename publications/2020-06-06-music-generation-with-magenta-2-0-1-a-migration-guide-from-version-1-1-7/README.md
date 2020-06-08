@@ -2,7 +2,7 @@
 
 **06/06/2020**
 
-![Inline - Cover Music Generation With Magenta Book](../cover-music-generation-with-magenta-book.jpeg) Writing a book about a software library like Google Magenta inhevitably ends by the code evolving while the book slowly becomes obsolete. In my book [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta), we use [Magenta v1.1.7](https://github.com/magenta/magenta/releases/tag/v1.1.7) because at the time of writing, that version was one of the most recent and seemed like the most stable. On June 2rd 2020, the Magenta team has released [Magenta v2.0.1](https://github.com/magenta/magenta/releases/tag/2.0.1), adding support for the Tensorflow 2 package. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
+![Inline - Cover Music Generation With Magenta Book](../cover-music-generation-with-magenta-book.jpeg) Writing a book about a software library like Google Magenta might lead to the library’s code evolving while the book's code becomes obsolete. In this article, we'll have a look at how to run the book's code using the newest Magenta release. In my book [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta), we use [Magenta v1.1.7](https://github.com/magenta/magenta/releases/tag/v1.1.7) because at the time of writing, that version was one of the most recent and seemed like the most stable. On June 2rd 2020, the Magenta team released [Magenta v2.0.1](https://github.com/magenta/magenta/releases/tag/2.0.1), adding support for the Tensorflow 2 package. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
 
 ## Outline
 
@@ -28,14 +28,14 @@ Magenta 2.0.1 doesn't use the new Tensorflow 2 API, but it supports the package 
 
 ## Managing multiple Magenta versions in Github
 
-We didn't want to modify the [Music Generation using Magenta book's code](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) in Github since we though that it might confuse the readers if the code presented in the book doesn't correspond to the code on Github. Instead, we created a new branch, [magenta-v2.0.1](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/magenta-v2.0.1) which contains the updated code for Magenta 2.0.1.
+We didn't want to modify the [Music Generation using Magenta book's code](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) in Github since we thought that it might confuse the readers if the code presented in the book doesn't correspond to the code on Github. Instead, we created a new branch, [magenta-v2.0.1](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/magenta-v2.0.1) which contains the updated code for Magenta 2.0.1.
 
 ![Github Music Generation using Magenta book code](./github-book-page-highlight.png)
 
 You can see what Magenta version you should be using by looking at the badge at the top of the README and in the Python files.
 
 - [**Magenta v1.1.7** (in the `master` branch)](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta) - The book's code uses Magenta 1.1.7 which, at the time of publication, was the latest stable available version. The code for that version is in the default `master` branch and will stay there.
-- [**Magenta v2.0.1** (in the `magenta-v2.0.1` branch)](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/magenta-v2.0.1) - We also provide the code for newer versions of Magenta, like Magenta 2.0.1 which is latest version we have the code for.
+- [**Magenta v2.0.1** (in the `magenta-v2.0.1` branch)](https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/magenta-v2.0.1) - We also provide the code for newer versions of Magenta, like Magenta 2.0.1 which is the latest version we have the code for.
 
 ## Trying the book's code with Magenta 2.0.1
 
@@ -127,7 +127,7 @@ When checking for errors, we get:
 ERROR: Using member tf.contrib.training.HParams in deprecated module tf.contrib. tf.contrib.training.HParams cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
 ```
 
-Unfortuately in Tensorflow 2, the `contrib` module is gone, so we have to add a dependency to the contribution module we want. This is already done for the `HParams` class since it is used in Magenta. We import the `contrib_training` module (which in turn imports `from tensor2tensor.utils.hparam import HParams`) to have access to the class:
+Unfortunately in Tensorflow 2, the `contrib` module is gone, so we have to add a dependency to the contribution module we want. This is already done for the `HParams` class since it is used in Magenta. We import the `contrib_training` module (which in turn imports `from tensor2tensor.utils.hparam import HParams`) to have access to the class:
 
 ```python
 from magenta.contrib import training as contrib_training
@@ -141,7 +141,7 @@ When importing Tensorflow, we can import it using `import tensorflow as tf` and 
 
 ## Migrating to Magenta 2.0.1
 
-Now that we modified our code to use Tensorflow 2, we'll make some modification regarding Magenta.
+Now that we modified our code to use Tensorflow 2, we'll make some modifications regarding Magenta.
 
 ### Migrating the RNN models
 
