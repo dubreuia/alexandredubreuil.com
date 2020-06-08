@@ -286,17 +286,18 @@ html {
     /* background-image: radial-gradient(ellipse at top right, #000000, #c43d20, #ef9e44, #f1faf9, #82c7f1, #064564, #000000) */
     color: #212121;
     font-family: monospace;
-    font-size: 14px;
+    font-size: 15px;
     height: 100%;
-    line-height: 24px;
+    line-height: 25px;
     overflow-y: scroll;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     color: #FFFFFF;
     font-weight: 600;
+    letter-spacing: 1px;
     line-height: 1.25;
     margin-bottom: 16px;
     margin-top: 24px;
@@ -957,6 +958,7 @@ div.sound-clip audio {
     html {
         font-size: 14px;
         line-height: 22px;
+        letter-spacing: -0.20px;
     }
 
     .page-header {
@@ -1023,6 +1025,7 @@ div.sound-clip audio {
     html {
         font-size: 13px;
         line-height: 20px;
+        letter-spacing: -0.10px;
     }
 
     .page-header a {
@@ -1070,11 +1073,6 @@ div.sound-clip audio {
 }
 
 @media only screen and (max-width: 400px) {
-    html {
-        font-size: 12px;
-        line-height: 18px;
-    }
-
     .page-header a {
         transform: scaleY(200%);
     }
