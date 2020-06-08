@@ -2,7 +2,11 @@
 
 **06/06/2020**
 
-![Inline - Cover Music Generation With Magenta Book](../cover-music-generation-with-magenta-book.jpeg) Writing a book about a software library like Google Magenta might lead to the library’s code evolving while the book's code becomes obsolete. In this article, we'll have a look at how to run the book's code using the newest Magenta release. In my book [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta), we use [Magenta v1.1.7](https://github.com/magenta/magenta/releases/tag/v1.1.7) because at the time of writing, that version was one of the most recent and seemed like the most stable. On June 2rd 2020, the Magenta team released [Magenta v2.0.1](https://github.com/magenta/magenta/releases/tag/2.0.1), adding support for the Tensorflow 2 package. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
+![Inline - Cover Music Generation With Magenta Book](../cover-music-generation-with-magenta-book.jpeg) Writing a book about a software library like Google Magenta might lead to the library’s code evolving while the book's code becomes obsolete. In this article, we'll have a look at how to run the book's code using the newest Magenta release.
+
+In my book [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta), we use [Magenta v1.1.7](https://github.com/magenta/magenta/releases/tag/v1.1.7) because at the time of writing, that version was one of the most recent and seemed like the most stable. On June 2rd 2020, the Magenta team released [Magenta v2.0.1](https://github.com/magenta/magenta/releases/tag/2.0.1), adding support for the Tensorflow 2 package.
+
+Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.
 
 ## Outline
 
