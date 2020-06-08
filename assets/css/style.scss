@@ -406,6 +406,10 @@ p {
     text-align: justify;
 }
 
+p.center {
+    text-align: center;
+}
+
 img, video {
     box-shadow: 0 0 5px gray;
     margin: 0 0 20px 0;
@@ -515,11 +519,20 @@ span.columns-two img:first-child {
     margin-right: 10px;
 }
 
-span.icon {
+.icon {
+    display: inline-block;
     margin: 0 10px 0 0;
 }
 
-span.icon:before {
+button.icon {
+    background-color: white;
+    border: 2px solid #333;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px;
+}
+
+.icon:before {
     display: inline-block;
     height: 19px;
     margin: 0 5px 0 0;
@@ -527,74 +540,78 @@ span.icon:before {
     width: 19px;
 }
 
-span.icon a {
+.icon a {
     vertical-align: middle;
 }
 
-span.icon-github:before {
+button.icon a {
+    text-decoration: none;
+}
+
+.icon-github:before {
     content: url("/assets/img/icon-github.svg");
 }
 
-span.icon-link:before {
+.icon-link:before {
     content: url("/assets/img/icon-link.svg");
 }
 
-span.icon-slideshare:before {
+.icon-slideshare:before {
     content: url("/assets/img/icon-slideshare.svg");
 }
 
-span.icon-website:before {
+.icon-website:before {
     content: url("/assets/img/icon-website.svg");
 }
 
-span.icon-youtube:before {
+.icon-youtube:before {
     content: url("/assets/img/icon-youtube.svg");
 }
 
-span.icon-flickr:before {
+.icon-flickr:before {
     content: url("/assets/img/icon-flickr.svg");
 }
 
-span.icon-id:before {
+.icon-id:before {
     content: url("/assets/img/icon-id.svg");
 }
 
-span.icon-soundcloud:before {
+.icon-soundcloud:before {
     content: url("/assets/img/icon-soundcloud.svg");
 }
 
-span.icon-pdf:before {
+.icon-pdf:before {
     content: url("/assets/img/icon-pdf.svg");
 }
 
-span.icon-mail:before {
+.icon-mail:before {
     content: url("/assets/img/icon-mail.svg");
 }
 
-span.icon-twitter:before {
+.icon-twitter:before {
     content: url("/assets/img/icon-twitter.svg");
 }
 
-span.icon-instagram:before {
+.icon-instagram:before {
     content: url("/assets/img/icon-instagram.svg");
 }
 
-span.icon-linkedin:before {
+.icon-linkedin:before {
     content: url("/assets/img/icon-linkedin.svg");
 }
 
-div.sound-clip {
+.sound-clip {
     display: inline-block;
     text-align: center;
     width: 185px;
     vertical-align: top;
 }
 
-div.sound-clip img {
+.sound-clip img {
     width: 185px;
 }
 
-div.sound-clip audio {
+.sound-clip audio {
     width: 185px;
 }
 
