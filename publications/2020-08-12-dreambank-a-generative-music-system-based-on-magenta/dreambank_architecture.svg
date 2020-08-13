@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="610.5px" preserveAspectRatio="none" style="width:1170px;height:610px;" version="1.1" viewBox="0 0 1170 610" width="1170px" zoomAndPan="magnify"><defs><filter height="300%" id="f1xjkdgx0agc2w" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="3.0" dy="3.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="13.5" lengthAdjust="spacingAndGlyphs" textLength="165" x="505.125" y="12.531">DreamBank Architecture</text><!--MD5=[0aef3e0634c61da8d61e3cc333ee33d2]
+cluster folder_dreambank--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="16.5,33.7148,138,33.7148,143.25,50.4375,1053.75,50.4375,1053.75,602.2148,16.5,602.2148,16.5,33.7148" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="16.5" x2="143.25" y1="50.4375" y2="50.4375"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="117" x="19.5" y="44.9612">DreamBank System</text><!--MD5=[9869fe32e131f5cbdd63b801cec33ca8]
+cluster folder_dreambanksound--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="157.5,134.2148,316.5,134.2148,321.75,150.9375,1035.75,150.9375,1035.75,584.2148,157.5,584.2148,157.5,134.2148" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="157.5" x2="321.75" y1="150.9375" y2="150.9375"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154.5" x="160.5" y="145.4612">DreamBankSound System</text><!--MD5=[9d1e95173e3e841ceeca43b9202c1abd]
+cluster component_dreambanksound--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="387.75" style="stroke: #000000; stroke-width: 1.125;" width="639" x="181.5" y="172.4648"/><rect fill="#FFFFFF" height="7.5" style="stroke: #000000; stroke-width: 1.125;" width="11.25" x="805.5" y="176.2148"/><rect fill="#FFFFFF" height="1.5" style="stroke: #000000; stroke-width: 1.125;" width="3" x="804" y="177.7148"/><rect fill="#FFFFFF" height="1.5" style="stroke: #000000; stroke-width: 1.125;" width="3" x="804" y="180.7148"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="106.5" x="447.75" y="191.9612">DreamBankSound</text><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="427.5" y="204.1838">(Tensorflow Application)</text><!--MD5=[0f1d1394f09bb5ce18d5a144fb079d0f]
+cluster thread_percussion--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="233.25" style="stroke: #000000; stroke-width: 1.125;" width="153.75" x="303.75" y="296.9648"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="110.25" x="325.5" y="308.2112">Looper Percussion</text><!--MD5=[a50b31e72197d9a0294d6657c913db6a]
+cluster thread_bass--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="233.25" style="stroke: #000000; stroke-width: 1.125;" width="133.5" x="487.5" y="296.9648"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="72.75" x="517.875" y="308.2112">Looper Bass</text><!--MD5=[94ec3a0d27af9e087468d04bb11c4939]
+cluster thread_lead--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="233.25" style="stroke: #000000; stroke-width: 1.125;" width="133.5" x="651" y="296.9648"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74.25" x="680.625" y="308.2112">Looper Lead</text><!--MD5=[17d89575eab710c19837901775397e0b]
+cluster component_audio--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="96.75" style="stroke: #000000; stroke-width: 1.125;" width="157.5" x="854.25" y="421.0898"/><rect fill="#FFFFFF" height="7.5" style="stroke: #000000; stroke-width: 1.125;" width="11.25" x="996.75" y="424.8398"/><rect fill="#FFFFFF" height="1.5" style="stroke: #000000; stroke-width: 1.125;" width="3" x="995.25" y="426.3398"/><rect fill="#FFFFFF" height="1.5" style="stroke: #000000; stroke-width: 1.125;" width="3" x="995.25" y="429.3398"/><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145.5" x="860.25" y="440.5862">Audio Rendering Engine</text><text fill="#000000" font-family="sans-serif" font-size="10.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="81" x="892.5" y="452.8088">(AbletonLive)</text><!--MD5=[3043d8378949ba4aaea81afe094cc899]
+entity component_dream--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="27.2227" style="stroke: #000000; stroke-width: 1.125;" width="114.75" x="232.875" y="59.9648"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="229.125" y="63.7148"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="229.125" y="79.6875"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="99.75" x="240.375" y="77.2112">Dream Generation</text><!--MD5=[b2e3d85943137b9cd54cc1be1616300a]
+entity component_sentiment--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="27.2227" style="stroke: #000000; stroke-width: 1.125;" width="116.25" x="28.875" y="216.7148"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="25.125" y="220.4648"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="25.125" y="236.4375"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="101.25" x="36.375" y="233.9612">Sentiment Analysis</text><!--MD5=[2cb475f649d08581ec7941c62e2e927b]
+entity interface_midi--><ellipse cx="881.25" cy="346.0898" fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="74.25" x="844.125" y="368.5862">MIDI Interface</text><!--MD5=[dc44fe6a122eac0e290b78066115def6]
+entity interface_io--><ellipse cx="987" cy="346.0898" fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="62.25" x="955.875" y="368.5862">IO Interface</text><!--MD5=[301dc75a30c082535bea4734ad724b2a]
+entity thread_dreamer--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="27.2227" style="stroke: #000000; stroke-width: 1.125;" width="63" x="278.25" y="216.7148"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="48" x="285.75" y="233.9612">Dreamer</text><!--MD5=[835cf31dd85d0a858dc9f31f9f9d0a03]
+entity queue_dream--><path d="M203.25,336.3398 L279.75,336.3398 C283.5,336.3398 283.5,346.2012 283.5,346.2012 C283.5,346.2012 283.5,356.0625 279.75,356.0625 L203.25,356.0625 C199.5,356.0625 199.5,346.2012 199.5,346.2012 C199.5,346.2012 199.5,336.3398 203.25,336.3398 " fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" style="stroke: #000000; stroke-width: 1.125;"/><path d="M279.75,336.3398 C276,336.3398 276,346.2012 276,346.2012 C276,356.0625 279.75,356.0625 279.75,356.0625 " fill="none" style="stroke: #000000; stroke-width: 1.125;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="69" x="203.25" y="349.8362">Dream Stack</text><!--MD5=[e47cb5ff76748533f89cf444faffd859]
+entity queue_percussion--><path d="M336.375,336.7148 C336.375,329.2148 387.75,329.2148 387.75,329.2148 C387.75,329.2148 439.125,329.2148 439.125,336.7148 L439.125,355.6875 C439.125,363.1875 387.75,363.1875 387.75,363.1875 C387.75,363.1875 336.375,363.1875 336.375,355.6875 L336.375,336.7148 " fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" style="stroke: #000000; stroke-width: 1.125;"/><path d="M336.375,336.7148 C336.375,344.2148 387.75,344.2148 387.75,344.2148 C387.75,344.2148 439.125,344.2148 439.125,336.7148 " fill="none" style="stroke: #000000; stroke-width: 1.125;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="87.75" x="343.875" y="356.9612">State Percussion</text><!--MD5=[70252c67d65c5474b585fe2d5308dbb6]
+entity node_percussion--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="340.125,460.4648,347.625,452.9648,435.375,452.9648,435.375,504.6328,427.875,512.1328,340.125,512.1328,340.125,460.4648" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="427.875" x2="434.625" y1="460.4648" y2="453.7148"/><line style="stroke: #000000; stroke-width: 1.125;" x1="340.125" x2="427.875" y1="460.4648" y2="460.4648"/><line style="stroke: #000000; stroke-width: 1.125;" x1="427.875" x2="427.875" y1="460.4648" y2="512.1328"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="46.5" x="351.375" y="477.7112">Magenta</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="57.75" x="351.375" y="489.9338">DrumsRNN</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="65.25" x="351.375" y="502.1565">(percussion)</text><!--MD5=[128966021b4ec9a28977746e302cae42]
+entity queue_bass--><path d="M522,336.7148 C522,329.2148 557.25,329.2148 557.25,329.2148 C557.25,329.2148 592.5,329.2148 592.5,336.7148 L592.5,355.6875 C592.5,363.1875 557.25,363.1875 557.25,363.1875 C557.25,363.1875 522,363.1875 522,355.6875 L522,336.7148 " fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" style="stroke: #000000; stroke-width: 1.125;"/><path d="M522,336.7148 C522,344.2148 557.25,344.2148 557.25,344.2148 C557.25,344.2148 592.5,344.2148 592.5,336.7148 " fill="none" style="stroke: #000000; stroke-width: 1.125;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="55.5" x="529.5" y="356.9612">State Bass</text><!--MD5=[af4f20c90dd33e6d16d7312c0b875c89]
+entity node_bass--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="511.875,460.4648,519.375,452.9648,602.625,452.9648,602.625,504.6328,595.125,512.1328,511.875,512.1328,511.875,460.4648" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="595.125" x2="601.875" y1="460.4648" y2="453.7148"/><line style="stroke: #000000; stroke-width: 1.125;" x1="511.875" x2="595.125" y1="460.4648" y2="460.4648"/><line style="stroke: #000000; stroke-width: 1.125;" x1="595.125" x2="595.125" y1="460.4648" y2="512.1328"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="46.5" x="523.125" y="477.7112">Magenta</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="60.75" x="523.125" y="489.9338">MelodyRNN</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="31.5" x="523.125" y="502.1565">(bass)</text><!--MD5=[e31054dc3db5a4d48cbd6df090c81dcc]
+entity queue_lead--><path d="M684.75,336.7148 C684.75,329.2148 720.75,329.2148 720.75,329.2148 C720.75,329.2148 756.75,329.2148 756.75,336.7148 L756.75,355.6875 C756.75,363.1875 720.75,363.1875 720.75,363.1875 C720.75,363.1875 684.75,363.1875 684.75,355.6875 L684.75,336.7148 " fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" style="stroke: #000000; stroke-width: 1.125;"/><path d="M684.75,336.7148 C684.75,344.2148 720.75,344.2148 720.75,344.2148 C720.75,344.2148 756.75,344.2148 756.75,336.7148 " fill="none" style="stroke: #000000; stroke-width: 1.125;"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="57" x="692.25" y="356.9612">State Lead</text><!--MD5=[71fc023970a19465529430a42c6a0a04]
+entity node_lead--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="675.375,460.4648,682.875,452.9648,766.125,452.9648,766.125,504.6328,758.625,512.1328,675.375,512.1328,675.375,460.4648" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="758.625" x2="765.375" y1="460.4648" y2="453.7148"/><line style="stroke: #000000; stroke-width: 1.125;" x1="675.375" x2="758.625" y1="460.4648" y2="460.4648"/><line style="stroke: #000000; stroke-width: 1.125;" x1="758.625" x2="758.625" y1="460.4648" y2="512.1328"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="46.5" x="686.625" y="477.7112">Magenta</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="60.75" x="686.625" y="489.9338">MelodyRNN</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="30.75" x="686.625" y="502.1565">(lead)</text><!--MD5=[c8398aa27d36129086fe50a59bac125c]
+entity node_maxmsp--><polygon fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" points="917.25,472.8398,924.75,465.3398,993.75,465.3398,993.75,492.5625,986.25,500.0625,917.25,500.0625,917.25,472.8398" style="stroke: #000000; stroke-width: 1.125;"/><line style="stroke: #000000; stroke-width: 1.125;" x1="986.25" x2="993" y1="472.8398" y2="466.0898"/><line style="stroke: #000000; stroke-width: 1.125;" x1="917.25" x2="986.25" y1="472.8398" y2="472.8398"/><line style="stroke: #000000; stroke-width: 1.125;" x1="986.25" x2="986.25" y1="472.8398" y2="500.0625"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="46.5" x="928.5" y="490.0862">Max MSP</text><!--MD5=[8ff07e4f4a9f30adc8827d058d873440]
+entity component_speech--><rect fill="#FFFFFF" filter="url(#f1xjkdgx0agc2w)" height="39.4453" style="stroke: #000000; stroke-width: 1.125;" width="96" x="1065.75" y="326.2148"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="1062" y="329.9648"/><rect fill="#FFFFFF" height="3.75" style="stroke: #000000; stroke-width: 1.125;" width="7.5" x="1062" y="358.1602"/><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="81" x="1073.25" y="343.4612">Text-to-Speech</text><text fill="#000000" font-family="sans-serif" font-size="10.5" lengthAdjust="spacingAndGlyphs" textLength="69" x="1073.25" y="355.6838">(Google TTS)</text><!--MD5=[569a177a4eabb1663c9009954e771d7d]
+link component_dream to component_dreambanksound--><path d="M347.865,76.0898 C476.265,80.8448 777.12,95.4023 808.5,128.2148 C823.8338,144.2498 825.5269,169.028 823.2919,190.058 C822.7331,195.3155 821.9289,200.3387 821.0309,204.9325 C820.9186,205.5067 820.8049,206.0743 820.69,206.6347 C820.6326,206.9149 820.5748,207.1933 820.5168,207.47 " fill="none" id="component_dream-&gt;component_dreambanksound" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="820.5168,207.47,824.838,201.4791,821.2863,203.7997,818.9656,200.248,820.5168,207.47" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="54.75" x="798" y="119.265">WebSocket</text><!--MD5=[3a98a8e931564d24fed042fe4b209f06]
+link component_dream to component_sentiment--><path d="M260.28,86.9948 C238.995,96.7673 210.27,111.3848 187.5,128.2148 C152.3775,154.1723 117.96,192.4073 99.9375,213.6923 " fill="none" id="component_dream-&gt;component_sentiment" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="97.4025,216.7073,104.0403,213.4667,99.8137,213.8353,99.4451,209.6087,97.4025,216.7073" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="54.75" x="215.25" y="119.265">WebSocket</text><!--MD5=[52a970df5297206ec15652ec56d383b5]
+link component_dreambanksound to component_speech--><path d="M820.5698,230.7796 C820.8002,230.7748 821.0367,230.77 821.2793,230.7653 C825.1603,230.6908 830.5903,230.6384 837.2625,230.7067 C850.6069,230.8432 868.92,231.4622 889.7475,233.3508 C931.4025,237.128 983.115,245.9836 1025.25,266.2148 C1053.2925,279.6773 1079.0325,304.7723 1095.435,323.0948 " fill="none" id="component_dreambanksound-&gt;component_speech" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="1097.985,325.9748,1095.7561,318.9325,1095.499,323.1673,1091.2641,322.9102,1097.985,325.9748" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="31.5" x="1044.75" y="276.015">HTTPS</text><!--MD5=[46dc108c2c2cd44bb47ac8f2d28aa8c3]
+link component_speech to component_dreambanksound--><path d="M1092.9225,326.0573 C1077.9375,313.0073 1056.75,296.1698 1035.75,284.9648 C1028.31,280.9973 1025.6775,281.8523 1017.75,278.9648 C1003.2675,273.6923 1000.2675,270.6173 985.5,266.2148 C948.9,255.2986 906.9038,246.5892 873.6891,240.5583 C857.0817,237.5428 842.6698,235.197 832.2254,233.5796 C829.6143,233.1753 827.2512,232.8165 825.1638,232.5042 C824.1201,232.348 823.1453,232.2035 822.2428,232.0706 C821.7916,232.0042 821.3585,231.9408 820.9439,231.8802 C820.8403,231.8651 820.7378,231.8501 820.6365,231.8354 " fill="none" id="component_speech-&gt;component_dreambanksound" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="820.6365,231.8354,826.8833,235.7773,824.3473,232.3761,827.7485,229.84,820.6365,231.8354" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="0" x="1021.5" y="276.015"/><!--MD5=[b6f5c970e0a5a2e02090c853fa0bcc3d]
+link component_dreambanksound to interface_midi--><path d="M820.5443,241.3243 C820.6714,241.542 820.8001,241.7626 820.9305,241.9859 C821.452,242.8794 821.9996,243.8176 822.5712,244.7968 C827.1436,252.6307 833.2491,263.0916 839.7956,274.3083 C852.8888,296.7417 867.7462,322.1986 875.6325,335.7098 " fill="none" id="component_dreambanksound-&gt;interface_midi" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="877.5825,339.0548,876.7757,331.7124,875.6943,335.8149,871.5918,334.7335,877.5825,339.0548" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[5c97b44fec8eaca87bc6fb1c6e699dbf]
+link component_dreambanksound to interface_io--><path d="M820.755,232.581 C820.8436,232.6049 820.933,232.629 821.0233,232.6535 C821.2039,232.7023 821.3879,232.7523 821.5752,232.8033 C821.9498,232.9052 822.3377,233.0115 822.7386,233.122 C824.3421,233.5639 826.1529,234.0739 828.1468,234.652 C836.1227,236.9644 847.0298,240.3661 859.3284,244.8605 C883.9256,253.8492 914.0887,267.2086 937.5,284.9648 C956.6475,299.4923 973.02,322.8623 981.2775,335.8523 " fill="none" id="component_dreambanksound-&gt;interface_io" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="983.385,339.2273,982.3449,331.9143,981.3946,336.0492,977.2598,335.0989,983.385,339.2273" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[ae797505c469a8df730cf00fe7fb80ee]
+link thread_dreamer to queue_dream--><path d="M295.7325,243.8648 C278.2125,265.9523 251.49,310.7648 242.775,332.6873 " fill="none" id="thread_dreamer-&gt;queue_dream" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="241.4475,336.2498,246.6125,330.9692,242.7548,332.7351,240.9889,328.8775,241.4475,336.2498" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[d96c3114bb3a93eb6ca193183b03c657]
+link queue_dream to thread_dreamer--><path d="M252.72,336.2498 C269.355,317.0498 296.7,272.1098 307.2075,247.6148 " fill="none" id="queue_dream-&gt;thread_dreamer" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="308.745,243.8648,303.4065,248.97,307.321,247.3339,308.957,251.2484,308.745,243.8648" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[43bf36655cfe93df07ed5bea508932f5]
+link thread_dreamer to thread_percussion--><path d="M309.75,243.8648 C309.75,251.2261 309.75,261.1097 309.75,271.8284 C309.75,277.1877 309.75,282.7558 309.75,288.3218 C309.75,291.1048 309.75,293.8872 309.75,296.6428 " fill="none" id="thread_dreamer-&gt;thread_percussion" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="309.75,296.6428,312.75,289.8928,309.75,292.8928,306.75,289.8928,309.75,296.6428" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[aab3e8347017c282a30b5593cec8f88a]
+link thread_dreamer to thread_bass--><path d="M341.2575,242.7023 C382.32,258.0398 449.205,283.1723 451.5,284.9648 C463.9725,294.7148 474.2156,309.1842 481.4634,321.5142 C483.2754,324.5967 484.9001,327.5455 486.3257,330.2534 C486.6821,330.9304 487.026,331.5923 487.3574,332.2375 C487.3988,332.3182 487.44,332.3985 487.481,332.4787 " fill="none" id="thread_dreamer-&gt;thread_bass" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="487.481,332.4787,487.0754,325.1032,485.7721,329.1407,481.7346,327.8374,487.481,332.4787" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[41105e53988c8cbca2f563148b780a9f]
+link thread_dreamer to thread_lead--><path d="M341.265,242.8598 C342.27,243.1598 343.2675,243.4448 344.25,243.7148 C428.2425,266.7323 450.6375,267.7748 537,278.9648 C554.2425,281.1998 599.91,276.3248 615,284.9648 C628.74,292.8286 639.0225,307.2398 645.9741,320.0105 C647.712,323.2031 649.2417,326.2932 650.5652,329.1529 C650.6479,329.3316 650.7298,329.5094 650.8109,329.6863 C650.8515,329.7748 650.8918,329.863 650.932,329.951 " fill="none" id="thread_dreamer-&gt;thread_lead" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="650.932,329.951,650.8586,322.5647,649.375,326.5395,645.4002,325.0558,650.932,329.951" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[b56fa2e9d29c78a722baf15014c17658]
+link queue_percussion to node_percussion--><path d="M381.255,363.1223 C377.925,384.2423 377.31,421.5998 379.395,448.7798 " fill="none" id="queue_percussion-&gt;node_percussion" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="379.7175,452.7098,382.1482,445.7346,379.407,448.9727,376.1688,446.2315,379.7175,452.7098" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[15155315d1d48123b53563e78a7bea61]
+link node_percussion to queue_percussion--><path d="M396.255,452.7098 C398.7225,426.8123 398.37,389.6273 395.205,366.9173 " fill="none" id="node_percussion-&gt;queue_percussion" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="394.6275,363.1223,392.6841,370.2488,395.1953,366.8291,398.615,369.3403,394.6275,363.1223" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[3b7b4d99330f96007fb8a3680b3e3a7c]
+link queue_bass to node_bass--><path d="M550.755,363.1223 C547.425,384.2423 546.81,421.5998 548.895,448.7798 " fill="none" id="queue_bass-&gt;node_bass" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="549.2175,452.7098,551.6482,445.7346,548.907,448.9727,545.6688,446.2315,549.2175,452.7098" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[a58b769ee6b5b8e83abfb8539fb58165]
+link node_bass to queue_bass--><path d="M565.755,452.7098 C568.2225,426.8123 567.87,389.6273 564.705,366.9173 " fill="none" id="node_bass-&gt;queue_bass" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="564.1275,363.1223,562.1841,370.2488,564.6953,366.8291,568.115,369.3403,564.1275,363.1223" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[83eae6761b4bf801201f542bd417b300]
+link queue_lead to node_lead--><path d="M714.255,363.1223 C710.925,384.2423 710.31,421.5998 712.395,448.7798 " fill="none" id="queue_lead-&gt;node_lead" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="712.7175,452.7098,715.1482,445.7346,712.407,448.9727,709.1688,446.2315,712.7175,452.7098" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[2dc218b7a392b9fb4bf77ae74db0199a]
+link node_lead to queue_lead--><path d="M729.255,452.7098 C731.7225,426.8123 731.37,389.6273 728.205,366.9173 " fill="none" id="node_lead-&gt;queue_lead" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="727.6275,363.1223,725.6841,370.2488,728.1953,366.8291,731.615,369.3403,727.6275,363.1223" style="stroke: #000000; stroke-width: 0.75;"/><!--MD5=[0331f8e5c2bfd4f8480d3cb4a5d3bb16]
+link interface_midi to component_audio--><path d="M881.25,352.9898 C881.25,359.4905 881.25,370.5952 881.25,383.6441 C881.25,390.1686 881.25,397.1791 881.25,404.3432 C881.25,407.9253 881.25,411.5458 881.25,415.1631 C881.25,416.9717 881.25,418.7796 881.25,420.5814 " fill="none" id="interface_midi-&gt;component_audio" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="881.25,420.5814,884.25,413.8314,881.25,416.8314,878.25,413.8314,881.25,420.5814" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="21.75" x="882" y="400.14">MIDI</text><!--MD5=[c05dcdc607edc2ba8e026d3966ea0b06]
+link interface_io to node_maxmsp--><path d="M985.5675,352.9898 C981.135,371.9723 967.5375,430.2473 960.24,461.5073 " fill="none" id="interface_io-&gt;node_maxmsp" style="stroke: #000000; stroke-width: 0.75;"/><polygon fill="#000000" points="959.385,465.1823,963.831,459.2836,960.2314,461.5291,957.9858,457.9294,959.385,465.1823" style="stroke: #000000; stroke-width: 0.75;"/><text fill="#000000" font-family="sans-serif" font-size="9.75" lengthAdjust="spacingAndGlyphs" textLength="11.25" x="977.25" y="400.14">FS</text><!--MD5=[8dc2ced61ae7fd95d817ac251000ccbe]
+@startuml
+
+title
+DreamBank Architecture
+end title
+
+skinparam node {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam rectangle {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam component {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam interface {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam database {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam queue {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+component "Text-to-Speech\n(Google TTS)" as component_speech
+folder "DreamBank System" as folder_dreambank {
+    component "Dream Generation" as component_dream
+    component "Sentiment Analysis" as component_sentiment
+    folder "DreamBankSound System" as folder_dreambanksound {
+        component "DreamBankSound\n(Tensorflow Application)" as component_dreambanksound {
+            rectangle "Dreamer" as thread_dreamer
+            queue "Dream Stack" as queue_dream
+            rectangle "Looper Percussion" as thread_percussion {
+                database "State Percussion" as queue_percussion
+                node "Magenta\nDrumsRNN\n(percussion)" as node_percussion
+            }
+            rectangle "Looper Bass" as thread_bass {
+                database "State Bass" as queue_bass
+                node "Magenta\nMelodyRNN\n(bass)" as node_bass
+            }
+            rectangle "Looper Lead" as thread_lead {
+                database "State Lead" as queue_lead
+                node "Magenta\nMelodyRNN\n(lead)" as node_lead
+            }
+        }
+        interface "MIDI Interface" as interface_midi
+        interface "IO Interface" as interface_io
+        component "Audio Rendering Engine\n(AbletonLive)" as component_audio {
+            node "Max MSP" as node_maxmsp
+        }
+    }
+}
+
+component_dream - -> component_dreambanksound : "WebSocket"
+component_dream - -> component_sentiment : "WebSocket"
+
+component_dreambanksound - -> component_speech : "HTTPS"
+component_speech - -> component_dreambanksound : ""
+component_dreambanksound - -> interface_midi
+component_dreambanksound - -> interface_io
+
+thread_dreamer - -> queue_dream
+queue_dream - -> thread_dreamer
+
+
+thread_dreamer - -> thread_percussion
+thread_dreamer - -> thread_bass
+thread_dreamer - -> thread_lead
+
+queue_percussion - -> node_percussion
+node_percussion - -> queue_percussion
+
+queue_bass - -> node_bass
+node_bass - -> queue_bass
+
+queue_lead - -> node_lead
+node_lead - -> queue_lead
+
+interface_midi - -> component_audio : "MIDI"
+interface_io - -> node_maxmsp : "FS"
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 12:51:06 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-b944.31
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

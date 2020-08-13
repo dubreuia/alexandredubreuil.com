@@ -1,0 +1,51 @@
+@startuml
+
+'clock clk with period 4
+binary "Dreamer Clock" as dreamer_clock
+concise "Looper Drums" as looper_drums
+concise "Looper Bass" as looper_bass
+concise "Looper Lead" as looper_lead
+
+scale 1 as 100 pixels
+
+@0
+
+@1 as :speech_begin
+@+2.75 as :speech_end
+highlight :speech_begin to :speech_end #Gold:Speech
+
+@4 as :dream1_start
+@+3.25 as :dream1_end
+highlight :dream1_start to :dream1_end #lightBlue:Dream1
+
+@8 as :dream2_start
+@+1 as :dream2_end
+highlight :dream2_start to :dream2_end #lightGreen:Dream2
+
+@looper_drums
+1 is waiting
++3 is generating
+dreamer_clock is high
++1 is looping
+dreamer_clock is low
++1 is looping
++1 is looping
++1 is generating
+dreamer_clock is high
++1 is looping
+dreamer_clock is low
+
+@looper_bass
+1 is waiting
++3 is generating
++2 is looping
++2 is generating
+
+@looper_lead
+1 is waiting
++3 is generating
++2 is looping
++2 is generating
+
+
+@enduml

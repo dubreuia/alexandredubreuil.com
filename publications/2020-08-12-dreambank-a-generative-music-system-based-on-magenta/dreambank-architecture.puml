@@ -1,0 +1,106 @@
+@startuml
+
+title
+DreamBank Architecture
+end title
+
+skinparam node {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam rectangle {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam component {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam interface {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam database {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+skinparam queue {
+    ArrowColor black
+    ArrowFontColor black
+    BorderColor black
+    BackgroundColor white
+}
+
+component "Text-to-Speech\n(Google TTS)" as component_speech
+folder "DreamBank System" as folder_dreambank {
+    component "Dream Generation" as component_dream
+    component "Sentiment Analysis" as component_sentiment
+    folder "DreamBankSound System" as folder_dreambanksound {
+        component "DreamBankSound\n(Tensorflow Application)" as component_dreambanksound {
+            rectangle "Dreamer" as thread_dreamer
+            queue "Dream Stack" as queue_dream
+            rectangle "Looper Drums" as thread_drums {
+                database "State Drums" as queue_drums
+                node "Magenta\nDrumsRNN\n(drums)" as node_drums
+            }
+            rectangle "Looper Bass" as thread_bass {
+                database "State Bass" as queue_bass
+                node "Magenta\nMelodyRNN\n(bass)" as node_bass
+            }
+            rectangle "Looper Lead" as thread_lead {
+                database "State Lead" as queue_lead
+                node "Magenta\nMelodyRNN\n(lead)" as node_lead
+            }
+        }
+        interface "MIDI Interface" as interface_midi
+        interface "IO Interface" as interface_io
+        component "Audio Rendering Engine\n(AbletonLive)" as component_audio {
+            node "Max MSP" as node_maxmsp
+        }
+    }
+}
+
+component_dream --> component_dreambanksound : "WebSocket"
+component_dream --> component_sentiment : "WebSocket"
+
+component_dreambanksound --> component_speech : "HTTPS"
+component_speech --> component_dreambanksound : ""
+component_dreambanksound --> interface_midi
+component_dreambanksound --> interface_io
+
+thread_dreamer --> queue_dream
+queue_dream --> thread_dreamer
+
+
+thread_dreamer --> thread_drums
+thread_dreamer --> thread_bass
+thread_dreamer --> thread_lead
+
+queue_drums --> node_drums
+node_drums --> queue_drums
+
+queue_bass --> node_bass
+node_bass --> queue_bass
+
+queue_lead --> node_lead
+node_lead --> queue_lead
+
+interface_midi --> component_audio : "MIDI"
+interface_io --> node_maxmsp : "FS"
+
+@enduml
