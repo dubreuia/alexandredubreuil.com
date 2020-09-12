@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo " DC " | figlet -w "40" -l  | lolcat --seed="${1:-0}"
+echo " AD " | figlet -w "40" -l  | lolcat --seed="${1:-0}"
 
