@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Using `script` to make sure the colors are written to file
+script -q -c "./logo ${1:-0}" /tmp/logo > /dev/null
+tail -n8 /tmp/logo | head -n6 > /tmp/logo-cut && cp /tmp/logo-cut /tmp/logo
+cat /tmp/logo | sed 's/38;/1;48;/g' > /tmp/logo-inverted && cp /tmp/logo-inverted /tmp/logo
+
