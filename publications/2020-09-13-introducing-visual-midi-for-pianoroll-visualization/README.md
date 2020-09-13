@@ -1,6 +1,6 @@
 # Introducing Visual MIDI for pianoroll visualization
 
-**13/09/2020**
+**2020/09/13**
 
 When I was writing [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta) during 2019, I knew I would need to generate a lot of MIDI diagrams (often called **pianoroll** visualization for their similarities to their ancestor, the [physical piano roll](https://en.wikipedia.org/wiki/Piano_roll) for automated piano) like this one:
 
@@ -8,7 +8,7 @@ When I was writing [Hands-On Music Generation with Magenta](https://www.packtpub
 
 I've looked a some existing libraries to do that (such as [Pypianoroll](https://salu133445.github.io/pypianoroll/visualization.html) or the [`get_piano_roll`](https://github.com/craffel/pretty-midi/blob/78e33ab1c24e1156529320ea127dd51d57f7ab99/pretty_midi/instrument.py#L76) function in Pretty MIDI, but I needed more customization on appearance, size, colors, grid, etc. so I decided to write my own library, [Visual MIDI](https://github.com/dubreuia/visual_midi).
 
-<p align="center">
+<p style="text-align:center">
   <img width="512px" src="visual-midi-logo-dark.png" alt="Visual MIDI Logo"/>
 </p>
 

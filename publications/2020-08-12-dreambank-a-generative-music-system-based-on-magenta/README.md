@@ -1,6 +1,6 @@
 # Dreambank: a Generative Music System Based on Magenta
 
-**08/12/2020**
+**2020/08/12**
 
 [Dreambank](http://claire-malrieux.com/DreamBank) is a contemporary art piece by Claire Malrieux, exploring the idea of the dream of a machine. In this artwork, the machine wanders in generated dreams of image, text, voice, and music. Here is a video extract of DreamBank:
 
