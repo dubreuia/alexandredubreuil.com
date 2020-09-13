@@ -8,6 +8,10 @@
 
 ## Articles
 
+### [Introducing Visual MIDI for pianoroll visualization](2020-09-13-introducing-visual-midi-for-pianoroll-visualization)
+
+When I was writing [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta) during 2019, I knew I would need to generate a lot of MIDI diagrams (often called **pianoroll** visualization for their similarities to their ancestor, the [physical piano roll](https://en.wikipedia.org/wiki/Piano_roll) for automated piano). In need of customization on appearance, size, colors, grid, etc. so I decided to write my own library, [Visual MIDI](https://github.com/dubreuia/visual_midi).
+
 ### [Music Generation with Magenta 2.0.1: A migration guide from version 1.1.7](2020-06-06-music-generation-with-magenta-2-0-1-a-migration-guide-from-version-1-1-7)
 
 **2020/06/06** - Writing a book about a software library like Google Magenta inhevitably ends by the code evolving while the book slowly becomes obsolete. Writing a second edition of the book, including the changes for that version, would be nice, but as we wait for that, let's look at how we update our code from Magenta 1.1.7 to Magenta 2.0.1.

@@ -1,12 +1,16 @@
 # Introducing Visual MIDI for pianoroll visualization
 
+**13/09/2020**
+
 When I was writing [Hands-On Music Generation with Magenta](https://www.packtpub.com/data/hands-on-music-generation-with-magenta) during 2019, I knew I would need to generate a lot of MIDI diagrams (often called **pianoroll** visualization for their similarities to their ancestor, the [physical piano roll](https://en.wikipedia.org/wiki/Piano_roll) for automated piano) like this one:
 
 ![Visual MIDI pianoroll example 01](visual-midi-example-01.png)
 
-I've looked a some existing libraries to do that (such as [Pypianoroll](https://salu133445.github.io/pypianoroll/visualization.html) or the [`get_piano_roll` function in Pretty MIDI](https://github.com/craffel/pretty-midi/blob/78e33ab1c24e1156529320ea127dd51d57f7ab99/pretty_midi/instrument.py#L76), but I needed more customization on appearance, size, colors, grid, etc. so I decided to write my own library, [Visual MIDI](https://github.com/dubreuia/visual_midi).
+I've looked a some existing libraries to do that (such as [Pypianoroll](https://salu133445.github.io/pypianoroll/visualization.html) or the [`get_piano_roll`](https://github.com/craffel/pretty-midi/blob/78e33ab1c24e1156529320ea127dd51d57f7ab99/pretty_midi/instrument.py#L76) function in Pretty MIDI, but I needed more customization on appearance, size, colors, grid, etc. so I decided to write my own library, [Visual MIDI](https://github.com/dubreuia/visual_midi).
 
-![Visual MIDI logo](visual-midi-logo-dark.png)
+<p align="center">
+  <img width="512px" src="visual-midi-logo-dark.png" alt="Visual MIDI Logo"/>
+</p>
 
 ## Introducing `NoteSequence`
 
@@ -76,7 +80,6 @@ note_seq = midi_file_to_note_sequence('my_midi_file.mid')
 Great! Now we can plot our sequence as a piano roll using Visual MIDI:
 
 ```python
-from visual_midi import Plotter
 from pretty_midi import PrettyMIDI
 
 plotter = Plotter()
@@ -86,9 +89,7 @@ plotter.show(pm, "/tmp/example-01.html")
 Which will open the plot in a new browser window. If you prefer to show the plot in a Jupyter notebook:
 
 ```python
-from visual_midi import Plotter
 from visual_midi import Preset
-from pretty_midi import PrettyMIDI
 
 preset = Preset(plot_width=850)
 plotter = Plotter(preset, plot_max_length_bar=4)
