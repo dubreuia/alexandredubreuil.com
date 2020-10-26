@@ -45,7 +45,7 @@ The bpm of each track is in parenthesis, then it reads: "Artist - Album - Track"
 
 ### (153) Genecom - Polyphonic Raid
 
-[Various - CyberTrance](https://www.discogs.com/Various-CyberTrance/release/189007) / I've found this old gem in Fabriclive 100 (see my [Top 10 albums of 2018](https://alexandredubreuil.com/articles/2018-12-29-top-10-albums-2018/#fabriclive100---kode9--burial)). Most of the tracks in this album are impossible to find but I could find that one. Very nice melodic synth all around.
+[Various - CyberTrance](https://www.discogs.com/Various-CyberTrance/release/189007) / I've found this old gem in Fabriclive 100 (see my [Top 10 albums of 2018](https://alexandredubreuil.com/publications/2018-12-29-top-10-albums-2018/#fabriclive100---kode9--burial)). Most of the tracks in this album are impossible to find but I could find that one. Very nice melodic synth all around.
 
 ### (159) Kindaaz - 3672 22 - B1
 

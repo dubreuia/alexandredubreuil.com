@@ -2,7 +2,7 @@
 
 ## Article
 
-- [Deploying your application secrets: Hashicorp Vault and continuous delivery](/articles/2019-03-01-hashicorp-vault-and-continuous-delivery)
+- [Deploying your application secrets: Hashicorp Vault and continuous delivery](/publications/2019-03-01-hashicorp-vault-and-continuous-delivery)
 
 ## Conferences
 

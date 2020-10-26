@@ -2,7 +2,7 @@
 
 ## Article
 
-- [Music Generation with Magenta: Using Machine Learning in Arts](/articles/2019-10-15-music-generation-with-magenta)
+- [Music Generation with Magenta: Using Machine Learning in Arts](/publications/2019-10-15-music-generation-with-magenta)
 
 ## Book
 
