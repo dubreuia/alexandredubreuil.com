@@ -35,6 +35,10 @@
     font-size: 1.2em;
 }
 
+.reveal p {
+    font-size: 0.9em;
+}
+
 .reveal .figure-caption {
     font-size: 0.5em;
     color: #666;
@@ -94,6 +98,12 @@
 .reveal .no_border {
     border: none;
     box-shadow: none;
+}
+
+.reveal .shadow_border {
+    border: none;
+    padding: 0 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.50);
 }
 
 .reveal .smaller {

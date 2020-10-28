@@ -22,7 +22,7 @@
        alt="VisualMIDI logo">
   <div class="title">
     <div>MIDI Visualization with VisualMIDI</div>
-    <div class="subtitle">TODO</div>
+    <div class="subtitle"></div>
   </div>
   <div class="title right">
     <div>Alexandre DuBreuil (<a href="https://twitter.com/dubreuia">@dubreuia</a>)</div>
@@ -33,42 +33,451 @@
 <div class="reveal">
 
   <div class="slides">
-
     <section>
 
-      <section>
-        <div class="align-left">
-          <img width="50%" class="no_border" src="../common/img/visual-midi-logo-light.png" alt="VisualMIDI logo">
-        </div>
-        <h1 class="align-left">
-            MIDI Visualization with <span class="color-magenta-light-01">VisualMIDI</span>
+      <section class="align-left">
+        <h1>
+          MIDI Visualization with
         </h1>
-        <h2 class="align-right">TODO</h2>
-        <h3 class="align-right">Alexandre DuBreuil (<a href="https://twitter.com/dubreuia">@dubreuia</a>)</h3>
+        <div>
+          <img width="75%" class="no_border" src="../common/img/visual-midi-logo-light.png" alt="VisualMIDI logo">
+        </div>
+        <h2></h2>
+        <h3>Alexandre DuBreuil (<a href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</h3>
       </section>
 
-      <section>
+      <section class="align-left">
         <h3>Alexandre DuBreuil</h3>
         <p>
           Software engineer, sound designer, book author, conference speaker and open source maintainer.
         </p>
-        <p>(<a href="https://twitter.com/dubreuia">@dubreuia</a>)</p>
+        <p>(<a href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</p>
       </section>
 
     </section>
 
     <section>
 
-      <section>
+      <section class="align-left">
         <h3>Introduction to <span class="color-magenta-light-01">VisualMIDI</span></h3>
       </section>
 
-      <section>
-        <h4>TODO</h4>
+      <section class="align-left">
+        <h4>Introduction</h4>
         <p class="align-left">
-          <img style="width: 25%" class="float" src="../common/img/visual-midi-logo-dark.png" title="VisualMIDI logo"
+          <img style="width: 33%"
+               class="float shadow_border"
+               src="../common/img/magenta/book-cover.png"
+               title="Hands on music generation with magenta book cover"
                alt="Magenta Logo">
-          <span>TODO</span>
+        </p>
+        <p class="align-left">
+          When writing <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong>,
+          I needed to show the music 🎼...
+        </p>
+        <p class="align-left">
+          - Generate easily <span class="color-magenta-light-01">HD graphs</span>
+        </p>
+        <p class="align-left">
+          - Analyse <span class="color-magenta-light-01">input data</span> for machine learning models
+        </p>
+        <p class="align-left">
+          - Analyse generated <span class="color-magenta-light-01">output data</span>
+        </p>
+      </section>
+
+      <section>
+        <h4>Installing <strong class="color-magenta-light-01">VisualMIDI</strong></h4>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-bash" data-trim data-noescape>
+# Create a new virtual env for python 3.8
+# (we could use other python env manager)
+conda create --name creativecoding python=3.8
+
+# Install visual-midi (which depends on pretty-midi)
+pip install visual-midi
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Usage - Creating plot from a MIDI file</h4>
+        <p>
+          In its most minimal form, we load a MIDI file using <code>PrettyMIDI</code>,
+          and show it using <code>VisualMIDI</code>.
+        </p>
+        <div class="fragment code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+from pretty_midi import PrettyMIDI
+from visual_midi import Plotter
+
+# Loading a file on disk using PrettyMidi,
+# and show some information
+pm = PrettyMIDI("./example-01.mid")
+print(pm.instruments)
+print(pm.instruments[0].notes)
+print(pm.instruments[0].notes[0])
+print(pm.get_tempo_changes())
+
+# Plot the result using VisualMidi
+plotter = Plotter()
+plotter.show(pm, "/tmp/example-01.html")
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Result - Creating plot from a MIDI file</h4>
+        <p class="align-left">
+          <img style="width: 100%"
+               class="no_border shadow_border"
+               src="./code/example-01.png"
+               title="Example 01 visual midi generation"
+               alt="Example 01 visual midi generation">
+        </p>
+      </section>
+
+      <section>
+        <h4>Usage - Modifying appearance</h4>
+        <p>
+          We can also change the appearance using the <code>Preset</code> class (for visual stuff 👁) and the
+          <code>Plotter</code> class for plot content (number of bars, etc.).
+        </p>
+        <div class="fragment code-wrapper smaller">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+from pretty_midi import PrettyMIDI
+from visual_midi import Plotter
+from visual_midi import Preset
+
+# Loading a file on disk using PrettyMidi
+pm = PrettyMIDI("./example-01.mid")
+
+# Plot the result using VisualMidi, modifying
+# the presentation with Preset
+preset = Preset(
+    plot_width=1200,
+    plot_height=500,
+    show_beat=False,
+    axis_label_text_font_size="14px",
+    label_text_font_size="12px",
+    toolbar_location=None,
+)
+plotter = Plotter(
+    preset=preset,
+    plot_max_length_bar=4,
+)
+plotter.show(pm, "/tmp/example-02.html")
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Result - Modifying appearance</h4>
+        <p class="align-left">
+          <img style="width: 100%"
+               class="no_border shadow_border"
+               src="./code/example-02.png"
+               title="Example 02 visual midi generation"
+               alt="Example 02 visual midi generation">
+        </p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Using <strong class="color-magenta-light-01">VisualMIDI</strong> for machine learning</h3>
+      </section>
+
+      <section class="align-left">
+        <h4>Creating a dataset</h4>
+        <p>
+          When training a model, we want to build a dataset that reflects what we want the machine to learn,
+          <strong class="color-magenta-light-01">VisualMIDI</strong> can help us check our results.
+        </p>
+        <p>
+          In <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong>,
+          Chapter 6, we automate the creation of a dataset 🗃 using the
+          <a href="https://colinraffel.com/projects/lmd/">The Lakh MIDI Dataset</a>.
+        </p>
+        <p>
+          <img style="width: 66%"
+               class="no_border shadow_border"
+               src="./code/music-generation-with-magenta-book-chapter-6.png"
+               title="Music generation with magenta book chapter 6"
+               alt="Music generation with magenta book chapter 6">
+        </p>
+      </section>
+
+      <section>
+        <h4>Creating a dataset - Four on the floor rhythmics</h4>
+        <p>
+          In the <a href="https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/master/Chapter06">first example of Chapter 6</a>,
+          we analyse the musical structure of the MIDI files and extract the drums patterns that we want.
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code bash" data-trim data-noescape>
+python chapter_06_example_00.py \
+    --sample_size=100 \
+    --path_dataset_dir=/tmp/lmd_matched \
+    --path_output_dir=/tmp/lmd_drums \
+    --bass_drums_on_beat_threshold=0.75
+            </code>
+          </pre>
+        </div>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code bash" data-trim data-noescape>
+Number of tracks: 116189, number of tracks in sample: 100, number of results: 11 (11.00%)
+Time:  37.87666302899743
+            </code>
+          </pre>
+        </div>
+        <p class="smaller">
+          But we need to check the result! Lets check with <strong class="color-magenta-light-01">VisualMIDI</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h4>Verifying the dataset - Four on the floor rhythmics</h4>
+        <p>
+          Here's a small sample of our extracted dataset
+        </p>
+        <p>
+          <img style="width: 55%"
+               class="no_border no_border"
+               src="./code/lmd-drums-files.png"
+               title="LMD drums files"
+               alt="LMD drums files">
+        </p>
+        <p class="smaller">
+          Let's convert the MIDI files into plots<br/>(<strong class="color-magenta-light-01">easy peasy VisualMIDI!</strong>)
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code bash" data-trim data-noescape>
+for file in $( ls ); do visual_midi $file; done
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Encoding for DrumsRNN</h4>
+        <p>
+          When we encode for a deep neural network such as a RNN (e.g. the
+          <strong class="color-magenta-light-01">DrumsRNN 🥁</strong> models
+          from Magenta).
+        </p>
+        <p>
+          <img style="width: 75%"
+               class="no_border shadow_border"
+               src="./code/midi-drums-file-steps.png"
+               title="MIDI drums file steps"
+               alt="MIDI drums file steps">
+        </p>
+        <p class="smaller">
+          We encode each step as a "class", in a one-hot vector.
+        </p>
+      </section>
+
+      <section>
+        <h4>Encoding for DrumsRNN</h4>
+        <p>
+          Each step is a one-hot vector, for example for<br/>
+          a <strong class="color-magenta-light-01">snare + ride</strong> on the same step.
+        </p>
+        <p>
+          <img style="width: 75%"
+               class="no_border shadow_border"
+               src="./code/midi-drums-file-encoding.png"
+               title="MIDI drums file encoding"
+               alt="MIDI drums file encoding">
+        </p>
+      </section>
+
+      <section>
+        <h4>Generating music - Repeating patterns</h4>
+        <p>
+          In the one-hot vector, we also encode a <strong class="color-magenta-light-01">lookback 👈</strong>,
+          which makes possible to learn <strong>repeating patterns</strong>.
+        </p>
+        <p>
+          <img style="width: 75%"
+               class="no_border shadow_border"
+               src="./code/midi-drums-generation-lookback.png"
+               title="MIDI drums generation lookback"
+               alt="MIDI drums generation lookback">
+        </p>
+        <p class="smaller">
+          We can verify the structure using <strong class="color-magenta-light-01">VisualMIDI</strong>, nice!
+        </p>
+      </section>
+
+      <section data-transition="fade-out">
+        <h4>Comparing generation parameters - temperature</h4>
+        <p>
+          High softmax temperature 🔥 (hott!)
+        </p>
+        <p>
+          <img style="width: 75%"
+               class="no_border shadow_border"
+               src="./code/midi-temperature-generation-01.png"
+               title="MIDI temperature generation"
+               alt="MIDI temperature generation">
+        </p>
+      </section>
+
+      <section data-transition="fade-in">
+        <h4>Comparing generation parameters - temperature</h4>
+        <p>
+          Low softmax temperature 🥶 (brrr!)
+        </p>
+        <p>
+          <img style="width: 75%"
+               class="no_border shadow_border"
+               src="./code/midi-temperature-generation-02.png"
+               title="MIDI temperature generation"
+               alt="MIDI temperature generation">
+        </p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Integrating <strong class="color-magenta-light-01">VisualMIDI</strong> with other tools</h3>
+      </section>
+
+      <section>
+        <h4>Integrating with <strong class="color-magenta-light-01">note-seq</strong> from Magenta</h4>
+        <p>
+          The <a href="https://github.com/magenta/note-seq">note-seq</a> library is a protobuf
+          representation of MIDI data, used by the models in Magenta.
+        </p>
+        <div class="code-wrapper smaller">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+from note_seq.protobuf import music_pb2
+sequence = music_pb2.NoteSequence()
+
+# Add notes to the sequence
+sequence.notes.add(pitch=60, start_time=0.0, end_time=0.5, velocity=80)
+sequence.notes.add(pitch=62, start_time=0.5, end_time=1.0, velocity=100)
+# ...
+
+# Add configuration
+sequence.total_time = 8
+sequence.tempos.add(qpm=60)
+
+print(sequence)
+            </code>
+          </pre>
+        </div>
+        <div class="code-wrapper smaller">
+          <pre class="prettyprint">
+            <code class="code bash" data-trim data-noescape>
+tempos {
+  qpm: 60.0
+}
+notes {
+  pitch: 60
+  velocity: 80
+  start_time: 0
+  end_time: 0.5
+}
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Integrating with <strong class="color-magenta-light-01">note-seq</strong> from Magenta</h4>
+        <p>
+          Which integrates nicely with VisualMIDI using
+          <strong class="color-magenta-light-01">PrettyMIDI</strong> as a pivot format.
+        </p>
+        <div class="code-wrapper">
+          <pre class="prettyprint">
+            <code class="code lang-python" data-trim data-noescape>
+from note_seq import midi_to_note_sequence
+from note_seq.midi_io import note_sequence_to_pretty_midi
+from note_seq.protobuf import music_pb2
+from visual_midi import Plotter
+
+# Convert "note-seq" -> "pretty-midi"
+pretty_midi = note_sequence_to_pretty_midi(sequence)
+print(pretty_midi)
+
+# Convert "pretty-midi" -> "note-seq"
+sequence = midi_to_note_sequence(pretty_midi)
+print(sequence)
+
+# Convert "pretty-midi" -> "visual-midi"
+plotter = Plotter()
+plotter.show(pretty_midi, "/tmp/example-01.html")
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h4>Integrating in <strong class="color-magenta-light-01">notebooks</strong></h4>
+        <p>
+          Notebooks are important tools for data scientists 👨‍🔬👩‍🔬, well,
+          <strong class="color-magenta-light-01">VisualMIDI</strong> also
+          integrates with notebooks, inserting an <strong>interactive</strong> plot!
+        </p>
+        <p>
+          <img style="width: 66%"
+               class="no_border shadow_border"
+               src="./code/visual-midi-notebook.png"
+               title="Visual MIDI example notebook"
+               alt="Visual MIDI example notebook">
+        </p>
+      </section>
+
+      <section>
+        <h4>Using VisualMIDI as a visual server (in progress)</h4>
+        <p class="smaller">
+          For <strong class="color-magenta-light-01">DreamBank</strong>, a 3 RNN network autonomous
+          generative system 🤖, VisualMIDI is important to show the current state.
+        </p>
+        <p>
+          <img style="width: 90%"
+               class="no_border no_border"
+               src="./code/dreambank-screenshot.png"
+               title="DreamBank screenshot"
+               alt="DreamBank screenshot">
+        </p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Conclusion (<strong class="color-magenta-light-01">end!</strong>)</h3>
+      </section>
+
+      <section class="align-left">
+        <h4><strong class="color-magenta-light-01">Thank you!</strong></h4>
+        <p>
+          The <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong> book 📕:
+          <a class="smaller" style="white-space: nowrap" href="https://www.packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419">packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419</a>
+        </p>
+        <p>
+          This presentation and original article 📰 on <strong class="color-magenta-light-01">VisualMIDI</strong>:
+          <a class="smaller" style="white-space: nowrap" href="https://alexandredubreuil.com/conferences/midi-visualization-with-visual-midi">alexandredubreuil.com/conferences/midi-visualization-with-visual-midi</a>
         </p>
       </section>
 
@@ -80,11 +489,11 @@
 <script src="../common/bower_components/jquery/dist/jquery.js"></script>
 <script src="../common/js/reveal.js"></script>
 <script>
-  Reveal.initialize({
-    progress: true,
-    history: true,
-    preloadIframes: false,
-  });
+    Reveal.initialize({
+        progress: true,
+        history: true,
+        preloadIframes: false,
+    });
 </script>
 </body>
 </html>

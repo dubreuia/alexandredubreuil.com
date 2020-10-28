@@ -19,3 +19,6 @@ __pycache__
 
 # Ableton Live
 *.asd
+
+# Jupyter
+.ipynb_checkpoints
