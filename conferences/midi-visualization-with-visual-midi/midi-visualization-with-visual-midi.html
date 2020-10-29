@@ -21,12 +21,12 @@
        src="../common/img/visual-midi-logo-dark.png"
        alt="VisualMIDI logo">
   <div class="title">
-    <div>MIDI Visualization with VisualMIDI</div>
-    <div class="subtitle"></div>
+    <div>MIDI Visualization</div>
+    <div class="subtitle">with VisualMIDI</div>
   </div>
   <div class="title right">
-    <div>Alexandre DuBreuil (<a href="https://twitter.com/dubreuia">@dubreuia</a>)</div>
-    <div class="subtitle"><a href="https://alexandredubreuil.com">https://alexandredubreuil.com</a></div>
+    <div>Alexandre DuBreuil</div>
+    <div class="subtitle"><a href="https://alexandredubreuil.com">alexandredubreuil.com</a></div>
   </div>
 </footer>
 
@@ -43,7 +43,7 @@
           <img width="75%" class="no_border" src="../common/img/visual-midi-logo-light.png" alt="VisualMIDI logo">
         </div>
         <h2></h2>
-        <h3>Alexandre DuBreuil (<a href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</h3>
+        <h3>Alexandre DuBreuil (<a target="_blank" href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</h3>
       </section>
 
       <section class="align-left">
@@ -51,7 +51,7 @@
         <p>
           Software engineer, sound designer, book author, conference speaker and open source maintainer.
         </p>
-        <p>(<a href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</p>
+        <p>(<a target="_blank" href="https://alexandredubreuil.com">alexandredubreuil.com</a>)</p>
       </section>
 
     </section>
@@ -73,17 +73,44 @@
         </p>
         <p class="align-left">
           When writing <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong>,
-          I needed to show the music 🎼...
+          I needed to show the music...
         </p>
-        <p class="align-left">
-          - Generate easily <span class="color-magenta-light-01">HD graphs</span>
+        <p>
+          🎼
         </p>
-        <p class="align-left">
+        <p class="align-left smaller">
+          - Easily generate <span class="color-magenta-light-01">HD graphs</span>
+        </p>
+        <p class="align-left smaller">
           - Analyse <span class="color-magenta-light-01">input data</span> for machine learning models
         </p>
-        <p class="align-left">
+        <p class="align-left smaller">
           - Analyse generated <span class="color-magenta-light-01">output data</span>
         </p>
+      </section>
+
+      <section>
+        <h4>Visualizing as <strong class="color-magenta-light-01">piano roll</strong></h4>
+        <p>
+          MIDI data is a <strong>symbolic representation</strong> of music, and a common way of viewing music
+          partitions are using piano roll.
+        </p>
+        <p>
+          <img style="width: 30%"
+               class="float shadow_border fragment"
+               src="./code/pianoroll-real.jpg"
+               title="Piano roll real"
+               alt="Piano roll real">
+        </p>
+        <!-- http://www.untoldentertainment.com/blog/img/2011_11_06/pianoRoll.jpg -->
+        <p>
+          <img style="width: 60%"
+               class="float shadow_border fragment"
+               src="./code/pianoroll-ableton-live.jpg"
+               title="Piano roll real"
+               alt="Piano roll real">
+        </p>
+        <!-- https://i.ytimg.com/vi/9qSnIEiziLo/maxresdefault.jpg -->
       </section>
 
       <section>
@@ -205,7 +232,7 @@ plotter.show(pm, "/tmp/example-02.html")
         <p>
           In <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong>,
           Chapter 6, we automate the creation of a dataset 🗃 using the
-          <a href="https://colinraffel.com/projects/lmd/">The Lakh MIDI Dataset</a>.
+          <a target="_blank" href="https://colinraffel.com/projects/lmd/">The Lakh MIDI Dataset</a>.
         </p>
         <p>
           <img style="width: 66%"
@@ -219,7 +246,7 @@ plotter.show(pm, "/tmp/example-02.html")
       <section>
         <h4>Creating a dataset - Four on the floor rhythmics</h4>
         <p>
-          In the <a href="https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/master/Chapter06">first example of Chapter 6</a>,
+          In the <a target="_blank" href="https://github.com/PacktPublishing/hands-on-music-generation-with-magenta/tree/master/Chapter06">first example of Chapter 6</a>,
           we analyse the musical structure of the MIDI files and extract the drums patterns that we want.
         </p>
         <div class="code-wrapper">
@@ -361,7 +388,7 @@ for file in $( ls ); do visual_midi $file; done
       <section>
         <h4>Integrating with <strong class="color-magenta-light-01">note-seq</strong> from Magenta</h4>
         <p>
-          The <a href="https://github.com/magenta/note-seq">note-seq</a> library is a protobuf
+          The <a target="_blank" href="https://github.com/magenta/note-seq">note-seq</a> library is a protobuf
           representation of MIDI data, used by the models in Magenta.
         </p>
         <div class="code-wrapper smaller">
@@ -449,8 +476,8 @@ plotter.show(pretty_midi, "/tmp/example-01.html")
       <section>
         <h4>Using VisualMIDI as a visual server (in progress)</h4>
         <p class="smaller">
-          For <strong class="color-magenta-light-01">DreamBank</strong>, a 3 RNN network autonomous
-          generative system 🤖, VisualMIDI is important to show the current state.
+          For <a target="_blank" href="http://claire-malrieux.com/DreamBank"><strong class="color-magenta-light-01">DreamBank</strong></a>,
+          a 3 RNN network autonomous generative system 🤖, VisualMIDI is important to show the current state.
         </p>
         <p>
           <img style="width: 90%"
@@ -473,11 +500,11 @@ plotter.show(pretty_midi, "/tmp/example-01.html")
         <h4><strong class="color-magenta-light-01">Thank you!</strong></h4>
         <p>
           The <strong class="color-magenta-light-01">Hands-on Music Generation with Magenta</strong> book 📕:
-          <a class="smaller" style="white-space: nowrap" href="https://www.packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419">packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419</a>
+          <a class="smaller" style="white-space: nowrap" target="_blank" href="https://www.packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419">packtpub.com/product/hands-on-music-generation-with-magenta/9781838824419</a>
         </p>
         <p>
           This presentation and original article 📰 on <strong class="color-magenta-light-01">VisualMIDI</strong>:
-          <a class="smaller" style="white-space: nowrap" href="https://alexandredubreuil.com/conferences/midi-visualization-with-visual-midi">alexandredubreuil.com/conferences/midi-visualization-with-visual-midi</a>
+          <a class="smaller" style="white-space: nowrap" target="_blank" href="https://alexandredubreuil.com/conferences/midi-visualization-with-visual-midi">alexandredubreuil.com/conferences/midi-visualization-with-visual-midi</a>
         </p>
       </section>
 
