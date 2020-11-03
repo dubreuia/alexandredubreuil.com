@@ -14,7 +14,7 @@
 
 ## Conferences
 
-- 2020/10/29 - Creative Code @ Online - <span class="icon icon-slideshare">**[Slides](./midi-visualization-with-visual-midi.html)**</span>
+- 2020/10/29 - Creative Code @ Online - <span class="icon icon-slideshare">**[Slides](./midi-visualization-with-visual-midi.html)**</span> <span class="icon icon-youtube">**[Video](https://www.youtube.com/watch?v=K91_PCOpPHU)**</span>
 
 ## (french) Visualisation de la musique avec Visual MIDI
 
