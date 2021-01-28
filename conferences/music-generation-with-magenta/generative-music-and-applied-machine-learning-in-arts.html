@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Generative Music and Applied Machine Learning in Arts</title>
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/reveal.css">
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/theme/white.css">
+  <link rel="stylesheet"
+        href="../common/css/magenta-theme.css">
+  <script
+      src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+<footer id="footer" class="hide">
+  <img class="logo"
+       src="../common/img/magenta/magenta-logo-01.png"
+       alt="Magenta logo">
+  <div class="title">
+    <div>Generative Music</div>
+    <div class="subtitle">Applied Machine Learning in Arts</div>
+  </div>
+  <div class="title right">
+    <div>Alexandre DuBreuil</div>
+    <div class="subtitle"><a href="https://alexandredubreuil.com">https://alexandredubreuil.com</a></div>
+  </div>
+</footer>
+
+<div class="reveal">
+
+  <div class="slides">
+    <section>
+      <section>
+        <img width="200px"
+             class="logo figure no_border"
+             src="../common/img/magenta/magenta-logo-02.png"
+             alt="Magenta logo">
+        <h1 class="align-left">
+          <span class="color-magenta-light-01">Generative Music</span>
+        </h1>
+        <h2 class="align-right">Applied Machine Learning in Arts</h2>
+        <h3 class="align-right">Alexandre DuBreuil</h3>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>What is generative music?</h2>
+        <p>
+          <img style="width: 66%" src="../common/img/cat-piano.gif"
+               title="Cat Piano" alt="Cat Piano">
+          <!-- https://cityoflondonsinfonia.files.wordpress.com/2015/01/cat-piano.gif -->
+        </p>
+      </section>
+      <section>
+        <p>
+        "<strong>Generative art is an artwork partially or completely created by an </strong><strong class="color-magenta-light-02">autonomous system</strong>" - Music Generation with Magenta
+        </p>
+      </section>
+      <section>
+        <h3>But has nothing to do with code!</h3>
+        <p class="align-left">
+          <img style="width: 33%" class="float" src="../common/img/back-to-the-future-gif.webp"
+               title="Back To the Future gif" alt="Back To the Future gif">
+          <!-- https://media2.giphy.com/media/7TZvWKVkm0xXi/giphy.gif -->
+          <span>Lets take our time machine and come back to the 18th century.</span>
+        </p>
+      </section>
+      <section>
+        <p class="align-left">
+          <img style="width: 33%" class="float" src="../common/img/mozart-music-dice-game-02.png"
+               title="Mozart music dice game" alt="Mozart music dice game">
+          <!-- http://abjad.mbrsi.org/_images/mozart-tables.png -->
+          <span>In 1792, a guy named Mozard created the Musikalisches Würfelspiel (<strong class="color-magenta-light-02">musical dice</strong>) game.</span><br/><br/>
+          <span>The result of a dice roll determines which measure to add to the generated composition</span><br/><br/>
+          <span>The system is autonomous, because you don't decide the outcome</span><br/><br/>
+        </p>
+      </section>
+      <section>
+        <h3>That's it, that's generative music</h3>
+        <p>So basically the system is working for (with) you to reach a common goal: <strong class="color-magenta-light-02">great music</strong></p>
+        <p>But the result is as good as the system that creates it.</p>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Fast forward in time (today!)</h2>
+        <p>
+          <img style="width: 33%" src="../common/img/time-swirl-gif.webp"
+               title="Time Swirl" alt="Time Swirl">
+          <!-- https://media1.giphy.com/media/3ov9jU4ycPvfrPTsly/giphy.gif?cid=ecf05e47tv64c7ol3zgpf1zup7osrwcliysbdmyahxm84a2j&rid=giphy.gif -->
+        </p>
+      </section>
+      <section>
+        <p class="align-left">
+          <img style="width: 33%" class="float" src="../common/img/disney-books-gif.webp"
+               title="Disney Books gifs" alt="Disney Books gifs">
+          <!-- https://disney.tumblr.com/post/124694210387/get-lost-in-a-good-story -->
+          <span>Back in 2021, we're sitting on a pile of theorical knowledge about music, and <strong class="color-magenta-light-02">lots of technology</strong>.</span>
+        </p>
+      </section>
+      <section>
+        <h3 class="align-left">Generative Music Artists</h3>
+        <p class="align-left">
+          <iframe style="width: 50%; height: 250px" class="float" src="https://www.youtube-nocookie.com/embed/Dwo-tvmEKhk?start=67" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span>Brian Eno, who coined the term "generative music", who created numerous <strong class="color-magenta-light-02">infinite albums</strong></span>
+        </p>
+      </section>
+      <section>
+        <h3 class="align-left">Esoteric Languages</h3>
+        <p class="align-left">
+          <iframe style="width: 50%; height: 250px" class="float" src="https://www.youtube-nocookie.com/embed/r28Xy-1_F8I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- https://disney.tumblr.com/post/124694210387/get-lost-in-a-good-story -->
+          <span>ORCA, one of many (<strong class="color-magenta-light-02">esoteric</strong>) langages created for generative music.</span>
+        </p>
+      </section>
+      <section>
+        <h3 class="align-left">Electronic Music Scene</h3>
+        <p class="align-left">
+          <iframe style="width: 50%; height: 250px" class="float" src="https://www.youtube-nocookie.com/embed/smQOiFt8e4Q?start=324" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- https://disney.tumblr.com/post/124694210387/get-lost-in-a-good-story -->
+          <span><strong class="color-magenta-light-02">Algorave</strong>, an underground music scene where the music is live-coded in front the audience (hence its name).</span>
+        </p>
+        </br/>
+        <div style="clear:both">More information: <a href="https://mixmag.net/feature/female-coders-algorave">Meet the female coders pushing electronic music into the future</a></div>
+      </section>
+      <section>
+        <h3>As musicians</h3>
+        <p>We have <strong class="color-magenta-light-02">generative music tools</strong> to help us compose, produce, improvise, etc.</p>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Limitations of algorithms</h2>
+        <p>
+          <img style="width: 66%" src="../common/img/algorithm-gif.webp"
+               title="Algorithm gifs" alt="Algorithm gifs">
+          <!-- https://media1.giphy.com/media/3o6Yg4GUVgIUg3bf7W/giphy.gif?cid=ecf05e47hnwmhtg127go22foky4rfs3gimvijenrhtcrv9tw&rid=giphy.gif -->
+        </p>
+      </section>
+      <section>
+        <h3>Climat General (2017)</h3>
+        <p>
+          <iframe width="75%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/515850132&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </p>
+        <p><a href="http://claire-malrieux.com/Climat-General">Claire Malrieux</a> / Alexandre DuBreuil (skip to 11:00)</p>
+        <p>This generative artwork makes a relation between climate events (rain, tornados, etc.), the artist's drawings, and the music.</p>
+      </section>
+      <section>
+        <h3>How generative can we go?</h3>
+        <p>Generative text, generative voice, generative score (partition), generative audio, generative emotions!?<p>
+        <h4>Using classical algorithm is HARD</h4>
+        <p>Some things are hard to do using traditional algorithm like text generation, voice generation, audio generation, etc. So we need a way of training a machine on human data...</p>
+      </section>
+      <section>
+        <h3>Machine learning to the rescue!</h3>
+        <p class="align-left">
+          <img style="width: 33%" class="float" src="../common/img/robot-gif.webp"
+               title="Robot gifs" alt="Robot gifs">
+          <!-- https://media2.giphy.com/media/Ps89uHS7n72j6/giphy.gif?cid=ecf05e470tj3hlqp4q6mgza6my2ezpzilwpj6dgu0jp57fbd&rid=giphy.gif -->
+          <span>With machine learning, you can use <strong class="color-magenta-light-02">human data</strong>, and let the machine predict / generate based on what it has learned.</span>
+        </p>
+      </section>
+      <section>
+        <h3>DreamBank (2019)</h3>
+        <p>
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/963478453&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </p>
+        <p><a href="http://claire-malrieux.com/DreamBank">Claire Malrieux</a> / Alexandre DuBreuil (skip to 10:50)</p>
+        <p>The machine tells us about its dream: "The street of the dream, interpretation too, I was very surprised that first I had..."</p>
+      </section>
+      <section>
+        <h3>DreamBank Generative System</h3>
+        <p class="align-left">
+          <img style="width: 33%" class="float" src="../common/img/dreambank-dude-on-the-floor.jpeg"
+               title="Dreambank dude on the floor" alt="Dreambank dude on the floor">
+          <!-- http://claire-malrieux.com/DreamBank -->
+          <span>We go "full generative": generative dream text based on human dreams, analysing sentiments (sad, happy, etc.) of the text, generating speech, generating musical score...</span>
+        </p>
+      </section>
+      <section>
+        <h3>Using neural nets for generating partitions</h3>
+        <p>
+          <img style="width: 75%" src="../common/img/music-generation-with-magenta-drumsrnn-example.png"
+               title="Music Generation with Magenta drumsrnn example" alt="Music Generation with Magenta drumsrnn example">
+          <!-- http://claire-malrieux.com/DreamBank -->
+        </p>
+        <p>
+          <span>Generating score based on style (rock, jazz, classical, etc.), emotion (sad, happy, etc.), instrument (drum, piano, etc.). With different <strong class="color-magenta-light-02">neural networks</strong> (Recurrent Neural Netowrks, RNNs).</span>
+        </p>
+      </section>
+      <section>
+        <h3>Using neural nets for generating audio</h3>
+        <p>
+          <img style="width: 75%" src="../common/img/music-generation-with-magenta-gansynth-example.png"
+               title="Music Generation with Magenta gansynth example" alt="Music Generation with Magenta gansynth example">
+          <!-- http://claire-malrieux.com/DreamBank -->
+        </p>
+        <p>
+          <span>Generating audio is HARD, but we can generate sounds based on cat meow!</span>
+        </p>
+        <p>
+          <audio controls>
+            <source src="../common/img/nsynth-cat.wav"
+                    type="audio/wav"/>
+          </audio>
+          <audio controls>
+            <source src="../common/img/nsynth-bass-cat.wav"
+                    type="audio/wav"/>
+          </audio>
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Closing</h2>
+      </section>
+      <section>
+        <h4>Music Generation with <strong class="color-magenta-light-02">Magenta</strong></h4>
+        <p>
+          <img style="width: 40%" class="float" src="../common/img/magenta/book-cover.png"
+               title="Music Generation with Magenta book cover" alt="Music Generation with Magenta book cover">
+          <span>Explore the role of deep learning in music generation and assisted music composition</span>
+        </p>
+      </section>
+      <section>
+        <h3>Thank you!</h3>
+        <p>Slides and Code: <a href="https://alexandredubreuil.com">alexandredubreuil.com</a></p>
+      </section>
+    </section>
+
+  </div>
+</div>
+<script src="../common/bower_components/reveal.js/js/reveal.js"></script>
+<script src="../common/bower_components/jquery/dist/jquery.js"></script>
+<script src="../common/js/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    progress: true,
+    history: true,
+    preloadIframes: false,
+  });
+</script>
+</body>
+</html>

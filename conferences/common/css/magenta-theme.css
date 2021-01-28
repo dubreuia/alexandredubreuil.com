@@ -144,7 +144,14 @@
     border: none;
     width: 25%;
     float: left;
-    padding: 20px;
+    margin: 0 20px;
+}
+
+.reveal iframe.float {
+    border: none;
+    width: 25%;
+    float: left;
+    padding: 0;
     margin: 0 20px;
 }
 
@@ -219,6 +226,10 @@ footer .title.right {
 .slide-first-vertical h5,
 .slide-first-vertical h6 {
     color: white;
+}
+
+.slide-first-vertical img {
+    background-color: white;
 }
 
 .slide-first-vertical footer {
