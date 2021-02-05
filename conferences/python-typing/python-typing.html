@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Python Typing 🐍</title>
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/reveal.css">
+  <link rel="stylesheet"
+        href="../common/bower_components/reveal.js/css/theme/white.css">
+  <link rel="stylesheet"
+        href="../common/css/magenta-theme.css">
+  <script
+      src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+<footer id="footer" class="hide">
+  <img class="logo"
+       src="../common/img/python-logo.png"
+       alt="Python logo">
+  <div class="title">
+    <div>Python Typing 🐍</div>
+    <div class="subtitle"></div>
+  </div>
+  <div class="title right">
+    <div>Alexandre DuBreuil</div>
+    <div>David Rousselie</div>
+  </div>
+</footer>
+
+<div class="reveal">
+
+  <div class="slides">
+    <section>
+
+      <section class="align-left">
+        <h1>
+          Python Typing 🐍
+        </h1>
+        <div>
+          <img width="20%" class="no_border" src="../common/img/python-logo.png" alt="Python logo">
+        </div>
+        <h2></h2>
+        <h3 class="align-right">Alexandre DuBreuil</h3>
+        <h3 class="align-right">David Rousselie</h3>
+      </section>
+
+      <section class="center">
+        <h3>Re-try Python Typing... 🕵️</h3>
+        <p>
+          <img style="width: 100%" class="shadow_border" src="../common/img/python-typing-failed-attempt.png">
+        </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Our approach: frictionnless</h4>
+        <p>⌥ <strong class="color-magenta-light-01">Optional typing:</strong> Check types only if provided</p>
+        <p>📈 <strong class="color-magenta-light-01">Incremental typing:</strong> One module at a time</p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Current state ⏰</h3>
+      </section>
+
+      <section class="align-left">
+        <h4>Checklist</h4>
+        <p>☑️ <strong class="color-magenta-light-01">Research tool:</strong> <code>mypy</code> configured for incremental checks</p>
+        <p>☑️ <strong class="color-magenta-light-01">Fix issues:</strong> work on the <code>shared</code> component</p>
+        <p>☑️ <strong class="color-magenta-light-01">Integrate CI:</strong> add type checks in the CI</p>
+        <p>☑️ <strong class="color-magenta-light-01">Integrate dev tools:</strong> add git hooks</p>
+      </section>
+
+      <section class="align-left">
+        <h4>That sweet green box ✅!</h4>
+        <p>
+          <img style="width: 100%" class="shadow_border" src="../common/img/python-typing-ci-screenshot.png">
+        </p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Roadmap 🚗</h3>
+      </section>
+
+      <section class="align-left">
+        <h4>Next steps: add more components!</h4>
+        <p><strong class="color-magenta-light-01">components/be_core:</strong> Found 285 errors in 45 files </p>
+        <p><strong class="color-magenta-light-01">components/es_core:</strong> Found 276 errors in 57 files </p>
+        <p><strong class="color-magenta-light-01">components/fr_accounting:</strong> Found 19 errors in 4 files </p>
+        <p><strong class="color-magenta-light-01">components/sdk:</strong> Found 218 errors in 34 files </p>
+      </section>
+
+      <section class="align-left">
+        <h4>Better support</h4>
+        <p>☑️ <strong class="color-magenta-light-01">Add more / better type stubs</strong> for IDE auto complete</p>
+      </section>
+
+    </section>
+
+    <section>
+
+      <section class="align-left">
+        <h3>Thank you 🙏</h3>
+      </section>
+    </section>
+
+  </div>
+</div>
+<script src="../common/bower_components/reveal.js/js/reveal.js"></script>
+<script src="../common/bower_components/jquery/dist/jquery.js"></script>
+<script src="../common/js/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        progress: true,
+        history: true,
+        preloadIframes: false,
+    });
+</script>
+</body>
+</html>
